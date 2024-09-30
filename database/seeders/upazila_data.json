@@ -1,0 +1,4642 @@
+[
+  {
+    "upazila_name": "BAGERHAT SADAR",
+    "upazila_code": "400108",
+    "district_name": "BAGERHAT",
+    "district_code": "4001",
+    "division_name": "KHULNA",
+    "division_code": "40"
+  },
+  {
+    "upazila_name": "CHITALMARI",
+    "upazila_code": "400114",
+    "district_name": "BAGERHAT",
+    "district_code": "4001",
+    "division_name": "KHULNA",
+    "division_code": "40"
+  },
+  {
+    "upazila_name": "FAKIRHAT",
+    "upazila_code": "400134",
+    "district_name": "BAGERHAT",
+    "district_code": "4001",
+    "division_name": "KHULNA",
+    "division_code": "40"
+  },
+  {
+    "upazila_name": "KACHUA",
+    "upazila_code": "400138",
+    "district_name": "BAGERHAT",
+    "district_code": "4001",
+    "division_name": "KHULNA",
+    "division_code": "40"
+  },
+  {
+    "upazila_name": "MOLLAHAT",
+    "upazila_code": "400156",
+    "district_name": "BAGERHAT",
+    "district_code": "4001",
+    "division_name": "KHULNA",
+    "division_code": "40"
+  },
+  {
+    "upazila_name": "MONGLA",
+    "upazila_code": "400158",
+    "district_name": "BAGERHAT",
+    "district_code": "4001",
+    "division_name": "KHULNA",
+    "division_code": "40"
+  },
+  {
+    "upazila_name": "MORELGANJ",
+    "upazila_code": "400160",
+    "district_name": "BAGERHAT",
+    "district_code": "4001",
+    "division_name": "KHULNA",
+    "division_code": "40"
+  },
+  {
+    "upazila_name": "RAMPAL",
+    "upazila_code": "400173",
+    "district_name": "BAGERHAT",
+    "district_code": "4001",
+    "division_name": "KHULNA",
+    "division_code": "40"
+  },
+  {
+    "upazila_name": "SHARANKHOLA",
+    "upazila_code": "400177",
+    "district_name": "BAGERHAT",
+    "district_code": "4001",
+    "division_name": "KHULNA",
+    "division_code": "40"
+  },
+  {
+    "upazila_name": "ALIKADAM",
+    "upazila_code": "200304",
+    "district_name": "BANDARBAN",
+    "district_code": "2003",
+    "division_name": "CHATTOGRAM",
+    "division_code": "20"
+  },
+  {
+    "upazila_name": "BANDARBAN SADAR",
+    "upazila_code": "200314",
+    "district_name": "BANDARBAN",
+    "district_code": "2003",
+    "division_name": "CHATTOGRAM",
+    "division_code": "20"
+  },
+  {
+    "upazila_name": "LAMA",
+    "upazila_code": "200351",
+    "district_name": "BANDARBAN",
+    "district_code": "2003",
+    "division_name": "CHATTOGRAM",
+    "division_code": "20"
+  },
+  {
+    "upazila_name": "NAIKKHONGCHHARI",
+    "upazila_code": "200373",
+    "district_name": "BANDARBAN",
+    "district_code": "2003",
+    "division_name": "CHATTOGRAM",
+    "division_code": "20"
+  },
+  {
+    "upazila_name": "ROWANGCHHARI",
+    "upazila_code": "200389",
+    "district_name": "BANDARBAN",
+    "district_code": "2003",
+    "division_name": "CHATTOGRAM",
+    "division_code": "20"
+  },
+  {
+    "upazila_name": "RUMA",
+    "upazila_code": "200391",
+    "district_name": "BANDARBAN",
+    "district_code": "2003",
+    "division_name": "CHATTOGRAM",
+    "division_code": "20"
+  },
+  {
+    "upazila_name": "THANCHI",
+    "upazila_code": "200395",
+    "district_name": "BANDARBAN",
+    "district_code": "2003",
+    "division_name": "CHATTOGRAM",
+    "division_code": "20"
+  },
+  {
+    "upazila_name": "AMTALI",
+    "upazila_code": "100409",
+    "district_name": "BARGUNA",
+    "district_code": "1004",
+    "division_name": "BARISHAL",
+    "division_code": "10"
+  },
+  {
+    "upazila_name": "BAMNA",
+    "upazila_code": "100419",
+    "district_name": "BARGUNA",
+    "district_code": "1004",
+    "division_name": "BARISHAL",
+    "division_code": "10"
+  },
+  {
+    "upazila_name": "BARGUNA SADAR",
+    "upazila_code": "100428",
+    "district_name": "BARGUNA",
+    "district_code": "1004",
+    "division_name": "BARISHAL",
+    "division_code": "10"
+  },
+  {
+    "upazila_name": "BETAGI",
+    "upazila_code": "100447",
+    "district_name": "BARGUNA",
+    "district_code": "1004",
+    "division_name": "BARISHAL",
+    "division_code": "10"
+  },
+  {
+    "upazila_name": "PATHARGHATA",
+    "upazila_code": "100485",
+    "district_name": "BARGUNA",
+    "district_code": "1004",
+    "division_name": "BARISHAL",
+    "division_code": "10"
+  },
+  {
+    "upazila_name": "TALTALI",
+    "upazila_code": "100490",
+    "district_name": "BARGUNA",
+    "district_code": "1004",
+    "division_name": "BARISHAL",
+    "division_code": "10"
+  },
+  {
+    "upazila_name": "AGAILJHARA",
+    "upazila_code": "100602",
+    "district_name": "BARISHAL",
+    "district_code": "1006",
+    "division_name": "BARISHAL",
+    "division_code": "10"
+  },
+  {
+    "upazila_name": "BABUGANJ",
+    "upazila_code": "100603",
+    "district_name": "BARISHAL",
+    "district_code": "1006",
+    "division_name": "BARISHAL",
+    "division_code": "10"
+  },
+  {
+    "upazila_name": "BAKERGANJ",
+    "upazila_code": "100607",
+    "district_name": "BARISHAL",
+    "district_code": "1006",
+    "division_name": "BARISHAL",
+    "division_code": "10"
+  },
+  {
+    "upazila_name": "BANARIPARA",
+    "upazila_code": "100610",
+    "district_name": "BARISHAL",
+    "district_code": "1006",
+    "division_name": "BARISHAL",
+    "division_code": "10"
+  },
+  {
+    "upazila_name": "GAURNADI",
+    "upazila_code": "100632",
+    "district_name": "BARISHAL",
+    "district_code": "1006",
+    "division_name": "BARISHAL",
+    "division_code": "10"
+  },
+  {
+    "upazila_name": "HIJLA",
+    "upazila_code": "100636",
+    "district_name": "BARISHAL",
+    "district_code": "1006",
+    "division_name": "BARISHAL",
+    "division_code": "10"
+  },
+  {
+    "upazila_name": "BARISHAL SADAR (KOTWALI)",
+    "upazila_code": "100651",
+    "district_name": "BARISHAL",
+    "district_code": "1006",
+    "division_name": "BARISHAL",
+    "division_code": "10"
+  },
+  {
+    "upazila_name": "MEHENDIGANJ",
+    "upazila_code": "100662",
+    "district_name": "BARISHAL",
+    "district_code": "1006",
+    "division_name": "BARISHAL",
+    "division_code": "10"
+  },
+  {
+    "upazila_name": "MULADI",
+    "upazila_code": "100669",
+    "district_name": "BARISHAL",
+    "district_code": "1006",
+    "division_name": "BARISHAL",
+    "division_code": "10"
+  },
+  {
+    "upazila_name": "UJIRPUR",
+    "upazila_code": "100694",
+    "district_name": "BARISHAL",
+    "district_code": "1006",
+    "division_name": "BARISHAL",
+    "division_code": "10"
+  },
+  {
+    "upazila_name": "BHOLA SADAR",
+    "upazila_code": "100918",
+    "district_name": "BHOLA",
+    "district_code": "1009",
+    "division_name": "BARISHAL",
+    "division_code": "10"
+  },
+  {
+    "upazila_name": "BORHANUDDIN",
+    "upazila_code": "100921",
+    "district_name": "BHOLA",
+    "district_code": "1009",
+    "division_name": "BARISHAL",
+    "division_code": "10"
+  },
+  {
+    "upazila_name": "CHARFASSON",
+    "upazila_code": "100925",
+    "district_name": "BHOLA",
+    "district_code": "1009",
+    "division_name": "BARISHAL",
+    "division_code": "10"
+  },
+  {
+    "upazila_name": "DAULATKHAN",
+    "upazila_code": "100929",
+    "district_name": "BHOLA",
+    "district_code": "1009",
+    "division_name": "BARISHAL",
+    "division_code": "10"
+  },
+  {
+    "upazila_name": "LALMOHAN",
+    "upazila_code": "100954",
+    "district_name": "BHOLA",
+    "district_code": "1009",
+    "division_name": "BARISHAL",
+    "division_code": "10"
+  },
+  {
+    "upazila_name": "MONPURA",
+    "upazila_code": "100965",
+    "district_name": "BHOLA",
+    "district_code": "1009",
+    "division_name": "BARISHAL",
+    "division_code": "10"
+  },
+  {
+    "upazila_name": "TAZUMUDDIN",
+    "upazila_code": "100991",
+    "district_name": "BHOLA",
+    "district_code": "1009",
+    "division_name": "BARISHAL",
+    "division_code": "10"
+  },
+  {
+    "upazila_name": "ADAMDIGHI",
+    "upazila_code": "501006",
+    "district_name": "BOGURA",
+    "district_code": "5010",
+    "division_name": "RAJSHAHI",
+    "division_code": "50"
+  },
+  {
+    "upazila_name": "BOGURA SADAR",
+    "upazila_code": "501020",
+    "district_name": "BOGURA",
+    "district_code": "5010",
+    "division_name": "RAJSHAHI",
+    "division_code": "50"
+  },
+  {
+    "upazila_name": "DHUNAT",
+    "upazila_code": "501027",
+    "district_name": "BOGURA",
+    "district_code": "5010",
+    "division_name": "RAJSHAHI",
+    "division_code": "50"
+  },
+  {
+    "upazila_name": "DUPCHACHIA",
+    "upazila_code": "501033",
+    "district_name": "BOGURA",
+    "district_code": "5010",
+    "division_name": "RAJSHAHI",
+    "division_code": "50"
+  },
+  {
+    "upazila_name": "GABTALI",
+    "upazila_code": "501040",
+    "district_name": "BOGURA",
+    "district_code": "5010",
+    "division_name": "RAJSHAHI",
+    "division_code": "50"
+  },
+  {
+    "upazila_name": "KAHALOO",
+    "upazila_code": "501054",
+    "district_name": "BOGURA",
+    "district_code": "5010",
+    "division_name": "RAJSHAHI",
+    "division_code": "50"
+  },
+  {
+    "upazila_name": "NANDIGRAM",
+    "upazila_code": "501067",
+    "district_name": "BOGURA",
+    "district_code": "5010",
+    "division_name": "RAJSHAHI",
+    "division_code": "50"
+  },
+  {
+    "upazila_name": "SARIAKANDI",
+    "upazila_code": "501081",
+    "district_name": "BOGURA",
+    "district_code": "5010",
+    "division_name": "RAJSHAHI",
+    "division_code": "50"
+  },
+  {
+    "upazila_name": "SHAJAHANPUR",
+    "upazila_code": "501085",
+    "district_name": "BOGURA",
+    "district_code": "5010",
+    "division_name": "RAJSHAHI",
+    "division_code": "50"
+  },
+  {
+    "upazila_name": "SHERPUR",
+    "upazila_code": "501088",
+    "district_name": "BOGURA",
+    "district_code": "5010",
+    "division_name": "RAJSHAHI",
+    "division_code": "50"
+  },
+  {
+    "upazila_name": "SHIBGANJ",
+    "upazila_code": "501094",
+    "district_name": "BOGURA",
+    "district_code": "5010",
+    "division_name": "RAJSHAHI",
+    "division_code": "50"
+  },
+  {
+    "upazila_name": "SONATALA",
+    "upazila_code": "501095",
+    "district_name": "BOGURA",
+    "district_code": "5010",
+    "division_name": "RAJSHAHI",
+    "division_code": "50"
+  },
+  {
+    "upazila_name": "AKHAURA",
+    "upazila_code": "201202",
+    "district_name": "BRAHMANBARIA",
+    "district_code": "2012",
+    "division_name": "CHATTOGRAM",
+    "division_code": "20"
+  },
+  {
+    "upazila_name": "BANCHHARAMPUR",
+    "upazila_code": "201204",
+    "district_name": "BRAHMANBARIA",
+    "district_code": "2012",
+    "division_name": "CHATTOGRAM",
+    "division_code": "20"
+  },
+  {
+    "upazila_name": "BIJOYNAGAR",
+    "upazila_code": "201207",
+    "district_name": "BRAHMANBARIA",
+    "district_code": "2012",
+    "division_name": "CHATTOGRAM",
+    "division_code": "20"
+  },
+  {
+    "upazila_name": "BRAHMANBARIA SADAR",
+    "upazila_code": "201213",
+    "district_name": "BRAHMANBARIA",
+    "district_code": "2012",
+    "division_name": "CHATTOGRAM",
+    "division_code": "20"
+  },
+  {
+    "upazila_name": "ASHUGANJ",
+    "upazila_code": "201233",
+    "district_name": "BRAHMANBARIA",
+    "district_code": "2012",
+    "division_name": "CHATTOGRAM",
+    "division_code": "20"
+  },
+  {
+    "upazila_name": "KASBA",
+    "upazila_code": "201263",
+    "district_name": "BRAHMANBARIA",
+    "district_code": "2012",
+    "division_name": "CHATTOGRAM",
+    "division_code": "20"
+  },
+  {
+    "upazila_name": "NABINAGAR",
+    "upazila_code": "201285",
+    "district_name": "BRAHMANBARIA",
+    "district_code": "2012",
+    "division_name": "CHATTOGRAM",
+    "division_code": "20"
+  },
+  {
+    "upazila_name": "NASIRNAGAR",
+    "upazila_code": "201290",
+    "district_name": "BRAHMANBARIA",
+    "district_code": "2012",
+    "division_name": "CHATTOGRAM",
+    "division_code": "20"
+  },
+  {
+    "upazila_name": "SARAIL",
+    "upazila_code": "201294",
+    "district_name": "BRAHMANBARIA",
+    "district_code": "2012",
+    "division_name": "CHATTOGRAM",
+    "division_code": "20"
+  },
+  {
+    "upazila_name": "CHANDPUR SADAR",
+    "upazila_code": "201322",
+    "district_name": "CHANDPUR",
+    "district_code": "2013",
+    "division_name": "CHATTOGRAM",
+    "division_code": "20"
+  },
+  {
+    "upazila_name": "FARIDGANJ",
+    "upazila_code": "201345",
+    "district_name": "CHANDPUR",
+    "district_code": "2013",
+    "division_name": "CHATTOGRAM",
+    "division_code": "20"
+  },
+  {
+    "upazila_name": "HAIMCHAR",
+    "upazila_code": "201347",
+    "district_name": "CHANDPUR",
+    "district_code": "2013",
+    "division_name": "CHATTOGRAM",
+    "division_code": "20"
+  },
+  {
+    "upazila_name": "HAJIGANJ",
+    "upazila_code": "201349",
+    "district_name": "CHANDPUR",
+    "district_code": "2013",
+    "division_name": "CHATTOGRAM",
+    "division_code": "20"
+  },
+  {
+    "upazila_name": "KACHUA",
+    "upazila_code": "201358",
+    "district_name": "CHANDPUR",
+    "district_code": "2013",
+    "division_name": "CHATTOGRAM",
+    "division_code": "20"
+  },
+  {
+    "upazila_name": "MATLAB DAKKHIN",
+    "upazila_code": "201376",
+    "district_name": "CHANDPUR",
+    "district_code": "2013",
+    "division_name": "CHATTOGRAM",
+    "division_code": "20"
+  },
+  {
+    "upazila_name": "MATLAB UTTAR",
+    "upazila_code": "201379",
+    "district_name": "CHANDPUR",
+    "district_code": "2013",
+    "division_name": "CHATTOGRAM",
+    "division_code": "20"
+  },
+  {
+    "upazila_name": "SHAHRASTI",
+    "upazila_code": "201395",
+    "district_name": "CHANDPUR",
+    "district_code": "2013",
+    "division_name": "CHATTOGRAM",
+    "division_code": "20"
+  },
+  {
+    "upazila_name": "AKBARSHAH",
+    "upazila_code": "201502",
+    "district_name": "CHATTOGRAM",
+    "district_code": "2015",
+    "division_name": "CHATTOGRAM",
+    "division_code": "20"
+  },
+  {
+    "upazila_name": "ANWARA",
+    "upazila_code": "201504",
+    "district_name": "CHATTOGRAM",
+    "district_code": "2015",
+    "division_name": "CHATTOGRAM",
+    "division_code": "20"
+  },
+  {
+    "upazila_name": "BAYEJID BOSTAMI",
+    "upazila_code": "201506",
+    "district_name": "CHATTOGRAM",
+    "district_code": "2015",
+    "division_name": "CHATTOGRAM",
+    "division_code": "20"
+  },
+  {
+    "upazila_name": "BANSHKHALI",
+    "upazila_code": "201508",
+    "district_name": "CHATTOGRAM",
+    "district_code": "2015",
+    "division_name": "CHATTOGRAM",
+    "division_code": "20"
+  },
+  {
+    "upazila_name": "BAKALIA",
+    "upazila_code": "201510",
+    "district_name": "CHATTOGRAM",
+    "district_code": "2015",
+    "division_name": "CHATTOGRAM",
+    "division_code": "20"
+  },
+  {
+    "upazila_name": "BOALKHALI",
+    "upazila_code": "201512",
+    "district_name": "CHATTOGRAM",
+    "district_code": "2015",
+    "division_name": "CHATTOGRAM",
+    "division_code": "20"
+  },
+  {
+    "upazila_name": "CHALK BAZAR",
+    "upazila_code": "201516",
+    "district_name": "CHATTOGRAM",
+    "district_code": "2015",
+    "division_name": "CHATTOGRAM",
+    "division_code": "20"
+  },
+  {
+    "upazila_name": "CHANDANAISH",
+    "upazila_code": "201518",
+    "district_name": "CHATTOGRAM",
+    "district_code": "2015",
+    "division_name": "CHATTOGRAM",
+    "division_code": "20"
+  },
+  {
+    "upazila_name": "CHANDGAON",
+    "upazila_code": "201519",
+    "district_name": "CHATTOGRAM",
+    "district_code": "2015",
+    "division_name": "CHATTOGRAM",
+    "division_code": "20"
+  },
+  {
+    "upazila_name": "CHATTOGRAM PORT",
+    "upazila_code": "201520",
+    "district_name": "CHATTOGRAM",
+    "district_code": "2015",
+    "division_name": "CHATTOGRAM",
+    "division_code": "20"
+  },
+  {
+    "upazila_name": "DOUBLEMOORING",
+    "upazila_code": "201528",
+    "district_name": "CHATTOGRAM",
+    "district_code": "2015",
+    "division_name": "CHATTOGRAM",
+    "division_code": "20"
+  },
+  {
+    "upazila_name": "EPZ",
+    "upazila_code": "201531",
+    "district_name": "CHATTOGRAM",
+    "district_code": "2015",
+    "division_name": "CHATTOGRAM",
+    "division_code": "20"
+  },
+  {
+    "upazila_name": "FATIKCHHARI",
+    "upazila_code": "201533",
+    "district_name": "CHATTOGRAM",
+    "district_code": "2015",
+    "division_name": "CHATTOGRAM",
+    "division_code": "20"
+  },
+  {
+    "upazila_name": "HALISHAHAR",
+    "upazila_code": "201535",
+    "district_name": "CHATTOGRAM",
+    "district_code": "2015",
+    "division_name": "CHATTOGRAM",
+    "division_code": "20"
+  },
+  {
+    "upazila_name": "HATHAZARI",
+    "upazila_code": "201537",
+    "district_name": "CHATTOGRAM",
+    "district_code": "2015",
+    "division_name": "CHATTOGRAM",
+    "division_code": "20"
+  },
+  {
+    "upazila_name": "KARNAPHULI",
+    "upazila_code": "201539",
+    "district_name": "CHATTOGRAM",
+    "district_code": "2015",
+    "division_name": "CHATTOGRAM",
+    "division_code": "20"
+  },
+  {
+    "upazila_name": "KOTWALI",
+    "upazila_code": "201541",
+    "district_name": "CHATTOGRAM",
+    "district_code": "2015",
+    "division_name": "CHATTOGRAM",
+    "division_code": "20"
+  },
+  {
+    "upazila_name": "KHULSHI",
+    "upazila_code": "201543",
+    "district_name": "CHATTOGRAM",
+    "district_code": "2015",
+    "division_name": "CHATTOGRAM",
+    "division_code": "20"
+  },
+  {
+    "upazila_name": "LOHAGARA",
+    "upazila_code": "201547",
+    "district_name": "CHATTOGRAM",
+    "district_code": "2015",
+    "division_name": "CHATTOGRAM",
+    "division_code": "20"
+  },
+  {
+    "upazila_name": "MIRSARAI",
+    "upazila_code": "201553",
+    "district_name": "CHATTOGRAM",
+    "district_code": "2015",
+    "division_name": "CHATTOGRAM",
+    "division_code": "20"
+  },
+  {
+    "upazila_name": "PAHARTALI",
+    "upazila_code": "201555",
+    "district_name": "CHATTOGRAM",
+    "district_code": "2015",
+    "division_name": "CHATTOGRAM",
+    "division_code": "20"
+  },
+  {
+    "upazila_name": "PANCHLAISH",
+    "upazila_code": "201557",
+    "district_name": "CHATTOGRAM",
+    "district_code": "2015",
+    "division_name": "CHATTOGRAM",
+    "division_code": "20"
+  },
+  {
+    "upazila_name": "PATIYA",
+    "upazila_code": "201561",
+    "district_name": "CHATTOGRAM",
+    "district_code": "2015",
+    "division_name": "CHATTOGRAM",
+    "division_code": "20"
+  },
+  {
+    "upazila_name": "PATENGA",
+    "upazila_code": "201565",
+    "district_name": "CHATTOGRAM",
+    "district_code": "2015",
+    "division_name": "CHATTOGRAM",
+    "division_code": "20"
+  },
+  {
+    "upazila_name": "RANGUNIA",
+    "upazila_code": "201570",
+    "district_name": "CHATTOGRAM",
+    "district_code": "2015",
+    "division_name": "CHATTOGRAM",
+    "division_code": "20"
+  },
+  {
+    "upazila_name": "RAOZAN",
+    "upazila_code": "201574",
+    "district_name": "CHATTOGRAM",
+    "district_code": "2015",
+    "division_name": "CHATTOGRAM",
+    "division_code": "20"
+  },
+  {
+    "upazila_name": "SADARGHAT",
+    "upazila_code": "201577",
+    "district_name": "CHATTOGRAM",
+    "district_code": "2015",
+    "division_name": "CHATTOGRAM",
+    "division_code": "20"
+  },
+  {
+    "upazila_name": "SANDWIP",
+    "upazila_code": "201578",
+    "district_name": "CHATTOGRAM",
+    "district_code": "2015",
+    "division_name": "CHATTOGRAM",
+    "division_code": "20"
+  },
+  {
+    "upazila_name": "SATKANIA",
+    "upazila_code": "201582",
+    "district_name": "CHATTOGRAM",
+    "district_code": "2015",
+    "division_name": "CHATTOGRAM",
+    "division_code": "20"
+  },
+  {
+    "upazila_name": "SITAKUNDA",
+    "upazila_code": "201586",
+    "district_name": "CHATTOGRAM",
+    "district_code": "2015",
+    "division_name": "CHATTOGRAM",
+    "division_code": "20"
+  },
+  {
+    "upazila_name": "ALAMDANGA",
+    "upazila_code": "401807",
+    "district_name": "CHUADANGA",
+    "district_code": "4018",
+    "division_name": "KHULNA",
+    "division_code": "40"
+  },
+  {
+    "upazila_name": "CHUADANGA SADAR",
+    "upazila_code": "401823",
+    "district_name": "CHUADANGA",
+    "district_code": "4018",
+    "division_name": "KHULNA",
+    "division_code": "40"
+  },
+  {
+    "upazila_name": "DAMURHUDA",
+    "upazila_code": "401831",
+    "district_name": "CHUADANGA",
+    "district_code": "4018",
+    "division_name": "KHULNA",
+    "division_code": "40"
+  },
+  {
+    "upazila_name": "JIBANNAGAR",
+    "upazila_code": "401855",
+    "district_name": "CHUADANGA",
+    "district_code": "4018",
+    "division_name": "KHULNA",
+    "division_code": "40"
+  },
+  {
+    "upazila_name": "BARURA",
+    "upazila_code": "201909",
+    "district_name": "CUMILLA",
+    "district_code": "2019",
+    "division_name": "CHATTOGRAM",
+    "division_code": "20"
+  },
+  {
+    "upazila_name": "BRAHMANPARA",
+    "upazila_code": "201915",
+    "district_name": "CUMILLA",
+    "district_code": "2019",
+    "division_name": "CHATTOGRAM",
+    "division_code": "20"
+  },
+  {
+    "upazila_name": "BURICHANG",
+    "upazila_code": "201918",
+    "district_name": "CUMILLA",
+    "district_code": "2019",
+    "division_name": "CHATTOGRAM",
+    "division_code": "20"
+  },
+  {
+    "upazila_name": "CHANDINA",
+    "upazila_code": "201927",
+    "district_name": "CUMILLA",
+    "district_code": "2019",
+    "division_name": "CHATTOGRAM",
+    "division_code": "20"
+  },
+  {
+    "upazila_name": "CHAUDDAGRAM",
+    "upazila_code": "201931",
+    "district_name": "CUMILLA",
+    "district_code": "2019",
+    "division_name": "CHATTOGRAM",
+    "division_code": "20"
+  },
+  {
+    "upazila_name": "SADAR DAKKHIN",
+    "upazila_code": "201933",
+    "district_name": "CUMILLA",
+    "district_code": "2019",
+    "division_name": "CHATTOGRAM",
+    "division_code": "20"
+  },
+  {
+    "upazila_name": "DAUDKANDI",
+    "upazila_code": "201936",
+    "district_name": "CUMILLA",
+    "district_code": "2019",
+    "division_name": "CHATTOGRAM",
+    "division_code": "20"
+  },
+  {
+    "upazila_name": "DEBIDWAR",
+    "upazila_code": "201940",
+    "district_name": "CUMILLA",
+    "district_code": "2019",
+    "division_name": "CHATTOGRAM",
+    "division_code": "20"
+  },
+  {
+    "upazila_name": "HOMNA",
+    "upazila_code": "201954",
+    "district_name": "CUMILLA",
+    "district_code": "2019",
+    "division_name": "CHATTOGRAM",
+    "division_code": "20"
+  },
+  {
+    "upazila_name": "ADARSHA SADAR",
+    "upazila_code": "201967",
+    "district_name": "CUMILLA",
+    "district_code": "2019",
+    "division_name": "CHATTOGRAM",
+    "division_code": "20"
+  },
+  {
+    "upazila_name": "LAKSAM",
+    "upazila_code": "201972",
+    "district_name": "CUMILLA",
+    "district_code": "2019",
+    "division_name": "CHATTOGRAM",
+    "division_code": "20"
+  },
+  {
+    "upazila_name": "LALMAI",
+    "upazila_code": "201973",
+    "district_name": "CUMILLA",
+    "district_code": "2019",
+    "division_name": "CHATTOGRAM",
+    "division_code": "20"
+  },
+  {
+    "upazila_name": "MANOHARGANJ",
+    "upazila_code": "201974",
+    "district_name": "CUMILLA",
+    "district_code": "2019",
+    "division_name": "CHATTOGRAM",
+    "division_code": "20"
+  },
+  {
+    "upazila_name": "MEGHNA",
+    "upazila_code": "201975",
+    "district_name": "CUMILLA",
+    "district_code": "2019",
+    "division_name": "CHATTOGRAM",
+    "division_code": "20"
+  },
+  {
+    "upazila_name": "MURADNAGAR",
+    "upazila_code": "201981",
+    "district_name": "CUMILLA",
+    "district_code": "2019",
+    "division_name": "CHATTOGRAM",
+    "division_code": "20"
+  },
+  {
+    "upazila_name": "NANGALKOT",
+    "upazila_code": "201987",
+    "district_name": "CUMILLA",
+    "district_code": "2019",
+    "division_name": "CHATTOGRAM",
+    "division_code": "20"
+  },
+  {
+    "upazila_name": "TITAS",
+    "upazila_code": "201994",
+    "district_name": "CUMILLA",
+    "district_code": "2019",
+    "division_name": "CHATTOGRAM",
+    "division_code": "20"
+  },
+  {
+    "upazila_name": "CHAKARIA",
+    "upazila_code": "202216",
+    "district_name": "COXS BAZAR",
+    "district_code": "2022",
+    "division_name": "CHATTOGRAM",
+    "division_code": "20"
+  },
+  {
+    "upazila_name": "COXS BAZAR SADAR",
+    "upazila_code": "202224",
+    "district_name": "COXS BAZAR",
+    "district_code": "2022",
+    "division_name": "CHATTOGRAM",
+    "division_code": "20"
+  },
+  {
+    "upazila_name": "KUTUBDIA",
+    "upazila_code": "202245",
+    "district_name": "COXS BAZAR",
+    "district_code": "2022",
+    "division_name": "CHATTOGRAM",
+    "division_code": "20"
+  },
+  {
+    "upazila_name": "MAHESHKHALI",
+    "upazila_code": "202249",
+    "district_name": "COXS BAZAR",
+    "district_code": "2022",
+    "division_name": "CHATTOGRAM",
+    "division_code": "20"
+  },
+  {
+    "upazila_name": "PEKUA",
+    "upazila_code": "202256",
+    "district_name": "COXS BAZAR",
+    "district_code": "2022",
+    "division_name": "CHATTOGRAM",
+    "division_code": "20"
+  },
+  {
+    "upazila_name": "RAMU",
+    "upazila_code": "202266",
+    "district_name": "COXS BAZAR",
+    "district_code": "2022",
+    "division_name": "CHATTOGRAM",
+    "division_code": "20"
+  },
+  {
+    "upazila_name": "TEKNAF",
+    "upazila_code": "202290",
+    "district_name": "COXS BAZAR",
+    "district_code": "2022",
+    "division_name": "CHATTOGRAM",
+    "division_code": "20"
+  },
+  {
+    "upazila_name": "UKHIA",
+    "upazila_code": "202294",
+    "district_name": "COXS BAZAR",
+    "district_code": "2022",
+    "division_name": "CHATTOGRAM",
+    "division_code": "20"
+  },
+  {
+    "upazila_name": "ADABAR",
+    "upazila_code": "302602",
+    "district_name": "DHAKA",
+    "district_code": "3026",
+    "division_name": "DHAKA",
+    "division_code": "30"
+  },
+  {
+    "upazila_name": "BADDA",
+    "upazila_code": "302604",
+    "district_name": "DHAKA",
+    "district_code": "3026",
+    "division_name": "DHAKA",
+    "division_code": "30"
+  },
+  {
+    "upazila_name": "BANGSHAL",
+    "upazila_code": "302605",
+    "district_name": "DHAKA",
+    "district_code": "3026",
+    "division_name": "DHAKA",
+    "division_code": "30"
+  },
+  {
+    "upazila_name": "BIMANBANDAR",
+    "upazila_code": "302606",
+    "district_name": "DHAKA",
+    "district_code": "3026",
+    "division_name": "DHAKA",
+    "division_code": "30"
+  },
+  {
+    "upazila_name": "BANANI",
+    "upazila_code": "302607",
+    "district_name": "DHAKA",
+    "district_code": "3026",
+    "division_name": "DHAKA",
+    "division_code": "30"
+  },
+  {
+    "upazila_name": "CANTONMENT",
+    "upazila_code": "302608",
+    "district_name": "DHAKA",
+    "district_code": "3026",
+    "division_name": "DHAKA",
+    "division_code": "30"
+  },
+  {
+    "upazila_name": "CHAKBAZAR",
+    "upazila_code": "302609",
+    "district_name": "DHAKA",
+    "district_code": "3026",
+    "division_name": "DHAKA",
+    "division_code": "30"
+  },
+  {
+    "upazila_name": "DAKKHINKHAN",
+    "upazila_code": "302610",
+    "district_name": "DHAKA",
+    "district_code": "3026",
+    "division_name": "DHAKA",
+    "division_code": "30"
+  },
+  {
+    "upazila_name": "DARUSSALAM",
+    "upazila_code": "302611",
+    "district_name": "DHAKA",
+    "district_code": "3026",
+    "division_name": "DHAKA",
+    "division_code": "30"
+  },
+  {
+    "upazila_name": "DEMRA",
+    "upazila_code": "302612",
+    "district_name": "DHAKA",
+    "district_code": "3026",
+    "division_name": "DHAKA",
+    "division_code": "30"
+  },
+  {
+    "upazila_name": "DHAMRAI",
+    "upazila_code": "302614",
+    "district_name": "DHAKA",
+    "district_code": "3026",
+    "division_name": "DHAKA",
+    "division_code": "30"
+  },
+  {
+    "upazila_name": "DHANMONDI",
+    "upazila_code": "302616",
+    "district_name": "DHAKA",
+    "district_code": "3026",
+    "division_name": "DHAKA",
+    "division_code": "30"
+  },
+  {
+    "upazila_name": "DOHAR",
+    "upazila_code": "302618",
+    "district_name": "DHAKA",
+    "district_code": "3026",
+    "division_name": "DHAKA",
+    "division_code": "30"
+  },
+  {
+    "upazila_name": "BHASANTEK",
+    "upazila_code": "302621",
+    "district_name": "DHAKA",
+    "district_code": "3026",
+    "division_name": "DHAKA",
+    "division_code": "30"
+  },
+  {
+    "upazila_name": "BHATARA",
+    "upazila_code": "302622",
+    "district_name": "DHAKA",
+    "district_code": "3026",
+    "division_name": "DHAKA",
+    "division_code": "30"
+  },
+  {
+    "upazila_name": "GENDARIA",
+    "upazila_code": "302624",
+    "district_name": "DHAKA",
+    "district_code": "3026",
+    "division_name": "DHAKA",
+    "division_code": "30"
+  },
+  {
+    "upazila_name": "GULSHAN",
+    "upazila_code": "302626",
+    "district_name": "DHAKA",
+    "district_code": "3026",
+    "division_name": "DHAKA",
+    "division_code": "30"
+  },
+  {
+    "upazila_name": "HAZARIBAG",
+    "upazila_code": "302628",
+    "district_name": "DHAKA",
+    "district_code": "3026",
+    "division_name": "DHAKA",
+    "division_code": "30"
+  },
+  {
+    "upazila_name": "JATRABARI",
+    "upazila_code": "302629",
+    "district_name": "DHAKA",
+    "district_code": "3026",
+    "division_name": "DHAKA",
+    "division_code": "30"
+  },
+  {
+    "upazila_name": "KAFRUL",
+    "upazila_code": "302630",
+    "district_name": "DHAKA",
+    "district_code": "3026",
+    "division_name": "DHAKA",
+    "division_code": "30"
+  },
+  {
+    "upazila_name": "KADAMTALI",
+    "upazila_code": "302632",
+    "district_name": "DHAKA",
+    "district_code": "3026",
+    "division_name": "DHAKA",
+    "division_code": "30"
+  },
+  {
+    "upazila_name": "KALABAGAN",
+    "upazila_code": "302633",
+    "district_name": "DHAKA",
+    "district_code": "3026",
+    "division_name": "DHAKA",
+    "division_code": "30"
+  },
+  {
+    "upazila_name": "KAMRANGICHAR",
+    "upazila_code": "302634",
+    "district_name": "DHAKA",
+    "district_code": "3026",
+    "division_name": "DHAKA",
+    "division_code": "30"
+  },
+  {
+    "upazila_name": "KHILGAON",
+    "upazila_code": "302636",
+    "district_name": "DHAKA",
+    "district_code": "3026",
+    "division_name": "DHAKA",
+    "division_code": "30"
+  },
+  {
+    "upazila_name": "KHILKHET",
+    "upazila_code": "302637",
+    "district_name": "DHAKA",
+    "district_code": "3026",
+    "division_name": "DHAKA",
+    "division_code": "30"
+  },
+  {
+    "upazila_name": "KERANIGANJ",
+    "upazila_code": "302638",
+    "district_name": "DHAKA",
+    "district_code": "3026",
+    "division_name": "DHAKA",
+    "division_code": "30"
+  },
+  {
+    "upazila_name": "KOTWALI",
+    "upazila_code": "302640",
+    "district_name": "DHAKA",
+    "district_code": "3026",
+    "division_name": "DHAKA",
+    "division_code": "30"
+  },
+  {
+    "upazila_name": "LALBAG",
+    "upazila_code": "302642",
+    "district_name": "DHAKA",
+    "district_code": "3026",
+    "division_name": "DHAKA",
+    "division_code": "30"
+  },
+  {
+    "upazila_name": "MIRPUR",
+    "upazila_code": "302648",
+    "district_name": "DHAKA",
+    "district_code": "3026",
+    "division_name": "DHAKA",
+    "division_code": "30"
+  },
+  {
+    "upazila_name": "MOHAMMADPUR",
+    "upazila_code": "302650",
+    "district_name": "DHAKA",
+    "district_code": "3026",
+    "division_name": "DHAKA",
+    "division_code": "30"
+  },
+  {
+    "upazila_name": "MOTIJHEEL",
+    "upazila_code": "302654",
+    "district_name": "DHAKA",
+    "district_code": "3026",
+    "division_name": "DHAKA",
+    "division_code": "30"
+  },
+  {
+    "upazila_name": "MUGDA",
+    "upazila_code": "302657",
+    "district_name": "DHAKA",
+    "district_code": "3026",
+    "division_name": "DHAKA",
+    "division_code": "30"
+  },
+  {
+    "upazila_name": "NAWABGANJ",
+    "upazila_code": "302662",
+    "district_name": "DHAKA",
+    "district_code": "3026",
+    "division_name": "DHAKA",
+    "division_code": "30"
+  },
+  {
+    "upazila_name": "NEWMARKET",
+    "upazila_code": "302663",
+    "district_name": "DHAKA",
+    "district_code": "3026",
+    "division_name": "DHAKA",
+    "division_code": "30"
+  },
+  {
+    "upazila_name": "PALLABI",
+    "upazila_code": "302664",
+    "district_name": "DHAKA",
+    "district_code": "3026",
+    "division_name": "DHAKA",
+    "division_code": "30"
+  },
+  {
+    "upazila_name": "PALTAN",
+    "upazila_code": "302665",
+    "district_name": "DHAKA",
+    "district_code": "3026",
+    "division_name": "DHAKA",
+    "division_code": "30"
+  },
+  {
+    "upazila_name": "RAMNA",
+    "upazila_code": "302666",
+    "district_name": "DHAKA",
+    "district_code": "3026",
+    "division_name": "DHAKA",
+    "division_code": "30"
+  },
+  {
+    "upazila_name": "RAMPURA",
+    "upazila_code": "302667",
+    "district_name": "DHAKA",
+    "district_code": "3026",
+    "division_name": "DHAKA",
+    "division_code": "30"
+  },
+  {
+    "upazila_name": "SABUJBAG",
+    "upazila_code": "302668",
+    "district_name": "DHAKA",
+    "district_code": "3026",
+    "division_name": "DHAKA",
+    "division_code": "30"
+  },
+  {
+    "upazila_name": "RUPNAGAR",
+    "upazila_code": "302670",
+    "district_name": "DHAKA",
+    "district_code": "3026",
+    "division_name": "DHAKA",
+    "division_code": "30"
+  },
+  {
+    "upazila_name": "SAVAR",
+    "upazila_code": "302672",
+    "district_name": "DHAKA",
+    "district_code": "3026",
+    "division_name": "DHAKA",
+    "division_code": "30"
+  },
+  {
+    "upazila_name": "SHAHJAHANPUR",
+    "upazila_code": "302673",
+    "district_name": "DHAKA",
+    "district_code": "3026",
+    "division_name": "DHAKA",
+    "division_code": "30"
+  },
+  {
+    "upazila_name": "SHAH ALI",
+    "upazila_code": "302674",
+    "district_name": "DHAKA",
+    "district_code": "3026",
+    "division_name": "DHAKA",
+    "division_code": "30"
+  },
+  {
+    "upazila_name": "SHAHBAG",
+    "upazila_code": "302675",
+    "district_name": "DHAKA",
+    "district_code": "3026",
+    "division_name": "DHAKA",
+    "division_code": "30"
+  },
+  {
+    "upazila_name": "SHYAMPUR",
+    "upazila_code": "302676",
+    "district_name": "DHAKA",
+    "district_code": "3026",
+    "division_name": "DHAKA",
+    "division_code": "30"
+  },
+  {
+    "upazila_name": "SHERE BANGLA NAGAR",
+    "upazila_code": "302680",
+    "district_name": "DHAKA",
+    "district_code": "3026",
+    "division_name": "DHAKA",
+    "division_code": "30"
+  },
+  {
+    "upazila_name": "SUTRAPUR",
+    "upazila_code": "302688",
+    "district_name": "DHAKA",
+    "district_code": "3026",
+    "division_name": "DHAKA",
+    "division_code": "30"
+  },
+  {
+    "upazila_name": "TEJGAON",
+    "upazila_code": "302690",
+    "district_name": "DHAKA",
+    "district_code": "3026",
+    "division_name": "DHAKA",
+    "division_code": "30"
+  },
+  {
+    "upazila_name": "TEJGAON SHILPA ELAKA",
+    "upazila_code": "302692",
+    "district_name": "DHAKA",
+    "district_code": "3026",
+    "division_name": "DHAKA",
+    "division_code": "30"
+  },
+  {
+    "upazila_name": "TURAG",
+    "upazila_code": "302693",
+    "district_name": "DHAKA",
+    "district_code": "3026",
+    "division_name": "DHAKA",
+    "division_code": "30"
+  },
+  {
+    "upazila_name": "UTTRA PASHCHIM",
+    "upazila_code": "302694",
+    "district_name": "DHAKA",
+    "district_code": "3026",
+    "division_name": "DHAKA",
+    "division_code": "30"
+  },
+  {
+    "upazila_name": "UTTARA PURBA",
+    "upazila_code": "302695",
+    "district_name": "DHAKA",
+    "district_code": "3026",
+    "division_name": "DHAKA",
+    "division_code": "30"
+  },
+  {
+    "upazila_name": "UTTARKHAN",
+    "upazila_code": "302696",
+    "district_name": "DHAKA",
+    "district_code": "3026",
+    "division_name": "DHAKA",
+    "division_code": "30"
+  },
+  {
+    "upazila_name": "WARI",
+    "upazila_code": "302698",
+    "district_name": "DHAKA",
+    "district_code": "3026",
+    "division_name": "DHAKA",
+    "division_code": "30"
+  },
+  {
+    "upazila_name": "BIRAMPUR",
+    "upazila_code": "552710",
+    "district_name": "DINAJPUR",
+    "district_code": "5527",
+    "division_name": "RANGPUR",
+    "division_code": "55"
+  },
+  {
+    "upazila_name": "BIRGANJ",
+    "upazila_code": "552712",
+    "district_name": "DINAJPUR",
+    "district_code": "5527",
+    "division_name": "RANGPUR",
+    "division_code": "55"
+  },
+  {
+    "upazila_name": "BIROL",
+    "upazila_code": "552717",
+    "district_name": "DINAJPUR",
+    "district_code": "5527",
+    "division_name": "RANGPUR",
+    "division_code": "55"
+  },
+  {
+    "upazila_name": "BOCHAGANJ",
+    "upazila_code": "552721",
+    "district_name": "DINAJPUR",
+    "district_code": "5527",
+    "division_name": "RANGPUR",
+    "division_code": "55"
+  },
+  {
+    "upazila_name": "CHIRIRBANDAR",
+    "upazila_code": "552730",
+    "district_name": "DINAJPUR",
+    "district_code": "5527",
+    "division_name": "RANGPUR",
+    "division_code": "55"
+  },
+  {
+    "upazila_name": "FULBARI",
+    "upazila_code": "552738",
+    "district_name": "DINAJPUR",
+    "district_code": "5527",
+    "division_name": "RANGPUR",
+    "division_code": "55"
+  },
+  {
+    "upazila_name": "GHORAGHAT",
+    "upazila_code": "552743",
+    "district_name": "DINAJPUR",
+    "district_code": "5527",
+    "division_name": "RANGPUR",
+    "division_code": "55"
+  },
+  {
+    "upazila_name": "HAKIMPUR",
+    "upazila_code": "552747",
+    "district_name": "DINAJPUR",
+    "district_code": "5527",
+    "division_name": "RANGPUR",
+    "division_code": "55"
+  },
+  {
+    "upazila_name": "KAHAROLE",
+    "upazila_code": "552756",
+    "district_name": "DINAJPUR",
+    "district_code": "5527",
+    "division_name": "RANGPUR",
+    "division_code": "55"
+  },
+  {
+    "upazila_name": "KHANSAMA",
+    "upazila_code": "552760",
+    "district_name": "DINAJPUR",
+    "district_code": "5527",
+    "division_name": "RANGPUR",
+    "division_code": "55"
+  },
+  {
+    "upazila_name": "DINAJPUR SADAR",
+    "upazila_code": "552764",
+    "district_name": "DINAJPUR",
+    "district_code": "5527",
+    "division_name": "RANGPUR",
+    "division_code": "55"
+  },
+  {
+    "upazila_name": "NABABGANJ",
+    "upazila_code": "552769",
+    "district_name": "DINAJPUR",
+    "district_code": "5527",
+    "division_name": "RANGPUR",
+    "division_code": "55"
+  },
+  {
+    "upazila_name": "PARBATIPUR",
+    "upazila_code": "552777",
+    "district_name": "DINAJPUR",
+    "district_code": "5527",
+    "division_name": "RANGPUR",
+    "division_code": "55"
+  },
+  {
+    "upazila_name": "ALFADANGA",
+    "upazila_code": "302903",
+    "district_name": "FARIDPUR",
+    "district_code": "3029",
+    "division_name": "DHAKA",
+    "division_code": "30"
+  },
+  {
+    "upazila_name": "BHANGA",
+    "upazila_code": "302910",
+    "district_name": "FARIDPUR",
+    "district_code": "3029",
+    "division_name": "DHAKA",
+    "division_code": "30"
+  },
+  {
+    "upazila_name": "BOALMARI",
+    "upazila_code": "302918",
+    "district_name": "FARIDPUR",
+    "district_code": "3029",
+    "division_name": "DHAKA",
+    "division_code": "30"
+  },
+  {
+    "upazila_name": "CHAR BHADRASAN",
+    "upazila_code": "302921",
+    "district_name": "FARIDPUR",
+    "district_code": "3029",
+    "division_name": "DHAKA",
+    "division_code": "30"
+  },
+  {
+    "upazila_name": "FARIDPUR SADAR",
+    "upazila_code": "302947",
+    "district_name": "FARIDPUR",
+    "district_code": "3029",
+    "division_name": "DHAKA",
+    "division_code": "30"
+  },
+  {
+    "upazila_name": "MADHUKHALI",
+    "upazila_code": "302956",
+    "district_name": "FARIDPUR",
+    "district_code": "3029",
+    "division_name": "DHAKA",
+    "division_code": "30"
+  },
+  {
+    "upazila_name": "NAGARKANDA",
+    "upazila_code": "302962",
+    "district_name": "FARIDPUR",
+    "district_code": "3029",
+    "division_name": "DHAKA",
+    "division_code": "30"
+  },
+  {
+    "upazila_name": "SADARPUR",
+    "upazila_code": "302984",
+    "district_name": "FARIDPUR",
+    "district_code": "3029",
+    "division_name": "DHAKA",
+    "division_code": "30"
+  },
+  {
+    "upazila_name": "SALTHA",
+    "upazila_code": "302990",
+    "district_name": "FARIDPUR",
+    "district_code": "3029",
+    "division_name": "DHAKA",
+    "division_code": "30"
+  },
+  {
+    "upazila_name": "CHHAGALNAIYA",
+    "upazila_code": "203014",
+    "district_name": "FENI",
+    "district_code": "2030",
+    "division_name": "CHATTOGRAM",
+    "division_code": "20"
+  },
+  {
+    "upazila_name": "DAGANBHUIYAN",
+    "upazila_code": "203025",
+    "district_name": "FENI",
+    "district_code": "2030",
+    "division_name": "CHATTOGRAM",
+    "division_code": "20"
+  },
+  {
+    "upazila_name": "FENI SADAR",
+    "upazila_code": "203029",
+    "district_name": "FENI",
+    "district_code": "2030",
+    "division_name": "CHATTOGRAM",
+    "division_code": "20"
+  },
+  {
+    "upazila_name": "FULGAZI",
+    "upazila_code": "203041",
+    "district_name": "FENI",
+    "district_code": "2030",
+    "division_name": "CHATTOGRAM",
+    "division_code": "20"
+  },
+  {
+    "upazila_name": "PARASHURAM",
+    "upazila_code": "203051",
+    "district_name": "FENI",
+    "district_code": "2030",
+    "division_name": "CHATTOGRAM",
+    "division_code": "20"
+  },
+  {
+    "upazila_name": "SONAGAZI",
+    "upazila_code": "203094",
+    "district_name": "FENI",
+    "district_code": "2030",
+    "division_name": "CHATTOGRAM",
+    "division_code": "20"
+  },
+  {
+    "upazila_name": "FULCHHARI",
+    "upazila_code": "553221",
+    "district_name": "GAIBANDHA",
+    "district_code": "5532",
+    "division_name": "RANGPUR",
+    "division_code": "55"
+  },
+  {
+    "upazila_name": "GAIBANDHA SADAR",
+    "upazila_code": "553224",
+    "district_name": "GAIBANDHA",
+    "district_code": "5532",
+    "division_name": "RANGPUR",
+    "division_code": "55"
+  },
+  {
+    "upazila_name": "GOBINDAGANJ",
+    "upazila_code": "553230",
+    "district_name": "GAIBANDHA",
+    "district_code": "5532",
+    "division_name": "RANGPUR",
+    "division_code": "55"
+  },
+  {
+    "upazila_name": "PALASHBARI",
+    "upazila_code": "553267",
+    "district_name": "GAIBANDHA",
+    "district_code": "5532",
+    "division_name": "RANGPUR",
+    "division_code": "55"
+  },
+  {
+    "upazila_name": "SADULLAPUR",
+    "upazila_code": "553282",
+    "district_name": "GAIBANDHA",
+    "district_code": "5532",
+    "division_name": "RANGPUR",
+    "division_code": "55"
+  },
+  {
+    "upazila_name": "SAGHATA",
+    "upazila_code": "553288",
+    "district_name": "GAIBANDHA",
+    "district_code": "5532",
+    "division_name": "RANGPUR",
+    "division_code": "55"
+  },
+  {
+    "upazila_name": "SUNDARGANJ",
+    "upazila_code": "553291",
+    "district_name": "GAIBANDHA",
+    "district_code": "5532",
+    "division_name": "RANGPUR",
+    "division_code": "55"
+  },
+  {
+    "upazila_name": "BASAN",
+    "upazila_code": "303315",
+    "district_name": "GAZIPUR",
+    "district_code": "3033",
+    "division_name": "DHAKA",
+    "division_code": "30"
+  },
+  {
+    "upazila_name": "GACHHA",
+    "upazila_code": "303318",
+    "district_name": "GAZIPUR",
+    "district_code": "3033",
+    "division_name": "DHAKA",
+    "division_code": "30"
+  },
+  {
+    "upazila_name": "GAZIPUR SADAR",
+    "upazila_code": "303330",
+    "district_name": "GAZIPUR",
+    "district_code": "3033",
+    "division_name": "DHAKA",
+    "division_code": "30"
+  },
+  {
+    "upazila_name": "KALIAKAIR",
+    "upazila_code": "303332",
+    "district_name": "GAZIPUR",
+    "district_code": "3033",
+    "division_name": "DHAKA",
+    "division_code": "30"
+  },
+  {
+    "upazila_name": "KALIGANJ",
+    "upazila_code": "303334",
+    "district_name": "GAZIPUR",
+    "district_code": "3033",
+    "division_name": "DHAKA",
+    "division_code": "30"
+  },
+  {
+    "upazila_name": "KAPASIA",
+    "upazila_code": "303336",
+    "district_name": "GAZIPUR",
+    "district_code": "3033",
+    "division_name": "DHAKA",
+    "division_code": "30"
+  },
+  {
+    "upazila_name": "KASHIMPUR",
+    "upazila_code": "303340",
+    "district_name": "GAZIPUR",
+    "district_code": "3033",
+    "division_name": "DHAKA",
+    "division_code": "30"
+  },
+  {
+    "upazila_name": "KONABARI",
+    "upazila_code": "303345",
+    "district_name": "GAZIPUR",
+    "district_code": "3033",
+    "division_name": "DHAKA",
+    "division_code": "30"
+  },
+  {
+    "upazila_name": "PUBAIL",
+    "upazila_code": "303350",
+    "district_name": "GAZIPUR",
+    "district_code": "3033",
+    "division_name": "DHAKA",
+    "division_code": "30"
+  },
+  {
+    "upazila_name": "SADAR",
+    "upazila_code": "303374",
+    "district_name": "GAZIPUR",
+    "district_code": "3033",
+    "division_name": "DHAKA",
+    "division_code": "30"
+  },
+  {
+    "upazila_name": "SREEPUR",
+    "upazila_code": "303386",
+    "district_name": "GAZIPUR",
+    "district_code": "3033",
+    "division_name": "DHAKA",
+    "division_code": "30"
+  },
+  {
+    "upazila_name": "TONGI PASHCHIM",
+    "upazila_code": "303390",
+    "district_name": "GAZIPUR",
+    "district_code": "3033",
+    "division_name": "DHAKA",
+    "division_code": "30"
+  },
+  {
+    "upazila_name": "TONGI PURBA",
+    "upazila_code": "303393",
+    "district_name": "GAZIPUR",
+    "district_code": "3033",
+    "division_name": "DHAKA",
+    "division_code": "30"
+  },
+  {
+    "upazila_name": "GOPALGANJ SADAR",
+    "upazila_code": "303532",
+    "district_name": "GOPALGANJ",
+    "district_code": "3035",
+    "division_name": "DHAKA",
+    "division_code": "30"
+  },
+  {
+    "upazila_name": "KASHIANI",
+    "upazila_code": "303543",
+    "district_name": "GOPALGANJ",
+    "district_code": "3035",
+    "division_name": "DHAKA",
+    "division_code": "30"
+  },
+  {
+    "upazila_name": "KOTALIPARA",
+    "upazila_code": "303551",
+    "district_name": "GOPALGANJ",
+    "district_code": "3035",
+    "division_name": "DHAKA",
+    "division_code": "30"
+  },
+  {
+    "upazila_name": "MUKSUDPUR",
+    "upazila_code": "303558",
+    "district_name": "GOPALGANJ",
+    "district_code": "3035",
+    "division_name": "DHAKA",
+    "division_code": "30"
+  },
+  {
+    "upazila_name": "TUNGIPARA",
+    "upazila_code": "303591",
+    "district_name": "GOPALGANJ",
+    "district_code": "3035",
+    "division_name": "DHAKA",
+    "division_code": "30"
+  },
+  {
+    "upazila_name": "AJMIRIGANJ",
+    "upazila_code": "603602",
+    "district_name": "HABIGANJ",
+    "district_code": "6036",
+    "division_name": "SYLHET",
+    "division_code": "60"
+  },
+  {
+    "upazila_name": "BAHUBAL",
+    "upazila_code": "603605",
+    "district_name": "HABIGANJ",
+    "district_code": "6036",
+    "division_name": "SYLHET",
+    "division_code": "60"
+  },
+  {
+    "upazila_name": "BANIACHONG",
+    "upazila_code": "603611",
+    "district_name": "HABIGANJ",
+    "district_code": "6036",
+    "division_name": "SYLHET",
+    "division_code": "60"
+  },
+  {
+    "upazila_name": "CHUNARUGHAT",
+    "upazila_code": "603626",
+    "district_name": "HABIGANJ",
+    "district_code": "6036",
+    "division_name": "SYLHET",
+    "division_code": "60"
+  },
+  {
+    "upazila_name": "HABIGANJ SADAR",
+    "upazila_code": "603644",
+    "district_name": "HABIGANJ",
+    "district_code": "6036",
+    "division_name": "SYLHET",
+    "division_code": "60"
+  },
+  {
+    "upazila_name": "LAKHAI",
+    "upazila_code": "603668",
+    "district_name": "HABIGANJ",
+    "district_code": "6036",
+    "division_name": "SYLHET",
+    "division_code": "60"
+  },
+  {
+    "upazila_name": "MADHABPUR",
+    "upazila_code": "603671",
+    "district_name": "HABIGANJ",
+    "district_code": "6036",
+    "division_name": "SYLHET",
+    "division_code": "60"
+  },
+  {
+    "upazila_name": "NABIGANJ",
+    "upazila_code": "603677",
+    "district_name": "HABIGANJ",
+    "district_code": "6036",
+    "division_name": "SYLHET",
+    "division_code": "60"
+  },
+  {
+    "upazila_name": "SHAYESTAGANJ",
+    "upazila_code": "603687",
+    "district_name": "HABIGANJ",
+    "district_code": "6036",
+    "division_name": "SYLHET",
+    "division_code": "60"
+  },
+  {
+    "upazila_name": "AKKELPUR",
+    "upazila_code": "503813",
+    "district_name": "JOYPURHAT",
+    "district_code": "5038",
+    "division_name": "RAJSHAHI",
+    "division_code": "50"
+  },
+  {
+    "upazila_name": "JOYPURHAT SADAR",
+    "upazila_code": "503847",
+    "district_name": "JOYPURHAT",
+    "district_code": "5038",
+    "division_name": "RAJSHAHI",
+    "division_code": "50"
+  },
+  {
+    "upazila_name": "KALAI",
+    "upazila_code": "503858",
+    "district_name": "JOYPURHAT",
+    "district_code": "5038",
+    "division_name": "RAJSHAHI",
+    "division_code": "50"
+  },
+  {
+    "upazila_name": "KHETLAL",
+    "upazila_code": "503861",
+    "district_name": "JOYPURHAT",
+    "district_code": "5038",
+    "division_name": "RAJSHAHI",
+    "division_code": "50"
+  },
+  {
+    "upazila_name": "PANCHBIBI",
+    "upazila_code": "503874",
+    "district_name": "JOYPURHAT",
+    "district_code": "5038",
+    "division_name": "RAJSHAHI",
+    "division_code": "50"
+  },
+  {
+    "upazila_name": "BAKSHIGANJ",
+    "upazila_code": "453907",
+    "district_name": "JAMALPUR",
+    "district_code": "4539",
+    "division_name": "MYMENSINGH",
+    "division_code": "45"
+  },
+  {
+    "upazila_name": "DEWANGANJ",
+    "upazila_code": "453915",
+    "district_name": "JAMALPUR",
+    "district_code": "4539",
+    "division_name": "MYMENSINGH",
+    "division_code": "45"
+  },
+  {
+    "upazila_name": "ISLAMPUR",
+    "upazila_code": "453929",
+    "district_name": "JAMALPUR",
+    "district_code": "4539",
+    "division_name": "MYMENSINGH",
+    "division_code": "45"
+  },
+  {
+    "upazila_name": "JAMALPUR SADAR",
+    "upazila_code": "453936",
+    "district_name": "JAMALPUR",
+    "district_code": "4539",
+    "division_name": "MYMENSINGH",
+    "division_code": "45"
+  },
+  {
+    "upazila_name": "MADARGANJ",
+    "upazila_code": "453958",
+    "district_name": "JAMALPUR",
+    "district_code": "4539",
+    "division_name": "MYMENSINGH",
+    "division_code": "45"
+  },
+  {
+    "upazila_name": "MELANDAHA",
+    "upazila_code": "453961",
+    "district_name": "JAMALPUR",
+    "district_code": "4539",
+    "division_name": "MYMENSINGH",
+    "division_code": "45"
+  },
+  {
+    "upazila_name": "SARISHABARI",
+    "upazila_code": "453985",
+    "district_name": "JAMALPUR",
+    "district_code": "4539",
+    "division_name": "MYMENSINGH",
+    "division_code": "45"
+  },
+  {
+    "upazila_name": "ABHAYNAGAR",
+    "upazila_code": "404104",
+    "district_name": "JASHORE",
+    "district_code": "4041",
+    "division_name": "KHULNA",
+    "division_code": "40"
+  },
+  {
+    "upazila_name": "BAGHARPARA",
+    "upazila_code": "404109",
+    "district_name": "JASHORE",
+    "district_code": "4041",
+    "division_name": "KHULNA",
+    "division_code": "40"
+  },
+  {
+    "upazila_name": "CHAUGACHHA",
+    "upazila_code": "404111",
+    "district_name": "JASHORE",
+    "district_code": "4041",
+    "division_name": "KHULNA",
+    "division_code": "40"
+  },
+  {
+    "upazila_name": "JHIKARGACHHA",
+    "upazila_code": "404123",
+    "district_name": "JASHORE",
+    "district_code": "4041",
+    "division_name": "KHULNA",
+    "division_code": "40"
+  },
+  {
+    "upazila_name": "KESHABPUR",
+    "upazila_code": "404138",
+    "district_name": "JASHORE",
+    "district_code": "4041",
+    "division_name": "KHULNA",
+    "division_code": "40"
+  },
+  {
+    "upazila_name": "JASHORE SADAR",
+    "upazila_code": "404147",
+    "district_name": "JASHORE",
+    "district_code": "4041",
+    "division_name": "KHULNA",
+    "division_code": "40"
+  },
+  {
+    "upazila_name": "MANIRAMPUR",
+    "upazila_code": "404161",
+    "district_name": "JASHORE",
+    "district_code": "4041",
+    "division_name": "KHULNA",
+    "division_code": "40"
+  },
+  {
+    "upazila_name": "SHARSHA",
+    "upazila_code": "404190",
+    "district_name": "JASHORE",
+    "district_code": "4041",
+    "division_name": "KHULNA",
+    "division_code": "40"
+  },
+  {
+    "upazila_name": "JHALOKATHI SADAR",
+    "upazila_code": "104240",
+    "district_name": "JHALOKATI",
+    "district_code": "1042",
+    "division_name": "BARISHAL",
+    "division_code": "10"
+  },
+  {
+    "upazila_name": "KANTHALIA",
+    "upazila_code": "104243",
+    "district_name": "JHALOKATI",
+    "district_code": "1042",
+    "division_name": "BARISHAL",
+    "division_code": "10"
+  },
+  {
+    "upazila_name": "NALCHHITY",
+    "upazila_code": "104273",
+    "district_name": "JHALOKATI",
+    "district_code": "1042",
+    "division_name": "BARISHAL",
+    "division_code": "10"
+  },
+  {
+    "upazila_name": "RAJAPUR",
+    "upazila_code": "104284",
+    "district_name": "JHALOKATI",
+    "district_code": "1042",
+    "division_name": "BARISHAL",
+    "division_code": "10"
+  },
+  {
+    "upazila_name": "HARINAKUNDU",
+    "upazila_code": "404414",
+    "district_name": "JHENAIDAH",
+    "district_code": "4044",
+    "division_name": "KHULNA",
+    "division_code": "40"
+  },
+  {
+    "upazila_name": "JHENAIDAH SADAR",
+    "upazila_code": "404419",
+    "district_name": "JHENAIDAH",
+    "district_code": "4044",
+    "division_name": "KHULNA",
+    "division_code": "40"
+  },
+  {
+    "upazila_name": "KALIGANJ",
+    "upazila_code": "404433",
+    "district_name": "JHENAIDAH",
+    "district_code": "4044",
+    "division_name": "KHULNA",
+    "division_code": "40"
+  },
+  {
+    "upazila_name": "KOTCHANDPUR",
+    "upazila_code": "404442",
+    "district_name": "JHENAIDAH",
+    "district_code": "4044",
+    "division_name": "KHULNA",
+    "division_code": "40"
+  },
+  {
+    "upazila_name": "MAHESHPUR",
+    "upazila_code": "404471",
+    "district_name": "JHENAIDAH",
+    "district_code": "4044",
+    "division_name": "KHULNA",
+    "division_code": "40"
+  },
+  {
+    "upazila_name": "SHAILKUPA",
+    "upazila_code": "404480",
+    "district_name": "JHENAIDAH",
+    "district_code": "4044",
+    "division_name": "KHULNA",
+    "division_code": "40"
+  },
+  {
+    "upazila_name": "DIGHINALA",
+    "upazila_code": "204643",
+    "district_name": "KHAGRACHHARI",
+    "district_code": "2046",
+    "division_name": "CHATTOGRAM",
+    "division_code": "20"
+  },
+  {
+    "upazila_name": "GUIMARA",
+    "upazila_code": "204647",
+    "district_name": "KHAGRACHHARI",
+    "district_code": "2046",
+    "division_name": "CHATTOGRAM",
+    "division_code": "20"
+  },
+  {
+    "upazila_name": "KHAGRACHHARI SADAR",
+    "upazila_code": "204649",
+    "district_name": "KHAGRACHHARI",
+    "district_code": "2046",
+    "division_name": "CHATTOGRAM",
+    "division_code": "20"
+  },
+  {
+    "upazila_name": "LAKKHICHHARI",
+    "upazila_code": "204661",
+    "district_name": "KHAGRACHHARI",
+    "district_code": "2046",
+    "division_name": "CHATTOGRAM",
+    "division_code": "20"
+  },
+  {
+    "upazila_name": "MAHALCHHARI",
+    "upazila_code": "204665",
+    "district_name": "KHAGRACHHARI",
+    "district_code": "2046",
+    "division_name": "CHATTOGRAM",
+    "division_code": "20"
+  },
+  {
+    "upazila_name": "MANIKCHHARI",
+    "upazila_code": "204667",
+    "district_name": "KHAGRACHHARI",
+    "district_code": "2046",
+    "division_name": "CHATTOGRAM",
+    "division_code": "20"
+  },
+  {
+    "upazila_name": "MATIRANGA",
+    "upazila_code": "204670",
+    "district_name": "KHAGRACHHARI",
+    "district_code": "2046",
+    "division_name": "CHATTOGRAM",
+    "division_code": "20"
+  },
+  {
+    "upazila_name": "PANCHHARI",
+    "upazila_code": "204677",
+    "district_name": "KHAGRACHHARI",
+    "district_code": "2046",
+    "division_name": "CHATTOGRAM",
+    "division_code": "20"
+  },
+  {
+    "upazila_name": "RAMGARH",
+    "upazila_code": "204680",
+    "district_name": "KHAGRACHHARI",
+    "district_code": "2046",
+    "division_name": "CHATTOGRAM",
+    "division_code": "20"
+  },
+  {
+    "upazila_name": "BATIAGHATA",
+    "upazila_code": "404712",
+    "district_name": "KHULNA",
+    "district_code": "4047",
+    "division_name": "KHULNA",
+    "division_code": "40"
+  },
+  {
+    "upazila_name": "DACOPE",
+    "upazila_code": "404717",
+    "district_name": "KHULNA",
+    "district_code": "4047",
+    "division_name": "KHULNA",
+    "division_code": "40"
+  },
+  {
+    "upazila_name": "DAULATPUR",
+    "upazila_code": "404721",
+    "district_name": "KHULNA",
+    "district_code": "4047",
+    "division_name": "KHULNA",
+    "division_code": "40"
+  },
+  {
+    "upazila_name": "DUMURIA",
+    "upazila_code": "404730",
+    "district_name": "KHULNA",
+    "district_code": "4047",
+    "division_name": "KHULNA",
+    "division_code": "40"
+  },
+  {
+    "upazila_name": "DIGHALIA",
+    "upazila_code": "404740",
+    "district_name": "KHULNA",
+    "district_code": "4047",
+    "division_name": "KHULNA",
+    "division_code": "40"
+  },
+  {
+    "upazila_name": "KHALISHPUR",
+    "upazila_code": "404745",
+    "district_name": "KHULNA",
+    "district_code": "4047",
+    "division_name": "KHULNA",
+    "division_code": "40"
+  },
+  {
+    "upazila_name": "KHAN JAHAN ALI",
+    "upazila_code": "404748",
+    "district_name": "KHULNA",
+    "district_code": "4047",
+    "division_name": "KHULNA",
+    "division_code": "40"
+  },
+  {
+    "upazila_name": "KHULNA SADAR",
+    "upazila_code": "404751",
+    "district_name": "KHULNA",
+    "district_code": "4047",
+    "division_name": "KHULNA",
+    "division_code": "40"
+  },
+  {
+    "upazila_name": "KOYRA",
+    "upazila_code": "404753",
+    "district_name": "KHULNA",
+    "district_code": "4047",
+    "division_name": "KHULNA",
+    "division_code": "40"
+  },
+  {
+    "upazila_name": "PAIKGACHHA",
+    "upazila_code": "404764",
+    "district_name": "KHULNA",
+    "district_code": "4047",
+    "division_name": "KHULNA",
+    "division_code": "40"
+  },
+  {
+    "upazila_name": "PHULTALA",
+    "upazila_code": "404769",
+    "district_name": "KHULNA",
+    "district_code": "4047",
+    "division_name": "KHULNA",
+    "division_code": "40"
+  },
+  {
+    "upazila_name": "RUPSA",
+    "upazila_code": "404775",
+    "district_name": "KHULNA",
+    "district_code": "4047",
+    "division_name": "KHULNA",
+    "division_code": "40"
+  },
+  {
+    "upazila_name": "SONADANGA",
+    "upazila_code": "404785",
+    "district_name": "KHULNA",
+    "district_code": "4047",
+    "division_name": "KHULNA",
+    "division_code": "40"
+  },
+  {
+    "upazila_name": "TEROKHADA",
+    "upazila_code": "404794",
+    "district_name": "KHULNA",
+    "district_code": "4047",
+    "division_name": "KHULNA",
+    "division_code": "40"
+  },
+  {
+    "upazila_name": "AUSTAGRAM",
+    "upazila_code": "304802",
+    "district_name": "KISHOREGANJ",
+    "district_code": "3048",
+    "division_name": "DHAKA",
+    "division_code": "30"
+  },
+  {
+    "upazila_name": "BAJITPUR",
+    "upazila_code": "304806",
+    "district_name": "KISHOREGANJ",
+    "district_code": "3048",
+    "division_name": "DHAKA",
+    "division_code": "30"
+  },
+  {
+    "upazila_name": "BHAIRAB",
+    "upazila_code": "304811",
+    "district_name": "KISHOREGANJ",
+    "district_code": "3048",
+    "division_name": "DHAKA",
+    "division_code": "30"
+  },
+  {
+    "upazila_name": "HOSSAINPUR",
+    "upazila_code": "304827",
+    "district_name": "KISHOREGANJ",
+    "district_code": "3048",
+    "division_name": "DHAKA",
+    "division_code": "30"
+  },
+  {
+    "upazila_name": "ITNA",
+    "upazila_code": "304833",
+    "district_name": "KISHOREGANJ",
+    "district_code": "3048",
+    "division_name": "DHAKA",
+    "division_code": "30"
+  },
+  {
+    "upazila_name": "KARIMGANJ",
+    "upazila_code": "304842",
+    "district_name": "KISHOREGANJ",
+    "district_code": "3048",
+    "division_name": "DHAKA",
+    "division_code": "30"
+  },
+  {
+    "upazila_name": "KATIADI",
+    "upazila_code": "304845",
+    "district_name": "KISHOREGANJ",
+    "district_code": "3048",
+    "division_name": "DHAKA",
+    "division_code": "30"
+  },
+  {
+    "upazila_name": "KISHOREGANJ SADAR",
+    "upazila_code": "304849",
+    "district_name": "KISHOREGANJ",
+    "district_code": "3048",
+    "division_name": "DHAKA",
+    "division_code": "30"
+  },
+  {
+    "upazila_name": "KULIARCHAR",
+    "upazila_code": "304854",
+    "district_name": "KISHOREGANJ",
+    "district_code": "3048",
+    "division_name": "DHAKA",
+    "division_code": "30"
+  },
+  {
+    "upazila_name": "MITHAMAIN",
+    "upazila_code": "304859",
+    "district_name": "KISHOREGANJ",
+    "district_code": "3048",
+    "division_name": "DHAKA",
+    "division_code": "30"
+  },
+  {
+    "upazila_name": "NIKLI",
+    "upazila_code": "304876",
+    "district_name": "KISHOREGANJ",
+    "district_code": "3048",
+    "division_name": "DHAKA",
+    "division_code": "30"
+  },
+  {
+    "upazila_name": "PAKUNDIA",
+    "upazila_code": "304879",
+    "district_name": "KISHOREGANJ",
+    "district_code": "3048",
+    "division_name": "DHAKA",
+    "division_code": "30"
+  },
+  {
+    "upazila_name": "TARAIL",
+    "upazila_code": "304892",
+    "district_name": "KISHOREGANJ",
+    "district_code": "3048",
+    "division_name": "DHAKA",
+    "division_code": "30"
+  },
+  {
+    "upazila_name": "BHURUNGAMARI",
+    "upazila_code": "554906",
+    "district_name": "KURIGRAM",
+    "district_code": "5549",
+    "division_name": "RANGPUR",
+    "division_code": "55"
+  },
+  {
+    "upazila_name": "RAJIBPUR",
+    "upazila_code": "554908",
+    "district_name": "KURIGRAM",
+    "district_code": "5549",
+    "division_name": "RANGPUR",
+    "division_code": "55"
+  },
+  {
+    "upazila_name": "CHILMARI",
+    "upazila_code": "554909",
+    "district_name": "KURIGRAM",
+    "district_code": "5549",
+    "division_name": "RANGPUR",
+    "division_code": "55"
+  },
+  {
+    "upazila_name": "PHULBARI",
+    "upazila_code": "554918",
+    "district_name": "KURIGRAM",
+    "district_code": "5549",
+    "division_name": "RANGPUR",
+    "division_code": "55"
+  },
+  {
+    "upazila_name": "KURIGRAM SADAR",
+    "upazila_code": "554952",
+    "district_name": "KURIGRAM",
+    "district_code": "5549",
+    "division_name": "RANGPUR",
+    "division_code": "55"
+  },
+  {
+    "upazila_name": "NAGESHWARI",
+    "upazila_code": "554961",
+    "district_name": "KURIGRAM",
+    "district_code": "5549",
+    "division_name": "RANGPUR",
+    "division_code": "55"
+  },
+  {
+    "upazila_name": "RAJARHAT",
+    "upazila_code": "554977",
+    "district_name": "KURIGRAM",
+    "district_code": "5549",
+    "division_name": "RANGPUR",
+    "division_code": "55"
+  },
+  {
+    "upazila_name": "ROUMARI",
+    "upazila_code": "554979",
+    "district_name": "KURIGRAM",
+    "district_code": "5549",
+    "division_name": "RANGPUR",
+    "division_code": "55"
+  },
+  {
+    "upazila_name": "ULIPUR",
+    "upazila_code": "554994",
+    "district_name": "KURIGRAM",
+    "district_code": "5549",
+    "division_name": "RANGPUR",
+    "division_code": "55"
+  },
+  {
+    "upazila_name": "BHERAMARA",
+    "upazila_code": "405015",
+    "district_name": "KUSHTIA",
+    "district_code": "4050",
+    "division_name": "KHULNA",
+    "division_code": "40"
+  },
+  {
+    "upazila_name": "DAULATPUR",
+    "upazila_code": "405039",
+    "district_name": "KUSHTIA",
+    "district_code": "4050",
+    "division_name": "KHULNA",
+    "division_code": "40"
+  },
+  {
+    "upazila_name": "KHOKSA",
+    "upazila_code": "405063",
+    "district_name": "KUSHTIA",
+    "district_code": "4050",
+    "division_name": "KHULNA",
+    "division_code": "40"
+  },
+  {
+    "upazila_name": "KUMARKHALI",
+    "upazila_code": "405071",
+    "district_name": "KUSHTIA",
+    "district_code": "4050",
+    "division_name": "KHULNA",
+    "division_code": "40"
+  },
+  {
+    "upazila_name": "KUSHTIA SADAR",
+    "upazila_code": "405079",
+    "district_name": "KUSHTIA",
+    "district_code": "4050",
+    "division_name": "KHULNA",
+    "division_code": "40"
+  },
+  {
+    "upazila_name": "MIRPUR",
+    "upazila_code": "405094",
+    "district_name": "KUSHTIA",
+    "district_code": "4050",
+    "division_name": "KHULNA",
+    "division_code": "40"
+  },
+  {
+    "upazila_name": "KAMALNAGAR",
+    "upazila_code": "205133",
+    "district_name": "LAKSHMIPUR",
+    "district_code": "2051",
+    "division_name": "CHATTOGRAM",
+    "division_code": "20"
+  },
+  {
+    "upazila_name": "LAKSHMIPUR SADAR",
+    "upazila_code": "205143",
+    "district_name": "LAKSHMIPUR",
+    "district_code": "2051",
+    "division_name": "CHATTOGRAM",
+    "division_code": "20"
+  },
+  {
+    "upazila_name": "RAIPUR",
+    "upazila_code": "205158",
+    "district_name": "LAKSHMIPUR",
+    "district_code": "2051",
+    "division_name": "CHATTOGRAM",
+    "division_code": "20"
+  },
+  {
+    "upazila_name": "RAMGANJ",
+    "upazila_code": "205165",
+    "district_name": "LAKSHMIPUR",
+    "district_code": "2051",
+    "division_name": "CHATTOGRAM",
+    "division_code": "20"
+  },
+  {
+    "upazila_name": "RAMGATI",
+    "upazila_code": "205173",
+    "district_name": "LAKSHMIPUR",
+    "district_code": "2051",
+    "division_name": "CHATTOGRAM",
+    "division_code": "20"
+  },
+  {
+    "upazila_name": "ADITMARI",
+    "upazila_code": "555202",
+    "district_name": "LALMONIRHAT",
+    "district_code": "5552",
+    "division_name": "RANGPUR",
+    "division_code": "55"
+  },
+  {
+    "upazila_name": "HATIBANDHA",
+    "upazila_code": "555233",
+    "district_name": "LALMONIRHAT",
+    "district_code": "5552",
+    "division_name": "RANGPUR",
+    "division_code": "55"
+  },
+  {
+    "upazila_name": "KALIGANJ",
+    "upazila_code": "555239",
+    "district_name": "LALMONIRHAT",
+    "district_code": "5552",
+    "division_name": "RANGPUR",
+    "division_code": "55"
+  },
+  {
+    "upazila_name": "LALMONIRHAT SADAR",
+    "upazila_code": "555255",
+    "district_name": "LALMONIRHAT",
+    "district_code": "5552",
+    "division_name": "RANGPUR",
+    "division_code": "55"
+  },
+  {
+    "upazila_name": "PATGRAM",
+    "upazila_code": "555270",
+    "district_name": "LALMONIRHAT",
+    "district_code": "5552",
+    "division_name": "RANGPUR",
+    "division_code": "55"
+  },
+  {
+    "upazila_name": "KALKINI",
+    "upazila_code": "305440",
+    "district_name": "MADARIPUR",
+    "district_code": "3054",
+    "division_name": "DHAKA",
+    "division_code": "30"
+  },
+  {
+    "upazila_name": "MADARIPUR SADAR",
+    "upazila_code": "305454",
+    "district_name": "MADARIPUR",
+    "district_code": "3054",
+    "division_name": "DHAKA",
+    "division_code": "30"
+  },
+  {
+    "upazila_name": "RAJOIR",
+    "upazila_code": "305480",
+    "district_name": "MADARIPUR",
+    "district_code": "3054",
+    "division_name": "DHAKA",
+    "division_code": "30"
+  },
+  {
+    "upazila_name": "SHIBCHAR",
+    "upazila_code": "305487",
+    "district_name": "MADARIPUR",
+    "district_code": "3054",
+    "division_name": "DHAKA",
+    "division_code": "30"
+  },
+  {
+    "upazila_name": "MAGURA SADAR",
+    "upazila_code": "405557",
+    "district_name": "MAGURA",
+    "district_code": "4055",
+    "division_name": "KHULNA",
+    "division_code": "40"
+  },
+  {
+    "upazila_name": "MOHAMMADPUR",
+    "upazila_code": "405566",
+    "district_name": "MAGURA",
+    "district_code": "4055",
+    "division_name": "KHULNA",
+    "division_code": "40"
+  },
+  {
+    "upazila_name": "SHALIKHA",
+    "upazila_code": "405585",
+    "district_name": "MAGURA",
+    "district_code": "4055",
+    "division_name": "KHULNA",
+    "division_code": "40"
+  },
+  {
+    "upazila_name": "SREEPUR",
+    "upazila_code": "405595",
+    "district_name": "MAGURA",
+    "district_code": "4055",
+    "division_name": "KHULNA",
+    "division_code": "40"
+  },
+  {
+    "upazila_name": "DAULATPUR",
+    "upazila_code": "305610",
+    "district_name": "MANIKGANJ",
+    "district_code": "3056",
+    "division_name": "DHAKA",
+    "division_code": "30"
+  },
+  {
+    "upazila_name": "GHIOR",
+    "upazila_code": "305622",
+    "district_name": "MANIKGANJ",
+    "district_code": "3056",
+    "division_name": "DHAKA",
+    "division_code": "30"
+  },
+  {
+    "upazila_name": "HARIRAMPUR",
+    "upazila_code": "305628",
+    "district_name": "MANIKGANJ",
+    "district_code": "3056",
+    "division_name": "DHAKA",
+    "division_code": "30"
+  },
+  {
+    "upazila_name": "MANIKGANJ SADAR",
+    "upazila_code": "305646",
+    "district_name": "MANIKGANJ",
+    "district_code": "3056",
+    "division_name": "DHAKA",
+    "division_code": "30"
+  },
+  {
+    "upazila_name": "SATURIA",
+    "upazila_code": "305670",
+    "district_name": "MANIKGANJ",
+    "district_code": "3056",
+    "division_name": "DHAKA",
+    "division_code": "30"
+  },
+  {
+    "upazila_name": "SHIBALAY",
+    "upazila_code": "305678",
+    "district_name": "MANIKGANJ",
+    "district_code": "3056",
+    "division_name": "DHAKA",
+    "division_code": "30"
+  },
+  {
+    "upazila_name": "SINGAIR",
+    "upazila_code": "305682",
+    "district_name": "MANIKGANJ",
+    "district_code": "3056",
+    "division_name": "DHAKA",
+    "division_code": "30"
+  },
+  {
+    "upazila_name": "GANGNI",
+    "upazila_code": "405747",
+    "district_name": "MEHERPUR",
+    "district_code": "4057",
+    "division_name": "KHULNA",
+    "division_code": "40"
+  },
+  {
+    "upazila_name": "MUJIBNAGAR",
+    "upazila_code": "405760",
+    "district_name": "MEHERPUR",
+    "district_code": "4057",
+    "division_name": "KHULNA",
+    "division_code": "40"
+  },
+  {
+    "upazila_name": "MEHERPUR SADAR",
+    "upazila_code": "405787",
+    "district_name": "MEHERPUR",
+    "district_code": "4057",
+    "division_name": "KHULNA",
+    "division_code": "40"
+  },
+  {
+    "upazila_name": "BARALEKHA",
+    "upazila_code": "605814",
+    "district_name": "MOULVIBAZAR",
+    "district_code": "6058",
+    "division_name": "SYLHET",
+    "division_code": "60"
+  },
+  {
+    "upazila_name": "JURI",
+    "upazila_code": "605835",
+    "district_name": "MOULVIBAZAR",
+    "district_code": "6058",
+    "division_name": "SYLHET",
+    "division_code": "60"
+  },
+  {
+    "upazila_name": "KAMALGANJ",
+    "upazila_code": "605856",
+    "district_name": "MOULVIBAZAR",
+    "district_code": "6058",
+    "division_name": "SYLHET",
+    "division_code": "60"
+  },
+  {
+    "upazila_name": "KULAURA",
+    "upazila_code": "605865",
+    "district_name": "MOULVIBAZAR",
+    "district_code": "6058",
+    "division_name": "SYLHET",
+    "division_code": "60"
+  },
+  {
+    "upazila_name": "MOULVIBAZAR SADAR",
+    "upazila_code": "605874",
+    "district_name": "MOULVIBAZAR",
+    "district_code": "6058",
+    "division_name": "SYLHET",
+    "division_code": "60"
+  },
+  {
+    "upazila_name": "RAJNAGAR",
+    "upazila_code": "605880",
+    "district_name": "MOULVIBAZAR",
+    "district_code": "6058",
+    "division_name": "SYLHET",
+    "division_code": "60"
+  },
+  {
+    "upazila_name": "SREEMANGAL",
+    "upazila_code": "605883",
+    "district_name": "MOULVIBAZAR",
+    "district_code": "6058",
+    "division_name": "SYLHET",
+    "division_code": "60"
+  },
+  {
+    "upazila_name": "GAZARIA",
+    "upazila_code": "305924",
+    "district_name": "MUNSHIGANJ",
+    "district_code": "3059",
+    "division_name": "DHAKA",
+    "division_code": "30"
+  },
+  {
+    "upazila_name": "LOUHAJANG",
+    "upazila_code": "305944",
+    "district_name": "MUNSHIGANJ",
+    "district_code": "3059",
+    "division_name": "DHAKA",
+    "division_code": "30"
+  },
+  {
+    "upazila_name": "MUNSHIGANJ SADAR",
+    "upazila_code": "305956",
+    "district_name": "MUNSHIGANJ",
+    "district_code": "3059",
+    "division_name": "DHAKA",
+    "division_code": "30"
+  },
+  {
+    "upazila_name": "SIRAJDIKHAN",
+    "upazila_code": "305974",
+    "district_name": "MUNSHIGANJ",
+    "district_code": "3059",
+    "division_name": "DHAKA",
+    "division_code": "30"
+  },
+  {
+    "upazila_name": "SREENAGAR",
+    "upazila_code": "305984",
+    "district_name": "MUNSHIGANJ",
+    "district_code": "3059",
+    "division_name": "DHAKA",
+    "division_code": "30"
+  },
+  {
+    "upazila_name": "TONGIBARI",
+    "upazila_code": "305994",
+    "district_name": "MUNSHIGANJ",
+    "district_code": "3059",
+    "division_name": "DHAKA",
+    "division_code": "30"
+  },
+  {
+    "upazila_name": "BHALUKA",
+    "upazila_code": "456113",
+    "district_name": "MYMENSINGH",
+    "district_code": "4561",
+    "division_name": "MYMENSINGH",
+    "division_code": "45"
+  },
+  {
+    "upazila_name": "DHOBAURA",
+    "upazila_code": "456116",
+    "district_name": "MYMENSINGH",
+    "district_code": "4561",
+    "division_name": "MYMENSINGH",
+    "division_code": "45"
+  },
+  {
+    "upazila_name": "FULBARIA",
+    "upazila_code": "456120",
+    "district_name": "MYMENSINGH",
+    "district_code": "4561",
+    "division_name": "MYMENSINGH",
+    "division_code": "45"
+  },
+  {
+    "upazila_name": "GAFARGAON",
+    "upazila_code": "456122",
+    "district_name": "MYMENSINGH",
+    "district_code": "4561",
+    "division_name": "MYMENSINGH",
+    "division_code": "45"
+  },
+  {
+    "upazila_name": "GOURIPUR",
+    "upazila_code": "456123",
+    "district_name": "MYMENSINGH",
+    "district_code": "4561",
+    "division_name": "MYMENSINGH",
+    "division_code": "45"
+  },
+  {
+    "upazila_name": "HALUAGHAT",
+    "upazila_code": "456124",
+    "district_name": "MYMENSINGH",
+    "district_code": "4561",
+    "division_name": "MYMENSINGH",
+    "division_code": "45"
+  },
+  {
+    "upazila_name": "ISHWARGANJ",
+    "upazila_code": "456131",
+    "district_name": "MYMENSINGH",
+    "district_code": "4561",
+    "division_name": "MYMENSINGH",
+    "division_code": "45"
+  },
+  {
+    "upazila_name": "MYMENSINGH SADAR",
+    "upazila_code": "456152",
+    "district_name": "MYMENSINGH",
+    "district_code": "4561",
+    "division_name": "MYMENSINGH",
+    "division_code": "45"
+  },
+  {
+    "upazila_name": "MUKTAGACHHA",
+    "upazila_code": "456165",
+    "district_name": "MYMENSINGH",
+    "district_code": "4561",
+    "division_name": "MYMENSINGH",
+    "division_code": "45"
+  },
+  {
+    "upazila_name": "NANDAIL",
+    "upazila_code": "456172",
+    "district_name": "MYMENSINGH",
+    "district_code": "4561",
+    "division_name": "MYMENSINGH",
+    "division_code": "45"
+  },
+  {
+    "upazila_name": "FULPUR",
+    "upazila_code": "456181",
+    "district_name": "MYMENSINGH",
+    "district_code": "4561",
+    "division_name": "MYMENSINGH",
+    "division_code": "45"
+  },
+  {
+    "upazila_name": "TARAKANDA",
+    "upazila_code": "456188",
+    "district_name": "MYMENSINGH",
+    "district_code": "4561",
+    "division_name": "MYMENSINGH",
+    "division_code": "45"
+  },
+  {
+    "upazila_name": "TRISHAL",
+    "upazila_code": "456194",
+    "district_name": "MYMENSINGH",
+    "district_code": "4561",
+    "division_name": "MYMENSINGH",
+    "division_code": "45"
+  },
+  {
+    "upazila_name": "ATRAI",
+    "upazila_code": "506403",
+    "district_name": "NAOGAON",
+    "district_code": "5064",
+    "division_name": "RAJSHAHI",
+    "division_code": "50"
+  },
+  {
+    "upazila_name": "BADALGACHHI",
+    "upazila_code": "506406",
+    "district_name": "NAOGAON",
+    "district_code": "5064",
+    "division_name": "RAJSHAHI",
+    "division_code": "50"
+  },
+  {
+    "upazila_name": "DHAMOIRHAT",
+    "upazila_code": "506428",
+    "district_name": "NAOGAON",
+    "district_code": "5064",
+    "division_name": "RAJSHAHI",
+    "division_code": "50"
+  },
+  {
+    "upazila_name": "MANDA",
+    "upazila_code": "506447",
+    "district_name": "NAOGAON",
+    "district_code": "5064",
+    "division_name": "RAJSHAHI",
+    "division_code": "50"
+  },
+  {
+    "upazila_name": "MAHADEBPUR",
+    "upazila_code": "506450",
+    "district_name": "NAOGAON",
+    "district_code": "5064",
+    "division_name": "RAJSHAHI",
+    "division_code": "50"
+  },
+  {
+    "upazila_name": "NAOGAON SADAR",
+    "upazila_code": "506460",
+    "district_name": "NAOGAON",
+    "district_code": "5064",
+    "division_name": "RAJSHAHI",
+    "division_code": "50"
+  },
+  {
+    "upazila_name": "NIAMATPUR",
+    "upazila_code": "506469",
+    "district_name": "NAOGAON",
+    "district_code": "5064",
+    "division_name": "RAJSHAHI",
+    "division_code": "50"
+  },
+  {
+    "upazila_name": "PATNITALA",
+    "upazila_code": "506475",
+    "district_name": "NAOGAON",
+    "district_code": "5064",
+    "division_name": "RAJSHAHI",
+    "division_code": "50"
+  },
+  {
+    "upazila_name": "PORSHA",
+    "upazila_code": "506479",
+    "district_name": "NAOGAON",
+    "district_code": "5064",
+    "division_name": "RAJSHAHI",
+    "division_code": "50"
+  },
+  {
+    "upazila_name": "RANINAGAR",
+    "upazila_code": "506485",
+    "district_name": "NAOGAON",
+    "district_code": "5064",
+    "division_name": "RAJSHAHI",
+    "division_code": "50"
+  },
+  {
+    "upazila_name": "SAPAHAR",
+    "upazila_code": "506486",
+    "district_name": "NAOGAON",
+    "district_code": "5064",
+    "division_name": "RAJSHAHI",
+    "division_code": "50"
+  },
+  {
+    "upazila_name": "KALIA",
+    "upazila_code": "406528",
+    "district_name": "NARAIL",
+    "district_code": "4065",
+    "division_name": "KHULNA",
+    "division_code": "40"
+  },
+  {
+    "upazila_name": "LOHAGARA",
+    "upazila_code": "406552",
+    "district_name": "NARAIL",
+    "district_code": "4065",
+    "division_name": "KHULNA",
+    "division_code": "40"
+  },
+  {
+    "upazila_name": "NARAIL SADAR",
+    "upazila_code": "406576",
+    "district_name": "NARAIL",
+    "district_code": "4065",
+    "division_name": "KHULNA",
+    "division_code": "40"
+  },
+  {
+    "upazila_name": "ARAIHAZAR",
+    "upazila_code": "306702",
+    "district_name": "NARAYANGANJ",
+    "district_code": "3067",
+    "division_name": "DHAKA",
+    "division_code": "30"
+  },
+  {
+    "upazila_name": "SONARGAON",
+    "upazila_code": "306704",
+    "district_name": "NARAYANGANJ",
+    "district_code": "3067",
+    "division_name": "DHAKA",
+    "division_code": "30"
+  },
+  {
+    "upazila_name": "BANDAR",
+    "upazila_code": "306706",
+    "district_name": "NARAYANGANJ",
+    "district_code": "3067",
+    "division_name": "DHAKA",
+    "division_code": "30"
+  },
+  {
+    "upazila_name": "NARAYANGANJ SADAR",
+    "upazila_code": "306758",
+    "district_name": "NARAYANGANJ",
+    "district_code": "3067",
+    "division_name": "DHAKA",
+    "division_code": "30"
+  },
+  {
+    "upazila_name": "RUPGANJ",
+    "upazila_code": "306768",
+    "district_name": "NARAYANGANJ",
+    "district_code": "3067",
+    "division_name": "DHAKA",
+    "division_code": "30"
+  },
+  {
+    "upazila_name": "BELABO",
+    "upazila_code": "306807",
+    "district_name": "NARSINGDI",
+    "district_code": "3068",
+    "division_name": "DHAKA",
+    "division_code": "30"
+  },
+  {
+    "upazila_name": "MANOHARDI",
+    "upazila_code": "306852",
+    "district_name": "NARSINGDI",
+    "district_code": "3068",
+    "division_name": "DHAKA",
+    "division_code": "30"
+  },
+  {
+    "upazila_name": "NARSINGDI SADAR",
+    "upazila_code": "306860",
+    "district_name": "NARSINGDI",
+    "district_code": "3068",
+    "division_name": "DHAKA",
+    "division_code": "30"
+  },
+  {
+    "upazila_name": "PALASH",
+    "upazila_code": "306863",
+    "district_name": "NARSINGDI",
+    "district_code": "3068",
+    "division_name": "DHAKA",
+    "division_code": "30"
+  },
+  {
+    "upazila_name": "RAIPURA",
+    "upazila_code": "306864",
+    "district_name": "NARSINGDI",
+    "district_code": "3068",
+    "division_name": "DHAKA",
+    "division_code": "30"
+  },
+  {
+    "upazila_name": "SHIBPUR",
+    "upazila_code": "306876",
+    "district_name": "NARSINGDI",
+    "district_code": "3068",
+    "division_name": "DHAKA",
+    "division_code": "30"
+  },
+  {
+    "upazila_name": "BAGATIPARA",
+    "upazila_code": "506909",
+    "district_name": "NATORE",
+    "district_code": "5069",
+    "division_name": "RAJSHAHI",
+    "division_code": "50"
+  },
+  {
+    "upazila_name": "BARAIGRAM",
+    "upazila_code": "506915",
+    "district_name": "NATORE",
+    "district_code": "5069",
+    "division_name": "RAJSHAHI",
+    "division_code": "50"
+  },
+  {
+    "upazila_name": "GURUDASPUR",
+    "upazila_code": "506941",
+    "district_name": "NATORE",
+    "district_code": "5069",
+    "division_name": "RAJSHAHI",
+    "division_code": "50"
+  },
+  {
+    "upazila_name": "LALPUR",
+    "upazila_code": "506944",
+    "district_name": "NATORE",
+    "district_code": "5069",
+    "division_name": "RAJSHAHI",
+    "division_code": "50"
+  },
+  {
+    "upazila_name": "NALDANGA",
+    "upazila_code": "506955",
+    "district_name": "NATORE",
+    "district_code": "5069",
+    "division_name": "RAJSHAHI",
+    "division_code": "50"
+  },
+  {
+    "upazila_name": "NATORE SADAR",
+    "upazila_code": "506963",
+    "district_name": "NATORE",
+    "district_code": "5069",
+    "division_name": "RAJSHAHI",
+    "division_code": "50"
+  },
+  {
+    "upazila_name": "SINGRA",
+    "upazila_code": "506991",
+    "district_name": "NATORE",
+    "district_code": "5069",
+    "division_name": "RAJSHAHI",
+    "division_code": "50"
+  },
+  {
+    "upazila_name": "BHOLAHAT",
+    "upazila_code": "507018",
+    "district_name": "CHAPAINABABGANJ",
+    "district_code": "5070",
+    "division_name": "RAJSHAHI",
+    "division_code": "50"
+  },
+  {
+    "upazila_name": "GOMASTAPUR",
+    "upazila_code": "507037",
+    "district_name": "CHAPAINABABGANJ",
+    "district_code": "5070",
+    "division_name": "RAJSHAHI",
+    "division_code": "50"
+  },
+  {
+    "upazila_name": "NACHOLE",
+    "upazila_code": "507056",
+    "district_name": "CHAPAINABABGANJ",
+    "district_code": "5070",
+    "division_name": "RAJSHAHI",
+    "division_code": "50"
+  },
+  {
+    "upazila_name": "CHAPAINAWABGANJ SADAR",
+    "upazila_code": "507066",
+    "district_name": "CHAPAINABABGANJ",
+    "district_code": "5070",
+    "division_name": "RAJSHAHI",
+    "division_code": "50"
+  },
+  {
+    "upazila_name": "SHIBGANJ",
+    "upazila_code": "507088",
+    "district_name": "CHAPAINABABGANJ",
+    "district_code": "5070",
+    "division_name": "RAJSHAHI",
+    "division_code": "50"
+  },
+  {
+    "upazila_name": "ATPARA",
+    "upazila_code": "457204",
+    "district_name": "NETRAKONA",
+    "district_code": "4572",
+    "division_name": "MYMENSINGH",
+    "division_code": "45"
+  },
+  {
+    "upazila_name": "BARHATTA",
+    "upazila_code": "457209",
+    "district_name": "NETRAKONA",
+    "district_code": "4572",
+    "division_name": "MYMENSINGH",
+    "division_code": "45"
+  },
+  {
+    "upazila_name": "DURGAPUR",
+    "upazila_code": "457218",
+    "district_name": "NETRAKONA",
+    "district_code": "4572",
+    "division_name": "MYMENSINGH",
+    "division_code": "45"
+  },
+  {
+    "upazila_name": "KHALIAJURI",
+    "upazila_code": "457238",
+    "district_name": "NETRAKONA",
+    "district_code": "4572",
+    "division_name": "MYMENSINGH",
+    "division_code": "45"
+  },
+  {
+    "upazila_name": "KALMAKANDA",
+    "upazila_code": "457240",
+    "district_name": "NETRAKONA",
+    "district_code": "4572",
+    "division_name": "MYMENSINGH",
+    "division_code": "45"
+  },
+  {
+    "upazila_name": "KENDUA",
+    "upazila_code": "457247",
+    "district_name": "NETRAKONA",
+    "district_code": "4572",
+    "division_name": "MYMENSINGH",
+    "division_code": "45"
+  },
+  {
+    "upazila_name": "MADAN",
+    "upazila_code": "457256",
+    "district_name": "NETRAKONA",
+    "district_code": "4572",
+    "division_name": "MYMENSINGH",
+    "division_code": "45"
+  },
+  {
+    "upazila_name": "MOHANGANJ",
+    "upazila_code": "457263",
+    "district_name": "NETRAKONA",
+    "district_code": "4572",
+    "division_name": "MYMENSINGH",
+    "division_code": "45"
+  },
+  {
+    "upazila_name": "NETRAKONA SADAR",
+    "upazila_code": "457274",
+    "district_name": "NETRAKONA",
+    "district_code": "4572",
+    "division_name": "MYMENSINGH",
+    "division_code": "45"
+  },
+  {
+    "upazila_name": "PURBADHALA",
+    "upazila_code": "457283",
+    "district_name": "NETRAKONA",
+    "district_code": "4572",
+    "division_name": "MYMENSINGH",
+    "division_code": "45"
+  },
+  {
+    "upazila_name": "DIMLA",
+    "upazila_code": "557312",
+    "district_name": "NILPHAMARI",
+    "district_code": "5573",
+    "division_name": "RANGPUR",
+    "division_code": "55"
+  },
+  {
+    "upazila_name": "DOMAR",
+    "upazila_code": "557315",
+    "district_name": "NILPHAMARI",
+    "district_code": "5573",
+    "division_name": "RANGPUR",
+    "division_code": "55"
+  },
+  {
+    "upazila_name": "JALDHAKA",
+    "upazila_code": "557336",
+    "district_name": "NILPHAMARI",
+    "district_code": "5573",
+    "division_name": "RANGPUR",
+    "division_code": "55"
+  },
+  {
+    "upazila_name": "KISHOREGANJ",
+    "upazila_code": "557345",
+    "district_name": "NILPHAMARI",
+    "district_code": "5573",
+    "division_name": "RANGPUR",
+    "division_code": "55"
+  },
+  {
+    "upazila_name": "NILPHAMARI SADAR",
+    "upazila_code": "557364",
+    "district_name": "NILPHAMARI",
+    "district_code": "5573",
+    "division_name": "RANGPUR",
+    "division_code": "55"
+  },
+  {
+    "upazila_name": "SAIDPUR",
+    "upazila_code": "557385",
+    "district_name": "NILPHAMARI",
+    "district_code": "5573",
+    "division_name": "RANGPUR",
+    "division_code": "55"
+  },
+  {
+    "upazila_name": "BEGUMGANJ",
+    "upazila_code": "207507",
+    "district_name": "NOAKHALI",
+    "district_code": "2075",
+    "division_name": "CHATTOGRAM",
+    "division_code": "20"
+  },
+  {
+    "upazila_name": "CHATKHIL",
+    "upazila_code": "207510",
+    "district_name": "NOAKHALI",
+    "district_code": "2075",
+    "division_name": "CHATTOGRAM",
+    "division_code": "20"
+  },
+  {
+    "upazila_name": "COMPANIGANJ",
+    "upazila_code": "207521",
+    "district_name": "NOAKHALI",
+    "district_code": "2075",
+    "division_name": "CHATTOGRAM",
+    "division_code": "20"
+  },
+  {
+    "upazila_name": "HATIYA",
+    "upazila_code": "207536",
+    "district_name": "NOAKHALI",
+    "district_code": "2075",
+    "division_name": "CHATTOGRAM",
+    "division_code": "20"
+  },
+  {
+    "upazila_name": "KABIRHAT",
+    "upazila_code": "207547",
+    "district_name": "NOAKHALI",
+    "district_code": "2075",
+    "division_name": "CHATTOGRAM",
+    "division_code": "20"
+  },
+  {
+    "upazila_name": "SENBAG",
+    "upazila_code": "207580",
+    "district_name": "NOAKHALI",
+    "district_code": "2075",
+    "division_name": "CHATTOGRAM",
+    "division_code": "20"
+  },
+  {
+    "upazila_name": "SONAIMURI",
+    "upazila_code": "207583",
+    "district_name": "NOAKHALI",
+    "district_code": "2075",
+    "division_name": "CHATTOGRAM",
+    "division_code": "20"
+  },
+  {
+    "upazila_name": "SUBARNACHAR",
+    "upazila_code": "207585",
+    "district_name": "NOAKHALI",
+    "district_code": "2075",
+    "division_name": "CHATTOGRAM",
+    "division_code": "20"
+  },
+  {
+    "upazila_name": "NOAKHALI SADAR",
+    "upazila_code": "207587",
+    "district_name": "NOAKHALI",
+    "district_code": "2075",
+    "division_name": "CHATTOGRAM",
+    "division_code": "20"
+  },
+  {
+    "upazila_name": "ATGHARIA",
+    "upazila_code": "507605",
+    "district_name": "PABNA",
+    "district_code": "5076",
+    "division_name": "RAJSHAHI",
+    "division_code": "50"
+  },
+  {
+    "upazila_name": "BERA",
+    "upazila_code": "507616",
+    "district_name": "PABNA",
+    "district_code": "5076",
+    "division_name": "RAJSHAHI",
+    "division_code": "50"
+  },
+  {
+    "upazila_name": "BHANGURA",
+    "upazila_code": "507619",
+    "district_name": "PABNA",
+    "district_code": "5076",
+    "division_name": "RAJSHAHI",
+    "division_code": "50"
+  },
+  {
+    "upazila_name": "CHATMOHAR",
+    "upazila_code": "507622",
+    "district_name": "PABNA",
+    "district_code": "5076",
+    "division_name": "RAJSHAHI",
+    "division_code": "50"
+  },
+  {
+    "upazila_name": "FARIDPUR",
+    "upazila_code": "507633",
+    "district_name": "PABNA",
+    "district_code": "5076",
+    "division_name": "RAJSHAHI",
+    "division_code": "50"
+  },
+  {
+    "upazila_name": "ISHWARDI",
+    "upazila_code": "507639",
+    "district_name": "PABNA",
+    "district_code": "5076",
+    "division_name": "RAJSHAHI",
+    "division_code": "50"
+  },
+  {
+    "upazila_name": "PABNA SADAR",
+    "upazila_code": "507655",
+    "district_name": "PABNA",
+    "district_code": "5076",
+    "division_name": "RAJSHAHI",
+    "division_code": "50"
+  },
+  {
+    "upazila_name": "SANTHIA",
+    "upazila_code": "507672",
+    "district_name": "PABNA",
+    "district_code": "5076",
+    "division_name": "RAJSHAHI",
+    "division_code": "50"
+  },
+  {
+    "upazila_name": "SUJANAGAR",
+    "upazila_code": "507683",
+    "district_name": "PABNA",
+    "district_code": "5076",
+    "division_name": "RAJSHAHI",
+    "division_code": "50"
+  },
+  {
+    "upazila_name": "ATOWARI",
+    "upazila_code": "557704",
+    "district_name": "PANCHAGARH",
+    "district_code": "5577",
+    "division_name": "RANGPUR",
+    "division_code": "55"
+  },
+  {
+    "upazila_name": "BODA",
+    "upazila_code": "557725",
+    "district_name": "PANCHAGARH",
+    "district_code": "5577",
+    "division_name": "RANGPUR",
+    "division_code": "55"
+  },
+  {
+    "upazila_name": "DEBIGANJ",
+    "upazila_code": "557734",
+    "district_name": "PANCHAGARH",
+    "district_code": "5577",
+    "division_name": "RANGPUR",
+    "division_code": "55"
+  },
+  {
+    "upazila_name": "PANCHAGARH SADAR",
+    "upazila_code": "557773",
+    "district_name": "PANCHAGARH",
+    "district_code": "5577",
+    "division_name": "RANGPUR",
+    "division_code": "55"
+  },
+  {
+    "upazila_name": "TENTULIA",
+    "upazila_code": "557790",
+    "district_name": "PANCHAGARH",
+    "district_code": "5577",
+    "division_name": "RANGPUR",
+    "division_code": "55"
+  },
+  {
+    "upazila_name": "BAUPHAL",
+    "upazila_code": "107838",
+    "district_name": "PATUAKHALI",
+    "district_code": "1078",
+    "division_name": "BARISHAL",
+    "division_code": "10"
+  },
+  {
+    "upazila_name": "DASHMINA",
+    "upazila_code": "107852",
+    "district_name": "PATUAKHALI",
+    "district_code": "1078",
+    "division_name": "BARISHAL",
+    "division_code": "10"
+  },
+  {
+    "upazila_name": "DUMKI",
+    "upazila_code": "107855",
+    "district_name": "PATUAKHALI",
+    "district_code": "1078",
+    "division_name": "BARISHAL",
+    "division_code": "10"
+  },
+  {
+    "upazila_name": "GALACHIPA",
+    "upazila_code": "107857",
+    "district_name": "PATUAKHALI",
+    "district_code": "1078",
+    "division_name": "BARISHAL",
+    "division_code": "10"
+  },
+  {
+    "upazila_name": "KALAPARA",
+    "upazila_code": "107866",
+    "district_name": "PATUAKHALI",
+    "district_code": "1078",
+    "division_name": "BARISHAL",
+    "division_code": "10"
+  },
+  {
+    "upazila_name": "MIRZAGANJ",
+    "upazila_code": "107876",
+    "district_name": "PATUAKHALI",
+    "district_code": "1078",
+    "division_name": "BARISHAL",
+    "division_code": "10"
+  },
+  {
+    "upazila_name": "PATUAKHALI SADAR",
+    "upazila_code": "107895",
+    "district_name": "PATUAKHALI",
+    "district_code": "1078",
+    "division_name": "BARISHAL",
+    "division_code": "10"
+  },
+  {
+    "upazila_name": "RANGABALI",
+    "upazila_code": "107897",
+    "district_name": "PATUAKHALI",
+    "district_code": "1078",
+    "division_name": "BARISHAL",
+    "division_code": "10"
+  },
+  {
+    "upazila_name": "BHANDARIA",
+    "upazila_code": "107914",
+    "district_name": "PIROJPUR",
+    "district_code": "1079",
+    "division_name": "BARISHAL",
+    "division_code": "10"
+  },
+  {
+    "upazila_name": "KAWKHALI",
+    "upazila_code": "107947",
+    "district_name": "PIROJPUR",
+    "district_code": "1079",
+    "division_name": "BARISHAL",
+    "division_code": "10"
+  },
+  {
+    "upazila_name": "MATHBARIA",
+    "upazila_code": "107958",
+    "district_name": "PIROJPUR",
+    "district_code": "1079",
+    "division_name": "BARISHAL",
+    "division_code": "10"
+  },
+  {
+    "upazila_name": "NAZIRPUR",
+    "upazila_code": "107976",
+    "district_name": "PIROJPUR",
+    "district_code": "1079",
+    "division_name": "BARISHAL",
+    "division_code": "10"
+  },
+  {
+    "upazila_name": "PIROJPUR SADAR",
+    "upazila_code": "107980",
+    "district_name": "PIROJPUR",
+    "district_code": "1079",
+    "division_name": "BARISHAL",
+    "division_code": "10"
+  },
+  {
+    "upazila_name": "NESARABAD (SWARUPKATHI)",
+    "upazila_code": "107987",
+    "district_name": "PIROJPUR",
+    "district_code": "1079",
+    "division_name": "BARISHAL",
+    "division_code": "10"
+  },
+  {
+    "upazila_name": "INDURKANI",
+    "upazila_code": "107990",
+    "district_name": "PIROJPUR",
+    "district_code": "1079",
+    "division_name": "BARISHAL",
+    "division_code": "10"
+  },
+  {
+    "upazila_name": "BAGHA",
+    "upazila_code": "508110",
+    "district_name": "RAJSHAHI",
+    "district_code": "5081",
+    "division_name": "RAJSHAHI",
+    "division_code": "50"
+  },
+  {
+    "upazila_name": "BAGMARA",
+    "upazila_code": "508112",
+    "district_name": "RAJSHAHI",
+    "district_code": "5081",
+    "division_name": "RAJSHAHI",
+    "division_code": "50"
+  },
+  {
+    "upazila_name": "BOALIA",
+    "upazila_code": "508122",
+    "district_name": "RAJSHAHI",
+    "district_code": "5081",
+    "division_name": "RAJSHAHI",
+    "division_code": "50"
+  },
+  {
+    "upazila_name": "CHANDRIMA",
+    "upazila_code": "508124",
+    "district_name": "RAJSHAHI",
+    "district_code": "5081",
+    "division_name": "RAJSHAHI",
+    "division_code": "50"
+  },
+  {
+    "upazila_name": "CHARGHAT",
+    "upazila_code": "508125",
+    "district_name": "RAJSHAHI",
+    "district_code": "5081",
+    "division_name": "RAJSHAHI",
+    "division_code": "50"
+  },
+  {
+    "upazila_name": "DURGAPUR",
+    "upazila_code": "508131",
+    "district_name": "RAJSHAHI",
+    "district_code": "5081",
+    "division_name": "RAJSHAHI",
+    "division_code": "50"
+  },
+  {
+    "upazila_name": "GODAGARI",
+    "upazila_code": "508134",
+    "district_name": "RAJSHAHI",
+    "district_code": "5081",
+    "division_name": "RAJSHAHI",
+    "division_code": "50"
+  },
+  {
+    "upazila_name": "KASHIADANGA",
+    "upazila_code": "508138",
+    "district_name": "RAJSHAHI",
+    "district_code": "5081",
+    "division_name": "RAJSHAHI",
+    "division_code": "50"
+  },
+  {
+    "upazila_name": "MATIHAR",
+    "upazila_code": "508140",
+    "district_name": "RAJSHAHI",
+    "district_code": "5081",
+    "division_name": "RAJSHAHI",
+    "division_code": "50"
+  },
+  {
+    "upazila_name": "MOHANPUR",
+    "upazila_code": "508153",
+    "district_name": "RAJSHAHI",
+    "district_code": "5081",
+    "division_name": "RAJSHAHI",
+    "division_code": "50"
+  },
+  {
+    "upazila_name": "PABA",
+    "upazila_code": "508172",
+    "district_name": "RAJSHAHI",
+    "district_code": "5081",
+    "division_name": "RAJSHAHI",
+    "division_code": "50"
+  },
+  {
+    "upazila_name": "PUTHIA",
+    "upazila_code": "508182",
+    "district_name": "RAJSHAHI",
+    "district_code": "5081",
+    "division_name": "RAJSHAHI",
+    "division_code": "50"
+  },
+  {
+    "upazila_name": "RAJPARA",
+    "upazila_code": "508185",
+    "district_name": "RAJSHAHI",
+    "district_code": "5081",
+    "division_name": "RAJSHAHI",
+    "division_code": "50"
+  },
+  {
+    "upazila_name": "SHAH MAKHDUM",
+    "upazila_code": "508190",
+    "district_name": "RAJSHAHI",
+    "district_code": "5081",
+    "division_name": "RAJSHAHI",
+    "division_code": "50"
+  },
+  {
+    "upazila_name": "TANORE",
+    "upazila_code": "508194",
+    "district_name": "RAJSHAHI",
+    "district_code": "5081",
+    "division_name": "RAJSHAHI",
+    "division_code": "50"
+  },
+  {
+    "upazila_name": "BALIAKANDI",
+    "upazila_code": "308207",
+    "district_name": "RAJBARI",
+    "district_code": "3082",
+    "division_name": "DHAKA",
+    "division_code": "30"
+  },
+  {
+    "upazila_name": "GOALANDA",
+    "upazila_code": "308229",
+    "district_name": "RAJBARI",
+    "district_code": "3082",
+    "division_name": "DHAKA",
+    "division_code": "30"
+  },
+  {
+    "upazila_name": "KALUKHALI",
+    "upazila_code": "308247",
+    "district_name": "RAJBARI",
+    "district_code": "3082",
+    "division_name": "DHAKA",
+    "division_code": "30"
+  },
+  {
+    "upazila_name": "PANGSHA",
+    "upazila_code": "308273",
+    "district_name": "RAJBARI",
+    "district_code": "3082",
+    "division_name": "DHAKA",
+    "division_code": "30"
+  },
+  {
+    "upazila_name": "RAJBARI SADAR",
+    "upazila_code": "308276",
+    "district_name": "RAJBARI",
+    "district_code": "3082",
+    "division_name": "DHAKA",
+    "division_code": "30"
+  },
+  {
+    "upazila_name": "BAGHAICHHARI",
+    "upazila_code": "208407",
+    "district_name": "RANGAMATI",
+    "district_code": "2084",
+    "division_name": "CHATTOGRAM",
+    "division_code": "20"
+  },
+  {
+    "upazila_name": "BARKAL",
+    "upazila_code": "208421",
+    "district_name": "RANGAMATI",
+    "district_code": "2084",
+    "division_name": "CHATTOGRAM",
+    "division_code": "20"
+  },
+  {
+    "upazila_name": "KAWKHALI",
+    "upazila_code": "208425",
+    "district_name": "RANGAMATI",
+    "district_code": "2084",
+    "division_name": "CHATTOGRAM",
+    "division_code": "20"
+  },
+  {
+    "upazila_name": "BELAICHHARI",
+    "upazila_code": "208429",
+    "district_name": "RANGAMATI",
+    "district_code": "2084",
+    "division_name": "CHATTOGRAM",
+    "division_code": "20"
+  },
+  {
+    "upazila_name": "KAPTAI",
+    "upazila_code": "208436",
+    "district_name": "RANGAMATI",
+    "district_code": "2084",
+    "division_name": "CHATTOGRAM",
+    "division_code": "20"
+  },
+  {
+    "upazila_name": "JURACHHARI",
+    "upazila_code": "208447",
+    "district_name": "RANGAMATI",
+    "district_code": "2084",
+    "division_name": "CHATTOGRAM",
+    "division_code": "20"
+  },
+  {
+    "upazila_name": "LANGADU",
+    "upazila_code": "208458",
+    "district_name": "RANGAMATI",
+    "district_code": "2084",
+    "division_name": "CHATTOGRAM",
+    "division_code": "20"
+  },
+  {
+    "upazila_name": "NANIARCHAR",
+    "upazila_code": "208475",
+    "district_name": "RANGAMATI",
+    "district_code": "2084",
+    "division_name": "CHATTOGRAM",
+    "division_code": "20"
+  },
+  {
+    "upazila_name": "RAJASTHALI",
+    "upazila_code": "208478",
+    "district_name": "RANGAMATI",
+    "district_code": "2084",
+    "division_name": "CHATTOGRAM",
+    "division_code": "20"
+  },
+  {
+    "upazila_name": "RANGAMATI SADAR",
+    "upazila_code": "208487",
+    "district_name": "RANGAMATI",
+    "district_code": "2084",
+    "division_name": "CHATTOGRAM",
+    "division_code": "20"
+  },
+  {
+    "upazila_name": "BADARGANJ",
+    "upazila_code": "558503",
+    "district_name": "RANGPUR",
+    "district_code": "5585",
+    "division_name": "RANGPUR",
+    "division_code": "55"
+  },
+  {
+    "upazila_name": "GANGACHARA",
+    "upazila_code": "558527",
+    "district_name": "RANGPUR",
+    "district_code": "5585",
+    "division_name": "RANGPUR",
+    "division_code": "55"
+  },
+  {
+    "upazila_name": "KAUNIA",
+    "upazila_code": "558542",
+    "district_name": "RANGPUR",
+    "district_code": "5585",
+    "division_name": "RANGPUR",
+    "division_code": "55"
+  },
+  {
+    "upazila_name": "RANGPUR SADAR",
+    "upazila_code": "558549",
+    "district_name": "RANGPUR",
+    "district_code": "5585",
+    "division_name": "RANGPUR",
+    "division_code": "55"
+  },
+  {
+    "upazila_name": "MITHAPUKUR",
+    "upazila_code": "558558",
+    "district_name": "RANGPUR",
+    "district_code": "5585",
+    "division_name": "RANGPUR",
+    "division_code": "55"
+  },
+  {
+    "upazila_name": "PIRGACHHA",
+    "upazila_code": "558573",
+    "district_name": "RANGPUR",
+    "district_code": "5585",
+    "division_name": "RANGPUR",
+    "division_code": "55"
+  },
+  {
+    "upazila_name": "PIRGANJ",
+    "upazila_code": "558576",
+    "district_name": "RANGPUR",
+    "district_code": "5585",
+    "division_name": "RANGPUR",
+    "division_code": "55"
+  },
+  {
+    "upazila_name": "TARAGANJ",
+    "upazila_code": "558592",
+    "district_name": "RANGPUR",
+    "district_code": "5585",
+    "division_name": "RANGPUR",
+    "division_code": "55"
+  },
+  {
+    "upazila_name": "BHEDARGANJ",
+    "upazila_code": "308614",
+    "district_name": "SHARIATPUR",
+    "district_code": "3086",
+    "division_name": "DHAKA",
+    "division_code": "30"
+  },
+  {
+    "upazila_name": "DAMUDYA",
+    "upazila_code": "308625",
+    "district_name": "SHARIATPUR",
+    "district_code": "3086",
+    "division_name": "DHAKA",
+    "division_code": "30"
+  },
+  {
+    "upazila_name": "GOSAIRHAT",
+    "upazila_code": "308636",
+    "district_name": "SHARIATPUR",
+    "district_code": "3086",
+    "division_name": "DHAKA",
+    "division_code": "30"
+  },
+  {
+    "upazila_name": "NARIA",
+    "upazila_code": "308665",
+    "district_name": "SHARIATPUR",
+    "district_code": "3086",
+    "division_name": "DHAKA",
+    "division_code": "30"
+  },
+  {
+    "upazila_name": "SHARIATPUR SADAR",
+    "upazila_code": "308669",
+    "district_name": "SHARIATPUR",
+    "district_code": "3086",
+    "division_name": "DHAKA",
+    "division_code": "30"
+  },
+  {
+    "upazila_name": "ZAJIRA",
+    "upazila_code": "308694",
+    "district_name": "SHARIATPUR",
+    "district_code": "3086",
+    "division_name": "DHAKA",
+    "division_code": "30"
+  },
+  {
+    "upazila_name": "ASHASHUNI",
+    "upazila_code": "408704",
+    "district_name": "SATKHIRA",
+    "district_code": "4087",
+    "division_name": "KHULNA",
+    "division_code": "40"
+  },
+  {
+    "upazila_name": "DEBHATA",
+    "upazila_code": "408725",
+    "district_name": "SATKHIRA",
+    "district_code": "4087",
+    "division_name": "KHULNA",
+    "division_code": "40"
+  },
+  {
+    "upazila_name": "KALAROA",
+    "upazila_code": "408743",
+    "district_name": "SATKHIRA",
+    "district_code": "4087",
+    "division_name": "KHULNA",
+    "division_code": "40"
+  },
+  {
+    "upazila_name": "KALIGANJ",
+    "upazila_code": "408747",
+    "district_name": "SATKHIRA",
+    "district_code": "4087",
+    "division_name": "KHULNA",
+    "division_code": "40"
+  },
+  {
+    "upazila_name": "SATKHIRA SADAR",
+    "upazila_code": "408782",
+    "district_name": "SATKHIRA",
+    "district_code": "4087",
+    "division_name": "KHULNA",
+    "division_code": "40"
+  },
+  {
+    "upazila_name": "SHYAMNAGAR",
+    "upazila_code": "408786",
+    "district_name": "SATKHIRA",
+    "district_code": "4087",
+    "division_name": "KHULNA",
+    "division_code": "40"
+  },
+  {
+    "upazila_name": "TALA",
+    "upazila_code": "408790",
+    "district_name": "SATKHIRA",
+    "district_code": "4087",
+    "division_name": "KHULNA",
+    "division_code": "40"
+  },
+  {
+    "upazila_name": "BELKUCHI",
+    "upazila_code": "508811",
+    "district_name": "SIRAJGANJ",
+    "district_code": "5088",
+    "division_name": "RAJSHAHI",
+    "division_code": "50"
+  },
+  {
+    "upazila_name": "CHOUHALI",
+    "upazila_code": "508827",
+    "district_name": "SIRAJGANJ",
+    "district_code": "5088",
+    "division_name": "RAJSHAHI",
+    "division_code": "50"
+  },
+  {
+    "upazila_name": "KAMARKHANDA",
+    "upazila_code": "508844",
+    "district_name": "SIRAJGANJ",
+    "district_code": "5088",
+    "division_name": "RAJSHAHI",
+    "division_code": "50"
+  },
+  {
+    "upazila_name": "KAZIPUR",
+    "upazila_code": "508850",
+    "district_name": "SIRAJGANJ",
+    "district_code": "5088",
+    "division_name": "RAJSHAHI",
+    "division_code": "50"
+  },
+  {
+    "upazila_name": "RAYGANJ",
+    "upazila_code": "508861",
+    "district_name": "SIRAJGANJ",
+    "district_code": "5088",
+    "division_name": "RAJSHAHI",
+    "division_code": "50"
+  },
+  {
+    "upazila_name": "SHAHJADPUR",
+    "upazila_code": "508867",
+    "district_name": "SIRAJGANJ",
+    "district_code": "5088",
+    "division_name": "RAJSHAHI",
+    "division_code": "50"
+  },
+  {
+    "upazila_name": "SIRAJGANJ SADAR",
+    "upazila_code": "508878",
+    "district_name": "SIRAJGANJ",
+    "district_code": "5088",
+    "division_name": "RAJSHAHI",
+    "division_code": "50"
+  },
+  {
+    "upazila_name": "TARASH",
+    "upazila_code": "508889",
+    "district_name": "SIRAJGANJ",
+    "district_code": "5088",
+    "division_name": "RAJSHAHI",
+    "division_code": "50"
+  },
+  {
+    "upazila_name": "ULLAPARA",
+    "upazila_code": "508894",
+    "district_name": "SIRAJGANJ",
+    "district_code": "5088",
+    "division_name": "RAJSHAHI",
+    "division_code": "50"
+  },
+  {
+    "upazila_name": "JHENAIGATI",
+    "upazila_code": "458937",
+    "district_name": "SHERPUR",
+    "district_code": "4589",
+    "division_name": "MYMENSINGH",
+    "division_code": "45"
+  },
+  {
+    "upazila_name": "NAKLA",
+    "upazila_code": "458967",
+    "district_name": "SHERPUR",
+    "district_code": "4589",
+    "division_name": "MYMENSINGH",
+    "division_code": "45"
+  },
+  {
+    "upazila_name": "NALITABARI",
+    "upazila_code": "458970",
+    "district_name": "SHERPUR",
+    "district_code": "4589",
+    "division_name": "MYMENSINGH",
+    "division_code": "45"
+  },
+  {
+    "upazila_name": "SHERPUR SADAR",
+    "upazila_code": "458988",
+    "district_name": "SHERPUR",
+    "district_code": "4589",
+    "division_name": "MYMENSINGH",
+    "division_code": "45"
+  },
+  {
+    "upazila_name": "SREEBARDI",
+    "upazila_code": "458990",
+    "district_name": "SHERPUR",
+    "district_code": "4589",
+    "division_name": "MYMENSINGH",
+    "division_code": "45"
+  },
+  {
+    "upazila_name": "BISHWAMBHARPUR",
+    "upazila_code": "609018",
+    "district_name": "SUNAMGANJ",
+    "district_code": "6090",
+    "division_name": "SYLHET",
+    "division_code": "60"
+  },
+  {
+    "upazila_name": "CHHATAK",
+    "upazila_code": "609023",
+    "district_name": "SUNAMGANJ",
+    "district_code": "6090",
+    "division_name": "SYLHET",
+    "division_code": "60"
+  },
+  {
+    "upazila_name": "DAKKHIN SUNAMGANJ",
+    "upazila_code": "609027",
+    "district_name": "SUNAMGANJ",
+    "district_code": "6090",
+    "division_name": "SYLHET",
+    "division_code": "60"
+  },
+  {
+    "upazila_name": "DERAI",
+    "upazila_code": "609029",
+    "district_name": "SUNAMGANJ",
+    "district_code": "6090",
+    "division_name": "SYLHET",
+    "division_code": "60"
+  },
+  {
+    "upazila_name": "DHARMAPASHA",
+    "upazila_code": "609032",
+    "district_name": "SUNAMGANJ",
+    "district_code": "6090",
+    "division_name": "SYLHET",
+    "division_code": "60"
+  },
+  {
+    "upazila_name": "DOWARABAZAR",
+    "upazila_code": "609033",
+    "district_name": "SUNAMGANJ",
+    "district_code": "6090",
+    "division_name": "SYLHET",
+    "division_code": "60"
+  },
+  {
+    "upazila_name": "JAGANNATHPUR",
+    "upazila_code": "609047",
+    "district_name": "SUNAMGANJ",
+    "district_code": "6090",
+    "division_name": "SYLHET",
+    "division_code": "60"
+  },
+  {
+    "upazila_name": "JAMALGANJ",
+    "upazila_code": "609050",
+    "district_name": "SUNAMGANJ",
+    "district_code": "6090",
+    "division_name": "SYLHET",
+    "division_code": "60"
+  },
+  {
+    "upazila_name": "SHALLA",
+    "upazila_code": "609086",
+    "district_name": "SUNAMGANJ",
+    "district_code": "6090",
+    "division_name": "SYLHET",
+    "division_code": "60"
+  },
+  {
+    "upazila_name": "SUNAMGANJ SADAR",
+    "upazila_code": "609089",
+    "district_name": "SUNAMGANJ",
+    "district_code": "6090",
+    "division_name": "SYLHET",
+    "division_code": "60"
+  },
+  {
+    "upazila_name": "TAHIRPUR",
+    "upazila_code": "609092",
+    "district_name": "SUNAMGANJ",
+    "district_code": "6090",
+    "division_name": "SYLHET",
+    "division_code": "60"
+  },
+  {
+    "upazila_name": "AIRPORT",
+    "upazila_code": "609105",
+    "district_name": "SYLHET",
+    "district_code": "6091",
+    "division_name": "SYLHET",
+    "division_code": "60"
+  },
+  {
+    "upazila_name": "BALAGANJ",
+    "upazila_code": "609108",
+    "district_name": "SYLHET",
+    "district_code": "6091",
+    "division_name": "SYLHET",
+    "division_code": "60"
+  },
+  {
+    "upazila_name": "BEANIBAZAR",
+    "upazila_code": "609117",
+    "district_name": "SYLHET",
+    "district_code": "6091",
+    "division_name": "SYLHET",
+    "division_code": "60"
+  },
+  {
+    "upazila_name": "BISHWANATH",
+    "upazila_code": "609120",
+    "district_name": "SYLHET",
+    "district_code": "6091",
+    "division_name": "SYLHET",
+    "division_code": "60"
+  },
+  {
+    "upazila_name": "COMPANIGANJ",
+    "upazila_code": "609127",
+    "district_name": "SYLHET",
+    "district_code": "6091",
+    "division_name": "SYLHET",
+    "division_code": "60"
+  },
+  {
+    "upazila_name": "DAKKHIN SURMA",
+    "upazila_code": "609131",
+    "district_name": "SYLHET",
+    "district_code": "6091",
+    "division_name": "SYLHET",
+    "division_code": "60"
+  },
+  {
+    "upazila_name": "FENCHUGANJ",
+    "upazila_code": "609135",
+    "district_name": "SYLHET",
+    "district_code": "6091",
+    "division_name": "SYLHET",
+    "division_code": "60"
+  },
+  {
+    "upazila_name": "GOLAPGANJ",
+    "upazila_code": "609138",
+    "district_name": "SYLHET",
+    "district_code": "6091",
+    "division_name": "SYLHET",
+    "division_code": "60"
+  },
+  {
+    "upazila_name": "GOWAINGHAT",
+    "upazila_code": "609141",
+    "district_name": "SYLHET",
+    "district_code": "6091",
+    "division_name": "SYLHET",
+    "division_code": "60"
+  },
+  {
+    "upazila_name": "JALALABAD",
+    "upazila_code": "609148",
+    "district_name": "SYLHET",
+    "district_code": "6091",
+    "division_name": "SYLHET",
+    "division_code": "60"
+  },
+  {
+    "upazila_name": "JAINTAPUR",
+    "upazila_code": "609153",
+    "district_name": "SYLHET",
+    "district_code": "6091",
+    "division_name": "SYLHET",
+    "division_code": "60"
+  },
+  {
+    "upazila_name": "KOTWALI",
+    "upazila_code": "609155",
+    "district_name": "SYLHET",
+    "district_code": "6091",
+    "division_name": "SYLHET",
+    "division_code": "60"
+  },
+  {
+    "upazila_name": "MOGLABAZAR",
+    "upazila_code": "609157",
+    "district_name": "SYLHET",
+    "district_code": "6091",
+    "division_name": "SYLHET",
+    "division_code": "60"
+  },
+  {
+    "upazila_name": "KANAIGHAT",
+    "upazila_code": "609159",
+    "district_name": "SYLHET",
+    "district_code": "6091",
+    "division_name": "SYLHET",
+    "division_code": "60"
+  },
+  {
+    "upazila_name": "OSMANINAGAR",
+    "upazila_code": "609160",
+    "district_name": "SYLHET",
+    "district_code": "6091",
+    "division_name": "SYLHET",
+    "division_code": "60"
+  },
+  {
+    "upazila_name": "SYLHET SADAR",
+    "upazila_code": "609162",
+    "district_name": "SYLHET",
+    "district_code": "6091",
+    "division_name": "SYLHET",
+    "division_code": "60"
+  },
+  {
+    "upazila_name": "SHAHPARAN",
+    "upazila_code": "609168",
+    "district_name": "SYLHET",
+    "district_code": "6091",
+    "division_name": "SYLHET",
+    "division_code": "60"
+  },
+  {
+    "upazila_name": "ZAKIGANJ",
+    "upazila_code": "609194",
+    "district_name": "SYLHET",
+    "district_code": "6091",
+    "division_name": "SYLHET",
+    "division_code": "60"
+  },
+  {
+    "upazila_name": "BASAIL",
+    "upazila_code": "309309",
+    "district_name": "TANGAIL",
+    "district_code": "3093",
+    "division_name": "DHAKA",
+    "division_code": "30"
+  },
+  {
+    "upazila_name": "BHUANPUR",
+    "upazila_code": "309319",
+    "district_name": "TANGAIL",
+    "district_code": "3093",
+    "division_name": "DHAKA",
+    "division_code": "30"
+  },
+  {
+    "upazila_name": "DELDUAR",
+    "upazila_code": "309323",
+    "district_name": "TANGAIL",
+    "district_code": "3093",
+    "division_name": "DHAKA",
+    "division_code": "30"
+  },
+  {
+    "upazila_name": "DHANBARI",
+    "upazila_code": "309325",
+    "district_name": "TANGAIL",
+    "district_code": "3093",
+    "division_name": "DHAKA",
+    "division_code": "30"
+  },
+  {
+    "upazila_name": "GHATAIL",
+    "upazila_code": "309328",
+    "district_name": "TANGAIL",
+    "district_code": "3093",
+    "division_name": "DHAKA",
+    "division_code": "30"
+  },
+  {
+    "upazila_name": "GOPALPUR",
+    "upazila_code": "309338",
+    "district_name": "TANGAIL",
+    "district_code": "3093",
+    "division_name": "DHAKA",
+    "division_code": "30"
+  },
+  {
+    "upazila_name": "KALIHATI",
+    "upazila_code": "309347",
+    "district_name": "TANGAIL",
+    "district_code": "3093",
+    "division_name": "DHAKA",
+    "division_code": "30"
+  },
+  {
+    "upazila_name": "MADHUPUR",
+    "upazila_code": "309357",
+    "district_name": "TANGAIL",
+    "district_code": "3093",
+    "division_name": "DHAKA",
+    "division_code": "30"
+  },
+  {
+    "upazila_name": "MIRZAPUR",
+    "upazila_code": "309366",
+    "district_name": "TANGAIL",
+    "district_code": "3093",
+    "division_name": "DHAKA",
+    "division_code": "30"
+  },
+  {
+    "upazila_name": "NAGARPUR",
+    "upazila_code": "309376",
+    "district_name": "TANGAIL",
+    "district_code": "3093",
+    "division_name": "DHAKA",
+    "division_code": "30"
+  },
+  {
+    "upazila_name": "SAKHIPUR",
+    "upazila_code": "309385",
+    "district_name": "TANGAIL",
+    "district_code": "3093",
+    "division_name": "DHAKA",
+    "division_code": "30"
+  },
+  {
+    "upazila_name": "TANGAIL SADAR",
+    "upazila_code": "309395",
+    "district_name": "TANGAIL",
+    "district_code": "3093",
+    "division_name": "DHAKA",
+    "division_code": "30"
+  },
+  {
+    "upazila_name": "BALIADANGI",
+    "upazila_code": "559408",
+    "district_name": "THAKURGAON",
+    "district_code": "5594",
+    "division_name": "RANGPUR",
+    "division_code": "55"
+  },
+  {
+    "upazila_name": "HARIPUR",
+    "upazila_code": "559451",
+    "district_name": "THAKURGAON",
+    "district_code": "5594",
+    "division_name": "RANGPUR",
+    "division_code": "55"
+  },
+  {
+    "upazila_name": "PIRGANJ",
+    "upazila_code": "559482",
+    "district_name": "THAKURGAON",
+    "district_code": "5594",
+    "division_name": "RANGPUR",
+    "division_code": "55"
+  },
+  {
+    "upazila_name": "RANISHANKAIL",
+    "upazila_code": "559486",
+    "district_name": "THAKURGAON",
+    "district_code": "5594",
+    "division_name": "RANGPUR",
+    "division_code": "55"
+  },
+  {
+    "upazila_name": "THAKURGAON SADAR",
+    "upazila_code": "559494",
+    "district_name": "THAKURGAON",
+    "district_code": "5594",
+    "division_name": "RANGPUR",
+    "division_code": "55"
+  }
+]

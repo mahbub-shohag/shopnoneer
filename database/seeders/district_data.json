@@ -1,0 +1,514 @@
+[
+  {
+    "division_bbs_code": "40",
+    "district_name_eng": "BAGERHAT",
+    "district_bbs_code": "4001",
+    "district_code": "01",
+    "latitude": "22.66024",
+    "longitude": "89.78955"
+  },
+  {
+    "division_bbs_code": "20",
+    "district_name_eng": "BANDARBAN",
+    "district_bbs_code": "2003",
+    "district_code": "03",
+    "latitude": "21.8311",
+    "longitude": "92.3686"
+  },
+  {
+    "division_bbs_code": "10",
+    "district_name_eng": "BARGUNA",
+    "district_bbs_code": "1004",
+    "district_code": "04",
+    "latitude": "22.09529",
+    "longitude": "90.11207"
+  },
+  {
+    "division_bbs_code": "10",
+    "district_name_eng": "BARISHAL",
+    "district_bbs_code": "1006",
+    "district_code": "06",
+    "latitude": "22.7010",
+    "longitude": "90.3535"
+  },
+  {
+    "division_bbs_code": "10",
+    "district_name_eng": "BHOLA",
+    "district_bbs_code": "1009",
+    "district_code": "09",
+    "latitude": "22.17853",
+    "longitude": "90.7101"
+  },
+  {
+    "division_bbs_code": "50",
+    "district_name_eng": "BOGURA",
+    "district_bbs_code": "5010",
+    "district_code": "10",
+    "latitude": "24.85104",
+    "longitude": "89.36972"
+  },
+  {
+    "division_bbs_code": "20",
+    "district_name_eng": "BRAHMANBARIA",
+    "district_bbs_code": "2012",
+    "district_code": "12",
+    "latitude": "23.96082",
+    "longitude": "91.1115"
+  },
+  {
+    "division_bbs_code": "20",
+    "district_name_eng": "CHANDPUR",
+    "district_bbs_code": "2013",
+    "district_code": "13",
+    "latitude": "23.25131",
+    "longitude": "90.85178"
+  },
+  {
+    "division_bbs_code": "20",
+    "district_name_eng": "CHATTOGRAM",
+    "district_bbs_code": "2015",
+    "district_code": "15",
+    "latitude": "22.51501",
+    "longitude": "91.75388"
+  },
+  {
+    "division_bbs_code": "40",
+    "district_name_eng": "CHUADANGA",
+    "district_bbs_code": "4018",
+    "district_code": "18",
+    "latitude": "23.61605",
+    "longitude": "88.8263"
+  },
+  {
+    "division_bbs_code": "20",
+    "district_name_eng": "CUMILLA",
+    "district_bbs_code": "2019",
+    "district_code": "19",
+    "latitude": "23.45757",
+    "longitude": "91.1809"
+  },
+  {
+    "division_bbs_code": "20",
+    "district_name_eng": "COXS BAZAR",
+    "district_bbs_code": "2022",
+    "district_code": "22",
+    "latitude": "21.56406",
+    "longitude": "92.02821"
+  },
+  {
+    "division_bbs_code": "30",
+    "district_name_eng": "DHAKA",
+    "district_bbs_code": "3026",
+    "district_code": "26",
+    "latitude": "23.8052",
+    "longitude": "90.33719"
+  },
+  {
+    "division_bbs_code": "55",
+    "district_name_eng": "DINAJPUR",
+    "district_bbs_code": "5527",
+    "district_code": "27",
+    "latitude": "25.62791",
+    "longitude": "88.63318"
+  },
+  {
+    "division_bbs_code": "30",
+    "district_name_eng": "FARIDPUR",
+    "district_bbs_code": "3029",
+    "district_code": "29",
+    "latitude": "23.54239",
+    "longitude": "89.63089"
+  },
+  {
+    "division_bbs_code": "20",
+    "district_name_eng": "FENI",
+    "district_bbs_code": "2030",
+    "district_code": "30",
+    "latitude": "22.94088",
+    "longitude": "91.40666"
+  },
+  {
+    "division_bbs_code": "55",
+    "district_name_eng": "GAIBANDHA",
+    "district_bbs_code": "5532",
+    "district_code": "32",
+    "latitude": "25.32969",
+    "longitude": "89.54297"
+  },
+  {
+    "division_bbs_code": "30",
+    "district_name_eng": "GAZIPUR",
+    "district_bbs_code": "3033",
+    "district_code": "33",
+    "latitude": "24.09582",
+    "longitude": "90.4125"
+  },
+  {
+    "division_bbs_code": "30",
+    "district_name_eng": "GOPALGANJ",
+    "district_bbs_code": "3035",
+    "district_code": "35",
+    "latitude": "23.04881",
+    "longitude": "89.88793"
+  },
+  {
+    "division_bbs_code": "60",
+    "district_name_eng": "HABIGANJ",
+    "district_bbs_code": "6036",
+    "district_code": "36",
+    "latitude": "24.47712",
+    "longitude": "91.45066"
+  },
+  {
+    "division_bbs_code": "50",
+    "district_name_eng": "JOYPURHAT",
+    "district_bbs_code": "5038",
+    "district_code": "38",
+    "latitude": "25.09473",
+    "longitude": "89.09449"
+  },
+  {
+    "division_bbs_code": "45",
+    "district_name_eng": "JAMALPUR",
+    "district_bbs_code": "4539",
+    "district_code": "39",
+    "latitude": "25.08309",
+    "longitude": "89.78532"
+  },
+  {
+    "division_bbs_code": "40",
+    "district_name_eng": "JASHORE",
+    "district_bbs_code": "4041",
+    "district_code": "41",
+    "latitude": "23.1634",
+    "longitude": "89.21817"
+  },
+  {
+    "division_bbs_code": "10",
+    "district_name_eng": "JHALOKATI",
+    "district_bbs_code": "1042",
+    "district_code": "42",
+    "latitude": "22.57208",
+    "longitude": "90.18696"
+  },
+  {
+    "division_bbs_code": "40",
+    "district_name_eng": "JHENAIDAH",
+    "district_bbs_code": "4044",
+    "district_code": "44",
+    "latitude": "23.54499",
+    "longitude": "89.1726"
+  },
+  {
+    "division_bbs_code": "20",
+    "district_name_eng": "KHAGRACHHARI",
+    "district_bbs_code": "2046",
+    "district_code": "46",
+    "latitude": "23.13218",
+    "longitude": "91.949"
+  },
+  {
+    "division_bbs_code": "40",
+    "district_name_eng": "KHULNA",
+    "district_bbs_code": "4047",
+    "district_code": "47",
+    "latitude": "22.67377",
+    "longitude": "89.39666"
+  },
+  {
+    "division_bbs_code": "30",
+    "district_name_eng": "KISHOREGANJ",
+    "district_bbs_code": "3048",
+    "district_code": "48",
+    "latitude": "24.426",
+    "longitude": "90.9821"
+  },
+  {
+    "division_bbs_code": "55",
+    "district_name_eng": "KURIGRAM",
+    "district_bbs_code": "5549",
+    "district_code": "49",
+    "latitude": "25.80724",
+    "longitude": "89.62947"
+  },
+  {
+    "division_bbs_code": "40",
+    "district_name_eng": "KUSHTIA",
+    "district_bbs_code": "4050",
+    "district_code": "50",
+    "latitude": "23.8907",
+    "longitude": "89.10994"
+  },
+  {
+    "division_bbs_code": "20",
+    "district_name_eng": "LAKSHMIPUR",
+    "district_bbs_code": "2051",
+    "district_code": "51",
+    "latitude": "22.94467",
+    "longitude": "90.82819"
+  },
+  {
+    "division_bbs_code": "55",
+    "district_name_eng": "LALMONIRHAT",
+    "district_bbs_code": "5552",
+    "district_code": "52",
+    "latitude": "25.99234",
+    "longitude": "89.28473"
+  },
+  {
+    "division_bbs_code": "30",
+    "district_name_eng": "MADARIPUR",
+    "district_bbs_code": "3054",
+    "district_code": "54",
+    "latitude": "23.23933",
+    "longitude": "90.18696"
+  },
+  {
+    "division_bbs_code": "40",
+    "district_name_eng": "MAGURA",
+    "district_bbs_code": "4055",
+    "district_code": "55",
+    "latitude": "23.429",
+    "longitude": "89.4364"
+  },
+  {
+    "division_bbs_code": "30",
+    "district_name_eng": "MANIKGANJ",
+    "district_bbs_code": "3056",
+    "district_code": "56",
+    "latitude": "23.86165",
+    "longitude": "90.00032"
+  },
+  {
+    "division_bbs_code": "40",
+    "district_name_eng": "MEHERPUR",
+    "district_bbs_code": "4057",
+    "district_code": "57",
+    "latitude": "23.11629",
+    "longitude": "88.67236"
+  },
+  {
+    "division_bbs_code": "60",
+    "district_name_eng": "MOULVIBAZAR",
+    "district_bbs_code": "6058",
+    "district_code": "58",
+    "latitude": "24.46706",
+    "longitude": "91.71496"
+  },
+  {
+    "division_bbs_code": "30",
+    "district_name_eng": "MUNSHIGANJ",
+    "district_bbs_code": "3059",
+    "district_code": "59",
+    "latitude": "23.49809",
+    "longitude": "90.41266"
+  },
+  {
+    "division_bbs_code": "45",
+    "district_name_eng": "MYMENSINGH",
+    "district_bbs_code": "4561",
+    "district_code": "61",
+    "latitude": "24.75386",
+    "longitude": "90.40729"
+  },
+  {
+    "division_bbs_code": "50",
+    "district_name_eng": "NAOGAON",
+    "district_bbs_code": "5064",
+    "district_code": "64",
+    "latitude": "24.91316",
+    "longitude": "88.7531"
+  },
+  {
+    "division_bbs_code": "40",
+    "district_name_eng": "NARAIL",
+    "district_bbs_code": "4065",
+    "district_code": "65",
+    "latitude": "23.11629",
+    "longitude": "89.58404"
+  },
+  {
+    "division_bbs_code": "30",
+    "district_name_eng": "NARAYANGANJ",
+    "district_bbs_code": "3067",
+    "district_code": "67",
+    "latitude": "23.71466",
+    "longitude": "90.56361"
+  },
+  {
+    "division_bbs_code": "30",
+    "district_name_eng": "NARSINGDI",
+    "district_bbs_code": "3068",
+    "district_code": "68",
+    "latitude": "24.13438",
+    "longitude": "90.78601"
+  },
+  {
+    "division_bbs_code": "50",
+    "district_name_eng": "NATORE",
+    "district_bbs_code": "5069",
+    "district_code": "69",
+    "latitude": "24.41024",
+    "longitude": "89.00762"
+  },
+  {
+    "division_bbs_code": "50",
+    "district_name_eng": "CHAPAINABABGANJ",
+    "district_bbs_code": "5070",
+    "district_code": "70",
+    "latitude": "24.74131",
+    "longitude": "88.29121"
+  },
+  {
+    "division_bbs_code": "45",
+    "district_name_eng": "NETRAKONA",
+    "district_bbs_code": "4572",
+    "district_code": "72",
+    "latitude": "24.81033",
+    "longitude": "90.86564"
+  },
+  {
+    "division_bbs_code": "55",
+    "district_name_eng": "NILPHAMARI",
+    "district_bbs_code": "5573",
+    "district_code": "73",
+    "latitude": "25.84828",
+    "longitude": "88.94141"
+  },
+  {
+    "division_bbs_code": "20",
+    "district_name_eng": "NOAKHALI",
+    "district_bbs_code": "2075",
+    "district_code": "75",
+    "latitude": "22.87238",
+    "longitude": "91.09732"
+  },
+  {
+    "division_bbs_code": "50",
+    "district_name_eng": "PABNA",
+    "district_bbs_code": "5076",
+    "district_code": "76",
+    "latitude": "24.15851",
+    "longitude": "89.44807"
+  },
+  {
+    "division_bbs_code": "55",
+    "district_name_eng": "PANCHAGARH",
+    "district_bbs_code": "5577",
+    "district_code": "77",
+    "latitude": "26.27087",
+    "longitude": "88.59518"
+  },
+  {
+    "division_bbs_code": "10",
+    "district_name_eng": "PATUAKHALI",
+    "district_bbs_code": "1078",
+    "district_code": "78",
+    "latitude": "22.22486",
+    "longitude": "90.45475"
+  },
+  {
+    "division_bbs_code": "10",
+    "district_name_eng": "PIROJPUR",
+    "district_bbs_code": "1079",
+    "district_code": "79",
+    "latitude": "22.57907",
+    "longitude": "89.97593"
+  },
+  {
+    "division_bbs_code": "50",
+    "district_name_eng": "RAJSHAHI",
+    "district_bbs_code": "5081",
+    "district_code": "81",
+    "latitude": "24.37331",
+    "longitude": "88.6048"
+  },
+  {
+    "division_bbs_code": "30",
+    "district_name_eng": "RAJBARI",
+    "district_bbs_code": "3082",
+    "district_code": "82",
+    "latitude": "23.71513",
+    "longitude": "89.58748"
+  },
+  {
+    "division_bbs_code": "20",
+    "district_name_eng": "RANGAMATI",
+    "district_bbs_code": "2084",
+    "district_code": "84",
+    "latitude": "22.73242",
+    "longitude": "92.29851"
+  },
+  {
+    "division_bbs_code": "55",
+    "district_name_eng": "RANGPUR",
+    "district_bbs_code": "5585",
+    "district_code": "85",
+    "latitude": "25.74679",
+    "longitude": "89.25083"
+  },
+  {
+    "division_bbs_code": "30",
+    "district_name_eng": "SHARIATPUR",
+    "district_bbs_code": "3086",
+    "district_code": "86",
+    "latitude": "23.24232",
+    "longitude": "90.43477"
+  },
+  {
+    "division_bbs_code": "40",
+    "district_name_eng": "SATKHIRA",
+    "district_bbs_code": "4087",
+    "district_code": "87",
+    "latitude": "22.31548",
+    "longitude": "89.11145"
+  },
+  {
+    "division_bbs_code": "50",
+    "district_name_eng": "SIRAJGANJ",
+    "district_bbs_code": "5088",
+    "district_code": "88",
+    "latitude": "24.31411",
+    "longitude": "89.56996"
+  },
+  {
+    "division_bbs_code": "45",
+    "district_name_eng": "SHERPUR",
+    "district_bbs_code": "4589",
+    "district_code": "89",
+    "latitude": "25.07462",
+    "longitude": "90.14949"
+  },
+  {
+    "division_bbs_code": "60",
+    "district_name_eng": "SUNAMGANJ",
+    "district_bbs_code": "6090",
+    "district_code": "90",
+    "latitude": "25.07145",
+    "longitude": "91.39916"
+  },
+  {
+    "division_bbs_code": "60",
+    "district_name_eng": "SYLHET",
+    "district_bbs_code": "6091",
+    "district_code": "91",
+    "latitude": "24.89934",
+    "longitude": "91.87005"
+  },
+  {
+    "division_bbs_code": "30",
+    "district_name_eng": "TANGAIL",
+    "district_bbs_code": "3093",
+    "district_code": "93",
+    "latitude": "24.39174",
+    "longitude": "89.99483"
+  },
+  {
+    "division_bbs_code": "55",
+    "district_name_eng": "THAKURGAON",
+    "district_bbs_code": "5594",
+    "district_code": "94",
+    "latitude": "26.04184",
+    "longitude": "88.42826"
+  }
+]

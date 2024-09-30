@@ -1,0 +1,866 @@
+[
+  {
+    "City": "Dhaka City Corp.(North)",
+    "Thana": "Khilkhet",
+    "Ward": "Ward No-17",
+    "ward_code": 30263717,
+    "area": "Khilkhet",
+    "pop": 131671
+  },
+  {
+    "City": "Dhaka City Corp.(North)",
+    "Thana": "Khilkhet",
+    "Ward": "Ward No-17",
+    "ward_code": 30263717,
+    "area": "Nikunja",
+    "pop": 101829
+  },
+  {
+    "City": "Dhaka City Corp.(North)",
+    "Thana": "Khilkhet",
+    "Ward": "Ward No-43",
+    "ward_code": 30263743,
+    "area": "Bashundhora",
+    "pop": 94650
+  },
+  {
+    "City": "Dhaka City Corp.(North)",
+    "Thana": "Mirpur",
+    "Ward": "Ward No-07",
+    "ward_code": 30264807,
+    "area": "Mirpur-2",
+    "pop": 58082
+  },
+  {
+    "City": "Dhaka City Corp.(North)",
+    "Thana": "Mirpur",
+    "Ward": "Ward No-11",
+    "ward_code": 30264811,
+    "area": "Mirpur 7",
+    "pop": 58082
+  },
+  {
+    "City": "Dhaka City Corp.(North)",
+    "Thana": "Mirpur",
+    "Ward": "Ward No-11",
+    "ward_code": 30264811,
+    "area": "Paikpara",
+    "pop": 97033
+  },
+  {
+    "City": "Dhaka City Corp.(North)",
+    "Thana": "Bhatara",
+    "Ward": "Ward No-40",
+    "ward_code": 30262240,
+    "area": "Bhatara",
+    "pop": 152706
+  },
+  {
+    "City": "Dhaka City Corp.(North)",
+    "Thana": "Gulshan",
+    "Ward": "Ward No-18",
+    "ward_code": 30262618,
+    "area": "Baridhara",
+    "pop": 41704
+  },
+  {
+    "City": "Dhaka City Corp.(North)",
+    "Thana": "Gulshan",
+    "Ward": "Ward No-19",
+    "ward_code": 30262619,
+    "area": "Gudaraghat",
+    "pop": 63616
+  },
+  {
+    "City": "Dhaka City Corp.(North)",
+    "Thana": "Adabor",
+    "Ward": "Ward No-30",
+    "ward_code": 30260230,
+    "area": "Adabor",
+    "pop": 285989
+  },
+  {
+    "City": "Dhaka City Corp.(North)",
+    "Thana": "Adabor",
+    "Ward": "Ward No-30",
+    "ward_code": 30260230,
+    "area": "Mohonpur",
+    "pop": 237880
+  },
+  {
+    "City": "Dhaka City Corp.(North)",
+    "Thana": "Adabor",
+    "Ward": "Ward No-30",
+    "ward_code": 30260230,
+    "area": "Shekher Tek",
+    "pop": 17350
+  },
+  {
+    "City": "Dhaka City Corp.(North)",
+    "Thana": "Badda",
+    "Ward": "Ward No-17",
+    "ward_code": 30260417,
+    "area": "Kuril",
+    "pop": 101829
+  },
+  {
+    "City": "Dhaka City Corp.(North)",
+    "Thana": "Badda",
+    "Ward": "Ward No-17",
+    "ward_code": 30260417,
+    "area": "Mintu Road",
+    "pop": 55920
+  },
+  {
+    "City": "Dhaka City Corp.(North)",
+    "Thana": "Badda",
+    "Ward": "Ward No-21",
+    "ward_code": 30260421,
+    "area": "Aftabnagar",
+    "pop": 63763
+  },
+  {
+    "City": "Dhaka City Corp.(North)",
+    "Thana": "Badda",
+    "Ward": "Ward No-21",
+    "ward_code": 30260421,
+    "area": "Merul",
+    "pop": 96111
+  },
+  {
+    "City": "Dhaka City Corp.(North)",
+    "Thana": "Badda",
+    "Ward": "Ward No-21",
+    "ward_code": 30260421,
+    "area": "Neemtoli",
+    "pop": 96111
+  },
+  {
+    "City": "Dhaka City Corp.(North)",
+    "Thana": "Badda",
+    "Ward": "Ward No-37",
+    "ward_code": 30260437,
+    "area": "NA",
+    "pop": 0
+  },
+  {
+    "City": "Dhaka City Corp.(North)",
+    "Thana": "Badda",
+    "Ward": "Ward No-38",
+    "ward_code": 30260438,
+    "area": "Badda",
+    "pop": 132016
+  },
+  {
+    "City": "Dhaka City Corp.(North)",
+    "Thana": "Badda",
+    "Ward": "Ward No-41",
+    "ward_code": 30260441,
+    "area": "NA",
+    "pop": 0
+  },
+  {
+    "City": "Dhaka City Corp.(North)",
+    "Thana": "Badda",
+    "Ward": "Ward No-42",
+    "ward_code": 30260442,
+    "area": "NA",
+    "pop": 0
+  },
+  {
+    "City": "Dhaka City Corp.(North)",
+    "Thana": "Biman Bandar",
+    "Ward": "Ward No-01",
+    "ward_code": 30260601,
+    "area": "NA",
+    "pop": 0
+  },
+  {
+    "City": "Dhaka City Corp.(North)",
+    "Thana": "Biman Bandar",
+    "Ward": "Ward No-98",
+    "ward_code": 30260698,
+    "area": "NA",
+    "pop": 0
+  },
+  {
+    "City": "Dhaka City Corp.(North)",
+    "Thana": "Banani",
+    "Ward": "Ward No-19",
+    "ward_code": 30260719,
+    "area": "Banani",
+    "pop": 96291
+  },
+  {
+    "City": "Dhaka City Corp.(North)",
+    "Thana": "Banani",
+    "Ward": "Ward No-19",
+    "ward_code": 30260719,
+    "area": "Gulshan",
+    "pop": 257683
+  },
+  {
+    "City": "Dhaka City Corp.(North)",
+    "Thana": "Banani",
+    "Ward": "Ward No-20",
+    "ward_code": 30260720,
+    "area": "Mohakhali",
+    "pop": 93143
+  },
+  {
+    "City": "Dhaka City Corp.(North)",
+    "Thana": "Banani",
+    "Ward": "Ward No-20",
+    "ward_code": 30260720,
+    "area": "Niketon",
+    "pop": 93143
+  },
+  {
+    "City": "Dhaka City Corp.(North)",
+    "Thana": "Banani",
+    "Ward": "Ward No-20",
+    "ward_code": 30260720,
+    "area": "Rasulbagh",
+    "pop": 44540
+  },
+  {
+    "City": "Dhaka City Corp.(North)",
+    "Thana": "Cantonment",
+    "Ward": "Ward No-15",
+    "ward_code": 30260815,
+    "area": "Cantonment",
+    "pop": 271455
+  },
+  {
+    "City": "Dhaka City Corp.(North)",
+    "Thana": "Cantonment",
+    "Ward": "Ward No-15",
+    "ward_code": 30260815,
+    "area": "Manikdi",
+    "pop": 70615
+  },
+  {
+    "City": "Dhaka City Corp.(North)",
+    "Thana": "Cantonment",
+    "Ward": "Ward No-15",
+    "ward_code": 30260815,
+    "area": "Matikata",
+    "pop": 16993
+  },
+  {
+    "City": "Dhaka City Corp.(North)",
+    "Thana": "Cantonment",
+    "Ward": "Ward No-98",
+    "ward_code": 30260898,
+    "area": "Kochukhet",
+    "pop": 70615
+  },
+  {
+    "City": "Dhaka City Corp.(North)",
+    "Thana": "Dakshinkhan",
+    "Ward": "Ward No-47",
+    "ward_code": 30261047,
+    "area": "Hajipara",
+    "pop": 160316
+  },
+  {
+    "City": "Dhaka City Corp.(North)",
+    "Thana": "Dakshinkhan",
+    "Ward": "Ward No-48",
+    "ward_code": 30261048,
+    "area": "Dakshinkhan",
+    "pop": 163514
+  },
+  {
+    "City": "Dhaka City Corp.(North)",
+    "Thana": "Dakshinkhan",
+    "Ward": "Ward No-49",
+    "ward_code": 30261049,
+    "area": "Airport",
+    "pop": 3391
+  },
+  {
+    "City": "Dhaka City Corp.(North)",
+    "Thana": "Dakshinkhan",
+    "Ward": "Ward No-49",
+    "ward_code": 30261049,
+    "area": "Ashkona",
+    "pop": 3391
+  },
+  {
+    "City": "Dhaka City Corp.(North)",
+    "Thana": "Dakshinkhan",
+    "Ward": "Ward No-50",
+    "ward_code": 30261050,
+    "area": "NA",
+    "pop": 0
+  },
+  {
+    "City": "Dhaka City Corp.(North)",
+    "Thana": "Darus Salam",
+    "Ward": "Ward No-09",
+    "ward_code": 30261109,
+    "area": "Golartek",
+    "pop": 71260
+  },
+  {
+    "City": "Dhaka City Corp.(North)",
+    "Thana": "Darus Salam",
+    "Ward": "Ward No-10",
+    "ward_code": 30261110,
+    "area": "Gabtoli",
+    "pop": 87879
+  },
+  {
+    "City": "Dhaka City Corp.(North)",
+    "Thana": "Darus Salam",
+    "Ward": "Ward No-10",
+    "ward_code": 30261110,
+    "area": "Kallyanpur",
+    "pop": 97033
+  },
+  {
+    "City": "Dhaka City Corp.(North)",
+    "Thana": "Darus Salam",
+    "Ward": "Ward No-12",
+    "ward_code": 30261112,
+    "area": "Tolarbag",
+    "pop": 51430
+  },
+  {
+    "City": "Dhaka City Corp.(North)",
+    "Thana": "Bhasan Tek",
+    "Ward": "Ward No-04",
+    "ward_code": 30262104,
+    "area": "NA",
+    "pop": 0
+  },
+  {
+    "City": "Dhaka City Corp.(North)",
+    "Thana": "Bhasan Tek",
+    "Ward": "Ward No-15",
+    "ward_code": 30262115,
+    "area": "Vasantek",
+    "pop": 75246
+  },
+  {
+    "City": "Dhaka City Corp.(North)",
+    "Thana": "Bhatara",
+    "Ward": "Ward No-17",
+    "ward_code": 30262217,
+    "area": "NA",
+    "pop": 0
+  },
+  {
+    "City": "Dhaka City Corp.(North)",
+    "Thana": "Bhatara",
+    "Ward": "Ward No-18",
+    "ward_code": 30262218,
+    "area": "Shahjadpur",
+    "pop": 63616
+  },
+  {
+    "City": "Dhaka City Corp.(North)",
+    "Thana": "Bhatara",
+    "Ward": "Ward No-39",
+    "ward_code": 30262239,
+    "area": "NA",
+    "pop": 0
+  },
+  {
+    "City": "Dhaka City Corp.(North)",
+    "Thana": "Kafrul",
+    "Ward": "Ward No-04",
+    "ward_code": 30263004,
+    "area": "Mirpur-13",
+    "pop": 58082
+  },
+  {
+    "City": "Dhaka City Corp.(North)",
+    "Thana": "Kafrul",
+    "Ward": "Ward No-04",
+    "ward_code": 30263004,
+    "area": "Mirpur-14",
+    "pop": 71508
+  },
+  {
+    "City": "Dhaka City Corp.(North)",
+    "Thana": "Kafrul",
+    "Ward": "Ward No-14",
+    "ward_code": 30263014,
+    "area": "Senpara",
+    "pop": 71508
+  },
+  {
+    "City": "Dhaka City Corp.(North)",
+    "Thana": "Kafrul",
+    "Ward": "Ward No-16",
+    "ward_code": 30263016,
+    "area": "Ibrahimpur",
+    "pop": 92289
+  },
+  {
+    "City": "Dhaka City Corp.(North)",
+    "Thana": "Kafrul",
+    "Ward": "Ward No-16",
+    "ward_code": 30263016,
+    "area": "Kafrul",
+    "pop": 536397
+  },
+  {
+    "City": "Dhaka City Corp.(North)",
+    "Thana": "Kafrul",
+    "Ward": "Ward No-16",
+    "ward_code": 30263016,
+    "area": "Shewrapara",
+    "pop": 71508
+  },
+  {
+    "City": "Dhaka City Corp.(North)",
+    "Thana": "Mirpur",
+    "Ward": "Ward No-12",
+    "ward_code": 30264812,
+    "area": "Ahmed Nagar",
+    "pop": 58316
+  },
+  {
+    "City": "Dhaka City Corp.(North)",
+    "Thana": "Mirpur",
+    "Ward": "Ward No-12",
+    "ward_code": 30264812,
+    "area": "Mirpur-1",
+    "pop": 97033
+  },
+  {
+    "City": "Dhaka City Corp.(North)",
+    "Thana": "Mirpur",
+    "Ward": "Ward No-12",
+    "ward_code": 30264812,
+    "area": "Shah Ali Bagh",
+    "pop": 82474
+  },
+  {
+    "City": "Dhaka City Corp.(North)",
+    "Thana": "Mirpur",
+    "Ward": "Ward No-13",
+    "ward_code": 30264813,
+    "area": "Gausia",
+    "pop": 4238
+  },
+  {
+    "City": "Dhaka City Corp.(North)",
+    "Thana": "Mirpur",
+    "Ward": "Ward No-13",
+    "ward_code": 30264813,
+    "area": "Monipur",
+    "pop": 77893
+  },
+  {
+    "City": "Dhaka City Corp.(North)",
+    "Thana": "Mirpur",
+    "Ward": "Ward No-13",
+    "ward_code": 30264813,
+    "area": "Pirerbagh",
+    "pop": 71260
+  },
+  {
+    "City": "Dhaka City Corp.(North)",
+    "Thana": "Mirpur",
+    "Ward": "Ward No-14",
+    "ward_code": 30264814,
+    "area": "Kazi para",
+    "pop": 92289
+  },
+  {
+    "City": "Dhaka City Corp.(North)",
+    "Thana": "Mohammadpur",
+    "Ward": "Ward No-29",
+    "ward_code": 30265029,
+    "area": "Mohammadpur",
+    "pop": 472285
+  },
+  {
+    "City": "Dhaka City Corp.(North)",
+    "Thana": "Mohammadpur",
+    "Ward": "Ward No-29",
+    "ward_code": 30265029,
+    "area": "Shaymoli",
+    "pop": 71260
+  },
+  {
+    "City": "Dhaka City Corp.(North)",
+    "Thana": "Mohammadpur",
+    "Ward": "Ward No-31",
+    "ward_code": 30265031,
+    "area": "NA",
+    "pop": 0
+  },
+  {
+    "City": "Dhaka City Corp.(North)",
+    "Thana": "Mohammadpur",
+    "Ward": "Ward No-32",
+    "ward_code": 30265032,
+    "area": "Asad Gate",
+    "pop": 72973
+  },
+  {
+    "City": "Dhaka City Corp.(North)",
+    "Thana": "Mohammadpur",
+    "Ward": "Ward No-32",
+    "ward_code": 30265032,
+    "area": "Lalmatia",
+    "pop": 302650
+  },
+  {
+    "City": "Dhaka City Corp.(North)",
+    "Thana": "Mohammadpur",
+    "Ward": "Ward No-33",
+    "ward_code": 30265033,
+    "area": "Bosila",
+    "pop": 20186
+  },
+  {
+    "City": "Dhaka City Corp.(North)",
+    "Thana": "Mohammadpur",
+    "Ward": "Ward No-34",
+    "ward_code": 30265034,
+    "area": "Rayerbazar",
+    "pop": 72973
+  },
+  {
+    "City": "Dhaka City Corp.(North)",
+    "Thana": "Mohammadpur",
+    "Ward": "Ward No-34",
+    "ward_code": 30265034,
+    "area": "Sankar",
+    "pop": 71829
+  },
+  {
+    "City": "Dhaka City Corp.(North)",
+    "Thana": "Pallabi",
+    "Ward": "Ward No-02",
+    "ward_code": 30266402,
+    "area": "NA",
+    "pop": 0
+  },
+  {
+    "City": "Dhaka City Corp.(North)",
+    "Thana": "Pallabi",
+    "Ward": "Ward No-03",
+    "ward_code": 30266403,
+    "area": "Mirpur-10",
+    "pop": 116544
+  },
+  {
+    "City": "Dhaka City Corp.(North)",
+    "Thana": "Pallabi",
+    "Ward": "Ward No-05",
+    "ward_code": 30266405,
+    "area": "Mirpur-11",
+    "pop": 157206
+  },
+  {
+    "City": "Dhaka City Corp.(North)",
+    "Thana": "Pallabi",
+    "Ward": "Ward No-06",
+    "ward_code": 30266406,
+    "area": "Mirpur-12",
+    "pop": 71508
+  },
+  {
+    "City": "Dhaka City Corp.(North)",
+    "Thana": "Pallabi",
+    "Ward": "Ward No-06",
+    "ward_code": 30266406,
+    "area": "Mirpur-6",
+    "pop": 51430
+  },
+  {
+    "City": "Dhaka City Corp.(North)",
+    "Thana": "Pallabi",
+    "Ward": "Ward No-06",
+    "ward_code": 30266406,
+    "area": "Pallabi",
+    "pop": 491349
+  },
+  {
+    "City": "Dhaka City Corp.(North)",
+    "Thana": "Pallabi",
+    "Ward": "Ward No-15",
+    "ward_code": 30266415,
+    "area": "NA",
+    "pop": 0
+  },
+  {
+    "City": "Dhaka City Corp.(North)",
+    "Thana": "Ramna",
+    "Ward": "Ward No-23",
+    "ward_code": 30266623,
+    "area": "NA",
+    "pop": 0
+  },
+  {
+    "City": "Dhaka City Corp.(North)",
+    "Thana": "Ramna",
+    "Ward": "Ward No-35",
+    "ward_code": 30266635,
+    "area": "Mogbazar",
+    "pop": 70984
+  },
+  {
+    "City": "Dhaka City Corp.(North)",
+    "Thana": "Ramna",
+    "Ward": "Ward No-36",
+    "ward_code": 30266636,
+    "area": "NA",
+    "pop": 0
+  },
+  {
+    "City": "Dhaka City Corp.(North)",
+    "Thana": "Rampura",
+    "Ward": "Ward No-22",
+    "ward_code": 30266722,
+    "area": "Banasree",
+    "pop": 68931
+  },
+  {
+    "City": "Dhaka City Corp.(North)",
+    "Thana": "Rampura",
+    "Ward": "Ward No-22",
+    "ward_code": 30266722,
+    "area": "Rampura",
+    "pop": 208882
+  },
+  {
+    "City": "Dhaka City Corp.(North)",
+    "Thana": "Rampura",
+    "Ward": "Ward No-23",
+    "ward_code": 30266723,
+    "area": "NA",
+    "pop": 0
+  },
+  {
+    "City": "Dhaka City Corp.(North)",
+    "Thana": "Rupnagar",
+    "Ward": "Ward No-06",
+    "ward_code": 30267006,
+    "area": "NA",
+    "pop": 0
+  },
+  {
+    "City": "Dhaka City Corp.(North)",
+    "Thana": "Rupnagar",
+    "Ward": "Ward No-07",
+    "ward_code": 30267007,
+    "area": "Mirpur",
+    "pop": 163770
+  },
+  {
+    "City": "Dhaka City Corp.(North)",
+    "Thana": "Rupnagar",
+    "Ward": "Ward No-07",
+    "ward_code": 30267007,
+    "area": "Rupnagar",
+    "pop": 58082
+  },
+  {
+    "City": "Dhaka City Corp.(North)",
+    "Thana": "Shah Ali",
+    "Ward": "Ward No-08",
+    "ward_code": 30267408,
+    "area": "NA",
+    "pop": 0
+  },
+  {
+    "City": "Dhaka City Corp.(North)",
+    "Thana": "Sher-e-bangla Nagar",
+    "Ward": "Ward No-16",
+    "ward_code": 30268016,
+    "area": "NA",
+    "pop": 0
+  },
+  {
+    "City": "Dhaka City Corp.(North)",
+    "Thana": "Sher-e-bangla Nagar",
+    "Ward": "Ward No-27",
+    "ward_code": 30268027,
+    "area": "Farmgate",
+    "pop": 37983
+  },
+  {
+    "City": "Dhaka City Corp.(North)",
+    "Thana": "Sher-e-bangla Nagar",
+    "Ward": "Ward No-27",
+    "ward_code": 30268027,
+    "area": "Raja Bazar",
+    "pop": 18635
+  },
+  {
+    "City": "Dhaka City Corp.(North)",
+    "Thana": "Sher-e-bangla Nagar",
+    "Ward": "Ward No-27",
+    "ward_code": 30268027,
+    "area": "Sher-E-Bangla Nagar",
+    "pop": 225160
+  },
+  {
+    "City": "Dhaka City Corp.(North)",
+    "Thana": "Sher-e-bangla Nagar",
+    "Ward": "Ward No-28",
+    "ward_code": 30268028,
+    "area": "Agargaon",
+    "pop": 108193
+  },
+  {
+    "City": "Dhaka City Corp.(North)",
+    "Thana": "Sher-e-bangla Nagar",
+    "Ward": "Ward No-28",
+    "ward_code": 30268028,
+    "area": "Taltola",
+    "pop": 65984
+  },
+  {
+    "City": "Dhaka City Corp.(North)",
+    "Thana": "Tejgaon",
+    "Ward": "Ward No-25",
+    "ward_code": 30269025,
+    "area": "Nakhalpara",
+    "pop": 61744
+  },
+  {
+    "City": "Dhaka City Corp.(North)",
+    "Thana": "Tejgaon",
+    "Ward": "Ward No-26",
+    "ward_code": 30269026,
+    "area": "Kawran Bazar",
+    "pop": 61744
+  },
+  {
+    "City": "Dhaka City Corp.(North)",
+    "Thana": "Tejgaon",
+    "Ward": "Ward No-26",
+    "ward_code": 30269026,
+    "area": "Tejgaon",
+    "pop": 114342
+  },
+  {
+    "City": "Dhaka City Corp.(North)",
+    "Thana": "Tejgaon",
+    "Ward": "Ward No-26",
+    "ward_code": 30269026,
+    "area": "Tejkunipara",
+    "pop": 13709
+  },
+  {
+    "City": "Dhaka City Corp.(North)",
+    "Thana": "Tejgaon",
+    "Ward": "Ward No-26",
+    "ward_code": 30269026,
+    "area": "Tezturi Bazar",
+    "pop": 5475
+  },
+  {
+    "City": "Dhaka City Corp.(North)",
+    "Thana": "Tejgaon",
+    "Ward": "Ward No-27",
+    "ward_code": 30269027,
+    "area": "Indira Road",
+    "pop": 103274
+  },
+  {
+    "City": "Dhaka City Corp.(North)",
+    "Thana": "Tejgaon Ind. Area",
+    "Ward": "Ward No-24",
+    "ward_code": 30269224,
+    "area": "Begunbari",
+    "pop": 103274
+  },
+  {
+    "City": "Dhaka City Corp.(North)",
+    "Thana": "Tejgaon Ind. Area",
+    "Ward": "Ward No-24",
+    "ward_code": 30269224,
+    "area": "Hatir jhil",
+    "pop": 63763
+  },
+  {
+    "City": "Dhaka City Corp.(North)",
+    "Thana": "Turag",
+    "Ward": "Ward No-52",
+    "ward_code": 30269352,
+    "area": "NA",
+    "pop": 0
+  },
+  {
+    "City": "Dhaka City Corp.(North)",
+    "Thana": "Turag",
+    "Ward": "Ward No-53",
+    "ward_code": 30269353,
+    "area": "Turag",
+    "pop": 220014
+  },
+  {
+    "City": "Dhaka City Corp.(North)",
+    "Thana": "Turag",
+    "Ward": "Ward No-53",
+    "ward_code": 30269353,
+    "area": "Uttara",
+    "pop": 342247
+  },
+  {
+    "City": "Dhaka City Corp.(North)",
+    "Thana": "Turag",
+    "Ward": "Ward No-54",
+    "ward_code": 30269354,
+    "area": "Beribadh",
+    "pop": 75246
+  },
+  {
+    "City": "Dhaka City Corp.(North)",
+    "Thana": "Uttara Paschim",
+    "Ward": "Ward No-01",
+    "ward_code": 30269401,
+    "area": "NA",
+    "pop": 0
+  },
+  {
+    "City": "Dhaka City Corp.(North)",
+    "Thana": "Uttara Paschim",
+    "Ward": "Ward No-51",
+    "ward_code": 30269451,
+    "area": "NA",
+    "pop": 0
+  },
+  {
+    "City": "Dhaka City Corp.(North)",
+    "Thana": "Uttara Purba",
+    "Ward": "Ward No-01",
+    "ward_code": 30269501,
+    "area": "Abdullahpur",
+    "pop": 342247
+  },
+  {
+    "City": "Dhaka City Corp.(North)",
+    "Thana": "Uttar Khan",
+    "Ward": "Ward No-44",
+    "ward_code": 30269644,
+    "area": "NA",
+    "pop": 0
+  },
+  {
+    "City": "Dhaka City Corp.(North)",
+    "Thana": "Uttar Khan",
+    "Ward": "Ward No-45",
+    "ward_code": 30269645,
+    "area": "NA",
+    "pop": 0
+  },
+  {
+    "City": "Dhaka City Corp.(North)",
+    "Thana": "Uttar Khan",
+    "Ward": "Ward No-46",
+    "ward_code": 30269646,
+    "area": "NA",
+    "pop": 0
+  }
+]

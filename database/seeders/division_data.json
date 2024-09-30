@@ -1,0 +1,34 @@
+[
+  {
+    "division_name_eng": "BARISHAL",
+    "bbs_code": "10"
+  },
+  {
+    "division_name_eng": "CHATTOGRAM",
+    "bbs_code": "20"
+  },
+  {
+    "division_name_eng": "DHAKA",
+    "bbs_code": "30"
+  },
+  {
+    "division_name_eng": "KHULNA",
+    "bbs_code": "40"
+  },
+  {
+    "division_name_eng": "MYMENSINGH",
+    "bbs_code": "45"
+  },
+  {
+    "division_name_eng": "RAJSHAHI",
+    "bbs_code": "50"
+  },
+  {
+    "division_name_eng": "RANGPUR",
+    "bbs_code": "55"
+  },
+  {
+    "division_name_eng": "SYLHET",
+    "bbs_code": "60"
+  }
+]
