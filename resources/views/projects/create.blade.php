@@ -31,33 +31,35 @@
                     <label class="custom-control-label">Division</label>
                     <select class="form-select" name="division_id">
                         @foreach($divisions as $division)
+                            <option value="">Select Division</option>
                             <option value="{{$division->id}}">{{$division->name}}</option>
                         @endforeach
                     </select>
                 </div>
+
                 <div class="mb-3">
                     <label class="custom-control-label">District</label>
                     <select class="form-select" name="district_id">
-                        <option>Select District</option>
+                        <option value="">Select District</option>
                     </select>
                 </div>
 
                 <div class="mb-3">
                     <label class="custom-control-label">Upazilla</label>
-                    <select class="form-select" name="upazilla_id">
-                        @foreach($upazillas as $upazilla)
-                            <option value="{{$upazilla->id}}">{{$upazilla->name}}</option>
+                    <select class="form-select" name="upazila_id">
+                        @foreach($upazillas as $upazila)
+                            <option value="{{$upazila->id}}">{{$upazila->name}}</option>
                         @endforeach
                     </select>
                 </div>
-                <div class="mb-3">
-                    <label class="custom-control-label">City</label>
-                    <select class="form-select" name="city_id">
-                        @foreach($cities as $city)
-                            <option value="{{$city->id}}">{{$city->area}}</option>
-                        @endforeach
-                    </select>
-                </div>
+{{--                <div class="mb-3">--}}
+{{--                    <label class="custom-control-label">City</label>--}}
+{{--                    <select class="form-select" name="city_id">--}}
+{{--                        @foreach($cities as $city)--}}
+{{--                            <option value="{{$city->id}}">{{$city->area}}</option>--}}
+{{--                        @endforeach--}}
+{{--                    </select>--}}
+{{--                </div>--}}
 
                 <div class="mb-3">
                     <label class="custom-control-label">Housing</label>
@@ -200,6 +202,48 @@
                 success : function(result){
                     $('select[name="district_id"]').html('');
                     $('select[name="district_id"]').append(result);
+                }
+            });
+        });
+
+
+        $('select[name="district_id"]').change(function(){
+            var district_id = $(this).val();
+            $.ajax({
+                headers: {
+
+                },
+                url : "{{route('upazillas_by_district_id')}}",
+                data : {
+                    "_token": "{{ csrf_token() }}",
+                    'district_id' : district_id
+                },
+                type : 'POST',
+                dataType : 'html',
+                success : function(result){
+                    $('select[name="upazila_id"]').html('');
+                    $('select[name="upazila_id"]').append(result);
+                }
+            });
+        });
+
+
+        $('select[name="upazila_id"]').change(function(){
+            var upazila_id = $(this).val();
+            $.ajax({
+                headers: {
+
+                },
+                url : "{{route('cities_by_upazila_id')}}",
+                data : {
+                    "_token": "{{ csrf_token() }}",
+                    'upazila_id' : upazila_id
+                },
+                type : 'POST',
+                dataType : 'html',
+                success : function(result){
+                    $('select[name="city_id"]').html('');
+                    $('select[name="city_id"]').append(result);
                 }
             });
         });

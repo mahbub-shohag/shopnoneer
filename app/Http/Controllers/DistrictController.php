@@ -3,6 +3,7 @@
 namespace App\Http\Controllers;
 
 use App\Models\District;
+use App\Models\Upazila;
 use Illuminate\Http\Request;
 
 class DistrictController extends Controller
@@ -63,5 +64,17 @@ class DistrictController extends Controller
     public function destroy(District $district)
     {
         //
+    }
+
+    public function upazillasByDistrictId(Request $request)
+    {
+        $district_id = $request->district_id;
+        $upazillas = Upazila::where('district_id', $district_id)->get();
+        $options = "<option value='' SELECTED>Select Upazila</option>";
+
+        foreach ($upazillas as $upazila) {
+            $options = $options . "<option value='$upazila->id'>$upazila->name</option>";
+        }
+        return $options;
     }
 }

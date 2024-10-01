@@ -9,9 +9,9 @@ class Housing extends Model
 {
     use HasFactory;
 
-    public function city()
+    public function division()
     {
-        return $this->belongsTo(City::class);
+        return $this->belongsTo(Division::class);
     }
 
     public function upazila(){

@@ -28,7 +28,6 @@
                 <tr>
                     <th>SL</th>
                     <th>Name</th>
-                    <th>City</th>
                     <th>Upazila</th>
                     <th>District</th>
                 </tr>
@@ -37,7 +36,6 @@
                 <tr>
                     <th>SL</th>
                     <th>Name</th>
-                    <th>City</th>
                     <th>Upazila</th>
                     <th>District</th>
                 </tr>
@@ -48,7 +46,6 @@
                 <tr>
                     <td><?php echo $key+1; ?></td>
                     <td><?php echo $housing->name; ?></td>
-                    <td><?php echo $housing->city->area; ?></td>
                     <td><?php echo $housing->upazila->name; ?></td>
                     <td><?php echo $housing->district->name; ?></td>
                 </tr>

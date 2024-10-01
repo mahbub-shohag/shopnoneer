@@ -17,12 +17,12 @@ class ProjectController extends Controller
      */
     public function index()
     {
-        $projects = Project::with('district','upazila','housing','city')->get();
+        $projects = Project::with('district','upazila','housing')->get();
         return view('projects.index',['projects'=>$projects]);
     }
 
     public function projectList(Request $request){
-        $projects = Project::with('district','upazila','housing','city')->get();
+        $projects = Project::with('district','upazila','housing')->get();
         return view('projects.project-list',['projects'=>$projects]);
     }
 
@@ -34,9 +34,8 @@ class ProjectController extends Controller
         $divisions = Division::all();
         $districts = District::all();
         $upazillas = Upazila::all();
-        $cities = City::all();
         $housings = Housing::all();
-        return view('projects.create',['divisions'=>$divisions,'districts'=>$districts,'upazillas'=>$upazillas,'cities'=>$cities,'housings'=>$housings]);
+        return view('projects.create',['divisions'=>$divisions,'districts'=>$districts,'upazillas'=>$upazillas,'housings'=>$housings]);
     }
 
     /**
@@ -47,8 +46,7 @@ class ProjectController extends Controller
         $project = new Project();
         $project->title = $request->title;
         $project->district_id = $request->district_id;
-        $project->upazila_id = $request->upazilla_id;
-        $project->city_id = $request->city_id;
+        $project->upazila_id = $request->upazila_id;
         $project->housing_id = $request->housing_id;
         $project->road = $request->road;
         $project->block = $request->block;

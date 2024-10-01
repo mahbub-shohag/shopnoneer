@@ -61,10 +61,14 @@ Route::post('/districts_by_division_id', [DivisionController::class, 'districtsB
 
 /*Upazillas*/
 Route::resource('/upazila',UpazilaController::class);
+Route::post('/upazillas_by_district_id', [DistrictController::class, 'upazillasByDistrictId'])->name('upazillas_by_district_id');
+
 /*Upazillas*/
 
 /*City*/
 Route::resource('/city',CityController::class);
+Route::post('/cities_by_upazila_id', [UpazilaController::class, 'citiesByUpazilaId'])->name('cities_by_upazila_id');
+
 /*City*/
 
 /*Housing*/

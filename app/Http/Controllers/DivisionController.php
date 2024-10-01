@@ -68,7 +68,7 @@ class DivisionController extends Controller
     public function districtsByDivisionId(Request $request){
         $division_id = $request->division_id;
         $districts = District::where('division_id',$division_id)->get();
-        $options = "";
+        $options = "<option value='' SELECTED>Select District</option>";
         foreach ($districts as $district){
             $options = $options. "<option value='$district->id'>$district->name</option>";
         }
