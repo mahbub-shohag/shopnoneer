@@ -40,7 +40,6 @@
                     <th>Upazila</th>
                     <th>District</th>
                     <th>Action</th>
-
                 </tr>
                 </tfoot>
                 <tbody>
@@ -51,10 +50,30 @@
                     <td><?php echo $housing->upazila->name; ?></td>
                     <td><?php echo $housing->district->name; ?></td>
                     <td>
-                        <a href="{{ route('housing.edit', ['housing' => $housing]) }}">
-                            <i class="fas fa-pencil"></i>
-                        </a>
+                        <!-- Flex Container for Edit, View, and Delete Actions -->
+                        <div style="display: flex; align-items: center; justify-content: space-around; width: 100%;">
+                            <!-- Edit Link -->
+                            <a href="{{ route('housing.edit', ['housing' => $housing]) }}">
+                                <i class="fas fa-pencil-alt"></i> <!-- Use a more specific pencil icon -->
+                            </a>
+                            <!-- View Link -->
+                            <a href="{{ route('housing.show', ['housing' => $housing]) }}">
+                                <i class="fas fa-eye"></i> <!-- Eye icon for view action -->
+                            </a>
+                            <!-- Delete Form -->
+                            <form action="{{ route('housing.destroy', ['housing' => $housing]) }}" method="POST" style="margin: 0;">
+                                @csrf
+                                @method('DELETE')
+                                <button type="submit" class="btn btn-link" title="Delete" style="padding: 0; color: red;">
+                                    <i class="fas fa-trash-alt"></i>
+                                </button>
+                            </form>
+
+                        </div>
                     </td>
+
+
+
                 </tr>
                 <?php } ?>
                 </tbody>

@@ -23,7 +23,15 @@
             <form action="{{ route('housing.update', $housing->id) }}" method="POST">
                 {{ csrf_field() }}
                 {{ method_field('PUT') }}
-
+                @if ($errors->any())
+                    <div class="alert alert-danger">
+                        <ol>
+                            @foreach ($errors->all() as $error)
+                                <li>{{ $error }}</li>
+                            @endforeach
+                        </ol>
+                    </div>
+                @endif
                 <div class="mb-3">
                     <label class="custom-control-label">Housing Name</label>
                     <input class="form-control" type="text" name="name" value="{{ $housing->name }}">

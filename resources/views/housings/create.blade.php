@@ -20,9 +20,19 @@
         </div>
 
         <div class="card-body">
-            <form action="{{route('housing.store')}}" method="POST">
-                {{csrf_field()}}
+            <form action="{{ route('housing.store') }}" method="POST">
+                {{ csrf_field() }}
                 {{ method_field('POST') }}
+
+                @if ($errors->any())
+                    <div class="alert alert-danger">
+                        <ol>
+                            @foreach ($errors->all() as $error)
+                                <li>{{ $error }}</li>
+                            @endforeach
+                        </ol>
+                    </div>
+                @endif
                 <div class="mb-3">
                     <label class="custom-control-label">Housing Name</label>
                     <input class="form-control" type="text" name="name">
@@ -33,7 +43,7 @@
                     <select class="form-select" name="division_id">
                         <option value="">Select Division</option>
                         @foreach($divisions as $division)
-                            <option value="{{$division->id}}">{{$division->name}}</option>
+                            <option value="{{ $division->id }}" >{{ $division->name }}</option>
                         @endforeach
                     </select>
                 </div>
@@ -41,29 +51,27 @@
                 <div class="mb-3">
                     <label class="custom-control-label">District</label>
                     <select class="form-select" name="district_id">
-                            <option value="">Select District</option>
+                        <option value="">Select District</option>
                     </select>
                 </div>
+
                 <div class="mb-3">
-                    <label class="custom-control-label">Upazilla</label>
+                    <label class="custom-control-label">Upazila</label>
                     <select class="form-select" name="upazila_id">
                         <option value="">Select Upazila</option>
                     </select>
                 </div>
 
-
                 <button class="btn btn-primary">Submit</button>
             </form>
         </div>
     </div>
+
     <script>
         $('select[name="division_id"]').change(function(){
             var division_id = $(this).val();
             $.ajax({
-                headers: {
-
-                },
-                url : "{{route('districts_by_division_id')}}",
+                url : "{{ route('districts_by_division_id') }}",
                 data : {
                     "_token": "{{ csrf_token() }}",
                     'division_id' : division_id
@@ -80,10 +88,7 @@
         $('select[name="district_id"]').change(function(){
             let district_id = $(this).val();
             $.ajax({
-                headers: {
-
-                },
-                url : "{{route('upazillas_by_district_id')}}",
+                url : "{{ route('upazillas_by_district_id') }}",
                 data : {
                     "_token": "{{ csrf_token() }}",
                     'district_id' : district_id
