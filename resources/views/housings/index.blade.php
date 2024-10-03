@@ -30,6 +30,7 @@
                     <th>Name</th>
                     <th>Upazila</th>
                     <th>District</th>
+                    <th>Action</th>
                 </tr>
                 </thead>
                 <tfoot>
@@ -38,6 +39,8 @@
                     <th>Name</th>
                     <th>Upazila</th>
                     <th>District</th>
+                    <th>Action</th>
+
                 </tr>
                 </tfoot>
                 <tbody>
@@ -48,6 +51,8 @@
                     <td><?php echo $housing->name; ?></td>
                     <td><?php echo $housing->upazila->name; ?></td>
                     <td><?php echo $housing->district->name; ?></td>
+                    <td><a href="{{ route('housing.edit',['housing'=>$housing]) }}"><i class="fas fa-pencil"></i></a></td>
+
                 </tr>
 
                 <?php } ?>

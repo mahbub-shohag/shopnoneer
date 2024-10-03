@@ -201,7 +201,7 @@
                 dataType : 'html',
                 success : function(result){
                     $('select[name="district_id"]').html('');
-                    $('select[name="district_id"]').append(result);
+                    $('select[name="district_id"]').append(result);``
                 }
             });
         });

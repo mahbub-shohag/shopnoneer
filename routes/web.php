@@ -73,6 +73,7 @@ Route::post('/cities_by_upazila_id', [UpazilaController::class, 'citiesByUpazila
 
 /*Housing*/
 Route::resource('/housing',HousingController::class);
+
 /*Housing*/
 
 /*Project*/
