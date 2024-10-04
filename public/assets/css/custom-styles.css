@@ -59,10 +59,10 @@
     border: none !important; /* No border */
     color: white !important; /* Default icon color */
     padding: 5px 10px !important; /* Adjust padding for a button feel */
-    border-radius: 20px !important; /* Beautiful rounded border */
+    border-radius: 10px !important; /* Beautiful rounded border */
     transition: transform 0.3s ease, box-shadow 0.3s ease, background-color 0.3s ease !important; /* Smooth transitions */
     cursor: pointer !important; /* Pointer cursor on hover */
-    font-size: 1.8rem !important; /* Slightly bigger icon */
+    font-size: 1rem !important; /* Slightly bigger icon */
 }
 
 /* Hover effect for all buttons */
