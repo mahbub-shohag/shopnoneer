@@ -4,10 +4,11 @@
         <div class="sb-sidenav-menu">
             <div class="nav">
                 <div class="sb-sidenav-menu-heading">Core</div>
-                <a class="nav-link" href="index.html">
+                <a class="nav-link {{ Request::is('index.html') ? 'active' : '' }}" href="#">
                     <div class="sb-nav-link-icon"><i class="fas fa-tachometer-alt"></i></div>
                     Dashboard
                 </a>
+
                 <div class="sb-sidenav-menu-heading">Interface</div>
                 <a class="nav-link collapsed" href="#" data-bs-toggle="collapse" data-bs-target="#collapseLayouts" aria-expanded="false" aria-controls="collapseLayouts">
                     <div class="sb-nav-link-icon"><i class="fas fa-columns"></i></div>
@@ -38,9 +39,6 @@
                     </nav>
                 </div>
 
-
-
-
                 <a class="nav-link collapsed" href="#" data-bs-toggle="collapse" data-bs-target="#collapseProject" aria-expanded="false" aria-controls="collapseProject">
                     <div class="sb-nav-link-icon"><i class="fas fa-book-open"></i></div>
                     Projects
@@ -52,12 +50,49 @@
                         <a class="nav-link" href="{{asset('project-list')}}">Project List</a>
                     </nav>
                 </div>
-        </div>
-        <div class="sb-sidenav-footer">
-            <div class="small">Logged in as:</div>
-            <?php
+            </div>
+            <div class="sb-sidenav-footer">
+                <div class="small">Logged in as:</div>
+                <?php
                 $user = Auth::user();
-            ?>
-        </div>
+                ?>
+            </div>
     </nav>
 </div>
+
+<style>
+    /* Sidebar link icons (including collapse arrows) */
+    .sb-nav-link-icon i, .sb-sidenav-collapse-arrow i {
+        color: darkcyan; /* Dark teal for icons */
+        transition: transform 0.3s ease, color 0.3s ease; /* Smooth transitions */
+    }
+
+    /* Hover effect for sidebar link icons */
+    .sb-nav-link-icon i:hover, .sb-sidenav-collapse-arrow i:hover {
+        transform: scale(1.1);
+        color: #004c4c !important; /* Darker teal on hover */
+    }
+
+    /* Sidebar links hover effect */
+    .nav-link:hover {
+        background-color: #004c4c !important; /* Dark teal background on hover */
+        color: white !important;
+    }
+
+    /* Sidenav menu heading text */
+    .sb-sidenav-menu-heading {
+        font-weight: bold; /* Make headings bold */
+        color: teal !important; /* Teal color for headings */
+    }
+
+    /* Sidebar collapse button */
+    .nav-link.collapsed:hover {
+        color: white !important; /* Ensure text is visible on hover */
+    }
+
+    /* Sidenav footer - Logged in user text */
+    .sb-sidenav-footer .small {
+        color: teal !important;
+        font-weight: bold; /* Bold for the logged in label */
+    }
+</style>

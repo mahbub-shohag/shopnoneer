@@ -1,0 +1,155 @@
+/* public/css/custom-styles.css */
+.bg-teal {
+    background-color: #008080 ; /* Teal background */
+}
+
+.bg-dark-teal {
+    background-color: #005757 ; /* Dark teal background */
+}
+
+.bg-light-teal {
+    background-color: #99ffff ; /* Light teal background */
+}
+
+/* Increase the font size for the dashboard cards */
+.card-header {
+    font-size: 1.5rem ; /* Adjust this value as needed */
+}
+
+.card-body {
+    font-size: 1.2rem ; /* Adjust this value as needed */
+}
+
+/* Add hover effect to the cards */
+.card {
+    transition: transform 0.3s ease, box-shadow 0.3s ease ; /* Smooth transition for hover effect */
+    cursor: pointer ; /* Change cursor to pointer on hover */
+}
+
+/* Hover effect applied to all card types */
+.dash_board_card:hover {
+    transform: scale(1.05) ; /* Scale up the card slightly */
+    box-shadow: 0 8px 25px rgba(0, 0, 0, 0.3) ; /* Add shadow on hover */
+}
+
+/* Optional: Add focus effect for accessibility */
+.card:focus {
+    outline: none ; /* Remove default outline */
+    box-shadow: 0 8px 25px rgba(0, 0, 0, 0.5) ; /* Stronger shadow for focus */
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+    .card-header {
+        font-size: 1.3rem ; /* Smaller size for mobile */
+    }
+    .card-body {
+        font-size: 1rem ; /* Smaller size for mobile */
+    }
+}
+
+
+/*------------- For action BTN ----------------*/
+
+/* Custom styles for Housing Management */
+
+/* Button Styles */
+.btn-icon {
+    background-color: #005757 !important; /* Dark teal background */
+    border: none !important; /* No border */
+    color: white !important; /* Default icon color */
+    padding: 5px 10px !important; /* Adjust padding for a button feel */
+    border-radius: 20px !important; /* Beautiful rounded border */
+    transition: transform 0.3s ease, box-shadow 0.3s ease, background-color 0.3s ease !important; /* Smooth transitions */
+    cursor: pointer !important; /* Pointer cursor on hover */
+    font-size: 1.8rem !important; /* Slightly bigger icon */
+}
+
+/* Hover effect for all buttons */
+.btn-icon:hover {
+    transform: scale(1.1) !important; /* Slight scaling effect on hover */
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2) !important; /* Shadow on hover */
+}
+
+/* Specific style for Edit Button */
+.btn-edit {
+    background-color: #008080 !important; /* Teal background */
+}
+
+.btn-edit:hover {
+    background-color: #00b3b3 !important; /* Lighter teal on hover */
+    color: white !important; /* Keep icon white */
+}
+
+/* Specific style for View Button */
+.btn-view {
+    background-color: #004040 !important; /* Dark teal background */
+}
+
+.btn-view:hover {
+    background-color: #006666 !important; /* Slightly lighter dark teal on hover */
+    color: #ffffff !important; /* Keep white icon */
+}
+
+/* Specific style for Delete Button (warning colors) */
+.btn-delete {
+    background-color: #ff6347 !important; /* Tomato background */
+    color: white !important; /* White icon for delete */
+}
+
+.btn-delete:hover {
+    background-color: #ffcc00 !important; /* Yellow hover effect for warning */
+    color: white !important; /* Keep white icon */
+}
+
+/* Icon color customization */
+.btn-icon i {
+    color: white !important; /* Default white icon color */
+}
+
+/* Hover effect for icon color (optional) */
+.btn-icon:hover i {
+    color: #f0f0f0 !important; /* Slightly lighter white icon on hover */
+}
+
+/* Focus effect for accessibility */
+.btn-icon:focus {
+    outline: none !important;
+    box-shadow: 0 8px 25px rgba(0, 128, 128, 0.7) !important; /* Focus shadow */
+}
+
+/* Card Styles */
+.card {
+    border-radius: 10px !important; /* Rounded corners for cards */
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1); /* Subtle shadow effect */
+}
+
+/* Table Styles */
+.table {
+    border-collapse: collapse; /* Collapsed borders */
+    width: 100%; /* Full width */
+}
+
+.table th, .table td {
+    padding: 15px; /* Padding for table cells */
+    text-align: left; /* Left align text */
+    border-bottom: 1px solid #ddd; /* Bottom border for cells */
+}
+
+/* Header Row Styles */
+.table th {
+    background-color: #005757; /* Dark teal background for header */
+    color: white; /* White text */
+}
+
+/* Table Row Hover Effect */
+.table tr:hover {
+    background-color: rgba(0, 128, 128, 0.1); /* Light teal background on hover */
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+    .btn-icon {
+        font-size: 1.5rem !important; /* Slightly smaller icons on mobile */
+    }
+}

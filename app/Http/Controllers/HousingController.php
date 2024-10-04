@@ -17,9 +17,7 @@ class HousingController extends Controller
 
     public function create(){
         $divisions = Division::all();
-        $districts = District::all();
-        $upazilas = Upazila::all();
-        return view('housings.create',['divisions' => $divisions,'districts' => $districts, 'upazillas' => $upazilas]);
+        return view('housings.create',['divisions' => $divisions]);
     }
 
     public function edit(Housing $housing)
@@ -27,13 +25,12 @@ class HousingController extends Controller
         $divisions = Division::all();
         $districts = District::all();
         $upazilas = Upazila::all();
-        return view('housings.edit',['housing'=>$housing,'divisions' => $divisions,'districts' => $districts, 'upazillas' => $upazilas]);
-
+        return view('housings.edit',['housing'=>$housing,'divisions' => $divisions,'districts' => $districts,'upazillas' => $upazilas]);
     }
     public function show(Housing $housing)
     {
         $housing = Housing::where('id',$housing->id)->with('division','district','upazila')->first();
-        return view('housings.show',['housing'=>$housing]);
+        return view('housings.show_1',['housing'=>$housing]);
 
     }
 
@@ -68,6 +65,7 @@ class HousingController extends Controller
             return redirect('/housing/create')->with('error', 'Failed to create housing record. Please try again.');
         }
     }
+
 
 
 

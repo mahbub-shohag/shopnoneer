@@ -23,6 +23,15 @@
             <form action="{{route('project.store')}}" method="POST">
                 {{csrf_field()}}
                 {{ method_field('POST') }}
+                @if ($errors->any())
+                    <div class="alert alert-danger">
+                        <ol>
+                            @foreach ($errors->all() as $error)
+                                <li>{{ $error }}</li>
+                            @endforeach
+                        </ol>
+                    </div>
+                @endif
                 <div class="mb-3">
                     <label class="custom-control-label">Title</label>
                     <input class="form-control" type="text" name="title">
@@ -30,8 +39,8 @@
                 <div class="mb-3">
                     <label class="custom-control-label">Division</label>
                     <select class="form-select" name="division_id">
+                          <option value="">Select Division</option>
                         @foreach($divisions as $division)
-                            <option value="">Select Division</option>
                             <option value="{{$division->id}}">{{$division->name}}</option>
                         @endforeach
                     </select>
@@ -47,26 +56,14 @@
                 <div class="mb-3">
                     <label class="custom-control-label">Upazilla</label>
                     <select class="form-select" name="upazila_id">
-                        @foreach($upazillas as $upazila)
-                            <option value="{{$upazila->id}}">{{$upazila->name}}</option>
-                        @endforeach
+                        <option value="">Select Upazilla</option>
+
                     </select>
                 </div>
-{{--                <div class="mb-3">--}}
-{{--                    <label class="custom-control-label">City</label>--}}
-{{--                    <select class="form-select" name="city_id">--}}
-{{--                        @foreach($cities as $city)--}}
-{{--                            <option value="{{$city->id}}">{{$city->area}}</option>--}}
-{{--                        @endforeach--}}
-{{--                    </select>--}}
-{{--                </div>--}}
-
                 <div class="mb-3">
                     <label class="custom-control-label">Housing</label>
                     <select class="form-select" name="housing_id">
-                        @foreach($housings as $housing)
-                            <option value="{{$housing->id}}">{{$housing->name}}</option>
-                        @endforeach
+                        <option value="">Select Housing</option>
                     </select>
                 </div>
 
@@ -228,13 +225,15 @@
         });
 
 
+
+
         $('select[name="upazila_id"]').change(function(){
             var upazila_id = $(this).val();
             $.ajax({
                 headers: {
 
                 },
-                url : "{{route('cities_by_upazila_id')}}",
+                url : "{{route('housings_by_upazila_id')}}",
                 data : {
                     "_token": "{{ csrf_token() }}",
                     'upazila_id' : upazila_id
@@ -242,8 +241,8 @@
                 type : 'POST',
                 dataType : 'html',
                 success : function(result){
-                    $('select[name="city_id"]').html('');
-                    $('select[name="city_id"]').append(result);
+                    $('select[name="housing_id"]').html('');
+                    $('select[name="housing_id"]').append(result);
                 }
             });
         });

@@ -27,7 +27,6 @@
                     <th>Title</th>
                     <th>District</th>
                     <th>Upazila</th>
-                    <th>City</th>
                     <th>Housing</th>
                 </tr>
                 </thead>
@@ -38,8 +37,8 @@
                         <td>{{$project->title}}</td>
                         <td>{{$project->district->name}}</td>
                         <td>{{$project->upazila->name}}</td>
-                        <td>{{$project->city->area}}</td>
                         <td>{{$project->housing->name}}</td>
+
                     </tr>
                 @endforeach
 

@@ -13,6 +13,7 @@
 @endsection
 
 @section('content')
+
     <div class="card mb-4">
         <div class="card-header">
             <i class="fas fa-table me-1"></i>
@@ -53,27 +54,23 @@
                         <!-- Flex Container for Edit, View, and Delete Actions -->
                         <div style="display: flex; align-items: center; justify-content: space-around; width: 100%;">
                             <!-- Edit Link -->
-                            <a href="{{ route('housing.edit', ['housing' => $housing]) }}">
-                                <i class="fas fa-pencil-alt"></i> <!-- Use a more specific pencil icon -->
+                            <a href="{{ route('housing.edit', ['housing' => $housing]) }}" class="btn-icon btn-edit">
+                                <i class="fas fa-pencil-alt"></i>
                             </a>
                             <!-- View Link -->
-                            <a href="{{ route('housing.show', ['housing' => $housing]) }}">
-                                <i class="fas fa-eye"></i> <!-- Eye icon for view action -->
+                            <a href="{{ route('housing.show', ['housing' => $housing]) }}" class="btn-icon btn-view">
+                                <i class="fas fa-eye"></i>
                             </a>
                             <!-- Delete Form -->
                             <form action="{{ route('housing.destroy', ['housing' => $housing]) }}" method="POST" style="margin: 0;">
                                 @csrf
                                 @method('DELETE')
-                                <button type="submit" class="btn btn-link" title="Delete" style="padding: 0; color: red;">
+                                <button type="submit" class="btn-icon btn-delete" title="Delete">
                                     <i class="fas fa-trash-alt"></i>
                                 </button>
                             </form>
-
                         </div>
                     </td>
-
-
-
                 </tr>
                 <?php } ?>
                 </tbody>

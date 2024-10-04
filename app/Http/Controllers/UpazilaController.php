@@ -3,6 +3,7 @@
 namespace App\Http\Controllers;
 
 use App\Models\City;
+use App\Models\Housing;
 use App\Models\Upazila;
 use Illuminate\Http\Request;
 
@@ -65,14 +66,16 @@ class UpazilaController extends Controller
         //
     }
 
-    public function citiesByUpazilaId(Request $request)
+    public function housingsByUpazilaId(Request $request)
     {
         $upazila_id = $request->upazila_id;
-        $cities = City::where('upazila_id', $upazila_id)->get();
-        $options = "";
-        foreach ($cities as $city) {
-            $options = $options . "<option value='$city->id'>$city->name</option>";
+        $housings = Housing::where('upazila_id', $upazila_id)->get();
+        $options = "<option value='' SELECTED>Select Upazila</option>";
+        foreach ($housings as $housing) {
+            $options .= "<option value='$housing->id'>" . ($housing->name == NULL ? "No housing in this Upazila" : $housing->name) . "</option>";
         }
+
+ $options = $options . "<option value='$housing->id'>$housing->name</option>";
         return $options;
     }
 }

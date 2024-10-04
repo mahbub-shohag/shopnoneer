@@ -2,12 +2,9 @@
 
 namespace App\Http\Controllers;
 
-use App\Models\City;
-use App\Models\District;
 use App\Models\Division;
 use App\Models\Housing;
 use App\Models\Project;
-use App\Models\Upazila;
 use Illuminate\Http\Request;
 
 class ProjectController extends Controller
@@ -32,10 +29,8 @@ class ProjectController extends Controller
     public function create()
     {
         $divisions = Division::all();
-        $districts = District::all();
-        $upazillas = Upazila::all();
         $housings = Housing::all();
-        return view('projects.create',['divisions'=>$divisions,'districts'=>$districts,'upazillas'=>$upazillas,'housings'=>$housings]);
+        return view('projects.create',['divisions'=>$divisions,'housings'=>$housings]);
     }
 
     /**
@@ -43,8 +38,68 @@ class ProjectController extends Controller
      */
     public function store(Request $request)
     {
+        $request->validate([
+            'title' => 'required|string',
+            'division_id' => 'required',
+            'district_id' => 'required',
+            'upazila_id' => 'required',
+            'housing_id' => 'required',
+            'road' => 'nullable|string|max:255',
+            'block' => 'nullable|string|max:255',
+            'plot' => 'nullable|string|max:255',
+            'plot_size' => 'nullable|numeric',
+            'plot_face' => 'nullable|string|max:255',
+            'is_corner' => 'nullable|boolean',
+            'storied' => 'nullable|integer|min:1',
+            'no_of_units' => 'nullable|integer|min:1',
+            'floor_area' => 'nullable|numeric',
+            'floor_no' => 'nullable|integer',
+            'no_of_beds' => 'nullable|integer|min:0',
+            'no_of_baths' => 'nullable|integer|min:0',
+            'no_of_balcony' => 'nullable|integer|min:0',
+            'parking_available' => 'nullable|boolean',
+            'owner_name' => 'nullable|string|max:255',
+            'owner_phone' => 'nullable|string|max:11',
+            'owner_email' => 'nullable|email|max:255',
+            'rate_per_sqft' => 'nullable|numeric|min:0',
+            'total_price' => 'nullable|numeric|min:0',
+            'description' => 'nullable|string',
+            'google_map' => 'nullable|url',
+
+        ],
+        [
+        'title.required' => 'The project title is required.',
+            'division_id.required' => 'Please select a division.',
+            'district_id.required' => 'Please select a district.',
+            'upazila_id.required' => 'Please select an upazila.',
+            'housing_id.required' => 'Please select a housing option.',
+            'road.string' => 'The road must be a string.',
+            'block.string' => 'The block must be a string.',
+            'plot.string' => 'The plot must be a string.',
+            'plot_size.numeric' => 'The plot size must be a number.',
+            'is_corner.boolean' => 'The corner option must be true or false.',
+            'storied.integer' => 'The storied value must be an integer.',
+            'no_of_units.integer' => 'The number of units must be an integer.',
+            'floor_area.numeric' => 'The floor area must be a number.',
+            'floor_no.integer' => 'The floor number must be an integer.',
+            'no_of_beds.integer' => 'The number of beds must be an integer.',
+            'no_of_baths.integer' => 'The number of baths must be an integer.',
+            'no_of_balcony.integer' => 'The number of balconies must be an integer.',
+            'parking_available.boolean' => 'The parking availability must be true or false.',
+            'owner_name.string' => 'The owner name must be a string.',
+            'owner_phone.string' => 'The owner phone must be a string.',
+            'owner_email.email' => 'The owner email must be a valid email address.',
+            'rate_per_sqft.numeric' => 'The rate per square foot must be a number.',
+            'total_price.numeric' => 'The total price must be a number.',
+            'description.string' => 'The description must be a string.',
+            'google_map.url' => 'The Google Map link must be a valid URL.',
+            'project_status.required' => 'The project status is required.',
+            'project_status.in' => 'The project status must be either active or inactive.',
+        ]);
+
         $project = new Project();
         $project->title = $request->title;
+        $project->division_id = $request->division_id;
         $project->district_id = $request->district_id;
         $project->upazila_id = $request->upazila_id;
         $project->housing_id = $request->housing_id;
@@ -53,7 +108,7 @@ class ProjectController extends Controller
         $project->plot = $request->plot;
         $project->plot_size = $request->plot_size;
         $project->plot_face = $request->plot_face;
-        $project->is_corner = isset($request->is_corner) ? 1:0;
+        $project->is_corner = isset($request->is_corner) ? 1 : 0;
         $project->storied = $request->storied;
         $project->no_of_units = $request->no_of_units;
         $project->floor_area = $request->floor_area;
@@ -61,7 +116,7 @@ class ProjectController extends Controller
         $project->no_of_beds = $request->no_of_beds;
         $project->no_of_baths = $request->no_of_baths;
         $project->no_of_balcony = $request->no_of_balcony;
-        $project->parking_available = isset($request->parking_available) ? 1:0;
+        $project->parking_available = isset($request->parking_available) ? 1 : 0;
         $project->owner_name = $request->owner_name;
         $project->owner_phone = $request->owner_phone;
         $project->owner_email = $request->owner_email;
@@ -70,8 +125,10 @@ class ProjectController extends Controller
         $project->description = $request->description;
         $project->google_map = $request->google_map;
         $project->save();
+
         return redirect('/project');
     }
+
 
     /**
      * Display the specified resource.
