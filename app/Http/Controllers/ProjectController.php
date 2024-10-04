@@ -49,7 +49,6 @@ class ProjectController extends Controller
             'plot' => 'nullable|string|max:255',
             'plot_size' => 'nullable|numeric',
             'plot_face' => 'nullable|string|max:255',
-            'is_corner' => 'nullable|boolean',
             'storied' => 'nullable|integer|min:1',
             'no_of_units' => 'nullable|integer|min:1',
             'floor_area' => 'nullable|numeric',
@@ -57,9 +56,8 @@ class ProjectController extends Controller
             'no_of_beds' => 'nullable|integer|min:0',
             'no_of_baths' => 'nullable|integer|min:0',
             'no_of_balcony' => 'nullable|integer|min:0',
-            'parking_available' => 'nullable|boolean',
             'owner_name' => 'nullable|string|max:255',
-            'owner_phone' => 'nullable|string|max:11',
+//            'owner_phone' => 'nullable|string|max:11',
             'owner_email' => 'nullable|email|max:255',
             'rate_per_sqft' => 'nullable|numeric|min:0',
             'total_price' => 'nullable|numeric|min:0',
@@ -77,7 +75,6 @@ class ProjectController extends Controller
             'block.string' => 'The block must be a string.',
             'plot.string' => 'The plot must be a string.',
             'plot_size.numeric' => 'The plot size must be a number.',
-            'is_corner.boolean' => 'The corner option must be true or false.',
             'storied.integer' => 'The storied value must be an integer.',
             'no_of_units.integer' => 'The number of units must be an integer.',
             'floor_area.numeric' => 'The floor area must be a number.',
@@ -85,9 +82,8 @@ class ProjectController extends Controller
             'no_of_beds.integer' => 'The number of beds must be an integer.',
             'no_of_baths.integer' => 'The number of baths must be an integer.',
             'no_of_balcony.integer' => 'The number of balconies must be an integer.',
-            'parking_available.boolean' => 'The parking availability must be true or false.',
             'owner_name.string' => 'The owner name must be a string.',
-            'owner_phone.string' => 'The owner phone must be a string.',
+//            'owner_phone.string' => 'The owner phone must be a string.',
             'owner_email.email' => 'The owner email must be a valid email address.',
             'rate_per_sqft.numeric' => 'The rate per square foot must be a number.',
             'total_price.numeric' => 'The total price must be a number.',
@@ -133,9 +129,12 @@ class ProjectController extends Controller
     /**
      * Display the specified resource.
      */
-    public function show(Project $project)
+    public function show(Project $project )
     {
-        //
+        $project = Project::where('id', $project->id)
+            ->with('division', 'district', 'upazila')
+            ->first();
+        return view('projects.show', ['project' => $project]);
     }
 
     /**
@@ -159,6 +158,7 @@ class ProjectController extends Controller
      */
     public function destroy(Project $project)
     {
-        //
+        $project->delete();
+        return redirect('/project');
     }
 }

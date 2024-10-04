@@ -19,7 +19,7 @@
             Project
         </div>
 
-        <div class="card-body">
+        <div class="">
             <table class="table table-bordered">
                 <thead>
                 <tr>
@@ -28,6 +28,7 @@
                     <th>District</th>
                     <th>Upazila</th>
                     <th>Housing</th>
+                    <th>Action</th>
                 </tr>
                 </thead>
                 <tbody>
@@ -38,10 +39,30 @@
                         <td>{{$project->district->name}}</td>
                         <td>{{$project->upazila->name}}</td>
                         <td>{{$project->housing->name}}</td>
+                        <td>
+                            <!-- Flex Container for Edit, View, and Delete Actions -->
+                            <div style="display: flex; align-items: center; justify-content: space-around; width: 100%;">
+                                <!-- Edit Link -->
+                                <a href="{{ route('project.edit', ['project' => $project]) }}" class="btn-icon btn-edit">
+                                    <i class="fas fa-pencil-alt"></i>
+                                </a>
+                                <!-- View Link -->
+                                <a href="{{ route('project.show', ['project' => $project]) }}" class="btn-icon btn-view">
+                                    <i class="fas fa-eye"></i>
+                                </a>
+                                <!-- Delete Form -->
+                                <form action="{{ route('project.destroy', ['project' => $project]) }}" method="POST" style="margin: 0;">
+                                    @csrf
+                                    @method('DELETE')
+                                    <button type="submit" class="btn-icon btn-delete" title="Delete">
+                                        <i class="fas fa-trash-alt"></i>
+                                    </button>
+                                </form>
+                            </div>
+                        </td>
 
                     </tr>
                 @endforeach
-
                 </tbody>
             </table>
         </div>

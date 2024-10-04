@@ -1,57 +1,54 @@
 /* public/css/custom-styles.css */
 .bg-teal {
-    background-color: #008080 ; /* Teal background */
+    background-color: #008080; /* Teal background */
 }
 
 .bg-dark-teal {
-    background-color: #005757 ; /* Dark teal background */
+    background-color: #005757; /* Dark teal background */
 }
 
 .bg-light-teal {
-    background-color: #99ffff ; /* Light teal background */
+    background-color: #99ffff; /* Light teal background */
 }
 
 /* Increase the font size for the dashboard cards */
 .card-header {
-    font-size: 1.5rem ; /* Adjust this value as needed */
+    font-size: 1.5rem; /* Adjust this value as needed */
 }
 
 .card-body {
-    font-size: 1.2rem ; /* Adjust this value as needed */
+    font-size: 1.2rem; /* Adjust this value as needed */
 }
 
 /* Add hover effect to the cards */
 .card {
-    transition: transform 0.3s ease, box-shadow 0.3s ease ; /* Smooth transition for hover effect */
-    cursor: pointer ; /* Change cursor to pointer on hover */
+    transition: transform 0.3s ease, box-shadow 0.3s ease; /* Smooth transition for hover effect */
+    cursor: pointer; /* Change cursor to pointer on hover */
 }
 
 /* Hover effect applied to all card types */
 .dash_board_card:hover {
-    transform: scale(1.05) ; /* Scale up the card slightly */
-    box-shadow: 0 8px 25px rgba(0, 0, 0, 0.3) ; /* Add shadow on hover */
+    transform: scale(1.05); /* Scale up the card slightly */
+    box-shadow: 0 8px 25px rgba(0, 0, 0, 0.3); /* Add shadow on hover */
 }
 
 /* Optional: Add focus effect for accessibility */
 .card:focus {
-    outline: none ; /* Remove default outline */
-    box-shadow: 0 8px 25px rgba(0, 0, 0, 0.5) ; /* Stronger shadow for focus */
+    outline: none; /* Remove default outline */
+    box-shadow: 0 8px 25px rgba(0, 0, 0, 0.5); /* Stronger shadow for focus */
 }
 
 /* Responsive adjustments */
 @media (max-width: 768px) {
     .card-header {
-        font-size: 1.3rem ; /* Smaller size for mobile */
+        font-size: 1.3rem; /* Smaller size for mobile */
     }
     .card-body {
-        font-size: 1rem ; /* Smaller size for mobile */
+        font-size: 1rem; /* Smaller size for mobile */
     }
 }
 
-
 /*------------- For action BTN ----------------*/
-
-/* Custom styles for Housing Management */
 
 /* Button Styles */
 .btn-icon {
@@ -139,12 +136,55 @@
 /* Header Row Styles */
 .table th {
     background-color: #005757; /* Dark teal background for header */
-    color: white; /* White text */
+    color: black; /* White text */
 }
 
-/* Table Row Hover Effect */
-.table tr:hover {
-    background-color: rgba(0, 128, 128, 0.1); /* Light teal background on hover */
+/* Teal and dark background */
+.text-teal {
+    color: #008080; /* Teal */
+}
+
+.bg-dark {
+    background-color: #000000; /* Dark background */
+    color: #ffffff; /* White text */
+}
+
+/* Hover effect for cards */
+.card {
+    border-radius: 10px !important; /* Rounded corners for cards */
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1); /* Subtle shadow effect */
+    transition: background-color 0.4s ease; /* Transition for background color */
+}
+
+.card:hover {
+    background-color: antiquewhite; /* Slightly lighter dark */
+}
+
+.card.active {
+    background-color: antiquewhite; /* Slightly lighter dark */
+    transition: background-color 0.4s ease; /* Smooth transition */
+}
+
+
+
+/* Interactive hover effect for buttons or text links */
+a:hover {
+    color: #004d4d; /* Darker teal on hover */
+    text-decoration: underline; /* Add underline on hover */
+}
+
+/* Light theme toggle example */
+.light-theme .bg-dark {
+    background-color: #f8f9fa; /* Light gray for light theme */
+    color: #212529; /* Dark text for contrast */
+}
+
+.light-theme .card:hover {
+    background-color: #e0e0e0; /* Light gray hover effect */
+}
+
+.light-theme a:hover {
+    color: #006666; /* Lighter teal for hover in light theme */
 }
 
 /* Responsive adjustments */
