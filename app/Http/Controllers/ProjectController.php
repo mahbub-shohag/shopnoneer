@@ -158,20 +158,25 @@ class ProjectController extends Controller
      */
     public function update(Request $request, Project $project)
     {
+//        echo '<pre style="background-color: #f8f9fa; border: 1px solid #dee2e6; padding: 10px; border-radius: 5px; overflow-x: auto;">';
+//        print_r($project);
+//        echo '</pre>';
 
         $request->validate([
             'title' => 'required',
             'division_id' => 'required',
             'district_id' => 'required',
             'upazila_id' => 'required',
+            'housing_id' => 'required',
         ],
             [
                 'title.required' => 'The Project name is required.',
                 'division_id.required' => 'Please select a division.',
                 'district_id.required' => 'Please select a district.',
                 'upazila_id.required' => 'Please select an upazila.',
+                'housing_id.required' => 'Please select an upazila.',
             ]);
-        try {
+
             $project->title = $request->title;
             $project->division_id = $request->division_id;
             $project->district_id = $request->district_id;
@@ -198,13 +203,10 @@ class ProjectController extends Controller
             $project->total_price = $request->total_price;
             $project->description = $request->description;
             $project->google_map = $request->google_map;
-
             $project->save();
 
             return redirect('/project');
-        }catch (\Exception $e) {
-            return redirect('/project')->with('error', 'Failed to update project record. Please try again.');
-        }
+
 
     }
     public function destroy(Project $project)

@@ -73,7 +73,7 @@
                 </div>
                 <div class="mb-3">
                     <label class="custom-control-label">Housing</label>
-                    <select class="form-select" name="upazila_id">
+                    <select class="form-select" name="housing_id">
                         <option value="">Select Housing</option>
                         @foreach($housings as $housing)
                             <option value="{{ $housing->id }}" @if($housing->id == $project->housing_id) selected @endif>
