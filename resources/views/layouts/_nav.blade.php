@@ -47,7 +47,7 @@
                 <div class="collapse" id="collapseProject" aria-labelledby="headingTwo" data-bs-parent="#sidenavAccordion">
                     <nav class="sb-sidenav-menu-nested nav accordion" id="sidenavAccordionPages">
                         <a class="nav-link" href="{{asset('project/create')}}">Add New</a>
-                        <a class="nav-link" href="{{asset('project-list')}}">Project List</a>
+                        <a class="nav-link" href="{{asset('project')}}">Project List</a>
                     </nav>
                 </div>
             </div>

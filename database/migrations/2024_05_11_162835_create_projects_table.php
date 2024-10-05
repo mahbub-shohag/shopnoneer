@@ -17,7 +17,7 @@ return new class extends Migration
             $table->foreignId('division_id')->constrained('divisions');
             $table->foreignId('district_id')->constrained('districts');
             $table->foreignId('upazila_id')->constrained('upazilas');
-            $table->foreignId('housing_id')->constrained('housings');
+            $table->foreignId('housing_id')->constrained('housings')->cascadeOnUpdate();
             $table->string('road')->nullable();
             $table->string('block')->nullable();
             $table->string('plot')->nullable();
