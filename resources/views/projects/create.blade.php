@@ -93,7 +93,7 @@
                         <option>North</option>
                         <option>South</option>
                         <option>East</option>
-                        <option>South</option>
+                        <option>West</option>
                     </select>
                 </div>
 

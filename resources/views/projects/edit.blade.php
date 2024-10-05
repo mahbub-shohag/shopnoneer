@@ -85,33 +85,34 @@
 
                 <div class="mb-3">
                     <label class="custom-control-label">Road</label>
-                    <input type="number" class="form-control" name="road">
+                    <input type="number" class="form-control" name="road" value="{{ $project->road }}">
                 </div>
 
                 <div class="mb-3">
                     <label class="custom-control-label">Block</label>
-                    <input type="text" class="form-control" name="block">
+                    <input type="text" class="form-control" name="block" value="{{ $project->block }}">
                 </div>
 
                 <div class="mb-3">
                     <label class="custom-control-label">Plot Number</label>
-                    <input type="text" class="form-control" name="plot">
+                    <input type="text" class="form-control" name="plot" value="{{ $project->plot }}">
                 </div>
 
                 <div class="mb-3">
                     <label class="custom-control-label">Plot Size</label>
-                    <input type="number" class="form-control" name="plot_size">
+                    <input type="number" class="form-control" name="plot_size" value="{{ $project->plot_size}}">
                 </div>
 
                 <div class="mb-3">
                     <label class="custom-control-label">Plot Face</label>
                     <select class="form-control" name="plot_face">
-                        <option>North</option>
-                        <option>South</option>
-                        <option>East</option>
-                        <option>South</option>
+                        <option value="North" {{ $project->plot_face == 'North' ? 'selected' : '' }}>North</option>
+                        <option value="South" {{ $project->plot_face == 'South' ? 'selected' : '' }}>South</option>
+                        <option value="East"  {{ $project->plot_face == 'East' ? 'selected' : '' }}>East</option>
+                        <option value="West"  {{ $project->plot_face == 'West' ? 'selected' : '' }}>West</option>
                     </select>
                 </div>
+
 
                 <div class="mb-3">
                     <label class="custom-control-label">Is Corner</label>
