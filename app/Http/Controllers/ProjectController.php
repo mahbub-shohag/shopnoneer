@@ -2,9 +2,11 @@
 
 namespace App\Http\Controllers;
 
+use App\Models\District;
 use App\Models\Division;
 use App\Models\Housing;
 use App\Models\Project;
+use App\Models\Upazila;
 use Illuminate\Http\Request;
 
 class ProjectController extends Controller
@@ -142,7 +144,13 @@ class ProjectController extends Controller
      */
     public function edit(Project $project)
     {
-        return view('projects.edit');
+        $divisions = Division::all();
+        $districts = District::all();
+        $upazilas = Upazila::all();
+        $housings = Housing::all();
+
+        return view('projects.edit',['project' =>$project,'housings'=>$housings,'divisions' => $divisions,'districts' => $districts,'upazillas' => $upazilas]);
+
     }
 
     /**
