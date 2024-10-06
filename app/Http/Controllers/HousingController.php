@@ -17,7 +17,7 @@ class HousingController extends Controller
 
     public function create(){
         $divisions = Division::all();
-        return view('housings.create',['divisions' => $divisions])->with('success', 'Project created successfully.');
+        return view('housings.create',['divisions' => $divisions])->with('success', 'Housings created successfully.');
     }
 
     public function edit(Housing $housing)
@@ -71,7 +71,6 @@ class HousingController extends Controller
 
     public function update(Request $request, Housing $housing)
     {
-
         $request->validate([
             'name' => 'required',
             'division_id' => 'required',
@@ -84,7 +83,18 @@ class HousingController extends Controller
                 'district_id.required' => 'Please select a district.',
                 'upazila_id.required' => 'Please select an upazila.',
             ]);
+
         try {
+            // Check if any changes were made
+            if ($housing->name == $request->input('name') &&
+                $housing->division_id == $request->input('division_id') &&
+                $housing->district_id == $request->input('district_id') &&
+                $housing->upazila_id == $request->input('upazila_id')) {
+                // No changes, return a message indicating nothing was updated
+                return redirect('/housing')->with('info', 'No changes made to the housing record.');
+            }
+
+            // Update housing record
             $housing->name = $request->input('name');
             $housing->division_id = $request->input('division_id');
             $housing->district_id = $request->input('district_id');
@@ -92,17 +102,20 @@ class HousingController extends Controller
 
             $housing->save();
 
-            return redirect('/housing')->with('success', 'Project updated successfully.');
-        }catch (\Exception $e) {
+            return redirect('/housing')->with('success', 'Housing updated successfully.');
+        } catch (\Exception $e) {
             return redirect('/housing')->with('error', 'Failed to update housing record. Please try again.');
         }
-
     }
+
     public function destroy(Housing $housing)
     {
-        $housing->delete();
-        return redirect('/housing')->with('success', 'Project deleted successfully.');
-
+        try {
+            $housing->delete();
+            return redirect('/housing')->with('error', 'Housing deleted successfully.');
+        } catch (\Exception $e) {
+            return redirect('/housing')->with('warning', 'Failed to delete Housing');
+        }
     }
 
 }

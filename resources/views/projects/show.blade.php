@@ -22,7 +22,7 @@
                     </div>
                     <div class="card-body p-5"> <!-- Spacious content -->
                         <div class="row">
-                            <div class="col-md-5">
+                            <div class="col-md-6">
                                 <table class="table table-hover table-striped table-bordered text-center" style="font-size: 1.5rem;"> <!-- Increased font size for table content -->
                                     <tbody>
                                     <tr>
@@ -88,7 +88,7 @@
                                     </tbody>
                                 </table>
                             </div>
-                            <div class="col-md-5">
+                            <div class="col-md-6">
                                 <table class="table table-hover table-striped table-bordered text-center" style="font-size: 1.5rem;"> <!-- Increased font size for table content -->
                                     <tbody>
                                     <tr>

@@ -20,7 +20,6 @@
                         <a class="nav-link" href="{{asset('division')}}">DIVISION</a>
                         <a class="nav-link" href="{{asset('district')}}">DISTRICT</a>
                         <a class="nav-link" href="{{asset('upazila')}}">UPAZILLA</a>
-                        <a class="nav-link" href="{{asset('city')}}">City</a>
                         <a class="nav-link" href="{{asset('housing')}}">Housing</a>
                         <a class="nav-link" href="{{asset('users')}}">Manage Users</a>
                         <a class="nav-link" href="{{asset('roles')}}">Roles</a>

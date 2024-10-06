@@ -168,11 +168,11 @@
 }
 
 .card:hover {
-    background-color: antiquewhite; /* Slightly lighter dark */
+    background-color: whitesmoke; /* Slightly lighter dark */
 }
 
 .card.active {
-    background-color: antiquewhite; /* Slightly lighter dark */
+    background-color: whitesmoke; /* Slightly lighter dark */
     transition: background-color 0.4s ease; /* Smooth transition */
 }
 
@@ -198,12 +198,12 @@ a:hover {
 }
 /*Toaster CSS*/
 #toast-container .toast-success {
-    background-color: #28a745 !important; /* Change this to your preferred color */
+    background-color: #006666 !important; /* Change this to your preferred color */
     color: #fff !important;               /* Text color */
 }
 
 #toast-container .toast-error {
-    background-color: #dc3545 !important; /* Error background color */
+    background-color: red !important; /* Error background color */
     color: #fff !important;               /* Text color */
 }
 
@@ -213,19 +213,22 @@ a:hover {
 }
 
 #toast-container .toast-warning {
-    background-color: #ffc107 !important; /* Warning background color */
+    background-color: #ff6347 !important; /* Warning background color */
     color: #fff !important;               /* Text color */
 }
 /* Custom success toast background */
 .custom-toast-success {
-    background-color: #28a745 !important;
+    background-color: #006666 !important;
     color: #fff !important;
 }
 
 /* Custom error toast background */
 .custom-toast-error {
-    background-color: #dc3545 !important;
+    background-color: #ff6347 !important;
     color: #fff !important;
+}
+#toast-container {
+    top: 70px; /* Adjust this value as needed */
 }
 
 

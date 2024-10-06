@@ -32,7 +32,7 @@ class ProjectController extends Controller
     {
         $divisions = Division::all();
         $housings = Housing::all();
-        return view('projects.create',['divisions'=>$divisions,'housings'=>$housings]);
+        return view('projects.create',['divisions'=>$divisions,'housings'=>$housings])->with('success', 'Project created successfully.');
     }
 
     /**
@@ -45,7 +45,7 @@ class ProjectController extends Controller
             'division_id' => 'required',
             'district_id' => 'required',
             'upazila_id' => 'required',
-            'housing_id' => 'required',
+//            'housing_id' => 'required',
             'road' => 'nullable|string|max:255',
             'block' => 'nullable|string|max:255',
             'plot' => 'nullable|string|max:255',
@@ -72,7 +72,7 @@ class ProjectController extends Controller
             'division_id.required' => 'Please select a division.',
             'district_id.required' => 'Please select a district.',
             'upazila_id.required' => 'Please select an upazila.',
-            'housing_id.required' => 'Please select a housing option.',
+//            'housing_id.required' => 'Please select a housing option.',
             'road.string' => 'The road must be a string.',
             'block.string' => 'The block must be a string.',
             'plot.string' => 'The plot must be a string.',
@@ -150,7 +150,6 @@ class ProjectController extends Controller
         $housings = Housing::all();
 
         return view('projects.edit',['project' =>$project,'housings'=>$housings,'divisions' => $divisions,'districts' => $districts,'upazillas' => $upazilas]);
-
     }
 
     /**
@@ -172,6 +171,40 @@ class ProjectController extends Controller
             'housing_id.required' => 'Please select a housing option.',
         ]);
 
+        // Check if any changes were made
+        if (
+            $project->title === $request->title &&
+            $project->division_id === $request->division_id &&
+            $project->district_id === $request->district_id &&
+            $project->upazila_id === $request->upazila_id &&
+            $project->housing_id === $request->housing_id &&
+            $project->road === $request->road &&
+            $project->block === $request->block &&
+            $project->plot === $request->plot &&
+            $project->plot_size === $request->plot_size &&
+            $project->plot_face === $request->plot_face &&
+            $project->is_corner === (isset($request->is_corner) ? 1 : 0) &&
+            $project->storied === $request->storied &&
+            $project->no_of_units === $request->no_of_units &&
+            $project->floor_area === $request->floor_area &&
+            $project->floor_no === $request->floor_no &&
+            $project->no_of_beds === $request->no_of_beds &&
+            $project->no_of_baths === $request->no_of_baths &&
+            $project->no_of_balcony === $request->no_of_balcony &&
+            $project->parking_available === (isset($request->parking_available) ? 1 : 0) &&
+            $project->owner_name === $request->owner_name &&
+            $project->owner_phone === $request->owner_phone &&
+            $project->owner_email === $request->owner_email &&
+            $project->rate_per_sqft === $request->rate_per_sqft &&
+            $project->total_price === $request->total_price &&
+            $project->description === $request->description &&
+            $project->google_map === $request->google_map
+        ) {
+            // No changes made, return a message indicating nothing was updated
+            return redirect('/project')->with('info', 'No changes made to the project record.');
+        }
+
+        // Update project record
         $project->title = $request->title;
         $project->division_id = $request->division_id;
         $project->district_id = $request->district_id;
@@ -204,12 +237,15 @@ class ProjectController extends Controller
         return redirect('/project')->with('success', 'Project updated successfully.');
     }
 
+
     public function destroy(Project $project)
     {
-        $project->delete();
-
-        // Flash success message
-        return redirect('/project')->with('success', 'Project deleted successfully.');
+        try {
+            $project->delete();
+            return redirect('/project')->with('error', 'Project deleted successfully.');
+        } catch (\Exception $e) {
+            return redirect('/project')->with('warning', 'Failed to delete Project');
+        }
     }
 
 }

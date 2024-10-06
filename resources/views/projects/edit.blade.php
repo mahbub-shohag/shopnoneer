@@ -18,7 +18,6 @@
             <i class="fas fa-table me-1"></i>
             Project
         </div>
-
         <div class="card-body">
             <form action="{{route('project.update',  $project->id)}}" method="POST">
                 {{csrf_field()}}
@@ -205,11 +204,7 @@
                 <!-- Latitude and Longitude Fields (Hidden) -->
                 <input type="hidden" id="latitude" name="latitude">
                 <input type="hidden" id="longitude" name="longitude">
-
-
-
-
-                <button class="btn btn-primary">Submit</button>
+                <button class="btn btn-primary mt-4">Submit</button>
             </form>
         </div>
     </div>

@@ -19,7 +19,6 @@
         <div class="card-header">
             <i class="fas fa-table me-1"></i>
             Housing
-
             <a href="housing/create">
                 <button class="btn btn-sm btn-primary" style="float: right"><i class="fas fa-plus"></i> Add New</button>
             </a>
@@ -78,20 +77,9 @@
             </table>
         </div>
     </div>
-    @if(session('success'))
-        <script>
-            toastr.success("{{ session('success') }}");
-        </script>
-    @endif
+
 
 @endsection
 
-<script>
-    toastr.options = {
-        "closeButton": true,
-        "progressBar": true,
-        "positionClass": "toast-top-right",
-        "timeOut": "5000",
-    };
-</script>
+
 

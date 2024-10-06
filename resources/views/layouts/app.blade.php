@@ -8,11 +8,11 @@
     <meta name="author" content="" />
     <title>Shopno Neer</title>
     <link href="https://cdn.jsdelivr.net/npm/simple-datatables@7.1.2/dist/style.min.css" rel="stylesheet" />
-    <link type="text/css" href="{{asset('assets/css/custom-styles.css')}}" rel="stylesheet">
+    <link type="text/css" href="{{ asset('assets/css/custom-styles.css') }}" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/toastr.js/latest/toastr.min.css">
-    <link type="text/css" href="{{asset('assets/css/styles.css')}}" rel="stylesheet">
-    <link type="text/css" href="{{asset('assets/css/app.css')}}" rel="stylesheet">
-    <script src="{{asset('assets/js/jquery.js')}}" type="text/javascript"></script>
+    <link type="text/css" href="{{ asset('assets/css/styles.css') }}" rel="stylesheet">
+    <link type="text/css" href="{{ asset('assets/css/app.css') }}" rel="stylesheet">
+    <script src="{{ asset('assets/js/jquery.js') }}" type="text/javascript"></script>
     <script src="https://use.fontawesome.com/releases/v6.3.0/js/all.js" crossorigin="anonymous"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/toastr.js/latest/toastr.min.js"></script>
 </head>
@@ -49,7 +49,7 @@
                         <button class="dropdown-item"><i class="fa fa-sign-out"></i>{{ __('Logout') }}</button>
                     </form>
                 @else
-                    <li><a class="dropdown-item" href="{{route('login')}}"><i class="fa fa-user"></i> Login</a></li>
+                    <li><a class="dropdown-item" href="{{ route('login') }}"><i class="fa fa-user"></i> Login</a></li>
                 @endif
             </ul>
         </li>
@@ -72,13 +72,44 @@
         </main>
 
         @include('layouts/_footer')
-
     </div>
 </div>
 
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js" crossorigin="anonymous"></script>
-<script src="{{asset('assets/js/scripts.js')}}"></script>
+<script src="{{ asset('assets/js/scripts.js') }}"></script>
 <script src="https://cdn.jsdelivr.net/npm/simple-datatables@7.1.2/dist/umd/simple-datatables.min.js" crossorigin="anonymous"></script>
-<script src="{{asset('assets/js/datatables-simple-demo.js')}}"></script>
+<script src="{{ asset('assets/js/datatables-simple-demo.js') }}"></script>
+
+<script>
+    // Toastr options
+    toastr.options = {
+        "closeButton": true,
+        "progressBar": true,
+        "positionClass": "toast-top-right", // Change to toast-top-right
+        "timeOut": "3000",
+    };
+
+    // Show success message
+    @if(session('success'))
+    toastr.success("{{ session('success') }}");
+    @endif
+
+    // Show error message
+    @if(session('error'))
+    toastr.error("{{ session('error') }}");
+    @endif
+
+    // Show warning message
+    @if(session('warning'))
+    toastr.warning("{{ session('warning') }}");
+    @endif
+
+    // Show info message
+    @if(session('info'))
+    toastr.info("{{ session('info') }}");
+    @endif
+
+</script>
+
 </body>
 </html>
