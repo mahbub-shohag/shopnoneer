@@ -124,7 +124,12 @@
                                     <tr>
                                         <td class="bg-dark text-white" style="padding: 1rem;">Description</td>
                                         <td style="padding: 1rem;">{{ $project->description }}</td>
-                                    </tr><tr>
+                                    </tr>
+                                    <tr>
+                                        <td class="bg-dark text-white" style="padding: 1rem;">Description</td>
+                                        <td style="padding: 1rem;">{{ $project->project_image }}</td>
+                                    </tr>
+                                    <tr>
                                         <td class="bg-dark text-white" style="padding: 1rem;">Google Map</td>
                                         <td style="padding: 1rem;">{{ $project->google_map }}</td>
                                     </tr>

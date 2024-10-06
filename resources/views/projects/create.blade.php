@@ -20,21 +20,13 @@
         </div>
 
         <div class="card-body">
-            <form action="{{route('project.store')}}" method="POST">
+            <form action="{{route('project.store')}}" method="POST" enctype="multipart/form-data">
                 {{csrf_field()}}
                 {{ method_field('POST') }}
-                @if ($errors->any())
-                    <div class="alert alert-danger">
-                        <ol>
-                            @foreach ($errors->all() as $error)
-                                <li>{{ $error }}</li>
-                            @endforeach
-                        </ol>
-                    </div>
-                @endif
+
                 <div class="mb-3">
-                    <label class="custom-control-label">Title</label>
-                    <input class="form-control" type="text" name="title">
+                    <label class="custom-control-label" >Title</label>
+                    <input class="form-control" required type="text" name="title">
                 </div>
                 <div class="mb-3">
                     <label class="custom-control-label">Division</label>
@@ -171,12 +163,18 @@
                     <label class="custom-control-label">Description</label>
                     <input type="text" class="form-control" name="description">
                 </div>
+
+                <div class="mb-3">
+                    <label class="custom-control-label">Project Image</label>
+                    <input type="file" class="form-control" name="project_image">
+                </div>
+
                 <div class="mb-3">
                     <label for="autocomplete" class="custom-control-label">Enter Address</label>
                     <input type="text" class="form-control" id="autocomplete" placeholder="Enter your address">
                 </div>
 
-                <!-- Map Container -->
+                <!-- Google Map Container -->
                 <div id="map" style="height: 400px; width: 100%;"></div>
 
                 <!-- Latitude and Longitude Fields (Hidden) -->
@@ -315,6 +313,27 @@
         window.onload = function() {
             initMap();
         };
+        // Example starter JavaScript for disabling form submissions if there are invalid fields
+        (function () {
+            'use strict'
+
+            // Fetch all the forms we want to apply custom Bootstrap validation styles to
+            var forms = document.querySelectorAll('.needs-validation')
+
+            // Loop over them and prevent submission
+            Array.prototype.slice.call(forms)
+                .forEach(function (form) {
+                    form.addEventListener('submit', function (event) {
+                        if (!form.checkValidity()) {
+                            event.preventDefault()
+                            event.stopPropagation()
+                        }
+
+                        form.classList.add('was-validated')
+                    }, false)
+                })
+        })()
     </script>
+
 
 @endsection

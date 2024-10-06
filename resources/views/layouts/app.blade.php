@@ -8,8 +8,8 @@
     <meta name="author" content="" />
     <title>Shopno Neer</title>
     <link href="https://cdn.jsdelivr.net/npm/simple-datatables@7.1.2/dist/style.min.css" rel="stylesheet" />
-    <link type="text/css" href="{{ asset('assets/css/custom-styles.css') }}" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/toastr.js/latest/toastr.min.css">
+    <link type="text/css" href="{{ asset('assets/css/custom-styles.css') }}" rel="stylesheet">
     <link type="text/css" href="{{ asset('assets/css/styles.css') }}" rel="stylesheet">
     <link type="text/css" href="{{ asset('assets/css/app.css') }}" rel="stylesheet">
     <script src="{{ asset('assets/js/jquery.js') }}" type="text/javascript"></script>

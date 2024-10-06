@@ -41,7 +41,7 @@ class ProjectController extends Controller
     public function store(Request $request)
     {
         $request->validate([
-            'title' => 'required|string',
+            'title' => 'required|string|min:3|max:255',
             'division_id' => 'required',
             'district_id' => 'required',
             'upazila_id' => 'required',
@@ -64,6 +64,7 @@ class ProjectController extends Controller
             'rate_per_sqft' => 'nullable|numeric|min:0',
             'total_price' => 'nullable|numeric|min:0',
             'description' => 'nullable|string',
+            'project_image' => 'nullable',
             'google_map' => 'nullable|url',
 
         ],
@@ -92,6 +93,7 @@ class ProjectController extends Controller
             'description.string' => 'The description must be a string.',
             'google_map.url' => 'The Google Map link must be a valid URL.',
             'project_status.required' => 'The project status is required.',
+            'project_image.required' => 'The project image is required.',
             'project_status.in' => 'The project status must be either active or inactive.',
         ]);
 
@@ -122,8 +124,17 @@ class ProjectController extends Controller
         $project->total_price = $request->total_price;
         $project->description = $request->description;
         $project->google_map = $request->google_map;
+        if ($request->hasFile('project_image') && $request->file('project_image')->isValid()) {
+            $result = $project->addMediaFromRequest('project_image')->toMediaCollection('project_image');
+            //echo "<pre>";print_r($result);exit;
+        }
+        //echo "<pre>";print_r($project);exit;
+           // $project->project_image = $request->project_image;
         $project->save();
-
+        $url = $project->getFirstMediaUrl('project_image', 'thumb');
+        $project->project_image = $url;
+        $project->save();
+        //exit;
         return redirect('/project');
     }
 
@@ -170,39 +181,6 @@ class ProjectController extends Controller
             'upazila_id.required' => 'Please select an upazila.',
             'housing_id.required' => 'Please select a housing option.',
         ]);
-
-        // Check if any changes were made
-        if (
-            $project->title === $request->title &&
-            $project->division_id === $request->division_id &&
-            $project->district_id === $request->district_id &&
-            $project->upazila_id === $request->upazila_id &&
-            $project->housing_id === $request->housing_id &&
-            $project->road === $request->road &&
-            $project->block === $request->block &&
-            $project->plot === $request->plot &&
-            $project->plot_size === $request->plot_size &&
-            $project->plot_face === $request->plot_face &&
-            $project->is_corner === (isset($request->is_corner) ? 1 : 0) &&
-            $project->storied === $request->storied &&
-            $project->no_of_units === $request->no_of_units &&
-            $project->floor_area === $request->floor_area &&
-            $project->floor_no === $request->floor_no &&
-            $project->no_of_beds === $request->no_of_beds &&
-            $project->no_of_baths === $request->no_of_baths &&
-            $project->no_of_balcony === $request->no_of_balcony &&
-            $project->parking_available === (isset($request->parking_available) ? 1 : 0) &&
-            $project->owner_name === $request->owner_name &&
-            $project->owner_phone === $request->owner_phone &&
-            $project->owner_email === $request->owner_email &&
-            $project->rate_per_sqft === $request->rate_per_sqft &&
-            $project->total_price === $request->total_price &&
-            $project->description === $request->description &&
-            $project->google_map === $request->google_map
-        ) {
-            // No changes made, return a message indicating nothing was updated
-            return redirect('/project')->with('info', 'No changes made to the project record.');
-        }
 
         // Update project record
         $project->title = $request->title;
