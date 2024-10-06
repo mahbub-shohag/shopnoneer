@@ -9,10 +9,12 @@
     <title>Shopno Neer</title>
     <link href="https://cdn.jsdelivr.net/npm/simple-datatables@7.1.2/dist/style.min.css" rel="stylesheet" />
     <link type="text/css" href="{{asset('assets/css/custom-styles.css')}}" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/toastr.js/latest/toastr.min.css">
     <link type="text/css" href="{{asset('assets/css/styles.css')}}" rel="stylesheet">
     <link type="text/css" href="{{asset('assets/css/app.css')}}" rel="stylesheet">
     <script src="{{asset('assets/js/jquery.js')}}" type="text/javascript"></script>
     <script src="https://use.fontawesome.com/releases/v6.3.0/js/all.js" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/toastr.js/latest/toastr.min.js"></script>
 </head>
 <body>
 <nav class="sb-topnav navbar navbar-expand navbar-dark bg-dark">

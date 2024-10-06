@@ -27,10 +27,21 @@
 }
 
 /* Hover effect applied to all card types */
+
+
+
 .dash_board_card:hover {
     transform: scale(1.05); /* Scale up the card slightly */
     box-shadow: 0 8px 25px rgba(0, 0, 0, 0.3); /* Add shadow on hover */
+    transition: transform 0.4s cubic-bezier(0.25, 0.8, 0.25, 1), box-shadow 0.4s cubic-bezier(0.25, 0.8, 0.25, 1);
+    transition-duration: 0.7s; /* Delay the return transition for half a second */
+
+
 }
+
+
+
+
 
 /* Optional: Add focus effect for accessibility */
 .card:focus {
@@ -170,7 +181,6 @@
 /* Interactive hover effect for buttons or text links */
 a:hover {
     color: #004d4d; /* Darker teal on hover */
-    text-decoration: underline; /* Add underline on hover */
 }
 
 /* Light theme toggle example */
@@ -186,6 +196,38 @@ a:hover {
 .light-theme a:hover {
     color: #006666; /* Lighter teal for hover in light theme */
 }
+/*Toaster CSS*/
+#toast-container .toast-success {
+    background-color: #28a745 !important; /* Change this to your preferred color */
+    color: #fff !important;               /* Text color */
+}
+
+#toast-container .toast-error {
+    background-color: #dc3545 !important; /* Error background color */
+    color: #fff !important;               /* Text color */
+}
+
+#toast-container .toast-info {
+    background-color: #17a2b8 !important; /* Info background color */
+    color: #fff !important;               /* Text color */
+}
+
+#toast-container .toast-warning {
+    background-color: #ffc107 !important; /* Warning background color */
+    color: #fff !important;               /* Text color */
+}
+/* Custom success toast background */
+.custom-toast-success {
+    background-color: #28a745 !important;
+    color: #fff !important;
+}
+
+/* Custom error toast background */
+.custom-toast-error {
+    background-color: #dc3545 !important;
+    color: #fff !important;
+}
+
 
 /* Responsive adjustments */
 @media (max-width: 768px) {

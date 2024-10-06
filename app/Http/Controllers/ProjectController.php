@@ -158,60 +158,58 @@ class ProjectController extends Controller
      */
     public function update(Request $request, Project $project)
     {
-//        echo '<pre style="background-color: #f8f9fa; border: 1px solid #dee2e6; padding: 10px; border-radius: 5px; overflow-x: auto;">';
-//        print_r($project);
-//        echo '</pre>';
-
         $request->validate([
             'title' => 'required',
             'division_id' => 'required',
             'district_id' => 'required',
             'upazila_id' => 'required',
             'housing_id' => 'required',
-        ],
-            [
-                'title.required' => 'The Project name is required.',
-                'division_id.required' => 'Please select a division.',
-                'district_id.required' => 'Please select a district.',
-                'upazila_id.required' => 'Please select an upazila.',
-                'housing_id.required' => 'Please select an upazila.',
-            ]);
+        ], [
+            'title.required' => 'The Project name is required.',
+            'division_id.required' => 'Please select a division.',
+            'district_id.required' => 'Please select a district.',
+            'upazila_id.required' => 'Please select an upazila.',
+            'housing_id.required' => 'Please select a housing option.',
+        ]);
 
-            $project->title = $request->title;
-            $project->division_id = $request->division_id;
-            $project->district_id = $request->district_id;
-            $project->upazila_id = $request->upazila_id;
-            $project->housing_id = $request->housing_id;
-            $project->road = $request->road;
-            $project->block = $request->block;
-            $project->plot = $request->plot;
-            $project->plot_size = $request->plot_size;
-            $project->plot_face = $request->plot_face;
-            $project->is_corner = isset($request->is_corner) ? 1 : 0;
-            $project->storied = $request->storied;
-            $project->no_of_units = $request->no_of_units;
-            $project->floor_area = $request->floor_area;
-            $project->floor_no = $request->floor_no;
-            $project->no_of_beds = $request->no_of_beds;
-            $project->no_of_baths = $request->no_of_baths;
-            $project->no_of_balcony = $request->no_of_balcony;
-            $project->parking_available = isset($request->parking_available) ? 1 : 0;
-            $project->owner_name = $request->owner_name;
-            $project->owner_phone = $request->owner_phone;
-            $project->owner_email = $request->owner_email;
-            $project->rate_per_sqft = $request->rate_per_sqft;
-            $project->total_price = $request->total_price;
-            $project->description = $request->description;
-            $project->google_map = $request->google_map;
-            $project->save();
+        $project->title = $request->title;
+        $project->division_id = $request->division_id;
+        $project->district_id = $request->district_id;
+        $project->upazila_id = $request->upazila_id;
+        $project->housing_id = $request->housing_id;
+        $project->road = $request->road;
+        $project->block = $request->block;
+        $project->plot = $request->plot;
+        $project->plot_size = $request->plot_size;
+        $project->plot_face = $request->plot_face;
+        $project->is_corner = isset($request->is_corner) ? 1 : 0;
+        $project->storied = $request->storied;
+        $project->no_of_units = $request->no_of_units;
+        $project->floor_area = $request->floor_area;
+        $project->floor_no = $request->floor_no;
+        $project->no_of_beds = $request->no_of_beds;
+        $project->no_of_baths = $request->no_of_baths;
+        $project->no_of_balcony = $request->no_of_balcony;
+        $project->parking_available = isset($request->parking_available) ? 1 : 0;
+        $project->owner_name = $request->owner_name;
+        $project->owner_phone = $request->owner_phone;
+        $project->owner_email = $request->owner_email;
+        $project->rate_per_sqft = $request->rate_per_sqft;
+        $project->total_price = $request->total_price;
+        $project->description = $request->description;
+        $project->google_map = $request->google_map;
+        $project->save();
 
-            return redirect('/project');
-
-
+        // Flash success message
+        return redirect('/project')->with('success', 'Project updated successfully.');
     }
+
     public function destroy(Project $project)
     {
         $project->delete();
-        return redirect('/project');
+
+        // Flash success message
+        return redirect('/project')->with('success', 'Project deleted successfully.');
     }
+
 }

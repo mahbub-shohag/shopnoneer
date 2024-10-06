@@ -17,7 +17,7 @@ class HousingController extends Controller
 
     public function create(){
         $divisions = Division::all();
-        return view('housings.create',['divisions' => $divisions]);
+        return view('housings.create',['divisions' => $divisions])->with('success', 'Project created successfully.');
     }
 
     public function edit(Housing $housing)
@@ -25,7 +25,7 @@ class HousingController extends Controller
         $divisions = Division::all();
         $districts = District::all();
         $upazilas = Upazila::all();
-        return view('housings.edit',['housing'=>$housing,'divisions' => $divisions,'districts' => $districts,'upazillas' => $upazilas]);
+        return view('housings.edit',['housing'=>$housing,'divisions' => $divisions,'districts' => $districts,'upazillas' => $upazilas])->with('success', 'Project edited successfully.');
     }
     public function show(Housing $housing)
     {
@@ -92,7 +92,7 @@ class HousingController extends Controller
 
             $housing->save();
 
-            return redirect('/housing');
+            return redirect('/housing')->with('success', 'Project updated successfully.');
         }catch (\Exception $e) {
             return redirect('/housing')->with('error', 'Failed to update housing record. Please try again.');
         }
@@ -101,8 +101,8 @@ class HousingController extends Controller
     public function destroy(Housing $housing)
     {
         $housing->delete();
+        return redirect('/housing')->with('success', 'Project deleted successfully.');
 
-        return redirect('/housing');
     }
 
 }
