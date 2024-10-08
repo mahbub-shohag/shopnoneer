@@ -126,8 +126,10 @@
                                         <td style="padding: 1rem;">{{ $project->description }}</td>
                                     </tr>
                                     <tr>
-                                        <td class="bg-dark text-white" style="padding: 1rem;">Description</td>
-                                        <td style="padding: 1rem;">{{ $project->project_image }}</td>
+                                        <td class="bg-dark text-white" style="padding: 1rem;">Project Image</td>
+                                        <td style="padding: 1rem;">
+                                            <img src="{{ $project->getFirstMediaUrl('project_image','thumb')}}">
+                                        </td>
                                     </tr>
                                     <tr>
                                         <td class="bg-dark text-white" style="padding: 1rem;">Google Map</td>

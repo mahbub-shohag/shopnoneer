@@ -16,6 +16,9 @@
     <div class="card mb-4">
         <div class="card-header">
             <i class="fas fa-table me-1"></i>
+            <a href="project/create">
+                <button class="btn btn-sm btn-primary" style="float: right"><i class="fas fa-plus"></i> Add New</button>
+            </a>
             Project
         </div>
 

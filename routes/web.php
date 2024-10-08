@@ -96,3 +96,7 @@ Route::middleware([
         return view('dashboard');
     })->name('dashboard');
 });
+//ALl controller and method
+Route::get('/controllers-actions', [RoleController::class, 'getControllersAndActions']);
+
+
