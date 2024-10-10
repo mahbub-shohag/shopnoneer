@@ -46,6 +46,8 @@ Route::resource('roles', RoleController::class);
 
 /*Permissions*/
 Route::resource('permissions', PermissionController::class);
+Route::get('/permission_import',[PermissionController::class,'permission_import'])->name('permission_import');
+Route::get('/import',[PermissionController::class,'import'])->name('import');
 /*..Permissions..*/
 
 Route::get('/division',[DivisionController::class,'index']);
