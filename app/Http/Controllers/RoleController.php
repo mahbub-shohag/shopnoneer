@@ -45,7 +45,27 @@ class RoleController extends Controller
         // Retrieve all routes defined in the application
         $routes = Route::getRoutes()->get();
         // Specify the controllers you want to include
-        $necessaryControllers = [];
+        $necessaryControllers = ['AuthController',
+            'ConfirmablePasswordController',
+            'ConfirmedPasswordStatusController',
+            'ConfirmedTwoFactorAuthenticationController',
+            'CsrfCookieController',
+            'ExecuteSolutionController',
+            'FilePreviewController',
+            'FileUploadController',
+            'FrontendAssets',
+            'HandleRequests',
+            'HealthCheckController',
+            'NewPasswordController',
+            'PasswordController',
+            'PasswordResetLinkController',
+            'RecoveryCodeController',
+            'RegisteredUserController',
+            'TwoFactorAuthenticatedSessionController',
+            'TwoFactorAuthenticationController',
+            'TwoFactorQrCodeController',
+            'TwoFactorSecretKeyController',
+            'UpdateConfigController'];
         $controllerData = [];
 
         // Loop through each route to gather controller methods
@@ -62,7 +82,7 @@ class RoleController extends Controller
                 if (!in_array($controllerName, $necessaryControllers) && class_exists($controllerClass)) {
                     // Ensure the controller is not already added to the $controllerData array
                     if (!isset($controllerData[$controllerName])) {
-                        $reflection = new ReflectionClass($controllerClass); // Create a reflection class instance
+                        $reflection = new \ReflectionClass($controllerClass); // Create a reflection class instance
                         // Get all methods of the class, without filtering by visibility
                         $methods = $reflection->getMethods();
                         $controllerMethods = [];
@@ -82,8 +102,10 @@ class RoleController extends Controller
                 }
             }
         }
+        //echo "<pre>";print_r($controllerData);exit;
 
         // Re-index the array to return a simple numerically indexed array
+
         return array_values($controllerData);
     }
 
@@ -95,21 +117,41 @@ class RoleController extends Controller
      */
     public function store(Request $request)
     {
+        // Validate the incoming request
         $request->validate([
             'name' => 'required|string|max:255',
-            // Additional validation rules for permissions if needed
+            'permissions' => 'array', // Ensure that permissions is an array
+            'permissions.*' => 'string', // Each permission must be a string
         ]);
 
+        // Create a new Role instance
         $role = new Role();
         $role->name = $request->name;
 
+        // Save the role
         if ($role->save()) {
+            // Attach the selected permissions to the role
+            if ($request->has('permissions')) {
+                foreach ($request->permissions as $permission) {
+                    // Split the permission value into controller and method
+                    list($controller, $method) = explode('@', $permission);
+                    // Create a new RolePermission entry
+                    $rolePermission = new RolePermission();
+                    $rolePermission->role_id = $role->id; // Set the role ID
+                    $rolePermission->permission_id = Permission::where('controller', $controller)
+                        ->where('action', $method)
+                        ->first()->id; // Fetch the permission ID based on controller and method
+                    $rolePermission->save(); // Save the RolePermission entry
+                }
+            }
+
+            // Redirect back with a success message
             return redirect()->route('roles.index')->with('message', 'Role created successfully');
         } else {
+            // Redirect back with an error message
             return redirect()->route('roles.create')->with('message', 'Role could not be created');
         }
     }
-
     /**
      * Display the specified resource.
      */

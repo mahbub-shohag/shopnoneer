@@ -45,12 +45,28 @@
                                         <ul class="list-group">
                                             @foreach(array_unique($controller['methods']) as $method)
                                                 <!-- Show only CRUD and custom methods -->
-{{--                                                @if(in_array($method, ['index', 'create', 'store', 'edit', 'update', 'destroy', 'show']) || str_contains($method, 'custom'))--}}
+                                                @if(!in_array($method,  [
+                                                              'middleware',
+                                                              'getMiddleware',
+                                                              'callAction',
+                                                              '__call',
+                                                              'authorize',
+                                                              'authorizeForUser',
+                                                              'parseAbilityAndArguments',
+                                                              'normalizeGuessedAbilityName',
+                                                              'authorizeResource',
+                                                              'resourceAbilityMap',
+                                                              'resourceMethodsWithoutModels',
+                                                              'validateWith',
+                                                              'validate',
+                                                              'validateWithBag',
+                                                              'getValidationFactory'
+                                                                        ]) || str_contains($method, 'custom'))
                                                     <li class="list-group-item">
                                                         <input type="checkbox" name="permissions[]" value="{{ $controllerName . '@' . $method }}" id="{{ $controllerName . '@' . $method }}">
                                                         <label for="{{ $controllerName . '@' . $method }}">{{ $method }}</label>
                                                     </li>
-{{--                                                @endif--}}
+                                                @endif
                                             @endforeach
                                         </ul>
                                     </div>
