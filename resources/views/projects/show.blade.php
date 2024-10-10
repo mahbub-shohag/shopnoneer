@@ -128,7 +128,7 @@
                                     <tr>
                                         <td class="bg-dark text-white" style="padding: 1rem;">Project Image</td>
                                         <td style="padding: 1rem;">
-                                            <img src="{{ $project->getFirstMediaUrl('project_image','thumb')}}">
+                                            <img src="{{ $project->getFirstMediaUrl('project_image', 'thumb') ?: asset('images/default.png') }}">
                                         </td>
                                     </tr>
                                     <tr>

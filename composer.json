@@ -14,6 +14,7 @@
         "laravel/ui": "^4.5",
         "livewire/livewire": "^3.0",
         "spatie/laravel-medialibrary": "^11.9",
+        "spatie/laravel-permission": "^6.9",
         "theriddleofenigma/laravel-model-validation": "^1.4"
     },
     "require-dev": {

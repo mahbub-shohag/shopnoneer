@@ -27,7 +27,6 @@
                     <th>Name</th>
                     <th>Controller</th>
                     <th>Action</th>
-                    <th>Manage</th>
                 </tr>
                 </thead>
                 <tfoot>
@@ -36,7 +35,6 @@
                     <th>Name</th>
                     <th>Controller</th>
                     <th>Action</th>
-                    <th>Manage</th>
                 </tr>
                 </tfoot>
                 <tbody>
@@ -46,27 +44,7 @@
                         <td>{{ $permission->name }}</td>
                         <td>{{ $permission->controller }}</td>
                         <td>{{ $permission->action }}</td>
-                        <td>
-                            <!-- Flex Container for Edit, View, and Delete Actions -->
-                            <div style="display: flex; align-items: center; justify-content: space-around; width: 100%;">
-                                <!-- Edit Link -->
-                                <a href="{{ route('permissions.edit', ['permission' => $permission]) }}" class="btn-icon btn-edit">
-                                    <i class="fas fa-pencil-alt"></i>
-                                </a>
-                                <!-- View Link -->
-                                <a href="{{ route('permissions.show', ['permission' => $permission]) }}" class="btn-icon btn-view">
-                                    <i class="fas fa-eye"></i>
-                                </a>
-                                <!-- Delete Form -->
-                                <form action="{{ route('permissions.destroy', ['permission' => $permission]) }}" method="POST" style="margin: 0;">
-                                    @csrf
-                                    @method('DELETE')
-                                    <button type="submit" class="btn-icon btn-delete" title="Delete">
-                                        <i class="fas fa-trash-alt"></i>
-                                    </button>
-                                </form>
-                            </div>
-                        </td>
+
                     </tr>
                 @endforeach
                 </tbody>

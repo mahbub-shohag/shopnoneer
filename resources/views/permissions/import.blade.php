@@ -39,13 +39,44 @@
                 </tr>
                 </tfoot>
                 <tbody>
+                @php
+                    // Define typical CRUD operations
+                    $crudMethods = [
+                                         'middleware',
+                                         'getMiddleware',
+                                         'callAction',
+                                         '__call',
+                                         'authorize',
+                                         'authorizeForUser',
+                                         'parseAbilityAndArguments',
+                                         'normalizeGuessedAbilityName',
+                                         'authorizeResource',
+                                         'resourceAbilityMap',
+                                         'resourceMethodsWithoutModels',
+                                         'validateWith',
+                                         'validate',
+                                         'validateWithBag',
+                                         'getValidationFactory'
+                                    ];
+
+                @endphp
+
                 @foreach($controllerData as $controller)
                     <tr>
-                        <td>{{ $loop->index + 1 }}</td>
-                        <td>{{ $controllerName = class_basename($controller['controller']) }}</td>
-                        <td>{{ implode(', ', $controller['methods']) }}</td>
+                        <td>{{ $loop->index + 1 }}</td> <!-- Generate a unique ID using the loop index -->
+                        <td>{{ $controllerName = class_basename($controller['controller']) }}</td> <!-- Display controller name -->
+                        <td>
+                            @php
+                                // Filter the controller methods to only show CRUD operations
+                                $crudControllerMethods = array_filter($controller['methods'], function($method) use ($crudMethods) {
+                                    return !in_array($method, $crudMethods);
+                                });
+                            @endphp
+                            {{ implode(', ', $crudControllerMethods) }} <!-- Show only CRUD methods separated by commas -->
+                        </td>
                     </tr>
                 @endforeach
+
                 </tbody>
             </table>
         </div>

@@ -166,7 +166,7 @@
 
                 <div class="mb-3">
                     <label class="custom-control-label">Project Image</label>
-                    <input type="file" class="form-control" name="project_image">
+                    <input type="file" class="form-control" name="project_image" accept="image/*">
                 </div>
 
                 <div class="mb-3">

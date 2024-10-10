@@ -16,7 +16,27 @@ class PermissionController extends Controller
         // Retrieve all routes defined in the application
         $routes = Route::getRoutes()->get();
         // Specify the controllers you want to include
-        $necessaryControllers = ['AuthController'];
+        $necessaryControllers = ['AuthController',
+            'ConfirmablePasswordController',
+            'ConfirmedPasswordStatusController',
+            'ConfirmedTwoFactorAuthenticationController',
+            'CsrfCookieController',
+            'ExecuteSolutionController',
+            'FilePreviewController',
+            'FileUploadController',
+            'FrontendAssets',
+            'HandleRequests',
+            'HealthCheckController',
+            'NewPasswordController',
+            'PasswordController',
+            'PasswordResetLinkController',
+            'RecoveryCodeController',
+            'RegisteredUserController',
+            'TwoFactorAuthenticatedSessionController',
+            'TwoFactorAuthenticationController',
+            'TwoFactorQrCodeController',
+            'TwoFactorSecretKeyController',
+            'UpdateConfigController'];
         $controllerData = [];
 
         // Loop through each route to gather controller methods
@@ -76,9 +96,42 @@ class PermissionController extends Controller
     }
     public function import()
     {
+        // Get all controller methods
         $controllerData = $this->getControllerMethods();
-        return view('permissions.import',['controllerData' => $controllerData]);
+
+        // Retrieve existing permissions from the database
+        $existingPermissions = Permission::all();
+
+        // Filter controllerData to only include methods that are not in the database
+        $filteredControllerData = array_filter($controllerData, function ($controller) use ($existingPermissions) {
+            $controllerName = class_basename($controller['controller']);
+            $newMethods = [];
+
+            // Loop through the controller's methods
+            foreach ($controller['methods'] as $method) {
+                // Check if the permission already exists in the database
+                $exists = $existingPermissions->contains(function ($permission) use ($controllerName, $method) {
+                    return $permission->controller == $controllerName && $permission->action == $method;
+                });
+
+                // If the permission does not exist, add it to the list of new methods
+                if (!$exists) {
+                    $newMethods[] = $method;
+                }
+            }
+
+            // Only return the controller if it has new methods to add
+            if (!empty($newMethods)) {
+                $controller['methods'] = $newMethods;
+                return $controller;
+            }
+            return null;
+        });
+
+        // Pass the filtered controller data to the view
+        return view('permissions.import', ['controllerData' => $filteredControllerData]);
     }
+
 
     /**
      * Store a newly created resource in storage.
@@ -128,16 +181,30 @@ class PermissionController extends Controller
     public function permission_import()
     {
         $controllerData = $this->getControllerMethods();
+
         foreach ($controllerData as $controller) {
             foreach ($controller['methods'] as $value) {
-                $permission = new Permission();
-                $permission->controller = class_basename($controller['controller']);
-                $permission->action = $value;
-                $permission->name = class_basename($controller['controller']) . " - " . $value;
-                $permission->save();
+                // Prepare data for checking or creating permission
+                $controllerName = class_basename($controller['controller']);
+                $action = $value;
+                $name = $controllerName . " - " . $action;
+
+                // Check if the permission already exists before saving
+                Permission::firstOrCreate(
+                    [
+                        'controller' => $controllerName,
+                        'action' => $action
+                    ],
+                    [
+                        'name' => $name
+                    ]
+                );
             }
         }
+
         // Optionally redirect or return a response
-        return redirect()->back()->with('success', 'Permissions imported successfully!');
+        return redirect()->route('permissions.index')->with('success', 'Permissions imported successfully!');
+
     }
+
 }
