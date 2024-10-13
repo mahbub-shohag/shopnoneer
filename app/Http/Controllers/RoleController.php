@@ -121,7 +121,6 @@ class RoleController extends Controller
         $request->validate([
             'name' => 'required|string|max:255',
             'permissions' => 'array', // Ensure that permissions is an array
-            'permissions.*' => 'string', // Each permission must be a string
         ]);
 
         // Create a new Role instance
@@ -146,10 +145,10 @@ class RoleController extends Controller
             }
 
             // Redirect back with a success message
-            return redirect()->route('roles.index')->with('message', 'Role created successfully');
+            return redirect()->route('roles.index')->with('success', 'Role created successfully');
         } else {
             // Redirect back with an error message
-            return redirect()->route('roles.create')->with('message', 'Role could not be created');
+            return redirect()->route('roles.create')->with('error', 'Role could not be created');
         }
     }
     /**
@@ -166,30 +165,66 @@ class RoleController extends Controller
      */
     public function edit(Role $role)
     {
+        // Fetch all permissions ordered by controller
         $permissions = Permission::orderBy('controller')->get();
-        $rolePermissions = $role->permissions->pluck('permission_id')->toArray();
-        return view('role.edit', [
-            'role' => $role,
-            'permissions' => $permissions,
-            'rolePermissions' => $rolePermissions,
-        ]);
+
+        // Fetch selected permissions for the role
+        $rolePermissions = $role->permissions->map(function ($rolePermission) {
+            return $rolePermission->permission->controller . '@' . $rolePermission->permission->action;
+        })->toArray(); // Change this to get controller and action
+
+        // Pass data to the view
+        return view('role.edit', compact('role', 'permissions', 'rolePermissions'))->with('success', 'Role edited successfully');
     }
+
+
+
+
+
 
     /**
      * Update the specified resource in storage.
      */
     public function update(Request $request, Role $role)
     {
+        // Validate the incoming request
         $request->validate([
-            'permissions' => 'array|required',
-            'permissions.*' => 'integer|exists:permissions,id', // Validate permissions
+            'name' => 'required|string|max:255',
+            'permissions' => 'array', // Ensure that permissions is an array
         ]);
 
-        // Sync role permissions
-        $role->permissions()->sync($request->permissions);
+        // Update the role name
+        $role->name = $request->name;
 
-        return redirect()->route('roles.index')->with('message', 'Role updated successfully');
+        // Save the updated role
+        if ($role->save()) {
+            // Delete existing permissions related to this role in the RolePermission table
+            RolePermission::where('role_id', $role->id)->delete();
+
+            // Attach the selected permissions to the role
+            if ($request->has('permissions')) {
+                foreach ($request->permissions as $permission) {
+                    // Split the permission value into controller and method
+                    list($controller, $method) = explode('@', $permission);
+
+                    // Create a new RolePermission entry
+                    $rolePermission = new RolePermission();
+                    $rolePermission->role_id = $role->id; // Set the role ID
+                    $rolePermission->permission_id = Permission::where('controller', $controller)
+                        ->where('action', $method)
+                        ->first()->id; // Fetch the permission ID based on controller and method
+                    $rolePermission->save(); // Save the RolePermission entry
+                }
+            }
+
+            // Redirect back with a success message
+            return redirect()->route('roles.index')->with('success', 'Role updated successfully');
+        } else {
+            // Redirect back with an error message
+            return redirect()->route('roles.edit', $role->id)->with('error', 'Role could not be updated');
+        }
     }
+
 
     /**
      * Remove the specified resource from storage.
@@ -198,6 +233,6 @@ class RoleController extends Controller
     {
         $role->permissions()->delete(); // Delete associated permissions
         $role->delete(); // Delete the role
-        return redirect()->route('roles.index')->with('message', 'Role deleted successfully');
+        return redirect()->route('roles.index')->with('warning', 'Role deleted successfully');
     }
 }

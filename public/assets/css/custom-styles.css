@@ -7,6 +7,7 @@
     background-color: #005757; /* Dark teal background */
 }
 
+
 .bg-light-teal {
     background-color: #99ffff; /* Light teal background */
 }
@@ -26,7 +27,62 @@
     cursor: pointer; /* Change cursor to pointer on hover */
 }
 
-/* Hover effect applied to all card types */
+/* Inline styling for the controller heading */
+.inline-header {
+    display: inline; /* Change display to inline */
+    margin-right: 10px; /* Space to the right of the header */
+    font-size: 1.25rem; /* Adjust font size as needed */
+    color: #007bff;/* Change color if desired */
+}
+.custom-width-height {
+    width: auto;          /* Allow width to adjust according to text length */
+    height: auto;        /* Default behavior */
+    padding: 10px;       /* Optional: Add padding for visual spacing */
+    display: inline-block;
+    background: red/* Make the element only take up as much width as necessary */
+}
+.card {
+    border-radius: 0.5rem;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+}
+
+.card-title {
+    font-weight: 600;
+    font-size: 1.5rem;
+}
+
+.card-subtitle {
+    font-weight: 500;
+    font-size: 1.1rem;
+}
+
+.list-group-item {
+    border-radius: 0.25rem;
+}
+
+.bg-light-teal {
+    background-color: #5f9ea0; /* Adjust this color if needed */
+}
+
+.hover-item {
+    transition: background-color 0.3s ease;
+}
+
+.hover-item:hover {
+    background-color: #e0f7fa; /* Light background on hover */
+}
+
+.text-teal {
+    color: #008080; /* Change text color to teal */
+}
+
+.badge {
+    border-radius: 0.5rem; /* Slightly rounded badges */
+    font-size: 0.9rem; /* Adjust badge font size if needed */
+}
+
+
+
 
 
 
@@ -231,6 +287,433 @@ a:hover {
     top: 70px; /* Adjust this value as needed */
 }
 
+.list-group-item {
+    border: none; /* Remove borders for a cleaner look */
+    padding: 10px 15px; /* Adjust padding for better spacing */
+    display: inline;
+}
+
+.bg-light {
+    background-color: #f8f9fa !important; /* Ensure this matches your design */
+}
+
+.bg-light-teal {
+    background-color: #99ffff; /* Ensure this matches your design */
+}
+
+.badge {
+    padding: 0.4rem 0.8rem; /* Padding for badges */
+    border-radius: 20px; /* Rounded badges */
+    font-size: 0.9rem; /* Font size for badges */
+}
+
+.list-group-item-action {
+    transition: background-color 0.3s; /* Smooth transition for hover effect */
+}
+
+.list-group-item-action:hover {
+    background-color: #e0e0e0; /* Light hover effect */
+}
+body {
+    background-color: red; /* Temporary test */
+}
+/* Custom styles for hover effect on list items */
+.hover-item {
+    transition: background-color 0.3s ease; /* Smooth transition for background color */
+}
+
+.hover-item:hover {
+    background-color: #e0f7fa; /* Light teal background on hover */
+    cursor: pointer; /* Change cursor to pointer */
+}
+/* Custom styles for hover effect on checkbox labels */
+.hover-checkbox {
+    position: relative; /* Positioning for hover effect */
+    padding: 10px 15px; /* Padding around the checkbox */
+    border-radius: 5px; /* Rounded corners */
+    transition: background-color 0.3s ease; /* Smooth background color transition */
+}
+
+.hover-checkbox:hover {
+    background-color: #e0f7fa; /* Light teal background on hover */
+}
+
+/* Optional: Style the checkbox itself */
+.form-check-input {
+    width: 1.25em; /* Adjust the width of the checkbox */
+    height: 1.25em; /* Adjust the height of the checkbox */
+    margin-right: 10px; /* Space between checkbox and label */
+}
+/* public/css/custom-styles.css */
+.bg-teal {
+    background-color: #008080; /* Teal background */
+}
+
+.bg-dark-teal {
+    background-color: #005757; /* Dark teal background */
+}
+
+.bg-light-teal {
+    background-color: #99ffff; /* Light teal background */
+}
+
+/* Increase the font size for the dashboard cards */
+.card-header {
+    font-size: 1.5rem; /* Adjust this value as needed */
+}
+
+.card-body {
+    font-size: 1.2rem; /* Adjust this value as needed */
+}
+
+/* Add hover effect to the cards */
+.card {
+    transition: transform 0.3s ease, box-shadow 0.3s ease; /* Smooth transition for hover effect */
+    cursor: pointer; /* Change cursor to pointer on hover */
+}
+
+/* Inline styling for the controller heading */
+.inline-header {
+    display: inline; /* Change display to inline */
+    margin-right: 10px; /* Space to the right of the header */
+    font-size: 1.25rem; /* Adjust font size as needed */
+    color: #007bff;/* Change color if desired */
+}
+.custom-width-height {
+    width: auto;          /* Allow width to adjust according to text length */
+    height: auto;        /* Default behavior */
+    padding: 10px;       /* Optional: Add padding for visual spacing */
+    display: inline-block;
+    background: red/* Make the element only take up as much width as necessary */
+}
+.card {
+    border-radius: 0.5rem;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+}
+
+.card-title {
+    font-weight: 600;
+    font-size: 1.5rem;
+}
+
+.card-subtitle {
+    font-weight: 500;
+    font-size: 1.1rem;
+}
+
+.list-group-item {
+    border-radius: 0.25rem;
+}
+
+.bg-light-teal {
+    background-color: #5f9ea0; /* Adjust this color if needed */
+}
+
+.hover-item {
+    transition: background-color 0.3s ease;
+}
+
+.hover-item:hover {
+    background-color: #e0f7fa; /* Light background on hover */
+}
+
+.text-teal {
+    color: #008080; /* Change text color to teal */
+}
+
+.badge {
+    border-radius: 0.5rem; /* Slightly rounded badges */
+    font-size: 0.9rem; /* Adjust badge font size if needed */
+}
+
+
+
+
+
+
+.dash_board_card:hover {
+    transform: scale(1.05); /* Scale up the card slightly */
+    box-shadow: 0 8px 25px rgba(0, 0, 0, 0.3); /* Add shadow on hover */
+    transition: transform 0.4s cubic-bezier(0.25, 0.8, 0.25, 1), box-shadow 0.4s cubic-bezier(0.25, 0.8, 0.25, 1);
+    transition-duration: 0.7s; /* Delay the return transition for half a second */
+
+
+}
+
+
+
+
+
+/* Optional: Add focus effect for accessibility */
+.card:focus {
+    outline: none; /* Remove default outline */
+    box-shadow: 0 8px 25px rgba(0, 0, 0, 0.5); /* Stronger shadow for focus */
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+    .card-header {
+        font-size: 1.3rem; /* Smaller size for mobile */
+    }
+    .card-body {
+        font-size: 1rem; /* Smaller size for mobile */
+    }
+}
+
+/*------------- For action BTN ----------------*/
+
+/* Button Styles */
+.btn-icon {
+    background-color: #005757 !important; /* Dark teal background */
+    border: none !important; /* No border */
+    color: white !important; /* Default icon color */
+    padding: 5px 10px !important; /* Adjust padding for a button feel */
+    border-radius: 10px !important; /* Beautiful rounded border */
+    transition: transform 0.3s ease, box-shadow 0.3s ease, background-color 0.3s ease !important; /* Smooth transitions */
+    cursor: pointer !important; /* Pointer cursor on hover */
+    font-size: 1rem !important; /* Slightly bigger icon */
+}
+
+/* Hover effect for all buttons */
+.btn-icon:hover {
+    transform: scale(1.1) !important; /* Slight scaling effect on hover */
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2) !important; /* Shadow on hover */
+}
+
+/* Specific style for Edit Button */
+.btn-edit {
+    background-color: #008080 !important; /* Teal background */
+}
+
+.btn-edit:hover {
+    background-color: #00b3b3 !important; /* Lighter teal on hover */
+    color: white !important; /* Keep icon white */
+}
+
+/* Specific style for View Button */
+.btn-view {
+    background-color: #004040 !important; /* Dark teal background */
+}
+
+.btn-view:hover {
+    background-color: #006666 !important; /* Slightly lighter dark teal on hover */
+    color: #ffffff !important; /* Keep white icon */
+}
+
+/* Specific style for Delete Button (warning colors) */
+.btn-delete {
+    background-color: #ff6347 !important; /* Tomato background */
+    color: white !important; /* White icon for delete */
+}
+
+.btn-delete:hover {
+    background-color: #ffcc00 !important; /* Yellow hover effect for warning */
+    color: white !important; /* Keep white icon */
+}
+
+/* Icon color customization */
+.btn-icon i {
+    color: white !important; /* Default white icon color */
+}
+
+/* Hover effect for icon color (optional) */
+.btn-icon:hover i {
+    color: #f0f0f0 !important; /* Slightly lighter white icon on hover */
+}
+
+/* Focus effect for accessibility */
+.btn-icon:focus {
+    outline: none !important;
+    box-shadow: 0 8px 25px rgba(0, 128, 128, 0.7) !important; /* Focus shadow */
+}
+
+/* Card Styles */
+.card {
+    border-radius: 10px !important; /* Rounded corners for cards */
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1); /* Subtle shadow effect */
+}
+
+/* Table Styles */
+.table {
+    border-collapse: collapse; /* Collapsed borders */
+    width: 100%; /* Full width */
+}
+
+.table th, .table td {
+    padding: 15px; /* Padding for table cells */
+    text-align: left; /* Left align text */
+    border-bottom: 1px solid #ddd; /* Bottom border for cells */
+}
+
+/* Header Row Styles */
+.table th {
+    background-color: #005757; /* Dark teal background for header */
+    color: black; /* White text */
+}
+
+/* Teal and dark background */
+.text-teal {
+    color: #008080; /* Teal */
+}
+
+.bg-dark {
+    background-color: black; /* Dark background */
+    color: #ffffff; /* White text */
+}
+
+/* Hover effect for cards */
+.card {
+    border-radius: 10px !important; /* Rounded corners for cards */
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1); /* Subtle shadow effect */
+    transition: background-color 0.4s ease; /* Transition for background color */
+}
+
+.card:hover {
+    background-color: whitesmoke; /* Slightly lighter dark */
+}
+
+.card.active {
+    background-color: whitesmoke; /* Slightly lighter dark */
+    transition: background-color 0.4s ease; /* Smooth transition */
+}
+
+
+
+/* Interactive hover effect for buttons or text links */
+a:hover {
+    color: #004d4d; /* Darker teal on hover */
+}
+
+/* Light theme toggle example */
+.light-theme .bg-dark {
+    background-color: #f8f9fa; /* Light gray for light theme */
+    color: #212529; /* Dark text for contrast */
+}
+
+.light-theme .card:hover {
+    background-color: #e0e0e0; /* Light gray hover effect */
+}
+
+.light-theme a:hover {
+    color: #006666; /* Lighter teal for hover in light theme */
+}
+/*Toaster CSS*/
+#toast-container .toast-success {
+    background-color: #006666 !important; /* Change this to your preferred color */
+    color: #fff !important;               /* Text color */
+}
+
+#toast-container .toast-error {
+    background-color: red !important; /* Error background color */
+    color: #fff !important;               /* Text color */
+}
+
+#toast-container .toast-info {
+    background-color: #17a2b8 !important; /* Info background color */
+    color: #fff !important;               /* Text color */
+}
+
+#toast-container .toast-warning {
+    background-color: #ff6347 !important; /* Warning background color */
+    color: #fff !important;               /* Text color */
+}
+/* Custom success toast background */
+.custom-toast-success {
+    background-color: #006666 !important;
+    color: #fff !important;
+}
+
+/* Custom error toast background */
+.custom-toast-error {
+    background-color: #ff6347 !important;
+    color: #fff !important;
+}
+#toast-container {
+    top: 70px; /* Adjust this value as needed */
+}
+
+.list-group-item {
+    border: none; /* Remove borders for a cleaner look */
+    padding: 10px 15px; /* Adjust padding for better spacing */
+    display: inline;
+}
+
+.bg-light {
+    background-color: #f8f9fa !important; /* Ensure this matches your design */
+}
+
+.bg-light-teal {
+    background-color: #99ffff; /* Ensure this matches your design */
+}
+
+.badge {
+    padding: 0.4rem 0.8rem; /* Padding for badges */
+    border-radius: 20px; /* Rounded badges */
+    font-size: 0.9rem; /* Font size for badges */
+}
+
+.list-group-item-action {
+    transition: background-color 0.3s; /* Smooth transition for hover effect */
+}
+
+.list-group-item-action:hover {
+    background-color: #e0e0e0; /* Light hover effect */
+}
+body {
+    background-color: red; /* Temporary test */
+}
+/* Custom styles for hover effect on list items */
+.hover-item {
+    transition: background-color 0.3s ease; /* Smooth transition for background color */
+}
+
+.hover-item:hover {
+    background-color: #e0f7fa; /* Light teal background on hover */
+    cursor: pointer; /* Change cursor to pointer */
+}
+/* Custom styles for hover effect on checkbox labels */
+.hover-checkbox {
+    position: relative; /* Positioning for hover effect */
+    padding: 10px 15px; /* Padding around the checkbox */
+    border-radius: 5px; /* Rounded corners */
+    transition: background-color 0.3s ease; /* Smooth background color transition */
+}
+
+.hover-checkbox:hover {
+    background-color: #e0f7fa; /* Light teal background on hover */
+}
+
+/* Optional: Style the checkbox itself */
+.form-check-input {
+    width: 1.25em; /* Adjust the width of the checkbox */
+    height: 1.25em; /* Adjust the height of the checkbox */
+    margin-right: 10px; /* Space between checkbox and label */
+}
+
+/* Teal background and text classes */
+.bg-teal {
+    background-color: #008080 !important; /* Teal background */
+}
+
+.bg-dark-teal {
+    background-color: #005757 !important; /* Dark teal background */
+}
+
+.text-teal {
+    color: #008080 !important; /* Teal text color */
+}
+
+/* Override Bootstrap button background */
+.btn-teal {
+    background-color: #008080 !important; /* Teal button background */
+    color: white !important; /* White text */
+}
+
+.btn-teal:hover {
+    background-color: #007373 !important; /* Slightly darker teal on hover */
+}
+
+/* Accordion button background */
 
 /* Responsive adjustments */
 @media (max-width: 768px) {
@@ -238,3 +721,13 @@ a:hover {
         font-size: 1.5rem !important; /* Slightly smaller icons on mobile */
     }
 }
+
+
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+    .btn-icon {
+        font-size: 1.5rem !important; /* Slightly smaller icons on mobile */
+    }
+}
+

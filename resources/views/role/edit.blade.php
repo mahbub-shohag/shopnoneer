@@ -1,50 +1,83 @@
 @extends('layouts.app')
 
 @section('title')
-    Roles
+    Edit Role
 @endsection
 
 @section('bread_controller')
-    <a href="index.html">Roles</a>
+    <a href="{{ route('roles.index') }}">Roles</a>
 @endsection
 
 @section('bread_action')
-    edit
+    Edit
 @endsection
 
 @section('content')
     <div class="card">
         <div class="card-body">
-            <form method="POST" action="/roles/{{ $role->id }}">
+            <form action="{{ route('roles.update', $role->id) }}" method="POST">
                 @csrf
                 @method('PUT')
+
+                <!-- Role Name Input -->
                 <div class="form-group">
-                    <label >Name</label>
-                    <input type="hidden" name="id" value="{{$role->id}}">
-                    <input type="text" name="name" value="{{$role->name}}" class="form-control" placeholder="Enter Role Name">
+                    <label for="roleName">Role Name</label>
+                    <input type="text" id="roleName" name="name"
+                           value="{{ old('name', $role->name) }}"
+                           class="form-control"
+                           placeholder="Enter Role Name"
+                           required>
                 </div>
 
-                <div>
-                    <?php
-                        $controller = "";
-                    ?>
-                    @foreach($permissions as $permission)
-                        @if($permission->controller!=$controller)
-                            <h3>{{$permission->controller}}</h3>
-                        @endif
+                <!-- Permissions Checkboxes -->
+                <div class="row mt-4">
+                    @php
+                        $currentController = null;
+                        $UnUsedMethods = [
+                            'middleware', 'getMiddleware', 'callAction', '__call',
+                            'authorize', 'authorizeForUser', 'parseAbilityAndArguments',
+                            'normalizeGuessedAbilityName', 'authorizeResource',
+                            'resourceAbilityMap', 'resourceMethodsWithoutModels',
+                            'validateWith', 'validate', 'validateWithBag',
+                            'getValidationFactory'
+                        ];
+                        $permissionsCount = count($permissions);
+                        $columnCount = 3; // Number of columns
+                        $permissionsPerColumn = ceil($permissionsCount / $columnCount);
+                        $permissionGroups = array_chunk($permissions->toArray(), $permissionsPerColumn);
+                    @endphp
 
-                        <input type="checkbox" name="permissions[]" value="{{$permission->id}}" {{(in_array($permission->id,$rolePermissions))? 'checked="checked"' : ''  }}> {{$permission->name}}
+                    @foreach($permissionGroups as $group)
+                        <div class="col-md-4">
+                            @foreach($group as $permission)
+                                @if(!in_array($permission['action'], $UnUsedMethods))
+                                    <!-- Display controller heading if it changes -->
+                                    @if($permission['controller'] != $currentController)
+                                        <h3 class="mt-3">{{ $permission['controller'] }}</h3>
+                                        @php
+                                            $currentController = $permission['controller'];
+                                        @endphp
+                                    @endif
 
-                        @if($permission->controller!=$controller)
-                            <?php $controller = $permission->controller;?>
-                            <hr>
-                        @endif
+                                    <!-- Permission Action Checkbox -->
+                                    <div class="form-check hover-checkbox">
+                                        <input class="form-check-input" type="checkbox" name="permissions[]"
+                                               value="{{ $permission['controller'] . '@' . $permission['action'] }}"
+                                               {{ in_array($permission['controller'] . '@' . $permission['action'], $rolePermissions) ? 'checked' : '' }}
+                                               id="permission-{{ $permission['id'] }}">
+                                        <label class="form-check-label" for="permission-{{ $permission['id'] }}">
+                                            {{ $permission['action'] }}
+                                        </label>
+                                    </div>
+                                @endif
+                            @endforeach
+                        </div>
                     @endforeach
                 </div>
 
-                <button type="submit" class="btn btn-primary">Submit</button>
+                <!-- Submit Button -->
+                <button type="submit" class="btn btn-primary mt-3">Update Role</button>
             </form>
         </div>
     </div>
-
 @endsection
