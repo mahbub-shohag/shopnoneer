@@ -721,13 +721,4 @@ body {
         font-size: 1.5rem !important; /* Slightly smaller icons on mobile */
     }
 }
-
-
-
-/* Responsive adjustments */
-@media (max-width: 768px) {
-    .btn-icon {
-        font-size: 1.5rem !important; /* Slightly smaller icons on mobile */
-    }
-}
-
+/* Custom Styles for Login Page */

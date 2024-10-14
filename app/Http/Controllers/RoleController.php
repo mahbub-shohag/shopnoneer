@@ -12,34 +12,6 @@ use ReflectionMethod;
 
 class RoleController extends Controller
 {
-    /**
-     * Display a listing of the resource.
-     */
-    public function index()
-    {
-        $roles = Role::with('permissions.permission')->get();
-        return view('role.index', ['roles' => $roles]);
-    }
-
-    /**
-     * Show the form for creating a new resource.
-     */
-    public function create()
-    {
-        // Fetch necessary controllers and methods
-        $controllerData = $this->getControllerMethods();
-
-        // Pass the controller-method data to the 'role.create' view
-        return view('role.create', [
-            'controllerData' => $controllerData,
-        ]);
-    }
-
-    /**
-     * Get methods of necessary controllers.
-     *
-     * @return array
-     */
     private function getControllerMethods()
     {
         // Retrieve all routes defined in the application
@@ -108,13 +80,31 @@ class RoleController extends Controller
 
         return array_values($controllerData);
     }
-
-
-
+    public function index()
+    {
+        $roles = Role::with('permissions.permission')->get();
+        return view('role.index', ['roles' => $roles]);
+    }
 
     /**
-     * Store a newly created resource in storage.
+     * Show the form for creating a new resource.
      */
+    public function create()
+    {
+        // Fetch necessary controllers and methods
+        $controllerData = $this->getControllerMethods();
+
+        // Fetch all permissions ordered by controller
+        $permissions = Permission::orderBy('controller')->get();
+
+        // Pass the controller-method data and permissions to the 'role.create' view
+        return view('role.create', [
+            'controllerData' => $controllerData,
+            'permissions' => $permissions, // Pass permissions here
+        ]);
+    }
+
+
     public function store(Request $request)
     {
         // Validate the incoming request
