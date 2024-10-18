@@ -83,4 +83,68 @@ class AuthController extends Controller
             return back()->with("message", "Password doesn't matches");
         }
     }
+
+    public function signupapi(Request $request)
+    {
+        if ($this->checkEmailExist($request->email)){
+            return $this->returnError("Email already exist",401);
+        }
+        if($request->password == $request->confirm_password){
+            $user = new User;
+            $user->full_name = $request->full_name;
+            $user->phone_number = $request->phone_number;
+            $user->email = $request->email;
+            $user->password = Hash::make($request->password);
+            $user->save();
+            if($user && Hash::check($request->password,$user->password)){
+                $token = $user->createToken('api');
+                $user->token = $token->plainTextToken;
+                return $this->returnSuccess("Signup Successful",$user);
+            }
+        }else{
+            return $this->returnError("User signup failed",401);
+        }
+    }
+
+    public function loginapi(Request $request){
+        $user = User::where('email',$request->email)->first();
+        if(!$user){
+            return $this->returnError("Email or password is invalid",401);
+        }
+        if($user && Hash::check($request->password,$user->password)){
+            $token = $user->createToken('api');
+            $user->token = $token->plainTextToken;
+            return $this->returnSuccess("User Logged in Successfully",$user);
+        }else{
+            return $this->returnError("Email or password is invalid",401);
+        }
+    }
+
+    public function logoutapi(Request $request){
+        $user = $request->user();
+        $user->tokens()->delete();
+        return $this->returnSuccess("User logged out successfully!",[]);
+    }
+
+    public function returnError($message,$code): \Illuminate\Http\JsonResponse
+    {
+        $message = [
+            "error"=>$message,
+            "code"=>$code
+        ];
+        return response()->json($message);
+    }
+
+    public function returnSuccess($message,$data): \Illuminate\Http\JsonResponse
+    {
+        $message = [
+            "message"=>$message,
+            "code"=>200,
+            "success"=>true,
+            "data"=>$data
+        ];
+        return response()->json($message);
+    }
+
+
 }

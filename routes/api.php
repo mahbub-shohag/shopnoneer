@@ -14,7 +14,9 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
+Route::post('/signupapi', [\App\Http\Controllers\AuthController::class, 'signupapi']);
+Route::post('loginapi',[\App\Http\Controllers\AuthController::class,'loginapi']);
 
-Route::middleware('auth:sanctum')->get('/user', function (Request $request) {
-    return $request->user();
+Route::middleware('auth:sanctum')->group(function (){
+    Route::delete('logoutapi',[\App\Http\Controllers\AuthController::class,'logoutapi']);
 });
