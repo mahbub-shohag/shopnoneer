@@ -3,6 +3,7 @@
 namespace App\Http\Controllers;
 
 use App\Models\Profile;
+use App\Models\UserVerification;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Auth;
 use Illuminate\Validation\ValidationException;
@@ -124,6 +125,20 @@ class AuthController extends Controller
         $user = $request->user();
         $user->tokens()->delete();
         return $this->returnSuccess("User logged out successfully!",[]);
+    }
+
+    /* Email Phone Number Send for getting verification Code */
+    public function send_verification_code(Request $request)
+    {
+        if ($this->checkEmailExist($request->email)){
+            return $this->returnError("Email already exists!",401);
+        }
+    }
+
+    function checkEmailExist($email)
+    {
+        $user = User::where('email', $email)->first();
+        return $user?true:false;
     }
 
     public function returnError($message,$code): \Illuminate\Http\JsonResponse
