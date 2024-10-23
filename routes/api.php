@@ -19,4 +19,5 @@ Route::post('loginapi',[\App\Http\Controllers\AuthController::class,'loginapi'])
 
 Route::middleware('auth:sanctum')->group(function (){
     Route::delete('logoutapi',[\App\Http\Controllers\AuthController::class,'logoutapi']);
+    Route::post('projectlist',[\App\Http\Controllers\ProjectController::class,'getProjectList']);
 });

@@ -43,11 +43,12 @@ class ProjectController extends Controller
     public function store(Request $request)
     {
         // Validate the incoming request
-        $request->validate([
+        /*$request->validate([
             'title' => 'required|string|min:3|max:255',
             'division_id' => 'required',
             'district_id' => 'required',
             'upazila_id' => 'required',
+            'housing_id' => 'required',
             'road' => 'nullable|string|max:255',
             'block' => 'nullable|string|max:255',
             'plot' => 'nullable|string|max:255',
@@ -65,25 +66,22 @@ class ProjectController extends Controller
             'rate_per_sqft' => 'nullable|numeric|min:0',
             'total_price' => 'nullable|numeric|min:0',
             'description' => 'nullable|string',
-            'project_image' => 'nullable|image|mimes:jpeg,png,jpg,gif|max:2048',
             'google_map' => 'nullable|url',
         ], [
             'title.required' => 'The project title is required.',
             'division_id.required' => 'Please select a division.',
             'district_id.required' => 'Please select a district.',
             'upazila_id.required' => 'Please select an upazila.',
-            'project_image.image' => 'The project image must be an image file.',
-            'project_image.mimes' => 'The project image must be a file of type: jpeg, png, jpg, gif.',
-            'project_image.max' => 'The project image must not be greater than 2MB.',
+            'housing_id.required' => 'Please select a housing.',
         ]);
-
+*/
         try {
-            // Create a new Project instance
             $project = new Project();
             $project->title = $request->title;
             $project->division_id = $request->division_id;
             $project->district_id = $request->district_id;
             $project->upazila_id = $request->upazila_id;
+            $project->housing_id = $request->housing_id;
             $project->road = $request->road;
             $project->block = $request->block;
             $project->plot = $request->plot;
@@ -102,21 +100,36 @@ class ProjectController extends Controller
             $project->total_price = $request->total_price;
             $project->description = $request->description;
             $project->google_map = $request->google_map;
-
+            //echo "<pre>";print_r($project);exit;
             // Save the project
+            $result = $project->save();
+            //print_r($result);exit;
+            // Handle the project image upload
+            //echo $request->file('project_image')->isValid();
+            //echo $request->hasFile('project_image') && $request->file('project_image')->isValid();exit;
+            //echo "Project Image".$request->hasFile('project_image');exit;
+            if ($request->hasFile('project_image') && $request->file('project_image')->isValid()) {
+                echo "***********";
+                $project->addMediaFromRequest('project_image')->toMediaCollection('project_image');
+            }
+            echo "pass";exit;
+            $project->project_image = "";
+            $result = $project->save();
+            echo "Project Save Status ".$result;
+            $url = $project->getFirstMediaUrl('project_image', 'thumb');
+            $project->project_image = $url;
             $project->save();
 
-            // Handle the project image upload
-            if ($request->hasFile('project_image') && $request->file('project_image')->isValid()) {
-                // Add the image to the media collection
-                try {
-                    $project->addMediaFromRequest('project_image')->toMediaCollection('project_image');
-                } catch (FileDoesNotExist $e) {
-                    return redirect()->back()->with('error', 'The uploaded file does not exist.');
-                } catch (FileIsTooBig $e) {
-                    return redirect()->back()->with('error', 'The uploaded file is too large.');
-                }
-            }
+//            if ($request->hasFile('project_image') && $request->file('project_image')->isValid()) {
+//                // Add the image to the media collection
+//                try {
+//                    $project->addMediaFromRequest('project_image')->toMediaCollection('project_image');
+//                } catch (FileDoesNotExist $e) {
+//                    return redirect()->back()->with('error', 'The uploaded file does not exist.');
+//                } catch (FileIsTooBig $e) {
+//                    return redirect()->back()->with('error', 'The uploaded file is too large.');
+//                }
+//            }
 
             // If everything is successful, redirect with success message
             return redirect('/project')->with('success', 'Project created successfully!');
@@ -216,4 +229,35 @@ class ProjectController extends Controller
         }
     }
 
+
+    /*API*/
+
+    public function getProjectList(Request $request){
+        $size = 5;
+        $page = $request->page?$request->page:1;
+        $skip = ($page - 1) * $size;
+        $projects = Project::where('is_active',1)
+            ->skip($skip)->take($size)->get();
+        return $this->returnSuccess("Project List",$projects);
+    }
+
+    public function returnError($message,$code): \Illuminate\Http\JsonResponse
+    {
+        $message = [
+            "error"=>$message,
+            "code"=>$code
+        ];
+        return response()->json($message);
+    }
+
+    public function returnSuccess($message,$data): \Illuminate\Http\JsonResponse
+    {
+        $message = [
+            "message"=>$message,
+            "code"=>200,
+            "success"=>true,
+            "data"=>$data
+        ];
+        return response()->json($message);
+    }
 }

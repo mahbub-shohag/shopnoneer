@@ -61,6 +61,7 @@ class HousingController extends Controller
             // Flash a success message to the session
             return redirect('/housing')->with('success', 'Housing record created successfully.');
         } catch (\Exception $e) {
+            print_r($e);exit;
             // Flash an error message to the session
             return redirect('/housing/create')->with('error', 'Failed to create housing record. Please try again.');
         }

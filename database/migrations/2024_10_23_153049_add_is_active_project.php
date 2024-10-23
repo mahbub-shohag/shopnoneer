@@ -11,11 +11,8 @@ return new class extends Migration
      */
     public function up(): void
     {
-        Schema::create('media', function (Blueprint $table) {
-            $table->id();
-            $table->string('image_path');
-            $table->foreignId('project_id')->constrained('projects');
-            $table->timestamps();
+        Schema::table('projects', function (Blueprint $table) {
+            $table->boolean('is_active')->default(true);
         });
     }
 
@@ -24,6 +21,6 @@ return new class extends Migration
      */
     public function down(): void
     {
-        Schema::dropIfExists('media');
+        //
     }
 };
