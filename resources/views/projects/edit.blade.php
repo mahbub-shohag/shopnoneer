@@ -19,7 +19,7 @@
             Project
         </div>
         <div class="card-body">
-            <form action="{{route('project.update',  $project->id)}}" method="POST">
+            <form action="{{route('project.update',  $project->id)}}" method="POST" enctype="multipart/form-data">
                 {{csrf_field()}}
                 {{ method_field('PUT') }}
                 @if ($errors->any())
@@ -198,12 +198,19 @@
                     <input type="text" class="form-control" id="autocomplete" placeholder="Enter your address">
                 </div>
 
+                <div class="mb-3">
+                    <label class="custom-control-label">Project Image</label>
+                    <input type="file" class="form-control" name="project_image" accept="image/*">
+                </div>
+
                 <!-- Map Container -->
                 <div id="map" style="height: 400px; width: 100%;"></div>
 
                 <!-- Latitude and Longitude Fields (Hidden) -->
                 <input type="hidden" id="latitude" name="latitude">
                 <input type="hidden" id="longitude" name="longitude">
+
+
                 <button class="btn btn-primary mt-4">Submit</button>
             </form>
         </div>

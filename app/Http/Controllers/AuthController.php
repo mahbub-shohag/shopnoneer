@@ -71,7 +71,7 @@ class AuthController extends Controller
         if($request->password == $request->confirm_password){
             $user = new User;
             $user->name = $request->name;
-            $user->role_id = 1;
+            $user->role_id = 3;
             $user->email = $request->email;
             $user->password = Hash::make($request->password);
             $user->save();
@@ -96,6 +96,7 @@ class AuthController extends Controller
             $user->phone_number = $request->phone_number;
             $user->email = $request->email;
             $user->password = Hash::make($request->password);
+            $user->role_id = 3;
             $user->save();
             if($user && Hash::check($request->password,$user->password)){
                 $token = $user->createToken('api');

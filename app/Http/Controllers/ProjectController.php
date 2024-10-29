@@ -8,6 +8,7 @@ use App\Models\Housing;
 use App\Models\Project;
 use App\Models\Upazila;
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\DB;
 use Spatie\MediaLibrary\MediaCollections\Exceptions\FileDoesNotExist;
 use Spatie\MediaLibrary\MediaCollections\Exceptions\FileIsTooBig;
 
@@ -100,36 +101,28 @@ class ProjectController extends Controller
             $project->total_price = $request->total_price;
             $project->description = $request->description;
             $project->google_map = $request->google_map;
-            //echo "<pre>";print_r($project);exit;
-            // Save the project
-            $result = $project->save();
-            //print_r($result);exit;
-            // Handle the project image upload
-            //echo $request->file('project_image')->isValid();
-            //echo $request->hasFile('project_image') && $request->file('project_image')->isValid();exit;
-            //echo "Project Image".$request->hasFile('project_image');exit;
-            if ($request->hasFile('project_image') && $request->file('project_image')->isValid()) {
-                echo "***********";
-                $project->addMediaFromRequest('project_image')->toMediaCollection('project_image');
-            }
-            echo "pass";exit;
+//            if ($request->hasFile('project_image') && $request->file('project_image')->isValid()) {
+//                $project->addMediaFromRequest('project_image')->toMediaCollection('project_image');
+//            }
             $project->project_image = "";
             $result = $project->save();
-            echo "Project Save Status ".$result;
-            $url = $project->getFirstMediaUrl('project_image', 'thumb');
-            $project->project_image = $url;
-            $project->save();
+            //echo "Project Save Status ".$result;
+            //$url = $project->getFirstMediaUrl('project_image', 'thumb');
 
-//            if ($request->hasFile('project_image') && $request->file('project_image')->isValid()) {
-//                // Add the image to the media collection
-//                try {
-//                    $project->addMediaFromRequest('project_image')->toMediaCollection('project_image');
-//                } catch (FileDoesNotExist $e) {
-//                    return redirect()->back()->with('error', 'The uploaded file does not exist.');
-//                } catch (FileIsTooBig $e) {
-//                    return redirect()->back()->with('error', 'The uploaded file is too large.');
-//                }
-//            }
+
+            if ($request->hasFile('project_image') && $request->file('project_image')->isValid()) {
+                // Add the image to the media collection
+                try {
+                    $project->addMediaFromRequest('project_image')->toMediaCollection('project_image');
+                    $url = $project->getFirstMediaUrl('project_image', 'thumb');
+                    $project->project_image = $url;
+                    $project->save();
+                } catch (FileDoesNotExist $e) {
+                    return redirect()->back()->with('error', 'The uploaded file does not exist.');
+                } catch (FileIsTooBig $e) {
+                    return redirect()->back()->with('error', 'The uploaded file is too large.');
+                }
+            }
 
             // If everything is successful, redirect with success message
             return redirect('/project')->with('success', 'Project created successfully!');
@@ -212,7 +205,19 @@ class ProjectController extends Controller
         $project->total_price = $request->total_price;
         $project->description = $request->description;
         $project->google_map = $request->google_map;
+
+        if ($request->hasFile('project_image') && $request->file('project_image')->isValid()) {
+            $project->media()->delete();
+            $project->addMediaFromRequest('project_image')->toMediaCollection('project_image');
+        }
+
         $project->save();
+        if ($request->hasFile('project_image') && $request->file('project_image')->isValid()) {
+            $url = $project->getFirstMediaUrl('project_image', 'thumb');
+            $project->project_image = $url;
+            $project->save();
+        }
+
 
         // Flash success message
         return redirect('/project')->with('success', 'Project updated successfully.');
@@ -236,8 +241,15 @@ class ProjectController extends Controller
         $size = 5;
         $page = $request->page?$request->page:1;
         $skip = ($page - 1) * $size;
-        $projects = Project::where('is_active',1)
-            ->skip($skip)->take($size)->get();
+        //$projects = Project::where('is_active',1)
+        //    ->skip($skip)->take($size)->get();
+        $projects = DB::table('projects')
+            ->leftJoin('districts', 'projects.district_id', '=', 'districts.id')
+            ->leftJoin('upazilas', 'projects.upazila_id', '=', 'upazilas.id')
+            ->leftJoin('housings', 'projects.housing_id', '=', 'housings.id')
+            ->leftJoin('divisions', 'projects.division_id', '=', 'divisions.id')
+            ->select('projects.*','divisions.name as division','districts.name as district','upazilas.name as upazila','housings.name as housing')
+            ->get();
         return $this->returnSuccess("Project List",$projects);
     }
 

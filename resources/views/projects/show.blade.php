@@ -22,6 +22,11 @@
                     </div>
                     <div class="card-body p-5"> <!-- Spacious content -->
                         <div class="row">
+                            <div class="col-md-12">
+                                <img src="{{$project->project_image}}" alt="Image"/>
+                            </div>
+                        </div>
+                        <div class="row">
                             <div class="col-md-6">
                                 <table class="table table-hover table-striped table-bordered text-center" style="font-size: 1.5rem;"> <!-- Increased font size for table content -->
                                     <tbody>
