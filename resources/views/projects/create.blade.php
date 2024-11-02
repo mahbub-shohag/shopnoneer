@@ -166,7 +166,8 @@
 
                 <div class="mb-3">
                     <label class="custom-control-label">Project Image</label>
-                    <input type="file" class="form-control" name="project_image" accept="image/*">
+                    <input type="file" class="form-control" style="margin-bottom: 15px;" name="project_image[]" accept="image/*">
+                    <button class="btn btn-primary btn-sm image_add_btn">Add Image</button>
                 </div>
 
                 <div class="mb-3">
@@ -249,6 +250,13 @@
                 }
             });
         });
+
+
+        $('.image_add_btn').click(function (){
+            event.preventDefault();
+            $('<input type="file" class="form-control" name="project_image[]" accept="image/*"><br>').insertBefore(this);
+        });
+
     </script>
     <script async defer
             src="https://maps.googleapis.com/maps/api/js?key=YOUR_GOOGLE_MAPS_API_KEY&libraries=places">

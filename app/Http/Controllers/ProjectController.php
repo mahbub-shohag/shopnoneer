@@ -76,6 +76,7 @@ class ProjectController extends Controller
             'housing_id.required' => 'Please select a housing.',
         ]);
 */
+        //echo "<pre>";print_r($_FILES);exit;
         try {
             $project = new Project();
             $project->title = $request->title;
@@ -113,7 +114,15 @@ class ProjectController extends Controller
             if ($request->hasFile('project_image') && $request->file('project_image')->isValid()) {
                 // Add the image to the media collection
                 try {
-                    $project->addMediaFromRequest('project_image')->toMediaCollection('project_image');
+                    //$project->addMediaFromRequest('project_image')->toMediaCollection('project_image');
+                    //$project->addMultipleMediaFromRequest('project_image')->toMediaCollection('project_image');
+                    if ($request->hasFile('project_image')) {
+                        $fileAdders = $listing->addMultipleMediaFromRequest(['project_image'])
+                            ->each(function ($fileAdder) {
+                                $fileAdder->toMediaCollection('project_image');
+                            });
+                    }
+
                     $url = $project->getFirstMediaUrl('project_image', 'thumb');
                     $project->project_image = $url;
                     $project->save();
@@ -251,6 +260,23 @@ class ProjectController extends Controller
             ->select('projects.*','divisions.name as division','districts.name as district','upazilas.name as upazila','housings.name as housing')
             ->get();
         return $this->returnSuccess("Project List",$projects);
+    }
+
+    public function getProjectById(Request $request){
+        try {
+            $project = DB::table('projects')
+                ->leftJoin('districts', 'projects.district_id', '=', 'districts.id')
+                ->leftJoin('upazilas', 'projects.upazila_id', '=', 'upazilas.id')
+                ->leftJoin('housings', 'projects.housing_id', '=', 'housings.id')
+                ->leftJoin('divisions', 'projects.division_id', '=', 'divisions.id')
+                ->where('projects.id','=',$request->project_id)
+                ->select('projects.*','divisions.name as division','districts.name as district','upazilas.name as upazila','housings.name as housing')
+                //->toSql();
+                ->first();
+            return $this->returnSuccess("Project Detail",$project);
+        }catch (\Exception $e) {
+            return $this->returnError("Error",$e->getMessage());
+        }
     }
 
     public function returnError($message,$code): \Illuminate\Http\JsonResponse

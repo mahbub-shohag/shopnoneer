@@ -25,3 +25,8 @@
     background-color: #009999 !important; /* Lighter teal for differentiation */
 }
 
+.image_add_btn{
+    float: right;
+    margin: 5px 0 5px;
+}
+
