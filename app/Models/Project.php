@@ -13,26 +13,21 @@ class Project extends Model implements HasMedia
     use HasFactory;
     use InteractsWithMedia;
 
-    public function medias(): HasMany
-    {
-        return $this->hasMany(Media::class);
-    }
-
     public function upazila(){
-        return $this->belongsTo(Upazila::class);
+        return $this->belongsTo(Upazila::class)->select(['id', 'name']);
     }
 
     public function division()
     {
-        return $this->belongsTo(Division::class);
+        return $this->belongsTo(Division::class)->select(['id', 'name']);
     }
     public function district()
     {
-        return $this->belongsTo(District::class);
+        return $this->belongsTo(District::class)->select(['id', 'name']);
     }
 
     public function housing()
     {
-        return $this->belongsTo(Housing::class);
+        return $this->belongsTo(Housing::class)->select(['id', 'name']);
     }
 }

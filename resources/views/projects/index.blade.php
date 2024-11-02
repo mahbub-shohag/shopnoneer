@@ -43,7 +43,12 @@
                         <td>{{$project->district->name}}</td>
                         <td>{{$project->upazila->name}}</td>
                         <td>{{$project->housing->name}}</td>
-                        <td><img src="{{$project->project_image}}" width="120px"></td>
+                        <td>
+                            @foreach($project->getMedia('project_image') as $image)
+                                <img src="{{$image->getUrl()}}" alt="Image"/>
+                            @endforeach
+{{--                            <img src="{{$project->project_image}}" width="120px">--}}
+                        </td>
                         <td>
                             <!-- Flex Container for Edit, View, and Delete Actions -->
                             <div style="display: flex; align-items: center; justify-content: space-around; width: 100%;">

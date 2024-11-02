@@ -23,7 +23,11 @@
                     <div class="card-body p-5"> <!-- Spacious content -->
                         <div class="row">
                             <div class="col-md-12">
-                                <img src="{{$project->project_image}}" alt="Image"/>
+                                @foreach($project->getMedia('project_image') as $image)
+                                    {{$image->getUrl()}}
+                                    <img src="{{$image->getUrl()}}" alt="Image"/>
+                                @endforeach
+
                             </div>
                         </div>
                         <div class="row">

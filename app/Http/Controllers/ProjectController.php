@@ -111,11 +111,12 @@ class ProjectController extends Controller
             //$url = $project->getFirstMediaUrl('project_image', 'thumb');
 
 
-            if ($request->hasFile('project_image') && $request->file('project_image')->isValid()) {
+            //if ($request->hasFile('project_image') && $request->file('project_image')->isValid()) {
                 // Add the image to the media collection
                 try {
                     //$project->addMediaFromRequest('project_image')->toMediaCollection('project_image');
                     //$project->addMultipleMediaFromRequest('project_image')->toMediaCollection('project_image');
+                    /*
                     if ($request->hasFile('project_image')) {
                         $fileAdders = $listing->addMultipleMediaFromRequest(['project_image'])
                             ->each(function ($fileAdder) {
@@ -125,13 +126,21 @@ class ProjectController extends Controller
 
                     $url = $project->getFirstMediaUrl('project_image', 'thumb');
                     $project->project_image = $url;
-                    $project->save();
+                    $project->save();*/
+
+                    if ($request->hasFile('project_image')) {
+                        foreach ($request->file('project_image') as $image) {
+                            $project->addMedia($image)->toMediaCollection('project_image');
+                        }
+                    }
+
+
                 } catch (FileDoesNotExist $e) {
                     return redirect()->back()->with('error', 'The uploaded file does not exist.');
                 } catch (FileIsTooBig $e) {
                     return redirect()->back()->with('error', 'The uploaded file is too large.');
                 }
-            }
+            //}
 
             // If everything is successful, redirect with success message
             return redirect('/project')->with('success', 'Project created successfully!');
@@ -152,6 +161,7 @@ class ProjectController extends Controller
         $project = Project::where('id', $project->id)
             ->with('division', 'district', 'upazila')
             ->first();
+        //echo "<pre>";print_r($project->getMedia('project_image'));exit;
         return view('projects.show', ['project' => $project]);
     }
 
@@ -264,15 +274,23 @@ class ProjectController extends Controller
 
     public function getProjectById(Request $request){
         try {
-            $project = DB::table('projects')
-                ->leftJoin('districts', 'projects.district_id', '=', 'districts.id')
-                ->leftJoin('upazilas', 'projects.upazila_id', '=', 'upazilas.id')
-                ->leftJoin('housings', 'projects.housing_id', '=', 'housings.id')
-                ->leftJoin('divisions', 'projects.division_id', '=', 'divisions.id')
-                ->where('projects.id','=',$request->project_id)
-                ->select('projects.*','divisions.name as division','districts.name as district','upazilas.name as upazila','housings.name as housing')
-                //->toSql();
-                ->first();
+//            $project = DB::table('projects')
+//                ->leftJoin('districts', 'projects.district_id', '=', 'districts.id')
+//                ->leftJoin('upazilas', 'projects.upazila_id', '=', 'upazilas.id')
+//                ->leftJoin('housings', 'projects.housing_id', '=', 'housings.id')
+//                ->leftJoin('divisions', 'projects.division_id', '=', 'divisions.id')
+//                ->where('projects.id','=',$request->project_id)
+//                ->select('projects.*','divisions.name as division','districts.name as district','upazilas.name as upazila','housings.name as housing')
+//                //->toSql();
+//                ->first();
+            $project = Project::with('division','upazila','district','housing')->find($request->project_id);
+            $mediaItems = $project->getMedia('project_image'); // Use your media collection name
+            // Map to get an array of URLs
+            $mediaUrls = $mediaItems->map(function ($media) {
+                return $media->getUrl();
+            });
+            $project->images = $mediaUrls;
+            unset($project['media']);
             return $this->returnSuccess("Project Detail",$project);
         }catch (\Exception $e) {
             return $this->returnError("Error",$e->getMessage());
