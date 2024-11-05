@@ -7,8 +7,8 @@ use App\Models\Division;
 use App\Models\Housing;
 use App\Models\Project;
 use App\Models\Upazila;
+use App\DTOs\ProjectDTO;
 use Illuminate\Http\Request;
-use Illuminate\Support\Facades\DB;
 use Spatie\MediaLibrary\MediaCollections\Exceptions\FileDoesNotExist;
 use Spatie\MediaLibrary\MediaCollections\Exceptions\FileIsTooBig;
 
@@ -257,41 +257,19 @@ class ProjectController extends Controller
     /*API*/
 
     public function getProjectList(Request $request){
-        $size = 5;
+        $size = $request->size;
         $page = $request->page?$request->page:1;
         $skip = ($page - 1) * $size;
-        //$projects = Project::where('is_active',1)
-        //    ->skip($skip)->take($size)->get();
-        $projects = DB::table('projects')
-            ->leftJoin('districts', 'projects.district_id', '=', 'districts.id')
-            ->leftJoin('upazilas', 'projects.upazila_id', '=', 'upazilas.id')
-            ->leftJoin('housings', 'projects.housing_id', '=', 'housings.id')
-            ->leftJoin('divisions', 'projects.division_id', '=', 'divisions.id')
-            ->select('projects.*','divisions.name as division','districts.name as district','upazilas.name as upazila','housings.name as housing')
-            ->get();
-        return $this->returnSuccess("Project List",$projects);
+        $projects = Project::with('media','division','district','upazila','housing')->where('is_active',1)->skip($skip)->take($size)->get();
+        $projectDtos = $projects->map(fn($project) => ProjectDTO::fromModel($project))->toArray();
+        return $this->returnSuccess("Project List",$projectDtos);
     }
 
     public function getProjectById(Request $request){
         try {
-//            $project = DB::table('projects')
-//                ->leftJoin('districts', 'projects.district_id', '=', 'districts.id')
-//                ->leftJoin('upazilas', 'projects.upazila_id', '=', 'upazilas.id')
-//                ->leftJoin('housings', 'projects.housing_id', '=', 'housings.id')
-//                ->leftJoin('divisions', 'projects.division_id', '=', 'divisions.id')
-//                ->where('projects.id','=',$request->project_id)
-//                ->select('projects.*','divisions.name as division','districts.name as district','upazilas.name as upazila','housings.name as housing')
-//                //->toSql();
-//                ->first();
-            $project = Project::with('division','upazila','district','housing')->find($request->project_id);
-            $mediaItems = $project->getMedia('project_image'); // Use your media collection name
-            // Map to get an array of URLs
-            $mediaUrls = $mediaItems->map(function ($media) {
-                return $media->getUrl();
-            });
-            $project->images = $mediaUrls;
-            unset($project['media']);
-            return $this->returnSuccess("Project Detail",$project);
+            $project = Project::with('media','division','district','upazila','housing')->find($request->project_id);
+            $projectDto = ProjectDTO::fromModel($project);
+            return $this->returnSuccess("Project Detail",$projectDto);
         }catch (\Exception $e) {
             return $this->returnError("Error",$e->getMessage());
         }
