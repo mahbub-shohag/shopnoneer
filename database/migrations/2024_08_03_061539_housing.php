@@ -14,7 +14,7 @@ return new class extends Migration
         Schema::create('housings', function (Blueprint $table) {
            $table->id();
            $table->string('name');
-            $table->foreignId('division_id')->constrained('divisions');
+           $table->foreignId('division_id')->constrained('divisions');
            $table->foreignId('district_id')->constrained('districts');
            $table->foreignId('upazila_id')->constrained('upazilas');
            $table->timestamps();

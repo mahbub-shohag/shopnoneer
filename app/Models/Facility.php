@@ -5,10 +5,13 @@ namespace App\Models;
 use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Database\Eloquent\Model;
 
-class Housing extends Model
+class Facility extends Model
 {
     use HasFactory;
-
+    public function category()
+    {
+        return $this->belongsTo(Category::class);
+    }
     public function division()
     {
         return $this->belongsTo(Division::class);
@@ -21,14 +24,5 @@ class Housing extends Model
     public function district()
     {
         return $this->belongsTo(District::class);
-    }
-
-    public function facilities()
-    {
-        return $this->hasMany(Facility::class);
-    }
-
-    public function amenities(){
-        return $this->hasMany(Amenity::class);
     }
 }
