@@ -1,27 +1,26 @@
-
 @extends('layouts.app')
 
 @section('title')
-    Category
+    Facility
 @endsection
 
 @section('bread_controller')
-    <a href="index.html">Category</a>
+    <a href="{{ route('facility.index') }}">Facility</a>
 @endsection
 
 @section('bread_action')
-    create
+    Create
 @endsection
 
 @section('content')
     <div class="card mb-4">
         <div class="card-header">
             <i class="fas fa-table me-1"></i>
-            New Category
+            Create Facility
         </div>
 
         <div class="card-body">
-            <form action="{{ route('category.store') }}" method="POST">
+            <form action="{{ route('facility.store') }}" method="POST">
                 {{ csrf_field() }}
                 {{ method_field('POST') }}
 
@@ -34,17 +33,30 @@
                         </ol>
                     </div>
                 @endif
+
                 <div class="mb-3">
-                    <label class="custom-control-label">Name</label>
+                    <label class="custom-control-label">Facility Name</label>
                     <input class="form-control" type="text" name="name">
                 </div>
+
+                <div class="mb-3">
+                    <label class="custom-control-label">Select A Facilities</label>
+                    <select class="form-select" name="category_id">
+                        <option value="">Select Category</option>
+                        @foreach($facility_categories as $facility_category)
+                            <option value="{{ $facility_category->id }}">{{ $facility_category->label }}</option>
+                        @endforeach
+                    </select>
+                </div>
+
+
 
                 <div class="mb-3">
                     <label class="custom-control-label">Division</label>
                     <select class="form-select" name="division_id">
                         <option value="">Select Division</option>
                         @foreach($divisions as $division)
-                            <option value="{{ $division->id }}" >{{ $division->name }}</option>
+                            <option value="{{ $division->id }}">{{ $division->name }}</option>
                         @endforeach
                     </select>
                 </div>
@@ -61,6 +73,11 @@
                     <select class="form-select" name="upazila_id">
                         <option value="">Select Upazila</option>
                     </select>
+                </div>
+
+                <div class="mb-3">
+                    <label class="custom-control-label">Google Map URL</label>
+                    <input class="form-control" type="text" name="google_map_url">
                 </div>
 
                 <button class="btn btn-primary">Submit</button>
@@ -102,5 +119,9 @@
                 }
             });
         });
+
+
+
+
     </script>
 @endsection

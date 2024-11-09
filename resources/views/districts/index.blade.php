@@ -29,7 +29,7 @@
                 </tr>
                 </thead>
                 <tfoot>
-                <tr>
+                <tr>.
                     <th>SL</th>
                     <th>Division</th>
                     <th>Name</th>

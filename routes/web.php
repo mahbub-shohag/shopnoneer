@@ -97,6 +97,7 @@ Route::resource('/category',CategoryController::class);
 
 /*Facility*/
 Route::resource('/facility',FacilityController::class);
+Route::post('/categories_by_category_id', [CategoryController::class, 'categoriesByCategoryId'])->name('categories_by_category_id');
 /*Facility*/
 
 

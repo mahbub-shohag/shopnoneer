@@ -35,19 +35,20 @@
                     </div>
                 @endif
                 <div class="mb-3">
-                    <label class="custom-control-label">Category Option</label>
-                    <input class="form-control" type="text" name="label">
-                </div>
-
-                <div class="mb-3">
                     <label class="custom-control-label">Category Type</label>
                     <select class="form-select" name="parent_id">
-                        <option value="1">Root</option>
+{{--                        <option value="1">Root</option>--}}
                         @foreach($category_types as $category_type)
                             <option value="{{ $category_type->id }}" >{{ $category_type->label }}</option>
                         @endforeach
                     </select>
                 </div>
+                <div class="mb-3">
+                    <label class="custom-control-label">Category Option</label>
+                    <input class="form-control" type="text" name="label">
+                </div>
+
+
 
                 <button class="btn btn-primary">Submit</button>
             </form>

@@ -1,11 +1,11 @@
 @extends('layouts.app')
 
 @section('title')
-    Category
+    Facility
 @endsection
 
 @section('bread_controller')
-    <a href="index.html">Category</a>
+    <a href="{{ route('facility.index') }}">Facility</a>
 @endsection
 
 @section('bread_action')
@@ -16,8 +16,8 @@
     <div class="card mb-4">
         <div class="card-header">
             <i class="fas fa-table me-1"></i>
-            Categories
-            <a href="{{ route('category.create') }}">
+            Facilities
+            <a href="{{ route('facility.create') }}">
                 <button class="btn btn-sm btn-primary" style="float: right"><i class="fas fa-plus"></i> Add New</button>
             </a>
         </div>
@@ -26,38 +26,41 @@
                 <thead>
                 <tr>
                     <th>SL</th>
-                    <th>Label</th>
-                    <th>Parent</th>
+                    <th>Name</th>
+                    <th>Category</th>
+                    <th>Location</th>
                     <th>Action</th>
                 </tr>
                 </thead>
                 <tfoot>
                 <tr>
                     <th>SL</th>
-                    <th>Label</th>
-                    <th>Parent</th>
+                    <th>Name</th>
+                    <th>Category</th>
+                    <th>Location</th>
                     <th>Action</th>
                 </tr>
                 </tfoot>
                 <tbody>
-                @foreach ($categories as $key => $category)
+                @foreach ($facilities as $key => $facility)
                     <tr>
                         <td>{{ $key + 1 }}</td>
-                        <td>{{ $category->label }}</td>
-                        <td>{{ $category->parent?->label ?? 'Root' }}</td>
+                        <td>{{ $facility->name }}</td>
+                        <td>{{ $facility->category->label ?? 'N/A' }}</td>
+                        <td>{{ $facility->division->name ?? 'N/A' }}, {{ $facility->district->name ?? 'N/A' }}, {{ $facility->upazila->name ?? 'N/A' }}</td>
                         <td>
                             <!-- Flex Container for Edit, View, and Delete Actions -->
                             <div style="display: flex; align-items: center; justify-content: space-around; width: 40%;">
                                 <!-- Edit Link -->
-                                <a href="{{ route('category.edit', ['category' => $category]) }}" class="btn-icon btn-edit">
+                                <a href="{{ route('facility.edit', ['facility' => $facility]) }}" class="btn-icon btn-edit">
                                     <i class="fas fa-pencil-alt"></i>
                                 </a>
                                 <!-- View Link -->
-                                <a href="{{ route('category.show', ['category' => $category]) }}" class="btn-icon btn-view">
+                                <a href="{{ route('facility.show', ['facility' => $facility]) }}" class="btn-icon btn-view">
                                     <i class="fas fa-eye"></i>
                                 </a>
                                 <!-- Delete Form -->
-                                <form action="{{ route('category.destroy', ['category' => $category]) }}" method="POST" style="margin: 0;">
+                                <form action="{{ route('facility.destroy', ['facility' => $facility]) }}" method="POST" style="margin: 0;">
                                     @csrf
                                     @method('DELETE')
                                     <button type="submit" class="btn-icon btn-delete" title="Delete">

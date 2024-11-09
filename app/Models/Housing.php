@@ -13,15 +13,15 @@ class Housing extends Model
     {
         return $this->belongsTo(Division::class);
     }
-
-    public function upazila(){
-        return $this->belongsTo(Upazila::class);
-    }
-
     public function district()
     {
         return $this->belongsTo(District::class);
     }
+    public function upazila(){
+        return $this->belongsTo(Upazila::class);
+    }
+
+
 
     public function facilities()
     {
