@@ -14,8 +14,7 @@ return new class extends Migration
         Schema::create('categories', function (Blueprint $table) {
             $table->id();
             $table->string('label');
-            $table->int('value');
-            $table->int('parent_id');
+            $table->foreignId('parent_id')->constrained('categories');
             $table->timestamps();
         });
     }

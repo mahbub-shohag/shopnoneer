@@ -1,9 +1,11 @@
 <?php
 
 use App\Http\Controllers\AuthController;
+use App\Http\Controllers\CategoryController;
 use App\Http\Controllers\CityController;
 use App\Http\Controllers\DivisionController;
 use App\Http\Controllers\DistrictController;
+use App\Http\Controllers\FacilityController;
 use App\Http\Controllers\UpazilaController;
 use App\Http\Controllers\UserController;
 use App\Http\Controllers\RoleController;
@@ -88,6 +90,15 @@ Route::get('project-list',[ProjectController::class,'projectList'])->name('proje
 Route::resource('/profiles',ProfileController::class);
 Route::get('profile_list',[ProfileController::class,'profile_list']);
 /*Project*/
+
+/*Category*/
+Route::resource('/category',CategoryController::class);
+/*Category*/
+
+/*Facility*/
+Route::resource('/facility',FacilityController::class);
+/*Facility*/
+
 
 Route::middleware([
     'auth:sanctum',
