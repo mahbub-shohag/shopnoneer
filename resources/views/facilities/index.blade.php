@@ -50,7 +50,7 @@
                         <td>{{ $facility->division->name ?? 'N/A' }}, {{ $facility->district->name ?? 'N/A' }}, {{ $facility->upazila->name ?? 'N/A' }}</td>
                         <td>
                             <!-- Flex Container for Edit, View, and Delete Actions -->
-                            <div style="display: flex; align-items: center; justify-content: space-around; width: 40%;">
+                            <div style="display: flex; align-items: center; justify-content: space-around; width: 100%;">
                                 <!-- Edit Link -->
                                 <a href="{{ route('facility.edit', ['facility' => $facility]) }}" class="btn-icon btn-edit">
                                     <i class="fas fa-pencil-alt"></i>

@@ -14,8 +14,8 @@ class UpazilaController extends Controller
      */
     public function index()
     {
-        $upazillas = Upazila::with('district','district.division')->get();
-        return view('upazilas.index',['upazillas'=>$upazillas]);
+        $upazillas = Upazila::with('district', 'district.division')->get();
+        return view('upazilas.index', ['upazillas' => $upazillas]);
     }
 
     /**
@@ -70,12 +70,10 @@ class UpazilaController extends Controller
     {
         $upazila_id = $request->upazila_id;
         $housings = Housing::where('upazila_id', $upazila_id)->get();
-        $options = "<option value='' SELECTED>Select Upazila</option>";
+        $options = "<option value='' SELECTED>Select Housing</option>";
         foreach ($housings as $housing) {
             $options .= "<option value='$housing->id'>" . ($housing->name == NULL ? "No housing in this Upazila" : $housing->name) . "</option>";
         }
-
- $options = $options . "<option value='$housing->id'>$housing->name</option>";
         return $options;
     }
 }

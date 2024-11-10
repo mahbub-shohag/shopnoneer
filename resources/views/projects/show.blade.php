@@ -13,6 +13,16 @@
 @endsection
 
 @section('content')
+    <style>
+        .banner-image {
+            width: 100%; /* Full width of the parent container */
+            height: auto; /* Maintain aspect ratio */
+            max-height: 400px; /* Optional: Limit the height to prevent excessive size */
+            object-fit: cover; /* Ensure the image fills the space proportionally */
+            margin-bottom: 15px;;
+        }
+    </style>
+
     <div class="container mt-4">
         <div class="row justify-content-center">
             <div class="col-md-14">
@@ -24,12 +34,11 @@
                         <div class="row">
                             <div class="col-md-12">
                                 @foreach($project->getMedia('project_image') as $image)
-                                    {{$image->getUrl()}}
-                                    <img src="{{$image->getUrl()}}" alt="Image"/>
+                                    <img src="{{$image->getUrl()}}" alt="Image" class="banner-image" />
                                 @endforeach
-
                             </div>
                         </div>
+
                         <div class="row">
                             <div class="col-md-6">
                                 <table class="table table-hover table-striped table-bordered text-center" style="font-size: 1.5rem;"> <!-- Increased font size for table content -->
@@ -93,7 +102,10 @@
                                         <td class="bg-dark text-white" style="padding: 1rem;">Floor No</td>
                                         <td style="padding: 1rem;">{{ $project->floor_no }}</td>
                                     </tr>
-
+                                    <tr>
+                                        <td class="bg-dark text-white" style="padding: 1rem;">Google Map</td>
+                                        <td style="padding: 1rem;">{{ $project->google_map }}</td>
+                                    </tr>
                                     </tbody>
                                 </table>
                             </div>
@@ -137,13 +149,10 @@
                                     <tr>
                                         <td class="bg-dark text-white" style="padding: 1rem;">Project Image</td>
                                         <td style="padding: 1rem;">
-                                            <img src="{{ $project->getFirstMediaUrl('project_image', 'thumb') ?: asset('images/default.png') }}">
+                                            <img style="width: auto;height: 70px" src="{{ $project->getFirstMediaUrl('project_image', 'thumb') ?: asset('images/default.png') }}">
                                         </td>
                                     </tr>
-                                    <tr>
-                                        <td class="bg-dark text-white" style="padding: 1rem;">Google Map</td>
-                                        <td style="padding: 1rem;">{{ $project->google_map }}</td>
-                                    </tr>
+
                                     </tbody>
                                 </table>
                             </div>

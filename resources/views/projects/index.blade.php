@@ -45,7 +45,7 @@
                         <td>{{$project->housing->name}}</td>
                         <td>
                             @foreach($project->getMedia('project_image') as $image)
-                                <img src="{{$image->getUrl()}}" alt="Image"/>
+                                <img style="width: auto;height: 40px" src="{{$image->getUrl()}}" alt="Image"/>
                             @endforeach
 {{--                            <img src="{{$project->project_image}}" width="120px">--}}
                         </td>
