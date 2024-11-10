@@ -179,8 +179,8 @@
                 <div id="map" style="height: 400px; width: 100%;"></div>
 
                 <!-- Latitude and Longitude Fields (Hidden) -->
-                <input type="hidden" id="latitude" name="latitude">
-                <input type="hidden" id="longitude" name="longitude">
+                <input type="text" id="latitude" name="latitude">
+                <input type="text" id="longitude" name="longitude">
                 <button class="btn btn-primary mt-4">Submit</button>
             </form>
         </div>
@@ -258,9 +258,7 @@
         });
 
     </script>
-    <script async defer
-            src="https://maps.googleapis.com/maps/api/js?key=YOUR_GOOGLE_MAPS_API_KEY&libraries=places">
-    </script>
+    <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyABnAbo9ifTK9aGO-2oBameLdIKPxVKoXI&libraries=places"></script>
 
     <script>
         let map;
