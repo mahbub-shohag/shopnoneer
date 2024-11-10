@@ -1,67 +1,66 @@
 @extends('layouts.app')
 
 @section('title')
-    Projects
+    Facility
 @endsection
 
 @section('bread_controller')
-    <a href="index.html">Project</a>
+    <a href="{{ route('facility.index') }}">Facility</a>
 @endsection
 
 @section('bread_action')
-    index
+    Index
 @endsection
 
 @section('content')
     <div class="card mb-4">
         <div class="card-header">
             <i class="fas fa-table me-1"></i>
-            <a href="project/create">
+            Facilities
+            <a href="{{ route('facility.create') }}">
                 <button class="btn btn-sm btn-primary" style="float: right"><i class="fas fa-plus"></i> Add New</button>
             </a>
-            Project
         </div>
-
-        <div class="">
-            <table class="table table-bordered">
+        <div class="card-body">
+            <table id="datatablesSimple">
                 <thead>
                 <tr>
                     <th>SL</th>
-                    <th>Title</th>
-                    <th>District</th>
-                    <th>Upazila</th>
-                    <th>Housing</th>
-                    <th>Image</th>
+                    <th>Name</th>
+                    <th>Category</th>
+                    <th>Location</th>
                     <th>Action</th>
                 </tr>
                 </thead>
+                <tfoot>
+                <tr>
+                    <th>SL</th>
+                    <th>Name</th>
+                    <th>Category</th>
+                    <th>Location</th>
+                    <th>Action</th>
+                </tr>
+                </tfoot>
                 <tbody>
-                @foreach($projects as $project)
+                @foreach ($facilities as $key => $facility)
                     <tr>
-                        <td>{{$loop->index+1}}</td>
-                        <td>{{$project->title}}</td>
-                        <td>{{$project->district->name}}</td>
-                        <td>{{$project->upazila->name}}</td>
-                        <td>{{$project->housing->name}}</td>
-                        <td>
-                            @foreach($project->getMedia('project_image') as $image)
-                                <img style="width: auto;height: 40px" src="{{$image->getUrl()}}" alt="Image"/>
-                            @endforeach
-{{--                            <img src="{{$project->project_image}}" width="120px">--}}
-                        </td>
+                        <td>{{ $key + 1 }}</td>
+                        <td>{{ $facility->name }}</td>
+                        <td>{{ $facility->category->label ?? 'N/A' }}</td>
+                        <td>{{ $facility->division->name ?? 'N/A' }}, {{ $facility->district->name ?? 'N/A' }}, {{ $facility->upazila->name ?? 'N/A' }}</td>
                         <td>
                             <!-- Flex Container for Edit, View, and Delete Actions -->
                             <div style="display: flex; align-items: center; justify-content: space-around; width: 100%;">
                                 <!-- Edit Link -->
-                                <a href="{{ route('project.edit', ['project' => $project]) }}" class="btn-icon btn-edit">
+                                <a href="{{ route('facility.edit', ['facility' => $facility]) }}" class="btn-icon btn-edit">
                                     <i class="fas fa-pencil-alt"></i>
                                 </a>
                                 <!-- View Link -->
-                                <a href="{{ route('project.show', ['project' => $project]) }}" class="btn-icon btn-view">
+                                <a href="{{ route('facility.show', ['facility' => $facility]) }}" class="btn-icon btn-view">
                                     <i class="fas fa-eye"></i>
                                 </a>
                                 <!-- Delete Form -->
-                                <form action="{{ route('project.destroy', ['project' => $project]) }}" method="POST" style="margin: 0;">
+                                <form action="{{ route('facility.destroy', ['facility' => $facility]) }}" method="POST" style="margin: 0;">
                                     @csrf
                                     @method('DELETE')
                                     <button type="submit" class="btn-icon btn-delete" title="Delete">
@@ -70,14 +69,11 @@
                                 </form>
                             </div>
                         </td>
-
                     </tr>
                 @endforeach
                 </tbody>
             </table>
         </div>
     </div>
+
 @endsection
-
-
-

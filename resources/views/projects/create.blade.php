@@ -161,7 +161,7 @@
 
                 <div class="mb-3">
                     <label class="custom-control-label">Description</label>
-                    <input type="text" class="form-control" name="description">
+                    <textarea class="form-control" name="description" rows="5"></textarea>
                 </div>
 
                 <div class="mb-3">
