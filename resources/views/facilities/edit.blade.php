@@ -63,12 +63,26 @@
 
                 <div class="mb-3">
                     <label class="custom-control-label">District</label>
-                    <input class="form-control" type="text" name="district_id" value="{{ old('district_id', $facility->district_id) }}">
+                    <select class="form-select" name="district_id">
+                        <option value="">Select District</option>
+                        @foreach($districts as $district)
+                            <option value="{{ $district->id }}" @if($district->id == $facility->district_id) selected @endif>
+                                {{ $district->name }}
+                            </option>
+                        @endforeach
+                    </select>
                 </div>
 
                 <div class="mb-3">
                     <label class="custom-control-label">Upazila</label>
-                    <input class="form-control" type="text" name="upazila_id" value="{{ old('upazila_id', $facility->upazila_id) }}">
+                    <select class="form-select" name="upazila_id">
+                        <option value="">Select Upazila</option>
+                        @foreach($upazilas as $upazila)
+                            <option value="{{ $upazila->id }}" @if($upazila->id == $facility->upazila_id) selected @endif>
+                                {{ $upazila->name }}
+                            </option>
+                        @endforeach
+                    </select>
                 </div>
 
                 <div class="mb-3">
