@@ -25,5 +25,9 @@ class Facility extends Model
         return $this->belongsTo(Upazila::class);
     }
 
+    public function housings()
+    {
+        return $this->belongsToMany(Housing::class, 'facility_housing', 'facility_id', 'housing_id');
+    }
 
 }

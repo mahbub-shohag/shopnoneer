@@ -4,6 +4,7 @@ namespace App\Http\Controllers;
 
 use App\Models\District;
 use App\Models\Division;
+use App\Models\Facility;
 use App\Models\Housing;
 use App\Models\Upazila;
 use Illuminate\Http\Request;
@@ -25,8 +26,22 @@ class HousingController extends Controller
         $divisions = Division::all();
         $districts = District::all();
         $upazilas = Upazila::all();
-        return view('housings.edit',['housing'=>$housing,'divisions' => $divisions,'districts' => $districts,'upazillas' => $upazilas])->with('success', 'Project edited successfully.');
+
+        // Group facilities by their category_id
+        $groupedFacilities = Facility::all()->groupBy('category_id');
+
+        $selectedFacilities = $housing->facilities->pluck('id')->toArray(); // Get IDs of attached facilities
+
+        return view('housings.edit', [
+            'housing' => $housing,
+            'divisions' => $divisions,
+            'districts' => $districts,
+            'upazillas' => $upazilas,
+            'groupedFacilities' => $groupedFacilities, // Pass grouped facilities
+            'selectedFacilities' => $selectedFacilities,
+        ]);
     }
+
     public function show(Housing $housing)
     {
         $housing = Housing::where('id',$housing->id)->with('division','district','upazila')->first();
@@ -56,11 +71,17 @@ class HousingController extends Controller
             $housing->division_id = $request->input('division_id');
             $housing->district_id = $request->input('district_id');
             $housing->upazila_id = $request->input('upazila_id');
-            $housing->save();
+            // Save the housing record first to generate its ID
 
+            // Get facilities from the request
+            $facilities = $request->input('facilities'); // Extract keys as facility IDs
+            //print_r($facilities);exit;
+            $housing->save();
+            $housing->facilities()->attach($facilities);
             // Flash a success message to the session
             return redirect('/housing')->with('success', 'Housing record created successfully.');
         } catch (\Exception $e) {
+//            print_r($e->getMessage());exit;
             // Flash an error message to the session
             return redirect('/housing/create')->with('error', 'Failed to create housing record. Please try again.');
         }
@@ -116,6 +137,17 @@ class HousingController extends Controller
         } catch (\Exception $e) {
             return redirect('/housing')->with('warning', 'Failed to delete Housing');
         }
+    }
+
+    public function housingsByUpazilaId(Request $request)
+    {
+        $upazila_id = $request->upazila_id;
+        $housings = Housing::where('upazila_id', $upazila_id)->get();
+        $options = "<option value='' SELECTED>Select Housing</option>";
+        foreach ($housings as $housing) {
+            $options .= "<option value='$housing->id'>" . ($housing->name == NULL ? "No housing in this Upazila" : $housing->name) . "</option>";
+        }
+        return $options;
     }
 
 

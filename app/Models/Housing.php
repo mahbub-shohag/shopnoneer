@@ -25,7 +25,7 @@ class Housing extends Model
 
     public function facilities()
     {
-        return $this->hasMany(Facility::class);
+        return $this->belongsToMany(Facility::class, 'facility_housing', 'housing_id', 'facility_id');
     }
 
     public function amenities(){

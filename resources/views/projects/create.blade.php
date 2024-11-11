@@ -121,12 +121,12 @@
 
                 <div class="mb-3">
                     <label class="custom-control-label">No of Baths</label>
-                    <input type="number" class="form-control" name="no_of_baths">
+                    <input type="number" class="form-control" name="no_of_baths" onwheel="this.blur()">
                 </div>
 
                 <div class="mb-3">
                     <label class="custom-control-label">No of Balcony</label>
-                    <input type="number" class="form-control" name="no_of_balcony">
+                    <input type="text" class="form-control" name="no_of_balcony">
                 </div>
 
                 <div class="mb-3">
