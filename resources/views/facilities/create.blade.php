@@ -80,6 +80,30 @@
                     <input class="form-control" type="text" name="google_map_url">
                 </div>
 
+                <div class="mb-3 d-flex">
+                    {{--                    <label class="custom-control-label">Latitude:</label>--}}
+                    <div class="input-group mb-3 d-flex align-items-center">
+                        <input type="text" id="latitude" name="latitude" class="form-control flex-grow-1" placeholder="Latitude" aria-label="Latitude" aria-describedby="latitude-addon">
+                        <span style="margin-right:50px " class="input-group-text" id="latitude-addon">°</span>
+                    </div>
+
+                    {{--                    <label class="custom-control-label">Longitude:</label>--}}
+                    <div class="input-group mb-3 d-flex align-items-center">
+                        <input type="text" id="longitude" name="longitude" class="form-control flex-grow-1" placeholder="Longitude" aria-label="Longitude" aria-describedby="longitude-addon">
+                        <span class="input-group-text" id="longitude-addon">°</span>
+                    </div>
+                </div>
+
+                <input
+                        style="margin-bottom: 30px;margin-top: 10px;width: 15%"
+                        id="pac-input"
+                        class="controls"
+                        type="text"
+                        placeholder="Search Box"
+                />
+                <div id="map" style="height: 500px; width: 100%;"></div>
+
+
                 <button class="btn btn-primary">Submit</button>
             </form>
         </div>
@@ -120,8 +144,70 @@
             });
         });
 
-
-
-
     </script>
+
+
+    <script
+            src="https://maps.googleapis.com/maps/api/js?key=AIzaSyABnAbo9ifTK9aGO-2oBameLdIKPxVKoXI&callback=initAutocomplete&libraries=places&v=weekly"
+            defer
+    ></script>
+    <script>
+        let map;
+        let autocomplete;
+        let marker;
+
+        function initAutocomplete() {
+            const initialPosition = { lat: 23.7570681, lng: 90.3587572 };
+            map = new google.maps.Map(document.getElementById("map"), {
+                center: initialPosition,
+                zoom: 13,
+                mapTypeId: "roadmap",
+            });
+
+            marker = new google.maps.Marker({
+                position: initialPosition,
+                map: map,
+                draggable: true,
+            });
+
+            marker.addListener("dragend", function (event) {
+                const lat = event.latLng.lat();
+                const lng = event.latLng.lng();
+                $('#latitude').val(lat);
+                $('#longitude').val(lng);
+                map.setCenter(event.latLng);
+            });
+
+            const input = document.getElementById("pac-input");
+            const searchBox = new google.maps.places.SearchBox(input);
+            map.controls[google.maps.ControlPosition.TOP_LEFT].push(input);
+
+            map.addListener("bounds_changed", function () {
+                searchBox.setBounds(map.getBounds());
+            });
+
+            google.maps.event.addListener(searchBox, "places_changed", function () {
+                const places = searchBox.getPlaces();
+                if (places.length === 0) return;
+
+                const bounds = new google.maps.LatLngBounds();
+                places.forEach(function (place) {
+                    if (!place.geometry) return;
+                    if (place.geometry.viewport) {
+                        bounds.union(place.geometry.viewport);
+                    } else {
+                        bounds.extend(place.geometry.location);
+                    }
+
+                    marker.setPosition(place.geometry.location);
+                    $('#latitude').val(place.geometry.location.lat());
+                    $('#longitude').val(place.geometry.location.lng());
+                });
+                map.fitBounds(bounds);
+            });
+        }
+
+        window.initAutocomplete = initAutocomplete;
+    </script>
+
 @endsection

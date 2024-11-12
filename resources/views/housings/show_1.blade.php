@@ -40,6 +40,12 @@
                                 <tr>
                                     <td class="bg-dark text-white" style="padding: 1rem;">Upazila</td>
                                     <td style="padding: 1rem;">{{ $housing->upazila->name }}</td>
+                                </tr> <tr>
+                                    <td class="bg-dark text-white" style="padding: 1rem;">Latitude</td>
+                                    <td style="padding: 1rem;">{{ $housing->latitude}}</td>
+                                </tr> <tr>
+                                    <td class="bg-dark text-white" style="padding: 1rem;">Longitude</td>
+                                    <td style="padding: 1rem;">{{ $housing->longitude }}</td>
                                 </tr>
                                 </tbody>
                             </table>

@@ -36,12 +36,12 @@
 
                 <div class="mb-3">
                     <label class="custom-control-label">Housing Name</label>
-                    <input class="form-control" type="text" name="name" value="{{ $housing->name }}">
+                    <input class="form-control" type="text" name="name" value="{{ old('name', $housing->name) }}">
                 </div>
 
                 <div class="mb-3">
                     <label class="custom-control-label">Division</label>
-                    <select class="form-select" name="division_id">
+                    <select class="form-select" name="division_id" id="divisionSelect">
                         <option value="">Select Division</option>
                         @foreach($divisions as $division)
                             <option value="{{ $division->id }}" @if($division->id == $housing->division_id) selected @endif>
@@ -53,7 +53,7 @@
 
                 <div class="mb-3">
                     <label class="custom-control-label">District</label>
-                    <select class="form-select" name="district_id">
+                    <select class="form-select" name="district_id" id="districtSelect">
                         <option value="">Select District</option>
                         @foreach($districts as $district)
                             <option value="{{ $district->id }}" @if($district->id == $housing->district_id) selected @endif>
@@ -65,7 +65,7 @@
 
                 <div class="mb-3">
                     <label class="custom-control-label">Upazila</label>
-                    <select class="form-select" name="upazila_id">
+                    <select class="form-select" name="upazila_id" id="upazilaSelect">
                         <option value="">Select Upazila</option>
                         @foreach($upazillas as $upazila)
                             <option value="{{ $upazila->id }}" @if($upazila->id == $housing->upazila_id) selected @endif>
@@ -89,7 +89,6 @@
                                             <input class="form-check-input" type="checkbox"
                                                    name="facilities[{{ $facility->id }}]"
                                                    value="{{ $facility->id }}"
-                                                   data-id="{{ $facility->id }}"
                                                    @if(in_array($facility->id, $selectedFacilities)) checked @endif>
                                             <label class="form-check-label">
                                                 {{ $facility->name }}
@@ -101,28 +100,54 @@
                         </div>
                     @endforeach
                 </div>
+                <div class="mb-3 d-flex">
+                    {{--                    <label class="custom-control-label">Latitude:</label>--}}
+                    <div class="input-group mb-3 d-flex align-items-center">
+                        <input value="{{ $housing->latitude }}" type="text" id="latitude" name="latitude" class="form-control flex-grow-1" placeholder="Latitude" aria-label="Latitude" aria-describedby="latitude-addon">
+                        <span style="margin-right:50px " class="input-group-text" id="latitude-addon">°</span>
+                    </div>
 
+                    {{--                    <label class="custom-control-label">Longitude:</label>--}}
+                    <div class="input-group mb-3 d-flex align-items-center">
+                        <input value="{{ $housing->longitude }}" type="text" id="longitude" name="longitude" class="form-control flex-grow-1" placeholder="Longitude" aria-label="Longitude" aria-describedby="longitude-addon">
+                        <span class="input-group-text" id="longitude-addon">°</span>
+                    </div>
+                </div>
+
+                <input
+                        style="margin-bottom: 30px;margin-top: 10px;width: 15%"
+                        id="pac-input"
+                        class="controls"
+                        type="text"
+                        placeholder="Search Box"
+                />
+                <div id="map" style="height: 500px; width: 100%;"></div>
                 <button class="btn btn-primary">Submit</button>
             </form>
         </div>
     </div>
 
     <script>
-        $('select[name="division_id"]').change(function () {
-            let division_id = $(this).val();
+        // Handle Division Change
+        $('#divisionSelect').change(function () {
+            var division_id = $(this).val();
             $.ajax({
                 url: "{{ route('districts_by_division_id') }}",
                 data: { "_token": "{{ csrf_token() }}", 'division_id': division_id },
                 type: 'POST',
                 dataType: 'html',
                 success: function (result) {
-                    $('select[name="district_id"]').html('');
-                    $('select[name="district_id"]').append(result);
+                    $('#districtSelect').html(result);
+                    $('#upazilaSelect').html('<option value="">Select Upazila</option>'); // Clear Upazilas
+                },
+                error: function () {
+                    alert("Error loading districts.");
                 }
             });
         });
 
-        $('select[name="district_id"]').change(function () {
+        // Handle District Change
+        $('#districtSelect').change(function () {
             let district_id = $(this).val();
             $.ajax({
                 url: "{{ route('upazillas_by_district_id') }}",
@@ -130,57 +155,77 @@
                 type: 'POST',
                 dataType: 'html',
                 success: function (result) {
-                    $('select[name="upazila_id"]').html('');
-                    $('select[name="upazila_id"]').append(result);
-                }
-            });
-        });
-        $('select[name="upazila_id"]').change(function () {
-            let upazila_id = $(this).val();
-            $.ajax({
-                url: "{{ route('facilities_by_upazila_id') }}",
-                data: { "_token": "{{ csrf_token() }}", 'upazila_id': upazila_id },
-                type: 'POST',
-                dataType: 'json',
-                success: function (groupedFacilities) {
-                    $('#facility-cards').html('');
-
-                    for (let categoryId in groupedFacilities) {
-                        if (groupedFacilities.hasOwnProperty(categoryId)) {
-                            let category = groupedFacilities[categoryId];
-                            let categoryLabel = category[0].category.label;
-
-                            let cardHTML =
-                                `<div class="col-md-6 mb-4">
-                                    <div class="card">
-                                        <div class="card-header bg-teal text-white">
-                                            ${categoryLabel}
-                                        </div>
-                                        <div class="card-body">`;
-
-                            category.forEach(facility => {
-                                cardHTML +=
-                                    `<div class="form-check">
-                                        <input class="form-check-input" type="checkbox"
-                                               name="facilities[${facility.id}]"
-                                               value="${facility.id}"
-                                               data-id="${facility.id}">
-                                        <label class="form-check-label">
-                                            ${facility.name}
-                                        </label>
-                                    </div>`;
-                            });
-
-                            cardHTML += `</div></div></div>`;
-                            $('#facility-cards').append(cardHTML);
-                        }
-                    }
+                    $('#upazilaSelect').html(result);
                 },
-                error: function (xhr, status, error) {
-                    console.error('Error:', xhr.responseText);
+                error: function () {
+                    alert("Error loading upazilas.");
                 }
             });
         });
-
     </script>
+
+    <script
+            src="https://maps.googleapis.com/maps/api/js?key=AIzaSyABnAbo9ifTK9aGO-2oBameLdIKPxVKoXI&callback=initAutocomplete&libraries=places&v=weekly"
+            defer
+    ></script>
+
+    <script>
+        let map;
+        let autocomplete;
+        let marker;
+
+        function initAutocomplete() {
+            const initialPosition = { lat: 23.7570681, lng: 90.3587572 };
+            map = new google.maps.Map(document.getElementById("map"), {
+                center: initialPosition,
+                zoom: 13,
+                mapTypeId: "roadmap",
+            });
+
+            marker = new google.maps.Marker({
+                position: initialPosition,
+                map: map,
+                draggable: true,
+            });
+
+            marker.addListener("dragend", function (event) {
+                const lat = event.latLng.lat();
+                const lng = event.latLng.lng();
+                $('#latitude').val(lat);
+                $('#longitude').val(lng);
+                map.setCenter(event.latLng);
+            });
+
+            const input = document.getElementById("pac-input");
+            const searchBox = new google.maps.places.SearchBox(input);
+            map.controls[google.maps.ControlPosition.TOP_LEFT].push(input);
+
+            map.addListener("bounds_changed", function () {
+                searchBox.setBounds(map.getBounds());
+            });
+
+            google.maps.event.addListener(searchBox, "places_changed", function () {
+                const places = searchBox.getPlaces();
+                if (places.length === 0) return;
+
+                const bounds = new google.maps.LatLngBounds();
+                places.forEach(function (place) {
+                    if (!place.geometry) return;
+                    if (place.geometry.viewport) {
+                        bounds.union(place.geometry.viewport);
+                    } else {
+                        bounds.extend(place.geometry.location);
+                    }
+
+                    marker.setPosition(place.geometry.location);
+                    $('#latitude').val(place.geometry.location.lat());
+                    $('#longitude').val(place.geometry.location.lng());
+                });
+                map.fitBounds(bounds);
+            });
+        }
+
+        window.initAutocomplete = initAutocomplete;
+    </script>
+
 @endsection

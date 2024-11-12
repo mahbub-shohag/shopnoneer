@@ -24,10 +24,11 @@ class FacilityController extends Controller
     }
 
     // Show the form for creating a new resource.
-    public function create(){
+    public function create()
+    {
         $divisions = Division::all();
         $facility_categories = Category::where('parent_id', 38)->get();
-        return view('facilities.create',['divisions' => $divisions],['facility_categories' => $facility_categories])->with('success', 'Facilities created successfully.');
+        return view('facilities.create', ['divisions' => $divisions], ['facility_categories' => $facility_categories])->with('success', 'Facilities created successfully.');
     }
 
     // Store a newly created resource in storage.
@@ -41,6 +42,8 @@ class FacilityController extends Controller
             $facility->division_id = $request->division_id;
             $facility->district_id = $request->district_id;
             $facility->upazila_id = $request->upazila_id;
+            $facility->latitude = $request->input('latitude'); // Store latitude
+            $facility->longitude = $request->input('longitude'); // Store longitude
             $facility->google_map_url = $request->google_map_url;
             $facility->save();
 
@@ -51,8 +54,6 @@ class FacilityController extends Controller
             return redirect()->route('facility.create')->with('error', 'Failed to create facility. Please try again.');
         }
     }
-
-
 
 
     // Display the specified resource.
@@ -116,6 +117,8 @@ class FacilityController extends Controller
             $facility->division_id = $request->input('division_id');
             $facility->district_id = $request->input('district_id');
             $facility->upazila_id = $request->input('upazila_id');
+            $facility->latitude = $request->input('latitude'); // Store latitude
+            $facility->longitude = $request->input('longitude'); // Store longitude
             $facility->google_map_url = $request->input('google_map_url');
 
             // Save the updated facility data
@@ -128,7 +131,6 @@ class FacilityController extends Controller
             return redirect()->route('facility.edit', $facility->id)->with('error', 'Failed to update facility. Please try again.');
         }
     }
-
 
 
     // Remove the specified resource from storage.

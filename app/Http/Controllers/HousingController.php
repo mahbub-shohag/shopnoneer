@@ -11,14 +11,16 @@ use Illuminate\Http\Request;
 
 class HousingController extends Controller
 {
-    public function index(){
-        $housings = Housing::with('district','upazila')->get();
-        return  view('housings.index', ['housings' => $housings]);
+    public function index()
+    {
+        $housings = Housing::with('district', 'upazila')->orderByDesc('id')->get();
+        return view('housings.index', ['housings' => $housings]);
     }
 
-    public function create(){
+    public function create()
+    {
         $divisions = Division::all();
-        return view('housings.create',['divisions' => $divisions])->with('success', 'Housings created successfully.');
+        return view('housings.create', ['divisions' => $divisions])->with('success', 'Housings created successfully.');
     }
 
     public function edit(Housing $housing)
@@ -72,6 +74,8 @@ class HousingController extends Controller
             $housing->division_id = $request->input('division_id');
             $housing->district_id = $request->input('district_id');
             $housing->upazila_id = $request->input('upazila_id');
+            $housing->latitude = $request->input('latitude'); // Store latitude
+            $housing->longitude = $request->input('longitude'); // Store longitude
             $facilities = $request->input('facilities'); // Extract keys as facility IDs
             $housing->save();
             $housing->facilities()->attach($facilities);
@@ -79,12 +83,13 @@ class HousingController extends Controller
 //           print_r($facilities);exit;
         } catch (\Exception $e) {
 //            print_r($e->getMessage());exit;
-            return redirect('/housing/create')->with('error', 'Failed to create housing record. Please try again.');
+            return redirect('/housing/create')->with('error',$e->getMessage());
         }
     }
 
     public function update(Request $request, Housing $housing)
     {
+        // Validation
         $request->validate([
             'name' => 'required',
             'division_id' => 'required',
@@ -103,6 +108,8 @@ class HousingController extends Controller
             $housing->division_id = $request->input('division_id');
             $housing->district_id = $request->input('district_id');
             $housing->upazila_id = $request->input('upazila_id');
+            $housing->latitude = $request->input('latitude');  // Update latitude
+            $housing->longitude = $request->input('longitude'); // Update longitude
             $housing->save();
 
             // Update facilities
@@ -112,12 +119,12 @@ class HousingController extends Controller
             } else {
                 $housing->facilities()->detach(); // Detach all facilities if none are selected
             }
-
             return redirect('/housing')->with('success', 'Housing updated successfully.');
         } catch (\Exception $e) {
             return redirect('/housing')->with('error', 'Failed to update housing record. Please try again.');
         }
     }
+
 
     public function destroy(Housing $housing)
     {

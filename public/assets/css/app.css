@@ -34,15 +34,19 @@
      * Always set the map height explicitly to define the size of the div element
      * that contains the map.
      */
- #map {
-     height: 100%;
- }
+/* Map styling */
+#map {
+    height: 100%;
+}
+
+/* Description text styling */
 #description {
-    font-family: Roboto;
+    font-family: Roboto, sans-serif;
     font-size: 15px;
     font-weight: 300;
 }
 
+/* Info window content */
 #infowindow-content .title {
     font-weight: bold;
 }
@@ -55,17 +59,15 @@
     display: inline;
 }
 
+/* Search input styling */
 .pac-card {
     background-color: #fff;
-    border: 0;
-    border-radius: 2px;
-    box-shadow: 0 1px 4px -1px rgba(0, 0, 0, 0.3);
+    border-radius: 5px;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.2);
     margin: 10px;
-    padding: 0 0.5em;
-    font: 400 18px Roboto, Arial, sans-serif;
+    padding: 0.5em;
+    font: 400 18px 'Roboto', Arial, sans-serif;
     overflow: hidden;
-    font-family: Roboto;
-    padding: 0;
 }
 
 #pac-container {
@@ -73,43 +75,84 @@
     margin-right: 12px;
 }
 
+/* Controls section */
 .pac-controls {
     display: inline-block;
     padding: 5px 11px;
 }
 
-.pac-controls label {
-    font-family: Roboto;
-    font-size: 13px;
-    font-weight: 300;
-}
-
+/* Input field in search box */
 #pac-input {
     background-color: #fff;
-    font-family: Roboto;
+    font-family: Roboto, sans-serif;
     font-size: 15px;
     font-weight: 300;
-    margin-left: 12px;
-    padding: 0 11px 0 13px;
-    text-overflow: ellipsis;
-    width: 400px;
+    padding: 12px 14px;
+    width: 350px;
+    border-radius: 30px;
+    border: 1px solid #ddd;
+    transition: all 0.3s ease-in-out;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    outline: none;
 }
 
+/* Focus effect on the input field */
 #pac-input:focus {
     border-color: #4d90fe;
+    box-shadow: 0 0 8px rgba(77, 144, 254, 0.7);
 }
 
+/* Styling for search button */
+.pac-search-btn {
+    background-color: #4d90fe;
+    color: #fff;
+    font-size: 16px;
+    font-weight: bold;
+    padding: 10px 15px;
+    border-radius: 30px;
+    border: none;
+    cursor: pointer;
+    margin-left: 10px;
+    transition: all 0.3s ease-in-out;
+}
+
+.pac-search-btn:hover {
+    background-color: #3578e5;
+}
+
+/* Title section for Map */
 #title {
     color: #fff;
     background-color: #4d90fe;
     font-size: 25px;
     font-weight: 500;
-    padding: 6px 12px;
+    padding: 8px 16px;
+    border-radius: 5px;
+    margin-bottom: 15px;
 }
 
+/* Targeting the address container */
 #target {
     width: 345px;
 }
+
+/* Centering the map input and making it more prominent */
+#pac-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 15px;
+}
+
+/* Make map container fill the screen */
+#map {
+    width: 100%;
+    height: 100%;
+    position: relative;
+}
+
+
+
 
 
 
