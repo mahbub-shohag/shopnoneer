@@ -216,9 +216,9 @@ class ProjectController extends Controller
         $project->no_of_beds = $request->no_of_beds;
         $project->no_of_baths = $request->no_of_baths;
         $project->no_of_balcony = $request->no_of_balcony;
-        $project->parking_available = isset($request->parking_available) ? 1 : 0;
+        $project->parking_available = isset($request->parking_available) ? 1 : 0; // null is saving
         $project->owner_name = $request->owner_name;
-        $project->owner_phone = $request->owner_phone;
+        $project->owner_phone = $request->owner_phone; // null is saving
         $project->owner_email = $request->owner_email;
         $project->rate_per_sqft = $request->rate_per_sqft;
         $project->total_price = $request->total_price;

@@ -5,7 +5,7 @@
 @endsection
 
 @section('bread_controller')
-    <a href="{{ url('housing') }}" class="text-teal">Housing</a> <!-- Link color is teal -->
+    <a href="{{ url('housing') }}" class="text-teal">Housing</a>
 @endsection
 
 @section('bread_action')
@@ -16,16 +16,17 @@
     <div class="container mt-4">
         <div class="row justify-content-center">
             <div class="col-md-10">
+                <!-- Housing Details Card -->
                 <div class="card shadow-lg border-0">
-                    <div class="card-header bg-teal text-white text-center"> <!-- Changed background to teal -->
-                        <h1 class="mb-0">Housing Details</h1> <!-- Larger title -->
+                    <div class="card-header bg-teal text-white text-center">
+                        <h1 class="mb-0">Housing Details</h1>
                     </div>
-                    <div class="card-body p-5"> <!-- Spacious content -->
-                        <div class="table-responsive"> <!-- Make table responsive -->
-                            <table class="table table-hover table-striped table-bordered text-center" style="font-size: 1.5rem;"> <!-- Increased font size for table content -->
+                    <div class="card-body p-5">
+                        <div class="table-responsive">
+                            <table class="table table-hover table-striped table-bordered text-center" style="font-size: 1.5rem;">
                                 <tbody>
                                 <tr>
-                                    <td class="bg-dark text-white" style="width: 25%; padding: 1rem;">Name</td> <!-- Indigo background -->
+                                    <td class="bg-dark text-white" style="width: 25%; padding: 1rem;">Name</td>
                                     <td style="padding: 1rem;">{{ $housing->name }}</td>
                                 </tr>
                                 <tr>
@@ -42,7 +43,37 @@
                                 </tr>
                                 </tbody>
                             </table>
-                        </div> <!-- End of table responsive -->
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Divider for Facilities Section -->
+                <div class="card shadow-lg border-0 mt-4">
+                    <div class="card-header bg-teal text-white text-center">
+                        <h1 class="mb-0">Facilities</h1>
+                    </div>
+                    <div class="card-body p-5">
+                        <div class="table-responsive">
+                            <table class="table table-hover table-striped table-bordered text-center" style="font-size: 1.5rem;">
+                                <tbody>
+                                @if ($housing->facilities->isNotEmpty())
+                                    @foreach ($housing->facilities->groupBy('category.label') as $categoryLabel => $facilities)
+                                        <tr>
+                                            <td class="bg-dark text-white" style="width: 25%; padding: 1rem;">{{ $categoryLabel }}</td>
+                                            <td style="padding: 1rem;">
+                                                {{ $facilities->pluck('name')->join(', ') }}
+                                            </td>
+                                        </tr>
+                                    @endforeach
+                                @else
+                                    <tr>
+                                        <td class="bg-dark text-white" style="padding: 1rem;">Facilities</td>
+                                        <td style="padding: 1rem;">No facilities assigned</td>
+                                    </tr>
+                                @endif
+                                </tbody>
+                            </table>
+                        </div>
                     </div>
                 </div>
             </div>

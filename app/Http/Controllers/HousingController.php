@@ -44,11 +44,12 @@ class HousingController extends Controller
 
     public function show(Housing $housing)
     {
-        $housing = Housing::where('id',$housing->id)->with('division','district','upazila')->first();
-        return view('housings.show_1',['housing'=>$housing]);
+        $housing = Housing::where('id', $housing->id)
+            ->with(['division', 'district', 'upazila', 'facilities.category']) // Load related facilities and their categories
+            ->first();
 
+        return view('housings.show_1', ['housing' => $housing]);
     }
-
 
     public function store(Request $request)
     {
@@ -71,24 +72,16 @@ class HousingController extends Controller
             $housing->division_id = $request->input('division_id');
             $housing->district_id = $request->input('district_id');
             $housing->upazila_id = $request->input('upazila_id');
-            // Save the housing record first to generate its ID
-
-            // Get facilities from the request
             $facilities = $request->input('facilities'); // Extract keys as facility IDs
-            //print_r($facilities);exit;
             $housing->save();
             $housing->facilities()->attach($facilities);
-            // Flash a success message to the session
             return redirect('/housing')->with('success', 'Housing record created successfully.');
+//           print_r($facilities);exit;
         } catch (\Exception $e) {
 //            print_r($e->getMessage());exit;
-            // Flash an error message to the session
             return redirect('/housing/create')->with('error', 'Failed to create housing record. Please try again.');
         }
     }
-
-
-
 
     public function update(Request $request, Housing $housing)
     {
@@ -97,31 +90,28 @@ class HousingController extends Controller
             'division_id' => 'required',
             'district_id' => 'required',
             'upazila_id' => 'required',
-        ],
-            [
-                'name.required' => 'The housing name is required.',
-                'division_id.required' => 'Please select a division.',
-                'district_id.required' => 'Please select a district.',
-                'upazila_id.required' => 'Please select an upazila.',
-            ]);
+        ], [
+            'name.required' => 'The housing name is required.',
+            'division_id.required' => 'Please select a division.',
+            'district_id.required' => 'Please select a district.',
+            'upazila_id.required' => 'Please select an upazila.',
+        ]);
 
         try {
-            // Check if any changes were made
-            if ($housing->name == $request->input('name') &&
-                $housing->division_id == $request->input('division_id') &&
-                $housing->district_id == $request->input('district_id') &&
-                $housing->upazila_id == $request->input('upazila_id')) {
-                // No changes, return a message indicating nothing was updated
-                return redirect('/housing')->with('info', 'No changes made to the housing record.');
-            }
-
             // Update housing record
             $housing->name = $request->input('name');
             $housing->division_id = $request->input('division_id');
             $housing->district_id = $request->input('district_id');
             $housing->upazila_id = $request->input('upazila_id');
-
             $housing->save();
+
+            // Update facilities
+            if ($request->has('facilities')) {
+                $facilities = $request->input('facilities'); // Get selected facility IDs
+                $housing->facilities()->sync($facilities); // Sync the selected facilities
+            } else {
+                $housing->facilities()->detach(); // Detach all facilities if none are selected
+            }
 
             return redirect('/housing')->with('success', 'Housing updated successfully.');
         } catch (\Exception $e) {

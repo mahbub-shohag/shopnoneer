@@ -151,21 +151,5 @@ class FacilityController extends Controller
         return $facilityGroups;
     }
 
-//    public function facilitiesByUpazilaId(Request $request)
-//    {
-//        $upazila_id = $request->upazila_id;
-//        $housing_id = $request->housing_id;
-//
-//        $facilities = Facility::with('category')->where('upazila_id', $upazila_id)->get();
-//        $facilityGroups = collect($facilities)->groupBy('category_id');
-//
-//        // Fetch selected facilities for the specific housing
-//        $selectedFacilities = Housing::find($housing_id)->facilities->pluck('id')->toArray();
-//
-//        return response()->json([
-//            'groupedFacilities' => $facilityGroups,
-//            'selectedFacilities' => $selectedFacilities,
-//        ]);
-//    }
 
 }

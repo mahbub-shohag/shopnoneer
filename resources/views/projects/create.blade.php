@@ -61,7 +61,7 @@
 
                 <div class="mb-3">
                     <label class="custom-control-label">Road</label>
-                    <input type="number" class="form-control" name="road">
+                    <input type="number" class="form-control" name="road" onwheel="this.blur()">
                 </div>
 
                 <div class="mb-3">
@@ -76,7 +76,7 @@
 
                 <div class="mb-3">
                     <label class="custom-control-label">Plot Size</label>
-                    <input type="number" class="form-control" name="plot_size">
+                    <input type="number" class="form-control" name="plot_size" onwheel="this.blur()">
                 </div>
 
                 <div class="mb-3">
@@ -96,27 +96,27 @@
 
                 <div class="mb-3">
                     <label class="custom-control-label">Storied</label>
-                    <input type="number" class="form-control" name="storied">
+                    <input type="number" class="form-control" name="storied" onwheel="this.blur()">
                 </div>
 
                 <div class="mb-3">
                     <label class="custom-control-label">No of Units</label>
-                    <input type="number" class="form-control" name="no_of_units">
+                    <input type="number" class="form-control" name="no_of_units" onwheel="this.blur()">
                 </div>
 
                 <div class="mb-3">
                     <label class="custom-control-label">Floor Area</label>
-                    <input type="number" class="form-control" name="floor_area">
+                    <input type="number" class="form-control" name="floor_area" onwheel="this.blur()">
                 </div>
 
                 <div class="mb-3">
                     <label class="custom-control-label">Floor No</label>
-                    <input type="number" class="form-control" name="floor_no">
+                    <input type="number" class="form-control" name="floor_no" onwheel="this.blur()">
                 </div>
 
                 <div class="mb-3">
                     <label class="custom-control-label">No of Beds</label>
-                    <input type="number" class="form-control" name="no_of_beds">
+                    <input type="number" class="form-control" name="no_of_beds" onwheel="this.blur()">
                 </div>
 
                 <div class="mb-3">

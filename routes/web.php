@@ -56,7 +56,7 @@ Route::get('/division',[DivisionController::class,'index']);
 
 /*Districts*/
 Route::resource('/district',DistrictController::class);
-Route::post('/districts_by_division_id', [DivisionController::class, 'districtsByDivisionId'])->name('districts_by_division_id');
+Route::post('/districts_by_division_id', [DistrictController::class, 'districtsByDivisionId'])->name('districts_by_division_id');
 
 
 /*Districts*/
@@ -65,8 +65,7 @@ Route::post('/districts_by_division_id', [DivisionController::class, 'districtsB
 
 /*Upazillas*/
 Route::resource('/upazila',UpazilaController::class);
-Route::post('/upazillas_by_district_id', [DistrictController::class, 'upazillasByDistrictId'])->name('upazillas_by_district_id');
-Route::post('/upazillas_by_district_id', [DistrictController::class, 'upazillasByDistrictId'])->name('upazillas_by_district_id');
+Route::post('/upazillas_by_district_id', [UpazilaController::class, 'upazillasByDistrictId'])->name('upazillas_by_district_id');
 
 /*Upazillas*/
 
@@ -94,13 +93,13 @@ Route::get('profile_list',[ProfileController::class,'profile_list']);
 
 /*Category*/
 Route::resource('/category',CategoryController::class);
+Route::post('/categories_by_category_id', [CategoryController::class, 'categoriesByCategoryId'])->name('categories_by_category_id');
+
 /*Category*/
 
 /*Facility*/
 Route::resource('/facility',FacilityController::class);
 Route::post('/facilities_by_upazila_id', [FacilityController::class, 'facilitiesByUpazilaId'])->name('facilities_by_upazila_id');
-
-Route::post('/categories_by_category_id', [CategoryController::class, 'categoriesByCategoryId'])->name('categories_by_category_id');
 /*Facility*/
 
 
