@@ -13,6 +13,7 @@
 @endsection
 
 @section('content')
+    <meta name="csrf-token" content="{{ csrf_token() }}">
     <div class="card mb-4">
         <div class="card-header">
             <i class="fas fa-building me-1"></i>
@@ -105,78 +106,17 @@
                         type="text"
                         placeholder="Search Box"
                 />
-                <div id="map" style="height: 500px; width: 100%;"></div>
-
-                <button class="btn btn-primary">Update Facility</button>
+                <div id="map" style="height: 500px; width: 100%;"
+                     data-latitude="{{ $facility->latitude }}"
+                     data-longitude="{{ $facility->longitude }}">
+                </div>
+                <button class="btn btn-primary mt-4">Update Facility</button>
             </form>
         </div>
     </div>
+    <script src="{{ asset('assets/js/ajax-handlers.js') }}"></script>
+    <script src="{{ asset('assets/js/google-maps.js') }}"></script>
+    <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyABnAbo9ifTK9aGO-2oBameLdIKPxVKoXI&callback=initAutocomplete&libraries=places" defer></script>
 
-    <script
-            src="https://maps.googleapis.com/maps/api/js?key=AIzaSyABnAbo9ifTK9aGO-2oBameLdIKPxVKoXI&callback=initAutocomplete&libraries=places&v=weekly"
-            defer
-    ></script>
 
-    <script>
-        let map;
-        let autocomplete;
-        let marker;
-
-        function initAutocomplete() {
-            let latitude = document.getElementById('latitude').value;
-            let longitude = document.getElementById('longitude').value;
-            latitude = latitude!==""?parseFloat(latitude):23.7570681;
-            longitude = longitude!==""?parseFloat(longitude):90.3587572;
-            const initialPosition = { lat: latitude, lng: longitude };
-            map = new google.maps.Map(document.getElementById("map"), {
-                center: initialPosition,
-                zoom: 13,
-                mapTypeId: "roadmap",
-            });
-
-            marker = new google.maps.Marker({
-                position: initialPosition,
-                map: map,
-                draggable: true,
-            });
-
-            marker.addListener("dragend", function (event) {
-                const lat = event.latLng.lat();
-                const lng = event.latLng.lng();
-                $('#latitude').val(lat);
-                $('#longitude').val(lng);
-                map.setCenter(event.latLng);
-            });
-
-            const input = document.getElementById("pac-input");
-            const searchBox = new google.maps.places.SearchBox(input);
-            map.controls[google.maps.ControlPosition.TOP_LEFT].push(input);
-
-            map.addListener("bounds_changed", function () {
-                searchBox.setBounds(map.getBounds());
-            });
-
-            google.maps.event.addListener(searchBox, "places_changed", function () {
-                const places = searchBox.getPlaces();
-                if (places.length === 0) return;
-
-                const bounds = new google.maps.LatLngBounds();
-                places.forEach(function (place) {
-                    if (!place.geometry) return;
-                    if (place.geometry.viewport) {
-                        bounds.union(place.geometry.viewport);
-                    } else {
-                        bounds.extend(place.geometry.location);
-                    }
-
-                    marker.setPosition(place.geometry.location);
-                    $('#latitude').val(place.geometry.location.lat());
-                    $('#longitude').val(place.geometry.location.lng());
-                });
-                map.fitBounds(bounds);
-            });
-        }
-
-        window.initAutocomplete = initAutocomplete;
-    </script>
 @endsection

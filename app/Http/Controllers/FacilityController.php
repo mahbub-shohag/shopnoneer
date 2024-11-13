@@ -16,7 +16,7 @@ class FacilityController extends Controller
     // Display a listing of the resource.
     public function index()
     {
-        $facilities = Facility::with('category', 'division', 'district', 'upazila')->get();
+        $facilities = Facility::with('category', 'division', 'district', 'upazila')->orderByDesc('updated_at')->get();
 //        dd($facilities);
 
         // Return the view with the fetched facilities
@@ -28,7 +28,7 @@ class FacilityController extends Controller
     {
         $divisions = Division::all();
         $facility_categories = Category::where('parent_id', 38)->get();
-        return view('facilities.create', ['divisions' => $divisions], ['facility_categories' => $facility_categories])->with('success', 'Facilities created successfully.');
+        return view('facilities.create', ['divisions' => $divisions], ['facility_categories' => $facility_categories]);
     }
 
     // Store a newly created resource in storage.
@@ -67,8 +67,6 @@ class FacilityController extends Controller
         // Return the view with the facility data
         return view('facilities.show', ['facility' => $facility]);
     }
-//        $facilities = Facility::with('category', 'division', 'district', 'upazila')->get();
-
 
     // Show the form for editing the specified resource.
     public function edit(Facility $facility)
@@ -119,7 +117,6 @@ class FacilityController extends Controller
             $facility->upazila_id = $request->input('upazila_id');
             $facility->latitude = $request->input('latitude'); // Store latitude
             $facility->longitude = $request->input('longitude'); // Store longitude
-            $facility->google_map_url = $request->input('google_map_url');
 
             // Save the updated facility data
             $facility->save();

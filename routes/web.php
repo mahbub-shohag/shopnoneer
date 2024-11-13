@@ -1,5 +1,6 @@
 <?php
 
+use App\Http\Controllers\AmenityController;
 use App\Http\Controllers\AuthController;
 use App\Http\Controllers\CategoryController;
 use App\Http\Controllers\CityController;
@@ -100,7 +101,11 @@ Route::post('/categories_by_category_id', [CategoryController::class, 'categorie
 /*Facility*/
 Route::resource('/facility',FacilityController::class);
 Route::post('/facilities_by_upazila_id', [FacilityController::class, 'facilitiesByUpazilaId'])->name('facilities_by_upazila_id');
-/*Facility*/
+
+
+
+/*Amenities*/
+Route::resource('/amenity',AmenityController::class);
 
 
 Route::middleware([

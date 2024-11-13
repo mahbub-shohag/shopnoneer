@@ -152,6 +152,49 @@
 }
 
 
+/* Flex container for dropdowns */
+.d-flex {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1rem; /* Space between dropdowns */
+}
+
+/* Styling for individual form groups */
+.form-group {
+    flex: 1; /* Evenly distribute available space */
+    min-width: 200px; /* Prevents shrinking below a readable size */
+}
+
+/* Label styles for better readability */
+.form-label {
+    font-weight: bold;
+    font-size: 1rem;
+    margin-bottom: 0.5rem;
+    color: #333;
+}
+
+/* Dropdown select styles */
+.form-select {
+    border: 1px solid #ced4da;
+    border-radius: 8px;
+    padding: 0.5rem;
+    font-size: 0.9rem;
+    background-color: #f9f9f9;
+    transition: border-color 0.3s ease;
+}
+
+.form-select:focus {
+    border-color: #009688; /* Highlight color for focus */
+    outline: none;
+    box-shadow: 0 0 4px rgba(0, 150, 136, 0.5);
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+    .form-group {
+        flex: 100%; /* Stack dropdowns vertically */
+    }
+}
 
 
 
