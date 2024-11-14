@@ -37,25 +37,24 @@
                 @endif
 
                 <div class="mb-3">
-                    <label class="custom-control-label">Housing Name</label>
-                    <input class="form-control" type="text" name="name" value="{{ old('name', $housing->name) }}">
+                    <label class="form-label">Housing Name</label>
+                    <input class="form-control" type="text" name="name" value="{{$housing->name }}">
                 </div>
-
-
-                <div class="d-flex flex-wrap gap-3 align-items-start">
+                <div class="d-flex flex-wrap gap-3 mb-4 align-items-start">
                     <div class="form-group">
                         <label for="divisionSelect" class="form-label">Division</label>
                         <select id="divisionSelect" class="form-select" name="division_id" required>
                             <option value="">Select Division</option>
                             @foreach($divisions as $division)
-                                <option value="{{ $division->id }}">{{ $division->name }}</option>
+                                <option value="{{ $division->id }}" @if($division->id == $housing->division_id) selected @endif>
+                                    {{ $division->name }}
+                                </option>
                             @endforeach
                         </select>
                     </div>
-
-                    <div class="mb-3">
-                        <label class="form-label">District</label>
-                        <select class="form-select" name="district_id" id="districtSelect">
+                    <div class="form-group">
+                        <label for="districtSelect" class="form-label">District</label>
+                        <select id="districtSelect" class="form-select" name="district_id" required>
                             <option value="">Select District</option>
                             @foreach($districts as $district)
                                 <option value="{{ $district->id }}" @if($district->id == $housing->district_id) selected @endif>
@@ -64,12 +63,11 @@
                             @endforeach
                         </select>
                     </div>
-
-                    <div class="mb-3">
-                        <label class="form-label">Upazila</label>
-                        <select class="form-select" name="upazila_id" id="upazilaSelect">
+                    <div class="form-group">
+                        <label for="upazilaSelect" class="form-label">Upazila</label>
+                        <select id="upazilaSelect" class="form-select upazila-select-housing" name="upazila_id" required>
                             <option value="">Select Upazila</option>
-                            @foreach($upazillas as $upazila)
+                            @foreach($upazilas as $upazila)
                                 <option value="{{ $upazila->id }}" @if($upazila->id == $housing->upazila_id) selected @endif>
                                     {{ $upazila->name }}
                                 </option>
@@ -104,17 +102,17 @@
                         </div>
                     @endforeach
                 </div>
-                <div class="mb-3 d-flex">
-                    <div class="input-group mb-3 d-flex align-items-center">
-                        <input value="{{ $housing->latitude }}" type="text" id="latitude" name="latitude" class="form-control flex-grow-1" placeholder="Latitude" aria-label="Latitude" aria-describedby="latitude-addon">
-                        <span style="margin-right:50px " class="input-group-text" id="latitude-addon">°</span>
+                <div class="d-flex flex-wrap gap-3 align-items-start">
+                    <div class="form-group">
+                        <label for="latitude" class="form-label">Latitude</label>
+                        <input value="{{ $housing->latitude }}" id="latitude" type="text" name="latitude" class="form-control" placeholder="Latitude" required>
                     </div>
-
-                    <div class="input-group mb-3 d-flex align-items-center">
-                        <input value="{{ $housing->longitude }}" type="text" id="longitude" name="longitude" class="form-control flex-grow-1" placeholder="Longitude" aria-label="Longitude" aria-describedby="longitude-addon">
-                        <span class="input-group-text" id="longitude-addon">°</span>
+                    <div class="form-group">
+                        <label for="longitude" class="form-label">Longitude</label>
+                        <input value="{{ $housing->longitude }}"  id="longitude" type="text" name="longitude" class="form-control" placeholder="Longitude" required>
                     </div>
                 </div>
+
 
                 <input
                         style="margin-bottom: 30px;margin-top: 10px;width: 15%"

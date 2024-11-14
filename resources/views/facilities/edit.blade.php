@@ -51,53 +51,52 @@
                     </select>
                 </div>
 
-                <div class="mb-3">
-                    <label class="custom-control-label">Division</label>
-                    <select class="form-select" name="division_id">
-                        @foreach($divisions as $division)
-                            <option value="{{ $division->id }}" {{ $facility->division_id == $division->id ? 'selected' : '' }}>
-                                {{ $division->name }}
-                            </option>
-                        @endforeach
-                    </select>
-                </div>
-
-                <div class="mb-3">
-                    <label class="custom-control-label">District</label>
-                    <select class="form-select" name="district_id">
-                        <option value="">Select District</option>
-                        @foreach($districts as $district)
-                            <option value="{{ $district->id }}" @if($district->id == $facility->district_id) selected @endif>
-                                {{ $district->name }}
-                            </option>
-                        @endforeach
-                    </select>
-                </div>
-
-                <div class="mb-3">
-                    <label class="custom-control-label">Upazila</label>
-                    <select class="form-select" name="upazila_id">
-                        <option value="">Select Upazila</option>
-                        @foreach($upazilas as $upazila)
-                            <option value="{{ $upazila->id }}" @if($upazila->id == $facility->upazila_id) selected @endif>
-                                {{ $upazila->name }}
-                            </option>
-                        @endforeach
-                    </select>
-                </div>
-                <div class="mb-3 d-flex">
-                    {{--                    <label class="custom-control-label">Latitude:</label>--}}
-                    <div class="input-group mb-3 d-flex align-items-center">
-                        <input value="{{ $facility->latitude }}" type="text" id="latitude" name="latitude" class="form-control flex-grow-1" placeholder="Latitude" aria-label="Latitude" aria-describedby="latitude-addon">
-                        <span style="margin-right:50px " class="input-group-text" id="latitude-addon">°</span>
+                <div class="d-flex flex-wrap gap-3 mb-4 align-items-start">
+                    <div class="form-group">
+                        <label for="divisionSelect" class="form-label">Division</label>
+                        <select id="divisionSelect" class="form-select" name="division_id" required>
+                            <option value="">Select Division</option>
+                            @foreach($divisions as $division)
+                                <option value="{{ $division->id }}" @if($division->id == $facility->division_id) selected @endif>
+                                    {{ $division->name }}
+                                </option>
+                            @endforeach
+                        </select>
                     </div>
-
-                    {{--                    <label class="custom-control-label">Longitude:</label>--}}
-                    <div class="input-group mb-3 d-flex align-items-center">
-                        <input value="{{ $facility->longitude }}" type="text" id="longitude" name="longitude" class="form-control flex-grow-1" placeholder="Longitude" aria-label="Longitude" aria-describedby="longitude-addon">
-                        <span class="input-group-text" id="longitude-addon">°</span>
+                    <div class="form-group">
+                        <label for="districtSelect" class="form-label">District</label>
+                        <select id="districtSelect" class="form-select" name="district_id" required>
+                            <option value="">Select District</option>
+                            @foreach($districts as $district)
+                                <option value="{{ $district->id }}" @if($district->id == $facility->district_id) selected @endif>
+                                    {{ $district->name }}
+                                </option>
+                            @endforeach
+                        </select>
+                    </div>
+                    <div class="form-group">
+                        <label for="upazilaSelect" class="form-label">Upazila</label>
+                        <select id="upazilaSelect" class="form-select upazila-select-housing" name="upazila_id" required>
+                            <option value="">Select Upazila</option>
+                            @foreach($upazilas as $upazila)
+                                <option value="{{ $upazila->id }}" @if($upazila->id == $facility->upazila_id) selected @endif>
+                                    {{ $upazila->name }}
+                                </option>
+                            @endforeach
+                        </select>
                     </div>
                 </div>
+                <div class="d-flex flex-wrap gap-3 align-items-start">
+                    <div class="form-group">
+                        <label for="latitude" class="form-label">Latitude</label>
+                        <input value="{{ $facility->latitude }}" id="latitude" type="text" name="latitude" class="form-control" placeholder="Latitude" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="longitude" class="form-label">Longitude</label>
+                        <input value="{{ $facility->longitude }}"  id="longitude" type="text" name="longitude" class="form-control" placeholder="Longitude" required>
+                    </div>
+                </div>
+
 
                 <input
                         style="margin-bottom: 30px;margin-top: 10px;width: 15%"

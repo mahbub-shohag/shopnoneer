@@ -38,7 +38,7 @@ class HousingController extends Controller
             'housing' => $housing,
             'divisions' => $divisions,
             'districts' => $districts,
-            'upazillas' => $upazilas,
+            'upazilas' => $upazilas,
             'groupedFacilities' => $groupedFacilities, // Pass grouped facilities
             'selectedFacilities' => $selectedFacilities,
         ]);
@@ -50,7 +50,7 @@ class HousingController extends Controller
             ->with(['division', 'district', 'upazila', 'facilities.category']) // Load related facilities and their categories
             ->first();
 
-        return view('housings.show_1', ['housing' => $housing]);
+        return view('housings.show', ['housing' => $housing]);
     }
 
     public function store(Request $request)

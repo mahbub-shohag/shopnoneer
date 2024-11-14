@@ -51,7 +51,7 @@ class FacilityController extends Controller
             return redirect()->route('facility.index')->with('success', 'Facility created successfully.');
         } catch (\Exception $e) {
             // Redirect with an error message
-            return redirect()->route('facility.create')->with('error', 'Failed to create facility. Please try again.');
+            return redirect()->route('facility.create')->with('error', $e->getMessage());
         }
     }
 
