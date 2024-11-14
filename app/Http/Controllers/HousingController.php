@@ -28,18 +28,15 @@ class HousingController extends Controller
         $divisions = Division::all();
         $districts = District::all();
         $upazilas = Upazila::all();
-
-        // Group facilities by their category_id
         $groupedFacilities = Facility::all()->groupBy('category_id');
-
-        $selectedFacilities = $housing->facilities->pluck('id')->toArray(); // Get IDs of attached facilities
+        $selectedFacilities = $housing->facilities->pluck('id')->toArray();
 
         return view('housings.edit', [
             'housing' => $housing,
             'divisions' => $divisions,
             'districts' => $districts,
             'upazilas' => $upazilas,
-            'groupedFacilities' => $groupedFacilities, // Pass grouped facilities
+            'groupedFacilities' => $groupedFacilities,
             'selectedFacilities' => $selectedFacilities,
         ]);
     }
@@ -47,11 +44,12 @@ class HousingController extends Controller
     public function show(Housing $housing)
     {
         $housing = Housing::where('id', $housing->id)
-            ->with(['division', 'district', 'upazila', 'facilities.category']) // Load related facilities and their categories
+            ->with(['division', 'district', 'upazila', 'facilities.category'])
             ->first();
 
         return view('housings.show', ['housing' => $housing]);
     }
+
 
     public function store(Request $request)
     {
@@ -68,28 +66,24 @@ class HousingController extends Controller
         ]);
 
         try {
-            // Create a new Housing instance and set its properties
             $housing = new Housing();
-            $housing->name = $request->input('name');
-            $housing->division_id = $request->input('division_id');
-            $housing->district_id = $request->input('district_id');
-            $housing->upazila_id = $request->input('upazila_id');
-            $housing->latitude = $request->input('latitude'); // Store latitude
-            $housing->longitude = $request->input('longitude'); // Store longitude
-            $facilities = $request->input('facilities'); // Extract keys as facility IDs
+            $housing->name = $request->name;
+            $housing->division_id = $request->division_id;
+            $housing->district_id = $request->district_id;
+            $housing->upazila_id = $request->upazila_id;
+            $housing->latitude = $request->latitude;
+            $housing->longitude = $request->longitude;
+            $facilities = $request->facilities;
             $housing->save();
             $housing->facilities()->attach($facilities);
             return redirect('/housing')->with('success', 'Housing record created successfully.');
-//           print_r($facilities);exit;
         } catch (\Exception $e) {
-//            print_r($e->getMessage());exit;
             return redirect('/housing/create')->with('error',$e->getMessage());
         }
     }
 
     public function update(Request $request, Housing $housing)
     {
-        // Validation
         $request->validate([
             'name' => 'required',
             'division_id' => 'required',
@@ -103,25 +97,25 @@ class HousingController extends Controller
         ]);
 
         try {
-            // Update housing record
+
             $housing->name = $request->input('name');
             $housing->division_id = $request->input('division_id');
             $housing->district_id = $request->input('district_id');
             $housing->upazila_id = $request->input('upazila_id');
-            $housing->latitude = $request->input('latitude');  // Update latitude
-            $housing->longitude = $request->input('longitude'); // Update longitude
+            $housing->latitude = $request->input('latitude');
+            $housing->longitude = $request->input('longitude');
             $housing->save();
 
             // Update facilities
             if ($request->has('facilities')) {
-                $facilities = $request->input('facilities'); // Get selected facility IDs
-                $housing->facilities()->sync($facilities); // Sync the selected facilities
+                $facilities = $request->input('facilities');
+                $housing->facilities()->sync($facilities);
             } else {
-                $housing->facilities()->detach(); // Detach all facilities if none are selected
+                $housing->facilities()->detach();
             }
             return redirect('/housing')->with('success', 'Housing updated successfully.');
         } catch (\Exception $e) {
-            return redirect('/housing')->with('error', 'Failed to update housing record. Please try again.');
+            return redirect('/housing')->with($e->getMessage());
         }
     }
 
@@ -132,9 +126,12 @@ class HousingController extends Controller
             $housing->delete();
             return redirect('/housing')->with('error', 'Housing deleted successfully.');
         } catch (\Exception $e) {
-            return redirect('/housing')->with('warning', 'Failed to delete Housing');
+            return redirect('/housing')->with($e->getMessage());
         }
     }
+
+
+
 
     public function housingsByUpazilaId(Request $request)
     {

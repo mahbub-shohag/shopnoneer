@@ -56,7 +56,7 @@
                     </div>
                 </div>
 
-                <div id="facility-cards" class="row">
+                <div id="facility-cards" class="row mt-4">
                 </div>
                 <div class="d-flex flex-wrap gap-3 align-items-start">
                     <div class="form-group">
