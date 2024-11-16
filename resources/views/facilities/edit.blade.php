@@ -37,7 +37,7 @@
 
                 <div class="mb-3">
                     <label class="custom-control-label">Facility Name</label>
-                    <input class="form-control" type="text" name="name" value="{{ old('name', $facility->name) }}">
+                    <input class="form-select" type="text" name="name" value="{{ old('name', $facility->name) }}">
                 </div>
 
                 <div class="mb-3">
@@ -89,11 +89,11 @@
                 <div class="d-flex flex-wrap gap-3 align-items-start">
                     <div class="form-group">
                         <label for="latitude" class="form-label">Latitude</label>
-                        <input value="{{ $facility->latitude }}" id="latitude" type="text" name="latitude" class="form-control" placeholder="Latitude" required>
+                        <input value="{{ $facility->latitude }}" id="latitude" type="text" name="latitude" class="form-select" placeholder="Latitude" required>
                     </div>
                     <div class="form-group">
                         <label for="longitude" class="form-label">Longitude</label>
-                        <input value="{{ $facility->longitude }}"  id="longitude" type="text" name="longitude" class="form-control" placeholder="Longitude" required>
+                        <input value="{{ $facility->longitude }}"  id="longitude" type="text" name="longitude" class="form-select" placeholder="Longitude" required>
                     </div>
                 </div>
 

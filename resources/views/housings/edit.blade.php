@@ -14,7 +14,6 @@
 
 @section('content')
     <meta name="csrf-token" content="{{ csrf_token() }}">
-
     <div class="card mb-4">
         <div class="card-header">
             <i class="fas fa-table me-1"></i>
@@ -38,7 +37,7 @@
 
                 <div class="mb-3">
                     <label class="form-label">Housing Name</label>
-                    <input class="form-control" type="text" name="name" value="{{$housing->name }}">
+                    <input class="form-select" type="text" name="name" value="{{$housing->name }}">
                 </div>
                 <div class="d-flex flex-wrap gap-3 mb-4 align-items-start">
                     <div class="form-group">
@@ -105,11 +104,11 @@
                 <div class="d-flex flex-wrap gap-3 align-items-start">
                     <div class="form-group">
                         <label for="latitude" class="form-label">Latitude</label>
-                        <input value="{{ $housing->latitude }}" id="latitude" type="text" name="latitude" class="form-control" placeholder="Latitude" required>
+                        <input value="{{ $housing->latitude }}" id="latitude" type="text" name="latitude" class="form-select" placeholder="Latitude" required>
                     </div>
                     <div class="form-group">
                         <label for="longitude" class="form-label">Longitude</label>
-                        <input value="{{ $housing->longitude }}"  id="longitude" type="text" name="longitude" class="form-control" placeholder="Longitude" required>
+                        <input value="{{ $housing->longitude }}"  id="longitude" type="text" name="longitude" class="form-select" placeholder="Longitude" required>
                     </div>
                 </div>
 

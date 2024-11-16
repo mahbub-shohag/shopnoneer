@@ -5,7 +5,7 @@
 @endsection
 
 @section('bread_controller')
-    <a href="index.html">Project</a>
+    <a href="/project">Project</a>
 @endsection
 
 @section('bread_action')
@@ -24,15 +24,12 @@
                     {{ csrf_field() }}
                     {{ method_field('POST') }}
 
-                    <!-- Use Bootstrap Grid for Layout -->
                     <div class="row g-4">
-                        <!-- Title -->
                         <div class="">
                             <label class="form-label">Title</label>
-                            <input class="form-control" required type="text" name="title">
+                            <input class="form-select" required type="text" name="title">
                         </div>
 
-                        <!-- Division -->
                         <div class="col-md-3">
                             <label for="divisionSelect" class="form-label">Division</label>
                             <select id="divisionSelect" class="form-select" name="division_id" required>
@@ -43,7 +40,6 @@
                             </select>
                         </div>
 
-                        <!-- District -->
                         <div class="col-md-3">
                             <label for="districtSelect" class="form-label">District</label>
                             <select id="districtSelect" class="form-select" name="district_id" required>
@@ -51,7 +47,6 @@
                             </select>
                         </div>
 
-                        <!-- Upazila -->
                         <div class="col-md-3">
                             <label for="upazilaSelect" class="form-label">Upazila</label>
                             <select id="upazilaSelect" class="form-select upazila-select-housing" name="upazila_id"
@@ -60,91 +55,89 @@
                             </select>
                         </div>
 
-                        <!-- Housing -->
                         <div class="col-md-3">
                             <label for="housingSelect" class="form-label">Housing</label>
                             <select id="housingSelect" class="form-select " name="housing_id" required>
                                 <option value="">Select Housing</option>
                             </select>
                         </div>
-                        <!-- Road -->
                         <div class="col-md-3">
                             <label class="form-label">Road</label>
-                            <input type="number" class="form-control" name="road" onwheel="this.blur()">
+                            <input type="number" class="form-select" name="road" onwheel="this.blur()">
                         </div>
 
-                        <!-- Block -->
                         <div class="col-md-3">
                             <label class="form-label">Block</label>
-                            <input type="text" class="form-control" name="block">
+                            <input type="text" class="form-select" name="block">
                         </div>
 
-                        <!-- Plot Number -->
                         <div class="col-md-3">
                             <label class="form-label">Plot Number</label>
-                            <input type="text" class="form-control" name="plot">
+                            <input type="text" class="form-select" name="plot">
                         </div>
-                        <!-- Storied -->
+
+                        <div class="col-md-3">
+                            <label class="form-label">Plot Size</label>
+                            <input type="text" class="form-select" name="plot_size">
+                        </div>
+
+                        <div class="col-md-3">
+                            <label class="form-label">Plot Face</label>
+                            <select class="form-select" name="plot_face">
+                                <option>North</option>
+                                <option>South</option>
+                                <option>East</option>
+                                <option>West</option>
+                            </select>
+                        </div>
                         <div class="col-md-3 mb-3">
                             <label class="form-label">Storied</label>
-                            <input type="number" class="form-control" name="storied" onwheel="this.blur()">
+                            <input type="number" class="form-select" name="storied" onwheel="this.blur()">
                         </div>
-                        <!-- No of Units -->
                         <div class="col-md-3 mb-3">
                             <label class="form-label">No of Units</label>
-                            <input type="number" class="form-control" name="no_of_units" onwheel="this.blur()">
+                            <input type="number" class="form-select" name="no_of_units" onwheel="this.blur()">
                         </div>
-                        <!-- Floor Area -->
                         <div class="col-md-3 mb-3">
                             <label class="form-label">Floor Area</label>
-                            <input type="number" class="form-control" name="floor_area" onwheel="this.blur()">
+                            <input type="number" class="form-select" name="floor_area" onwheel="this.blur()">
                         </div>
-                        <!-- Floor No -->
                         <div class="col-md-3 mb-3">
                             <label class="form-label">Floor No</label>
-                            <input type="number" class="form-control" name="floor_no" onwheel="this.blur()">
+                            <input type="number" class="form-select" name="floor_no" onwheel="this.blur()">
                         </div>
-                        <!-- No of Beds -->
                         <div class="col-md-3 mb-3">
                             <label class="form-label">No of Beds</label>
-                            <input type="number" class="form-control" name="no_of_beds" onwheel="this.blur()">
+                            <input type="number" class="form-select" name="no_of_beds" onwheel="this.blur()">
                         </div>
-                        <!-- No of Baths -->
                         <div class="col-md-3 mb-3">
                             <label class="form-label">No of Baths</label>
-                            <input type="number" class="form-control" name="no_of_baths" onwheel="this.blur()">
+                            <input type="number" class="form-select" name="no_of_baths" onwheel="this.blur()">
                         </div>
-                        <!-- No of Balcony -->
                         <div class="col-md-3 mb-3">
                             <label class="form-label">No of Balcony</label>
-                            <input type="text" class="form-control" name="no_of_balcony">
+                            <input type="text" class="form-select" name="no_of_balcony">
                         </div>
-                        <!-- Owner Name -->
                         <div class="col-md-3 mb-3">
                             <label class="form-label">Owner Name</label>
-                            <input type="text" class="form-control" name="owner_name">
+                            <input type="text" class="form-select" name="owner_name">
                         </div>
-                        <!-- Owner Phone -->
                         <div class="col-md-3 mb-3">
                             <label class="form-label">Owner Phone</label>
-                            <input type="text" class="form-control" name="owner_phone">
+                            <input type="text" class="form-select" name="owner_phone">
                         </div>
-                        <!-- Owner Email -->
                         <div class="col-md-3 mb-3">
                             <label class="form-label">Owner Email</label>
-                            <input type="text" class="form-control" name="owner_email">
+                            <input type="text" class="form-select" name="owner_email">
                         </div>
-                        <!-- Rate Per sqft -->
                         <div class="col-md-3 mb-3">
                             <label class="form-label">Rate Per sqft</label>
-                            <input type="text" class="form-control" name="rate_per_sqft">
+                            <input type="text" class="form-select" name="rate_per_sqft">
                         </div>
-                        <!-- Total Price -->
                         <div class="col-md-12 mb-3">
                             <label class="form-label">Total Price</label>
-                            <input type="number" class="form-control" name="total_price">
+                            <input type="number" class="form-select" name="total_price">
                         </div>
-                        <!-- Is Corner -->
                         <div class="col-md-3 mb-3">
                             <label class="form-label">Is Corner</label>
                             <div class="form-check">
@@ -152,32 +145,25 @@
                                 <label class="form-check-label" for="is_corner">Yes</label>
                             </div>
                         </div>
-                        <!-- Parking Available -->
                         <div class="col-md-3 mb-3">
-                            <label class="form-label">Parking Available?</label>
-                            <div class="form-check">
-                                <input type="checkbox" class="form-check-input" name="parking_available"
-                                       id="parking_available">
-                                <label class="form-check-label" for="parking_available">Yes</label>
-                            </div>
+                            <label class="custom-control-label">Parking Available?</label>
+                            <input type="checkbox" class="form-checkbox" name="parking_available">
                         </div>
-                        <!-- Description -->
                         <div class="col-12 mb-3">
                             <label class="form-label">Description</label>
-                            <textarea class="form-control" name="description" rows="5"></textarea>
+                            <textarea class="form-select" name="description" rows="5"></textarea>
+                            <button type="button" class="btn btn-primary mt-3" id="add-image-btn">Add Image</button>
                         </div>
 
-                        <!-- Project Image -->
-                        <div class="col-12 mb-3">
-                            <label class="form-label">Project Image</label>
-                            <input type="file" class="form-control" name="project_image[]" accept="image/*">
-                            <button class="btn btn-primary btn-sm mt-2 image_add_btn">Add Image</button>
+                        <div class="image-input-container">
+                            <div class="col-12 mb-3">
+                                <input type="file" class="form-select" name="project_image[]" accept="image/*">
+                            </div>
                         </div>
 
-                        <!-- Enter Address -->
                         <div class="col-12 mb-3">
                             <label class="form-label" for="autocomplete">Enter Address</label>
-                            <input type="text" class="form-control" id="autocomplete" placeholder="Enter your address">
+                            <input type="text" class="form-select" id="autocomplete" placeholder="Enter your address">
                         </div>
                         <label class="form-label card-body">Amenities</label>
                         <div class="row">
@@ -201,7 +187,6 @@
                                 </div>
                             @endforeach
                         </div>
-
                     </div>
                     <button class="btn btn-primary mt-4">Submit</button>
                 </form>
@@ -209,6 +194,16 @@
         </div>
     </div>
 
-    <!-- Include External Scripts -->
     <script src="{{ asset('assets/js/ajax-handlers.js') }}"></script>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script>
+        $('#add-image-btn').click(function () {
+            $('.image-input-container').append(`
+            <div class="col-12 mb-3">
+                <input type="file" class="form-select" name="project_image[]" accept="image/*">
+            </div>
+        `);
+        });
+    </script>
+
 @endsection

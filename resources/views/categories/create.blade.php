@@ -45,7 +45,7 @@
                 </div>
                 <div class="mb-3">
                     <label class="custom-control-label">Category Option</label>
-                    <input class="form-control" type="text" name="label">
+                    <input class="form-select" type="text" name="label">
                 </div>
 
 

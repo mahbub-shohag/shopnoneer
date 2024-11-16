@@ -47,7 +47,7 @@
 
                 <div class="mb-3">
                     <label class="custom-control-label">Category Option</label>
-                    <input class="form-control" type="text" name="label" value="{{ old('label', $category->label) }}">
+                    <input class="form-select" type="text" name="label" value="{{ old('label', $category->label) }}">
                 </div>
 
                 <button class="btn btn-primary">Update</button>

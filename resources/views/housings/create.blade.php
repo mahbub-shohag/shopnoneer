@@ -29,7 +29,7 @@
                 @endif
                 <div class="mb-3">
                     <label for="housingName" class="form-label">Housing Name</label>
-                    <input id="housingName" class="form-control" type="text" name="name" required>
+                    <input id="housingName" class="form-select" type="text" name="name" required>
                 </div>
 
                 <div class="d-flex flex-wrap gap-3 align-items-start">
@@ -61,11 +61,11 @@
                 <div class="d-flex flex-wrap gap-3 align-items-start">
                     <div class="form-group">
                         <label for="latitude" class="form-label">Latitude</label>
-                        <input id="latitude" type="text" name="latitude" class="form-control" placeholder="Latitude" required>
+                        <input id="latitude" type="text" name="latitude" class="form-select" placeholder="Latitude" required>
                     </div>
                     <div class="form-group">
                         <label for="longitude" class="form-label">Longitude</label>
-                        <input id="longitude" type="text" name="longitude" class="form-control" placeholder="Longitude" required>
+                        <input id="longitude" type="text" name="longitude" class="form-select" placeholder="Longitude" required>
                     </div>
                 </div>
                 <input id="pac-input" class="controls my-4" type="text" placeholder="Search Box">

@@ -36,25 +36,25 @@
 
                 <div class="mb-3">
                     <label class="custom-control-label">Amenity Name</label>
-                    <input class="form-control" type="text" name="name" value="{{$amenity->name}}"
+                    <input class="form-select" type="text" name="name" value="{{$amenity->name}}"
                            placeholder="Enter the amenity name" required>
                 </div>
 
                 <div class="mb-3">
                     <label class="custom-control-label">Android Icon</label>
-                    <input class="form-control icon-picker" type="text" name="android_icon" value="{{$amenity->android_icon}}"
+                    <input class="form-select icon-picker" type="text" name="android_icon" value="{{$amenity->android_icon}}"
                            placeholder="Select an icon" required>
                 </div>
 
                 <div class="mb-3">
                     <label class="custom-control-label">Ios Icon</label>
-                    <input class="form-control icon-picker" type="text" name="ios_icon" value="{{$amenity->ios_icon}}"
+                    <input class="form-select icon-picker" type="text" name="ios_icon" value="{{$amenity->ios_icon}}"
                            placeholder="Select an icon" required>
                 </div>
 
                 <div class="mb-3">
                     <label class="custom-control-label">Web Icon</label>
-                    <input class="form-control icon-picker" type="text" name="web_icon" value="{{$amenity->web_icon}}"
+                    <input class="form-select icon-picker" type="text" name="web_icon" value="{{$amenity->web_icon}}"
                            placeholder="Select an icon" required>
                 </div>
 

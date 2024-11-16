@@ -27,7 +27,9 @@
                 <tr>
                     <th>SL</th>
                     <th>Amenity Name</th>
-                    <th>Amenity Icon</th>
+                    <th>Amenity app</th>
+                    <th>Amenity ios</th>
+                    <th>Amenity web</th>
                     <th>Action</th>
                 </tr>
                 </thead>
@@ -35,7 +37,9 @@
                 <tr>
                     <th>SL</th>
                     <th>Amenity Name</th>
-                    <th>Amenity Icon</th>
+                    <th>Amenity app</th>
+                    <th>Amenity ios</th>
+                    <th>Amenity web</th>
                     <th>Action</th>
                 </tr>
                 </tfoot>
@@ -43,11 +47,13 @@
                 @foreach ($amenities as $key => $amenity)
                     <tr>
                         <td>{{ $key + 1 }}</td>
-                        <td>{{ $amenity->name }}</td>
-                        <td>{{$amenity->icon }}</td>
+                        <td>{{$amenity->name }}</td>
+                        <td>{{$amenity->android_icon }}</td>
+                        <td>{{$amenity->ios_icon }}</td>
+                        <td>{{$amenity->web_icon }}</td>
                         <td>
                             <!-- Flex Container for Edit, View, and Delete Actions -->
-                            <div style="display: flex; align-items: center; justify-content: space-around; width: 60%;">
+                            <div style="display: flex; align-items: center; justify-content: space-around; width: auto;">
                                 <!-- Edit Link -->
                                 <a href="{{ route('amenity.edit', ['amenity' => $amenity]) }}"
                                    class="btn-icon btn-edit">
