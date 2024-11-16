@@ -82,10 +82,6 @@
                     </div>
                 </div>
                 <input id="pac-input" class="controls my-4" type="text" placeholder="Search Box">
-                <div class="mb-3">
-                    <label class="custom-control-label">Google Map URL</label>
-                    <input class="form-control" type="text" name="google_map_url">
-                </div>
                 <div id="map" style="height: 500px; width: 100%;"></div>
                 <button class="btn btn-primary mt-4">Submit</button>
             </form>

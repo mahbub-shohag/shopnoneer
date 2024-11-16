@@ -4,6 +4,7 @@ use App\Http\Controllers\AmenityController;
 use App\Http\Controllers\AuthController;
 use App\Http\Controllers\CategoryController;
 use App\Http\Controllers\CityController;
+use App\Http\Controllers\DashboardController;
 use App\Http\Controllers\DivisionController;
 use App\Http\Controllers\DistrictController;
 use App\Http\Controllers\FacilityController;
@@ -119,5 +120,9 @@ Route::middleware([
 });
 //ALl controller and method
 Route::get('/controllers-actions', [RoleController::class, 'getControllersAndActions']);
+
+
+Route::get('/dashboard', [DashboardController::class, 'index'])->name('dashboard');
+
 
 

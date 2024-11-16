@@ -34,7 +34,6 @@ class FacilityController extends Controller
             $facility->upazila_id = $request->upazila_id;
             $facility->latitude = $request->input('latitude'); // Store latitude
             $facility->longitude = $request->input('longitude'); // Store longitude
-            $facility->google_map_url = $request->google_map_url;
             $facility->save();
 
             return redirect('facility')->with('success', 'Facility created successfully.');

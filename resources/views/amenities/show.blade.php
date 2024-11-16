@@ -33,8 +33,18 @@
                 </tr>
 
                 <tr>
-                    <th scope="row"><strong>Amenity Icon</strong></th>
-                    <td>{{$amenity->icon }}</td>
+                    <th scope="row"><strong>Android Icon</strong></th>
+                    <td>{{$amenity->android_icon }}</td>
+                </tr>
+
+                <tr>
+                    <th scope="row"><strong>Ios Icon</strong></th>
+                    <td>{{$amenity->ios_icon }}</td>
+                </tr>
+
+                <tr>
+                    <th scope="row"><strong>Web Icon</strong></th>
+                    <td>{{$amenity->web_icon }}</td>
                 </tr>
                 </tbody>
             </table>

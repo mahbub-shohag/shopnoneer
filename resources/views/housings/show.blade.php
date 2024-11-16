@@ -21,10 +21,6 @@
                     <div class="card-header bg-teal text-white text-center">
                         <h1 class="mb-0">Housing Details</h1>
                     </div>
-                    <div id="map" style="height: 500px; width: 100%;"
-                         data-latitude="{{ $housing->latitude }}"
-                         data-longitude="{{ $housing->longitude }}">
-                    </div>
                     <div class="card-body p-5">
                         <div class="table-responsive">
                             <table class="table table-hover table-striped table-bordered text-center" style="font-size: 1.5rem;">
@@ -83,6 +79,10 @@
                                 @endif
                                 </tbody>
                             </table>
+                            <div id="map" style="height: 500px; width: 100%;"
+                                 data-latitude="{{ $housing->latitude }}"
+                                 data-longitude="{{ $housing->longitude }}">
+                            </div>
                         </div>
                     </div>
                 </div>

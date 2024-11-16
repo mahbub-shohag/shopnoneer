@@ -12,7 +12,7 @@ class CategoryController extends Controller
 {
     public function index()
     {
-        $categories = Category::with('parent')->get();
+        $categories = Category::with('parent')->orderByDesc('updated_at')->get();
         return view('categories.index', ['categories' => $categories]);
     }
     public function create()
@@ -63,7 +63,7 @@ class CategoryController extends Controller
             $category->delete();
             return redirect('/category')->with('error', 'Category deleted successfully.');
         } catch (\Exception $e) {
-            return redirect('/category')->with('warning', 'Failed to delete Housing');
+            return redirect('/category')->with('warning', 'Failed to delete Category');
         }
     }
 

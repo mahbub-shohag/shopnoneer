@@ -13,8 +13,8 @@ class HousingController extends Controller
 {
     public function index()
     {
-        $housings = Housing::with('district', 'upazila')->orderByDesc('id')->get();
-        return view('housings.index', ['housings' => $housings]);
+        $housings = Housing::with('district', 'upazila')->orderByDesc('updated_at')->get();
+        return view('housings.index',['housings' => $housings])->with('housings', $housings);
     }
 
     public function create()

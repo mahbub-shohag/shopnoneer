@@ -1,4 +1,3 @@
-
 @extends('layouts.app')
 
 @section('title')
@@ -40,9 +39,21 @@
                     <input class="form-control" type="text" name="name" placeholder="Enter the amenity name" required>
                 </div>
 
+
                 <div class="mb-3">
-                    <label class="custom-control-label">Amenity Icon</label>
-                    <input class="form-control icon-picker" type="text" name="icon" placeholder="Select an icon" required>
+                    <label class="custom-control-label">App Icon</label>
+                    <input class="form-control icon-picker" type="text" name="android_icon" placeholder="Select an icon"
+                           required>
+                </div>
+                <div class="mb-3">
+                    <label class="custom-control-label">IOS Icon</label>
+                    <input class="form-control icon-picker" type="text" name="ios_icon" placeholder="Select an icon"
+                           required>
+                </div>
+                <div class="mb-3">
+                    <label class="custom-control-label">Web Icon</label>
+                    <input class="form-control icon-picker" type="text" name="web_icon" placeholder="Select an icon"
+                           required>
                 </div>
                 <button class="btn btn-primary">Submit</button>
             </form>
