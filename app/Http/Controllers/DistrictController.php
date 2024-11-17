@@ -66,14 +66,12 @@ class DistrictController extends Controller
         //
     }
 
-    public function upazillasByDistrictId(Request $request)
-    {
-        $district_id = $request->district_id;
-        $upazillas = Upazila::where('district_id', $district_id)->get();
-        $options = "<option value='' SELECTED>Select Upazila</option>";
-
-        foreach ($upazillas as $upazila) {
-            $options = $options . "<option value='$upazila->id'>$upazila->name</option>";
+    public function districtsByDivisionId(Request $request){
+        $division_id = $request->division_id;
+        $districts = District::where('division_id',$division_id)->get();
+        $options = "<option value='' SELECTED>Select District</option>";
+        foreach ($districts as $district){
+            $options = $options. "<option value='$district->id'>$district->name</option>";
         }
         return $options;
     }

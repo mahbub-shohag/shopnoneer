@@ -30,3 +30,173 @@
     margin: 5px 0 5px;
 }
 
+     /*
+     * Always set the map height explicitly to define the size of the div element
+     * that contains the map.
+     */
+/* Map styling */
+#map {
+    height: 100%;
+}
+
+/* Description text styling */
+#description {
+    font-family: Roboto, sans-serif;
+    font-size: 15px;
+    font-weight: 300;
+}
+
+/* Info window content */
+#infowindow-content .title {
+    font-weight: bold;
+}
+
+#infowindow-content {
+    display: none;
+}
+
+#map #infowindow-content {
+    display: inline;
+}
+
+/* Search input styling */
+.pac-card {
+    background-color: #fff;
+    border-radius: 5px;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.2);
+    margin: 10px;
+    padding: 0.5em;
+    font: 400 18px 'Roboto', Arial, sans-serif;
+    overflow: hidden;
+}
+
+#pac-container {
+    padding-bottom: 12px;
+    margin-right: 12px;
+}
+
+/* Controls section */
+.pac-controls {
+    display: inline-block;
+    padding: 5px 11px;
+}
+
+/* Input field in search box */
+#pac-input {
+    background-color: #fff;
+    font-family: Roboto, sans-serif;
+    font-size: 15px;
+    font-weight: 300;
+    padding: 12px 14px;
+    width: 350px;
+    border-radius: 30px;
+    border: 1px solid #ddd;
+    transition: all 0.3s ease-in-out;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    outline: none;
+}
+
+/* Focus effect on the input field */
+#pac-input:focus {
+    border-color: #4d90fe;
+    box-shadow: 0 0 8px rgba(77, 144, 254, 0.7);
+}
+
+/* Styling for search button */
+.pac-search-btn {
+    background-color: #4d90fe;
+    color: #fff;
+    font-size: 16px;
+    font-weight: bold;
+    padding: 10px 15px;
+    border-radius: 30px;
+    border: none;
+    cursor: pointer;
+    margin-left: 10px;
+    transition: all 0.3s ease-in-out;
+}
+
+.pac-search-btn:hover {
+    background-color: #3578e5;
+}
+
+/* Title section for Map */
+#title {
+    color: #fff;
+    background-color: #4d90fe;
+    font-size: 25px;
+    font-weight: 500;
+    padding: 8px 16px;
+    border-radius: 5px;
+    margin-bottom: 15px;
+}
+
+/* Targeting the address container */
+#target {
+    width: 345px;
+}
+
+/* Centering the map input and making it more prominent */
+#pac-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 15px;
+}
+
+/* Make map container fill the screen */
+#map {
+    width: 100%;
+    height: 100%;
+    position: relative;
+}
+
+
+/* Flex container for dropdowns */
+.d-flex {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1rem; /* Space between dropdowns */
+}
+
+/* Styling for individual form groups */
+.form-group {
+    flex: 1; /* Evenly distribute available space */
+    min-width: 200px; /* Prevents shrinking below a readable size */
+}
+
+/* Label styles for better readability */
+.form-label {
+    font-weight: bold;
+    font-size: 1rem;
+    margin-bottom: 0.5rem;
+    color: #333;
+
+}
+
+/* Dropdown select styles */
+.form-select {
+    border: 1px solid #ced4da;
+    border-radius: 8px;
+    padding: 0.5rem;
+    font-size: 0.9rem;
+    background-color: #f9f9f9;
+    transition: border-color 0.3s ease;
+}
+
+.form-select:focus {
+    border-color: #009688; /* Highlight color for focus */
+    outline: none;
+    box-shadow: 0 0 4px rgba(0, 150, 136, 0.5);
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+    .form-group {
+        flex: 100%; /* Stack dropdowns vertically */
+    }
+}
+
+
+
+

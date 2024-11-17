@@ -14,6 +14,10 @@ class Project extends Model implements HasMedia
     use HasFactory;
     use InteractsWithMedia;
 
+    public function amenities()
+    {
+        return $this->belongsToMany(Amenity::class, 'amenity_project', 'project_id', 'amenity_id');
+    }
     public function upazila(){
         return $this->belongsTo(Upazila::class)->select(['id', 'name']);
     }

@@ -4,10 +4,13 @@ namespace App\Models;
 
 use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Database\Eloquent\Model;
-
 class Housing extends Model
 {
     use HasFactory;
+
+//    public mixed $facilities;
+
+
 
     public function division()
     {
@@ -21,14 +24,8 @@ class Housing extends Model
         return $this->belongsTo(Upazila::class);
     }
 
-
-
     public function facilities()
     {
-        return $this->hasMany(Facility::class);
-    }
-
-    public function amenities(){
-        return $this->hasMany(Amenity::class);
+        return $this->belongsToMany(Facility::class, 'facility_housing', 'housing_id', 'facility_id');
     }
 }

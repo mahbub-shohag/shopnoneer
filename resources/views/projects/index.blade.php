@@ -22,8 +22,8 @@
             Project
         </div>
 
-        <div class="">
-            <table class="table table-bordered">
+        <div class="card-body">
+            <table id="datatablesSimple" class="table table-bordered">
                 <thead>
                 <tr>
                     <th>SL</th>
@@ -47,10 +47,9 @@
                             @foreach($project->getMedia('project_image') as $image)
                                 <img style="width: auto;height: 40px" src="{{$image->getUrl()}}" alt="Image"/>
                             @endforeach
-{{--                            <img src="{{$project->project_image}}" width="120px">--}}
+{{--                            <img src="{{$project->project_image}}" width="120px" alt="Image">--}}
                         </td>
                         <td>
-                            <!-- Flex Container for Edit, View, and Delete Actions -->
                             <div style="display: flex; align-items: center; justify-content: space-around; width: 100%;">
                                 <!-- Edit Link -->
                                 <a href="{{ route('project.edit', ['project' => $project]) }}" class="btn-icon btn-edit">

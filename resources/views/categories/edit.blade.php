@@ -37,7 +37,6 @@
                 <div class="mb-3">
                     <label class="custom-control-label">Category Type</label>
                     <select class="form-select" name="parent_id">
-                        <option value="1" {{ $category->parent_id == 1 ? 'selected' : '' }}>Root</option>
                         @foreach($category_types as $category_type)
                             <option value="{{ $category_type->id }}" {{ $category->parent_id == $category_type->id ? 'selected' : '' }}>
                                 {{ $category_type->label }}
@@ -48,7 +47,7 @@
 
                 <div class="mb-3">
                     <label class="custom-control-label">Category Option</label>
-                    <input class="form-control" type="text" name="label" value="{{ old('label', $category->label) }}">
+                    <input class="form-select" type="text" name="label" value="{{ old('label', $category->label) }}">
                 </div>
 
                 <button class="btn btn-primary">Update</button>

@@ -2031,6 +2031,7 @@ progress {
 }
 .form-control::-moz-placeholder, .datatable-input::-moz-placeholder {
   color: #6c757d;
+
   opacity: 1;
 }
 .form-control::placeholder, .datatable-input::placeholder {

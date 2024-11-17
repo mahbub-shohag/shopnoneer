@@ -5,7 +5,8 @@
 @endsection
 
 @section('bread_controller')
-    <a href="index.html">Project</a>
+    <a href="/project">Project</a>
+
 @endsection
 
 @section('bread_action')
@@ -13,339 +14,254 @@
 @endsection
 
 @section('content')
-    <div class="mb-4">
-        <div class="card-header">
-            <i class="fas fa-table me-1"></i>
-            Project
-        </div>
-        <div class="card-body">
-            <form action="{{route('project.update',  $project->id)}}" method="POST" enctype="multipart/form-data">
-                {{csrf_field()}}
-                {{ method_field('PUT') }}
-                @if ($errors->any())
-                    <div class="alert alert-danger">
-                        <ol>
-                            @foreach ($errors->all() as $error)
-                                <li>{{ $error }}</li>
+    <meta name="csrf-token" content="{{ csrf_token() }}">
+    <div class=" mb-4">
+        <div class="card">
+            <div class="card-header">
+                <i class="fas fa-table me-1"></i> Project
+            </div>
+            <div class="card-body">
+                <form action="{{ route('project.update',$project->id) }}" method="POST" enctype="multipart/form-data">
+                    {{ csrf_field() }}
+                    {{ method_field('PUT') }}
+
+                    <div class="row g-4">
+                        <div class="">
+                            <label class="form-label">Title</label>
+                            <input class="form-select" type="text" name="title" value="{{ $project->title }}">
+                        </div>
+
+                        <div class="col-md-3">
+                            <label for="divisionSelect" class="form-label">Division</label>
+                            <select id="divisionSelect" class="form-select" name="division_id" required>
+                                <option value="">Select Division</option>
+                                @foreach($divisions as $division)
+                                    <option value="{{ $division->id }}"
+                                            @if($division->id == $project->division_id) selected @endif>
+                                        {{ $division->name }}
+                                    </option>
+                                @endforeach
+                            </select>
+                        </div>
+
+                        <div class="col-md-3">
+                            <label for="districtSelect" class="form-label">District</label>
+                            <select id="districtSelect" class="form-select" name="district_id" required>
+                                <option value="">Select District</option>
+                                @foreach($districts as $district)
+                                    <option value="{{ $district->id }}"
+                                            @if($district->id == $project->district_id) selected @endif>
+                                        {{ $district->name }}
+                                    </option>
+                                @endforeach
+                            </select>
+                        </div>
+
+                        <div class="col-md-3">
+                            <label for="upazilaSelect" class="form-label">Upazila</label>
+                            <select id="upazilaSelect" class="form-select upazila-select-housing" name="upazila_id"
+                                    required>
+                                @foreach($upazillas as $upazila)
+                                    <option value="{{ $upazila->id }}"
+                                            @if($upazila->id == $project->upazila_id) selected @endif>
+                                        {{ $upazila->name }}
+                                    </option>
+                                @endforeach
+                            </select>
+                        </div>
+
+                        <div class="col-md-3">
+                            <label for="housingSelect" class="form-label">Housing</label>
+                            <select id="housingSelect" class="form-select " name="housing_id" required>
+                                @foreach($housings as $housing)
+                                    <option value="{{ $housing->id }}"
+                                            @if($housing->id == $project->housing_id) selected @endif>
+                                        {{ $housing->name }}
+                                    </option>
+                                @endforeach
+                            </select>
+                        </div>
+                        <div class="col-md-3">
+                            <label class="form-label">Road</label>
+                            <input type="number" class="form-select" name="road" value="{{ $project->road }}"
+                                   onwheel="this.blur()">
+                        </div>
+
+                        <div class="col-md-3">
+                            <label class="form-label">Block</label>
+                            <input type="text" class="form-select" name="block" value="{{ $project->block }}">
+                        </div>
+
+                        <div class="col-md-3">
+                            <label class="form-label">Plot Number</label>
+                            <input type="text" class="form-select" name="plot" value="{{ $project->plot }}">
+                        </div>
+
+                        <div class="col-md-3">
+                            <label class="form-label">Plot Size</label>
+                            <input type="text" class="form-select" name="plot_size" value="{{ $project->plot_size }}">
+                        </div>
+
+                        <div class="col-md-3">
+                            <label class="form-label">Plot Face</label>
+                            <select class="form-select" name="plot_face">
+                                <option value="North" {{ $project->plot_face == 'North' ? 'selected' : '' }}>North
+                                </option>
+                                <option value="South" {{ $project->plot_face == 'South' ? 'selected' : '' }}>South
+                                </option>
+                                <option value="East" {{ $project->plot_face == 'East' ? 'selected' : '' }}>East</option>
+                                <option value="West" {{ $project->plot_face == 'West' ? 'selected' : '' }}>West</option>
+                            </select>
+                        </div>
+                        <div class="col-md-3 mb-3">
+                            <label class="form-label">Storied</label>
+                            <input type="number" class="form-select" name="storied" value="{{ $project->storied}}"
+                                   onwheel="this.blur()">
+                        </div>
+                        <div class="col-md-3 mb-3">
+                            <label class="form-label">No of Units</label>
+                            <input type="number" class="form-select" name="no_of_units"
+                                   value="{{ $project->no_of_units }}" onwheel="this.blur()">
+                        </div>
+                        <div class="col-md-3 mb-3">
+                            <label class="form-label">Floor Area</label>
+                            <input type="number" class="form-select" name="floor_area"
+                                   value="{{ $project->floor_area }}" onwheel="this.blur()">
+                        </div>
+                        <div class="col-md-3 mb-3">
+                            <label class="form-label">Floor No</label>
+                            <input type="number" class="form-select" name="floor_no" value="{{ $project->floor_no}}"
+                                   onwheel="this.blur()">
+                        </div>
+                        <div class="col-md-3 mb-3">
+                            <label class="form-label">No of Beds</label>
+                            <input type="number" class="form-select" name="no_of_beds"
+                                   value="{{ $project->no_of_beds }}" onwheel="this.blur()">
+                        </div>
+                        <div class="col-md-3 mb-3">
+                            <label class="form-label">No of Baths</label>
+                            <input type="number" class="form-select" name="no_of_baths"
+                                   value="{{ $project->no_of_baths }}" onwheel="this.blur()">
+                        </div>
+                        <div class="col-md-3 mb-3">
+                            <label class="form-label">No of Balcony</label>
+                            <input type="text" class="form-select" name="no_of_balcony"
+                                   value="{{ $project->no_of_balcony }}">
+                        </div>
+                        <div class="col-md-3 mb-3">
+                            <label class="form-label">Owner Name</label>
+                            <input type="text" class="form-select" name="owner_name"
+                                   value="{{ $project->owner_name }}">
+                        </div>
+                        <div class="col-md-3 mb-3">
+                            <label class="form-label">Owner Phone</label>
+                            <input type="text" class="form-select" name="owner_phone"
+                                   value="{{ $project->owner_phone }}">
+                        </div>
+                        <div class="col-md-3 mb-3">
+                            <label class="form-label">Owner Email</label>
+                            <input type="text" class="form-select" name="owner_email"
+                                   value="{{ $project->owner_email }}">
+                        </div>
+                        <div class="col-md-3 mb-3">
+                            <label class="form-label">Rate Per sqft</label>
+                            <input type="text" class="form-select" name="rate_per_sqft"
+                                   value="{{ $project->rate_per_sqft }}">
+                        </div>
+                        <div class="col-md-12 mb-3">
+                            <label class="form-label">Total Price</label>
+                            <input type="number" class="form-select" name="total_price"
+                                   value="{{ $project->total_price }}">
+                        </div>
+                        <div class="col-md-12mb-3">
+                            <label class="custom-control-label">Is Corner?</label>
+                            <input type="checkbox" class="form-checkbox" name="is_corner"
+                                   value="{{ $project->is_corner}}"
+                                    {{$project->is_corner == 1  ? 'checked' : ''}}
+                            >
+                        </div>
+                        <div class="mb-3">
+                            <label class="custom-control-label">Parking Available?</label>
+                            <input type="checkbox" class="form-checkbox" name="parking_available"
+                                   value="{{ $project->parking_available}}"
+                                    {{$project->parking_available == 1  ? 'checked' : ''}}
+                            >
+                        </div>
+                        <div class="col-12 mb-3">
+                            <label class="form-label">Description</label>
+                            <textarea class="form-select" name="description"
+                                      rows="5">{{ $project->description }}</textarea>
+                            <button type="button" class="btn btn-primary mt-3" id="add-image-btn">Add Image</button>
+
+                        </div>
+                        <div style="display: flex; gap: 1rem; flex-wrap: wrap;">
+                            @foreach($project->getMedia('project_image') as $image)
+                                <label style="position: relative; width: auto; height: 60px; border-radius: 8px; overflow: hidden; display: flex; justify-content: center; align-items: center; cursor: pointer;">
+                                    <img style="max-width: 100%; max-height: 100%; object-fit: cover; opacity: 0.6; transition: opacity 0.3s;" src="{{ $image->getUrl() }}" alt="Image">
+                                    <input
+                                            type="checkbox"
+                                            name="delete_images[]"
+                                            value="{{ $image->id }}"
+                                            style="display: none;"
+                                            checked
+                                            onclick="this.previousElementSibling.style.opacity = this.checked ? '0.5' : '1';">
+                                </label>
                             @endforeach
-                        </ol>
+                        </div>
+
+
+
+
+
+                        <div class="image-input-container">
+                            <div class="col-12 mb-3">
+                                <label class="form-label">Project Image</label>
+                                <input type="file" class="form-select" name="project_image[]" accept="image/*">
+                            </div>
+                        </div>
+                        <div class="col-12 mb-3">
+                            <label class="form-label" for="autocomplete">Enter Address</label>
+                            <input type="text" class="form-select" id="autocomplete" placeholder="Enter your address">
+                        </div>
+                        <label class="form-label card-body">Amenities</label>
+                        <div class="row">
+                            @foreach($amenities as $amenity)
+                                <div class="col-md-4 col-sm-6 mb-3">
+                                    <div class="d-flex align-items-center">
+                                        <input
+                                                class="form-check-input"
+                                                type="checkbox"
+                                                id="amenity_{{ $amenity->id }}"
+                                                name="amenities[]"
+                                                value="{{ $amenity->id }}"
+
+                                                style="border-color: #0c4128; background-color: teal;"
+                                        >
+
+                                        <label for="amenity_{{ $amenity->id }}" class="form-check-label">
+                                            {{ $amenity->name }}
+                                        </label>
+                                    </div>
+                                </div>
+                            @endforeach
+                        </div>
+
                     </div>
-                @endif
-                <div class="mb-3">
-                    <label class="custom-control-label">Title</label>
-                    <input class="form-control" type="text" name="title" value="{{ $project->title }}">
-                </div>
-                <div class="mb-3">
-                    <label class="custom-control-label">Division</label>
-                    <select class="form-select" name="division_id">
-                        <option value="">Select Division</option>
-                        @foreach($divisions as $division)
-                            <option value="{{ $division->id }}" @if($division->id == $project->division_id) selected @endif>
-                                {{ $division->name }}
-                            </option>
-                        @endforeach
-                    </select>
-                </div>
-
-                <div class="mb-3">
-                    <label class="custom-control-label">District</label>
-                    <select class="form-select" name="district_id">
-                        <option value="">Select District</option>
-                        @foreach($districts as $district)
-                            <option value="{{ $district->id }}" @if($district->id == $project->district_id) selected @endif>
-                                {{ $district->name }}
-                            </option>
-                        @endforeach
-                    </select>
-                </div>
-
-                <div class="mb-3">
-                    <label class="custom-control-label">Upazila</label>
-                    <select class="form-select" name="upazila_id">
-                        <option value="">Select Upazila</option>
-                        @foreach($upazillas as $upazila)
-                            <option value="{{ $upazila->id }}" @if($upazila->id == $project->upazila_id) selected @endif>
-                                {{ $upazila->name }}
-                            </option>
-                        @endforeach
-                    </select>
-                </div>
-                <div class="mb-3">
-                    <label class="custom-control-label">Housing</label>
-                    <select class="form-select" name="housing_id">
-                        <option value="">Select Housing</option>
-                        @foreach($housings as $housing)
-                            <option value="{{ $housing->id }}" @if($housing->id == $project->housing_id) selected @endif>
-                                {{ $housing->name }}
-                            </option>
-                        @endforeach
-                    </select>
-                </div>
-
-                <div class="mb-3">
-                    <label class="custom-control-label">Road</label>
-                    <input type="number" class="form-control" name="road" value="{{ $project->road }}">
-                </div>
-
-                <div class="mb-3">
-                    <label class="custom-control-label">Block</label>
-                    <input type="text" class="form-control" name="block" value="{{ $project->block }}">
-                </div>
-
-                <div class="mb-3">
-                    <label class="custom-control-label">Plot Number</label>
-                    <input type="text" class="form-control" name="plot" value="{{ $project->plot }}">
-                </div>
-
-                <div class="mb-3">
-                    <label class="custom-control-label">Plot Size</label>
-                    <input type="number" class="form-control" name="plot_size" value="{{ $project->plot_size}}">
-                </div>
-
-                <div class="mb-3">
-                    <label class="custom-control-label">Plot Face</label>
-                    <select class="form-control" name="plot_face">
-                        <option value="North" {{ $project->plot_face == 'North' ? 'selected' : '' }}>North</option>
-                        <option value="South" {{ $project->plot_face == 'South' ? 'selected' : '' }}>South</option>
-                        <option value="East"  {{ $project->plot_face == 'East' ? 'selected' : '' }}>East</option>
-                        <option value="West"  {{ $project->plot_face == 'West' ? 'selected' : '' }}>West</option>
-                    </select>
-                </div>
-
-
-                <div class="mb-3">
-                    <label class="custom-control-label">Is Corner</label>
-                    <input type="checkbox" class="form-checkbox" name="is_corner" value="{{ $project->is_corner }}"
-                            {{ $project->is_corner == 1 ? 'checked' : '' }}>
-                </div>
-
-                <div class="mb-3">
-                    <label class="custom-control-label">No of Units</label>
-                    <input type="number" class="form-control" name="no_of_units" value="{{ $project->storied}}" >
-                </div>
-                <div class="mb-3">
-                    <label class="custom-control-label">Storied</label>
-                    <input type="number" class="form-control" name="storied"  value="{{ $project->no_of_units }}">
-                </div>
-
-
-                <div class="mb-3">
-                    <label class="custom-control-label">Floor Area</label>
-                    <input type="number" class="form-control" name="floor_area" value="{{ $project->floor_area }}">
-                </div>
-
-                <div class="mb-3">
-                    <label class="custom-control-label">floor_no</label>
-                    <input type="number" class="form-control" name="floor_no" value="{{ $project->floor_no}}">
-                </div>
-
-                <div class="mb-3">
-                    <label class="custom-control-label">No of Beds</label>
-                    <input type="number" class="form-control" name="no_of_beds" value="{{ $project->no_of_beds }}">
-                </div>
-
-                <div class="mb-3">
-                    <label class="custom-control-label">No of Baths</label>
-                    <input type="number" class="form-control" name="no_of_baths" value="{{ $project->no_of_baths }}">
-                </div>
-
-                <div class="mb-3">
-                    <label class="custom-control-label">No of Balcony</label>
-                    <input type="number" class="form-control" name="no_of_balcony"  value="{{ $project->no_of_balcony }}">
-                </div>
-
-                <div class="mb-3">
-                    <label class="custom-control-label">Parking Available?</label>
-                    <input type="checkbox" class="form-checkbox" name="parking_available" value="{{ $project->parking_available}}"
-                      {{$project->parking_available == 1  ? 'checked' : ''}}
-                    >
-
-
-                </div>
-
-                <div class="mb-3">
-                    <label class="custom-control-label">Owner Name</label>
-                    <input type="text" class="form-control" name="owner_name" value="{{ $project->owner_name }}">
-                </div>
-
-                <div class="mb-3">
-                    <label class="custom-control-label">Owner Phone</label>
-                    <input type="text" class="form-control" name="owner_phone" value="{{ $project->owner_phone }}">
-                </div>
-
-                <div class="mb-3">
-                    <label class="custom-control-label">Owner Email</label>
-                    <input type="text" class="form-control" name="owner_email" value="{{ $project->owner_email }}">
-                </div>
-
-                <div class="mb-3">
-                    <label class="custom-control-label">Rate Per sqft</label>
-                    <input type="text" class="form-control" name="rate_per_sqft" value="{{ $project->rate_per_sqft }}">
-                </div>
-
-                <div class="mb-3">
-                    <label class="custom-control-label">Total Price</label>
-                    <input type="number" class="form-control" name="total_price" value="{{ $project->total_price }}">
-                </div>
-
-                <div class="mb-3">
-                    <label class="custom-control-label">Description</label>
-                    <input type="text" class="form-control" name="description" value="{{ $project->description }}">
-                </div>
-
-                <div class="mb-3">
-                    <label for="autocomplete" class="custom-control-label">Enter Address</label>
-                    <input type="text" class="form-control" id="autocomplete" placeholder="Enter your address">
-                </div>
-
-                <div class="mb-3">
-                    <label class="custom-control-label">Project Image</label>
-                    <input type="file" class="form-control" name="project_image" accept="image/*">
-                </div>
-
-                <!-- Map Container -->
-                <div id="map" style="height: 400px; width: 100%;"></div>
-
-                <!-- Latitude and Longitude Fields (Hidden) -->
-                <input type="hidden" id="latitude" name="latitude">
-                <input type="hidden" id="longitude" name="longitude">
-
-
-                <button class="btn btn-primary mt-4">Submit</button>
-            </form>
+                    <button class="btn btn-primary mt-4">Submit</button>
+                </form>
+            </div>
         </div>
     </div>
-
+    <script src="{{ asset('assets/js/ajax-handlers.js') }}"></script>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
     <script>
-        $('select[name="division_id"]').change(function(){
-            var division_id = $(this).val();
-            $.ajax({
-                headers: {
-
-                },
-                url : "{{route('districts_by_division_id')}}",
-                data : {
-                    "_token": "{{ csrf_token() }}",
-                    'division_id' : division_id
-                },
-                type : 'POST',
-                dataType : 'html',
-                success : function(result){
-                    $('select[name="district_id"]').html('');
-                    $('select[name="district_id"]').append(result);
-                }
-            });
+        $('#add-image-btn').click(function () {
+            $('.image-input-container').append(`
+            <div class="col-12 mb-3">
+                <input type="file" class="form-select" name="project_image[]" accept="image/*">
+            </div>
+        `);
         });
-
-
-        $('select[name="district_id"]').change(function(){
-            var district_id = $(this).val();
-            $.ajax({
-                headers: {
-
-                },
-                url : "{{route('upazillas_by_district_id')}}",
-                data : {
-                    "_token": "{{ csrf_token() }}",
-                    'district_id' : district_id
-                },
-                type : 'POST',
-                dataType : 'html',
-                success : function(result){
-                    $('select[name="upazila_id"]').html('');
-                    $('select[name="upazila_id"]').append(result);
-                }
-            });
-        });
-
-
-
-
-        $('select[name="upazila_id"]').change(function(){
-            var upazila_id = $(this).val();
-            $.ajax({
-                headers: {
-
-                },
-                url : "{{route('housings_by_upazila_id')}}",
-                data : {
-                    "_token": "{{ csrf_token() }}",
-                    'upazila_id' : upazila_id
-                },
-                type : 'POST',
-                dataType : 'html',
-                success : function(result){
-                    $('select[name="housing_id"]').html('');
-                    $('select[name="housing_id"]').append(result);
-                }
-            });
-        });
-    </script>
-
-    <!-- Load Google Maps JavaScript API with Places Library -->
-    <script async defer
-            src="https://maps.googleapis.com/maps/api/js?key=YOUR_GOOGLE_MAPS_API_KEY&libraries=places">
-    </script>
-
-    <script>
-        let map;
-        let marker;
-        let autocomplete;
-
-        function initMap() {
-            // Default location (latitude and longitude)
-            let defaultLocation = { lat: -34.397, lng: 150.644 };
-
-            // Initialize map centered on the default location
-            map = new google.maps.Map(document.getElementById('map'), {
-                center: defaultLocation,
-                zoom: 8
-            });
-
-            // Initialize the marker
-            marker = new google.maps.Marker({
-                map: map,
-                position: defaultLocation,
-                draggable: true
-            });
-
-            // Update latitude and longitude fields when marker is moved
-            google.maps.event.addListener(marker, 'dragend', function(event) {
-                document.getElementById('latitude').value = event.latLng.lat();
-                document.getElementById('longitude').value = event.latLng.lng();
-            });
-
-            // Initialize the autocomplete input field
-            autocomplete = new google.maps.places.Autocomplete(
-                document.getElementById('autocomplete')
-            );
-
-            // Update the map and marker when an address is selected from the autocomplete suggestions
-            autocomplete.addListener('place_changed', function() {
-                let place = autocomplete.getPlace();
-
-                if (!place.geometry) {
-                    console.error('No details available for the input: ' + place.name);
-                    return;
-                }
-
-                // Center the map on the selected place
-                map.setCenter(place.geometry.location);
-                map.setZoom(15);
-
-                // Update the marker position
-                marker.setPosition(place.geometry.location);
-
-                // Set the latitude and longitude values
-                document.getElementById('latitude').value = place.geometry.location.lat();
-                document.getElementById('longitude').value = place.geometry.location.lng();
-            });
-        }
-
-        // Load the map after the page has loaded
-        window.onload = function() {
-            initMap();
-        };
     </script>
 
 @endsection

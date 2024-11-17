@@ -1,8 +1,10 @@
 <?php
 
+use App\Http\Controllers\AmenityController;
 use App\Http\Controllers\AuthController;
 use App\Http\Controllers\CategoryController;
 use App\Http\Controllers\CityController;
+use App\Http\Controllers\DashboardController;
 use App\Http\Controllers\DivisionController;
 use App\Http\Controllers\DistrictController;
 use App\Http\Controllers\FacilityController;
@@ -56,7 +58,7 @@ Route::get('/division',[DivisionController::class,'index']);
 
 /*Districts*/
 Route::resource('/district',DistrictController::class);
-Route::post('/districts_by_division_id', [DivisionController::class, 'districtsByDivisionId'])->name('districts_by_division_id');
+Route::post('/districts_by_division_id', [DistrictController::class, 'districtsByDivisionId'])->name('districts_by_division_id');
 
 
 /*Districts*/
@@ -65,7 +67,7 @@ Route::post('/districts_by_division_id', [DivisionController::class, 'districtsB
 
 /*Upazillas*/
 Route::resource('/upazila',UpazilaController::class);
-Route::post('/upazillas_by_district_id', [DistrictController::class, 'upazillasByDistrictId'])->name('upazillas_by_district_id');
+Route::post('/upazillas_by_district_id', [UpazilaController::class, 'upazillasByDistrictId'])->name('upazillas_by_district_id');
 
 /*Upazillas*/
 
@@ -77,7 +79,7 @@ Route::post('/cities_by_upazila_id', [UpazilaController::class, 'citiesByUpazila
 
 /*Housing*/
 Route::resource('/housing',HousingController::class);
-Route::post('/housings_by_upazila_id', [UpazilaController::class, 'housingsByUpazilaId'])->name('housings_by_upazila_id');
+Route::post('/housings_by_upazila_id', [HousingController::class, 'housingsByUpazilaId'])->name('housings_by_upazila_id');
 
 /*Housing*/
 
@@ -93,12 +95,18 @@ Route::get('profile_list',[ProfileController::class,'profile_list']);
 
 /*Category*/
 Route::resource('/category',CategoryController::class);
+Route::post('/categories_by_category_id', [CategoryController::class, 'categoriesByCategoryId'])->name('categories_by_category_id');
+
 /*Category*/
 
 /*Facility*/
 Route::resource('/facility',FacilityController::class);
-Route::post('/categories_by_category_id', [CategoryController::class, 'categoriesByCategoryId'])->name('categories_by_category_id');
-/*Facility*/
+Route::post('/facilities_by_upazila_id', [FacilityController::class, 'facilitiesByUpazilaId'])->name('facilities_by_upazila_id');
+
+
+
+/*Amenities*/
+Route::resource('/amenity',AmenityController::class);
 
 
 Route::middleware([
@@ -112,5 +120,9 @@ Route::middleware([
 });
 //ALl controller and method
 Route::get('/controllers-actions', [RoleController::class, 'getControllersAndActions']);
+
+
+Route::get('/dashboard', [DashboardController::class, 'index'])->name('dashboard');
+
 
 

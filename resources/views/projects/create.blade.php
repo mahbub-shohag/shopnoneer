@@ -5,266 +5,205 @@
 @endsection
 
 @section('bread_controller')
-    <a href="index.html">Project</a>
+    <a href="/project">Project</a>
 @endsection
 
 @section('bread_action')
-    create
+    Create
 @endsection
 
 @section('content')
-    <div class="mb-4">
-        <div class="card-header">
-            <i class="fas fa-table me-1"></i>
-            Project
-        </div>
+    <meta name="csrf-token" content="{{ csrf_token() }}">
+    <div class=" mb-4">
+        <div class="card">
+            <div class="card-header">
+                <i class="fas fa-table me-1"></i> Project
+            </div>
+            <div class="card-body">
+                <form action="{{ route('project.store') }}" method="POST" enctype="multipart/form-data">
+                    {{ csrf_field() }}
+                    {{ method_field('POST') }}
 
-        <div class="card-body">
-            <form action="{{route('project.store')}}" method="POST" enctype="multipart/form-data">
-                {{csrf_field()}}
-                {{ method_field('POST') }}
+                    <div class="row g-4">
+                        <div class="">
+                            <label class="form-label">Title</label>
+                            <input class="form-select" required type="text" name="title">
+                        </div>
 
-                <div class="mb-3">
-                    <label class="custom-control-label" >Title</label>
-                    <input class="form-control" required type="text" name="title">
-                </div>
-                <div class="mb-3">
-                    <label class="custom-control-label">Division</label>
-                    <select class="form-select" name="division_id">
-                          <option value="">Select Division</option>
-                        @foreach($divisions as $division)
-                            <option value="{{$division->id}}">{{$division->name}}</option>
-                        @endforeach
-                    </select>
-                </div>
+                        <div class="col-md-3">
+                            <label for="divisionSelect" class="form-label">Division</label>
+                            <select id="divisionSelect" class="form-select" name="division_id" required>
+                                <option value="">Select Division</option>
+                                @foreach($divisions as $division)
+                                    <option value="{{ $division->id }}">{{ $division->name }}</option>
+                                @endforeach
+                            </select>
+                        </div>
 
-                <div class="mb-3">
-                    <label class="custom-control-label">District</label>
-                    <select class="form-select" name="district_id">
-                        <option value="">Select District</option>
-                    </select>
-                </div>
+                        <div class="col-md-3">
+                            <label for="districtSelect" class="form-label">District</label>
+                            <select id="districtSelect" class="form-select" name="district_id" required>
+                                <option value="">Select District</option>
+                            </select>
+                        </div>
 
-                <div class="mb-3">
-                    <label class="custom-control-label">Upazilla</label>
-                    <select class="form-select" name="upazila_id">
-                        <option value="">Select Upazilla</option>
+                        <div class="col-md-3">
+                            <label for="upazilaSelect" class="form-label">Upazila</label>
+                            <select id="upazilaSelect" class="form-select upazila-select-housing" name="upazila_id"
+                                    required>
+                                <option value="">Select Upazila</option>
+                            </select>
+                        </div>
 
-                    </select>
-                </div>
-                <div class="mb-3">
-                    <label class="custom-control-label">Housing</label>
-                    <select class="form-select" name="housing_id">
-                        <option value="">Select Housing</option>
-                    </select>
-                </div>
+                        <div class="col-md-3">
+                            <label for="housingSelect" class="form-label">Housing</label>
+                            <select id="housingSelect" class="form-select " name="housing_id" required>
+                                <option value="">Select Housing</option>
+                            </select>
+                        </div>
+                        <div class="col-md-3">
+                            <label class="form-label">Road</label>
+                            <input type="number" class="form-select" name="road" onwheel="this.blur()">
+                        </div>
 
-                <div class="mb-3">
-                    <label class="custom-control-label">Road</label>
-                    <input type="number" class="form-control" name="road">
-                </div>
+                        <div class="col-md-3">
+                            <label class="form-label">Block</label>
+                            <input type="text" class="form-select" name="block">
+                        </div>
 
-                <div class="mb-3">
-                    <label class="custom-control-label">Block</label>
-                    <input type="text" class="form-control" name="block">
-                </div>
+                        <div class="col-md-3">
+                            <label class="form-label">Plot Number</label>
+                            <input type="text" class="form-select" name="plot">
+                        </div>
 
-                <div class="mb-3">
-                    <label class="custom-control-label">Plot Number</label>
-                    <input type="text" class="form-control" name="plot">
-                </div>
+                        <div class="col-md-3">
+                            <label class="form-label">Plot Size</label>
+                            <input type="text" class="form-select" name="plot_size">
+                        </div>
 
-                <div class="mb-3">
-                    <label class="custom-control-label">Plot Size</label>
-                    <input type="number" class="form-control" name="plot_size">
-                </div>
+                        <div class="col-md-3">
+                            <label class="form-label">Plot Face</label>
+                            <select class="form-select" name="plot_face">
+                                <option>North</option>
+                                <option>South</option>
+                                <option>East</option>
+                                <option>West</option>
+                            </select>
+                        </div>
+                        <div class="col-md-3 mb-3">
+                            <label class="form-label">Storied</label>
+                            <input type="number" class="form-select" name="storied" onwheel="this.blur()">
+                        </div>
+                        <div class="col-md-3 mb-3">
+                            <label class="form-label">No of Units</label>
+                            <input type="number" class="form-select" name="no_of_units" onwheel="this.blur()">
+                        </div>
+                        <div class="col-md-3 mb-3">
+                            <label class="form-label">Floor Area</label>
+                            <input type="number" class="form-select" name="floor_area" onwheel="this.blur()">
+                        </div>
+                        <div class="col-md-3 mb-3">
+                            <label class="form-label">Floor No</label>
+                            <input type="number" class="form-select" name="floor_no" onwheel="this.blur()">
+                        </div>
+                        <div class="col-md-3 mb-3">
+                            <label class="form-label">No of Beds</label>
+                            <input type="number" class="form-select" name="no_of_beds" onwheel="this.blur()">
+                        </div>
+                        <div class="col-md-3 mb-3">
+                            <label class="form-label">No of Baths</label>
+                            <input type="number" class="form-select" name="no_of_baths" onwheel="this.blur()">
+                        </div>
+                        <div class="col-md-3 mb-3">
+                            <label class="form-label">No of Balcony</label>
+                            <input type="text" class="form-select" name="no_of_balcony">
+                        </div>
+                        <div class="col-md-3 mb-3">
+                            <label class="form-label">Owner Name</label>
+                            <input type="text" class="form-select" name="owner_name">
+                        </div>
+                        <div class="col-md-3 mb-3">
+                            <label class="form-label">Owner Phone</label>
+                            <input type="text" class="form-select" name="owner_phone">
+                        </div>
+                        <div class="col-md-3 mb-3">
+                            <label class="form-label">Owner Email</label>
+                            <input type="text" class="form-select" name="owner_email">
+                        </div>
+                        <div class="col-md-3 mb-3">
+                            <label class="form-label">Rate Per sqft</label>
+                            <input type="text" class="form-select" name="rate_per_sqft">
+                        </div>
+                        <div class="col-md-12 mb-3">
+                            <label class="form-label">Total Price</label>
+                            <input type="number" class="form-select" name="total_price">
+                        </div>
+                        <div class="col-md-3 mb-3">
+                            <label class="form-label">Is Corner</label>
+                            <div class="form-check">
+                                <input type="checkbox" class="form-check-input" name="is_corner" id="is_corner">
+                                <label class="form-check-label" for="is_corner">Yes</label>
+                            </div>
+                        </div>
+                        <div class="col-md-3 mb-3">
+                            <label class="custom-control-label">Parking Available?</label>
+                            <input type="checkbox" class="form-checkbox" name="parking_available">
+                        </div>
+                        <div class="col-12 mb-3">
+                            <label class="form-label">Description</label>
+                            <textarea class="form-select" name="description" rows="5"></textarea>
+                            <button type="button" class="btn btn-primary mt-3" id="add-image-btn">Add Image</button>
+                        </div>
 
-                <div class="mb-3">
-                    <label class="custom-control-label">Plot Face</label>
-                    <select class="form-control" name="plot_face">
-                        <option>North</option>
-                        <option>South</option>
-                        <option>East</option>
-                        <option>West</option>
-                    </select>
-                </div>
+                        <div class="image-input-container">
+                            <div class="col-12 mb-3">
+                                <input type="file" class="form-select" name="project_image[]" accept="image/*">
+                            </div>
+                        </div>
 
-                <div class="mb-3">
-                    <label class="custom-control-label">Is Corner</label>
-                    <input type="checkbox" class="form-checkbox" name="is_corner">
-                </div>
+                        <div class="col-12 mb-3">
+                            <label class="form-label" for="autocomplete">Enter Address</label>
+                            <input type="text" class="form-select" id="autocomplete" placeholder="Enter your address">
+                        </div>
+                        <label class="form-label card-body">Amenities</label>
+                        <div class="row">
+                            @foreach($amenities as $amenity)
+                                <div class="col-md-4 col-sm-6 mb-3">
+                                    <div class="d-flex align-items-center">
+                                        <input
+                                                class="form-check-input"
+                                                type="checkbox"
+                                                id="amenity_{{ $amenity->id }}"
+                                                name="amenities[]"
+                                                value="{{ $amenity->id }}"
+                                                checked
+                                                style="border-color: #0c4128; background-color: teal;"
+                                        >
 
-                <div class="mb-3">
-                    <label class="custom-control-label">Storied</label>
-                    <input type="number" class="form-control" name="storied">
-                </div>
-
-                <div class="mb-3">
-                    <label class="custom-control-label">No of Units</label>
-                    <input type="number" class="form-control" name="no_of_units">
-                </div>
-
-                <div class="mb-3">
-                    <label class="custom-control-label">Floor Area</label>
-                    <input type="number" class="form-control" name="floor_area">
-                </div>
-
-                <div class="mb-3">
-                    <label class="custom-control-label">Floor No</label>
-                    <input type="number" class="form-control" name="floor_no">
-                </div>
-
-                <div class="mb-3">
-                    <label class="custom-control-label">No of Beds</label>
-                    <input type="number" class="form-control" name="no_of_beds">
-                </div>
-
-                <div class="mb-3">
-                    <label class="custom-control-label">No of Baths</label>
-                    <input type="number" class="form-control" name="no_of_baths">
-                </div>
-
-                <div class="mb-3">
-                    <label class="custom-control-label">No of Balcony</label>
-                    <input type="number" class="form-control" name="no_of_balcony">
-                </div>
-
-                <div class="mb-3">
-                    <label class="custom-control-label">Parking Available?</label>
-                    <input type="checkbox" class="form-checkbox" name="parking_available">
-                </div>
-
-                <div class="mb-3">
-                    <label class="custom-control-label">Owner Name</label>
-                    <input type="text" class="form-control" name="owner_name">
-                </div>
-
-                <div class="mb-3">
-                    <label class="custom-control-label">Owner Phone</label>
-                    <input type="text" class="form-control" name="owner_phone">
-                </div>
-
-                <div class="mb-3">
-                    <label class="custom-control-label">Owner Email</label>
-                    <input type="text" class="form-control" name="owner_email">
-                </div>
-
-                <div class="mb-3">
-                    <label class="custom-control-label">Rate Per sqft</label>
-                    <input type="text" class="form-control" name="rate_per_sqft">
-                </div>
-
-                <div class="mb-3">
-                    <label class="custom-control-label">Total Price</label>
-                    <input type="number" class="form-control" name="total_price">
-                </div>
-
-                <div class="mb-3">
-                    <label class="custom-control-label">Description</label>
-                    <textarea class="form-control" name="description" rows="5"></textarea>
-                </div>
-
-                <div class="mb-3">
-                    <label class="custom-control-label">Project Image</label>
-                    <input type="file" class="form-control" style="margin-bottom: 15px;" name="project_image[]" accept="image/*">
-                    <button class="btn btn-primary btn-sm image_add_btn">Add Image</button>
-                </div>
-                <button class="btn btn-primary mt-4">Submit</button>
-            </form>
+                                        <label for="amenity_{{ $amenity->id }}" class="form-check-label">
+                                            {{ $amenity->name }}
+                                        </label>
+                                    </div>
+                                </div>
+                            @endforeach
+                        </div>
+                    </div>
+                    <button class="btn btn-primary mt-4">Submit</button>
+                </form>
+            </div>
         </div>
     </div>
 
+    <script src="{{ asset('assets/js/ajax-handlers.js') }}"></script>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
     <script>
-        $('select[name="division_id"]').change(function(){
-            var division_id = $(this).val();
-            $.ajax({
-                headers: {
-
-                },
-                url : "{{route('districts_by_division_id')}}",
-                data : {
-                    "_token": "{{ csrf_token() }}",
-                    'division_id' : division_id
-                },
-                type : 'POST',
-                dataType : 'html',
-                success : function(result){
-                    $('select[name="district_id"]').html('');
-                    $('select[name="district_id"]').append(result);
-                }
-            });
+        $('#add-image-btn').click(function () {
+            $('.image-input-container').append(`
+            <div class="col-12 mb-3">
+                <input type="file" class="form-select" name="project_image[]" accept="image/*">
+            </div>
+        `);
         });
-
-
-        $('select[name="district_id"]').change(function(){
-            var district_id = $(this).val();
-            $.ajax({
-                headers: {
-
-                },
-                url : "{{route('upazillas_by_district_id')}}",
-                data : {
-                    "_token": "{{ csrf_token() }}",
-                    'district_id' : district_id
-                },
-                type : 'POST',
-                dataType : 'html',
-                success : function(result){
-                    $('select[name="upazila_id"]').html('');
-                    $('select[name="upazila_id"]').append(result);
-                }
-            });
-        });
-
-
-
-
-        $('select[name="upazila_id"]').change(function(){
-            var upazila_id = $(this).val();
-            $.ajax({
-                headers: {
-
-                },
-                url : "{{route('housings_by_upazila_id')}}",
-                data : {
-                    "_token": "{{ csrf_token() }}",
-                    'upazila_id' : upazila_id
-                },
-                type : 'POST',
-                dataType : 'html',
-                success : function(result){
-                    $('select[name="housing_id"]').html('');
-                    $('select[name="housing_id"]').append(result);
-                }
-            });
-        });
-
-
-        $('.image_add_btn').click(function (){
-            event.preventDefault();
-            $('<input type="file" class="form-control" name="project_image[]" accept="image/*"><br>').insertBefore(this);
-        });
-
-        // Example starter JavaScript for disabling form submissions if there are invalid fields
-        (function () {
-            'use strict'
-
-            // Fetch all the forms we want to apply custom Bootstrap validation styles to
-            var forms = document.querySelectorAll('.needs-validation')
-
-            // Loop over them and prevent submission
-            Array.prototype.slice.call(forms)
-                .forEach(function (form) {
-                    form.addEventListener('submit', function (event) {
-                        if (!form.checkValidity()) {
-                            event.preventDefault()
-                            event.stopPropagation()
-                        }
-
-                        form.classList.add('was-validated')
-                    }, false)
-                })
-        })()
-
     </script>
+
 @endsection

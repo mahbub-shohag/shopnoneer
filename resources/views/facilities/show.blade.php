@@ -17,9 +17,11 @@
         <div class="row justify-content-center">
             <div class="col-md-10">
                 <div class="card shadow-lg border-0">
+
                     <div class="card-header bg-teal text-white text-center">
                         <h1 class="mb-0">Facility Details</h1>
                     </div>
+
                     <div class="card-body p-5">
                         <div class="table-responsive">
                             <table class="table table-hover table-striped table-bordered text-center" style="font-size: 1.5rem;">
@@ -44,16 +46,19 @@
                                     <td class="bg-dark text-white" style="padding: 1rem;">Upazila</td>
                                     <td style="padding: 1rem;">{{ $facility->upazila->name }}</td>
                                 </tr>
-                                <tr>
-                                    <td class="bg-dark text-white" style="padding: 1rem;">Google Map URL</td>
-                                    <td style="padding: 1rem;"><a href="{{ $facility->google_map_url }}" target="_blank">View Map</a></td>
-                                </tr>
                                 </tbody>
                             </table>
+                            <div id="map" style="height: 500px; width: 100%;"
+                                 data-latitude="{{ $facility->latitude }}"
+                                 data-longitude="{{ $facility->longitude }}">
+                            </div>
                         </div>
                     </div>
                 </div>
             </div>
         </div>
     </div>
+    <script src="{{ asset('assets/js/google-maps.js') }}"></script>
+    <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyABnAbo9ifTK9aGO-2oBameLdIKPxVKoXI&callback=initAutocomplete&libraries=places" defer></script>
+
 @endsection
