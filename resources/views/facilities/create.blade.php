@@ -21,7 +21,7 @@
         </div>
 
         <div class="card-body">
-            <form action="{{ route('facility.store') }}" method="POST">
+            <form class="preventSubmit" action="{{ route('facility.store') }}" method="POST">
                 {{ csrf_field() }}
                 {{ method_field('POST') }}
 

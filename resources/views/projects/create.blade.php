@@ -141,13 +141,13 @@
                         <div class="col-md-3 mb-3">
                             <label class="form-label">Is Corner</label>
                             <div class="form-check">
-                                <input type="checkbox" class="form-check-input" name="is_corner" id="is_corner">
+                                <input type="checkbox" class="form-check-input initially-all-check-box" name="is_corner" id="is_corner" onchange="toggleCheckboxBackground(this)">
                                 <label class="form-check-label" for="is_corner">Yes</label>
                             </div>
                         </div>
                         <div class="col-md-3 mb-3">
-                            <label class="custom-control-label">Parking Available?</label>
-                            <input type="checkbox" class="form-checkbox" name="parking_available">
+                            <input  type="checkbox" class="form-check-input initially-all-check-box" name="parking_available"  onchange="toggleCheckboxBackground(this)">
+                            <label class="form-check-label">Parking Available?</label>
                         </div>
                         <div class="col-12 mb-3">
                             <label class="form-label">Description</label>
@@ -163,7 +163,7 @@
 
                         <div class="col-12 mb-3">
                             <label class="form-label" for="autocomplete">Enter Address</label>
-                            <input type="text" class="form-select" id="autocomplete" placeholder="Enter your address">
+                            <input type="text" class="form-select"  id="autocomplete" placeholder="Enter your address">
                         </div>
                         <label class="form-label card-body">Amenities</label>
                         <div class="row">
@@ -171,15 +171,14 @@
                                 <div class="col-md-4 col-sm-6 mb-3">
                                     <div class="d-flex align-items-center">
                                         <input
-                                                class="form-check-input"
+                                                class="form-check-input initially-all-check-box"
                                                 type="checkbox"
                                                 id="amenity_{{ $amenity->id }}"
                                                 name="amenities[]"
                                                 value="{{ $amenity->id }}"
                                                 checked
-                                                style="border-color: #0c4128; background-color: teal;"
+                                                onchange="toggleCheckboxBackground(this)"
                                         >
-
                                         <label for="amenity_{{ $amenity->id }}" class="form-check-label">
                                             {{ $amenity->name }}
                                         </label>
@@ -187,6 +186,10 @@
                                 </div>
                             @endforeach
                         </div>
+
+                        <!-- Include External JS -->
+                        <script src="{{ asset('js/amenities.js') }}"></script>
+
                     </div>
                     <button class="btn btn-primary mt-4">Submit</button>
                 </form>

@@ -21,7 +21,7 @@
         </div>
 
         <div class="card-body">
-            <form action="{{ route('housing.update', $housing->id) }}" method="POST">
+            <form class="preventSubmit" action="{{ route('housing.update', $housing->id) }}" method="POST">
                 {{ csrf_field() }}
                 {{ method_field('PUT') }}
 
@@ -64,7 +64,7 @@
                     </div>
                     <div class="form-group">
                         <label for="upazilaSelect" class="form-label">Upazila</label>
-                        <select id="upazilaSelect" class="form-select upazila-select-housing" name="upazila_id" required>
+                        <select id="upazilaSelect" class="form-select upazila-select-facilities" name="upazila_id" required>
                             <option value="">Select Upazila</option>
                             @foreach($upazilas as $upazila)
                                 <option value="{{ $upazila->id }}" @if($upazila->id == $housing->upazila_id) selected @endif>
@@ -87,9 +87,10 @@
                                 <div class="card-body">
                                     @foreach ($facilities as $facility)
                                         <div class="form-check">
-                                            <input class="form-check-input" type="checkbox"
+                                            <input class="form-check-input initially-all-check-box" type="checkbox"
                                                    name="facilities[{{ $facility->id }}]"
                                                    value="{{ $facility->id }}"
+                                                   onchange="toggleCheckboxBackground(this)"
                                                    @if(in_array($facility->id, $selectedFacilities)) checked @endif>
                                             <label class="form-check-label">
                                                 {{ $facility->name }}
@@ -111,8 +112,6 @@
                         <input value="{{ $housing->longitude }}"  id="longitude" type="text" name="longitude" class="form-select" placeholder="Longitude" required>
                     </div>
                 </div>
-
-
                 <input
                         style="margin-bottom: 30px;margin-top: 10px;width: 15%"
                         id="pac-input"
@@ -130,7 +129,6 @@
         </div>
     </div>
 
-    <!-- Scripts -->
     <script src="{{ asset('assets/js/ajax-handlers.js') }}"></script>
     <script src="{{ asset('assets/js/google-maps.js') }}"></script>
     <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyABnAbo9ifTK9aGO-2oBameLdIKPxVKoXI&callback=initAutocomplete&libraries=places" defer></script>

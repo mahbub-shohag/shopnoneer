@@ -21,7 +21,7 @@
         </div>
 
         <div class="card-body">
-            <form action="{{ route('facility.update', $facility->id) }}" method="POST">
+            <form class="preventSubmit" action="{{ route('facility.update', $facility->id) }}" method="POST">
                 {{ csrf_field() }}
                 {{ method_field('PUT') }}
 
@@ -96,8 +96,6 @@
                         <input value="{{ $facility->longitude }}"  id="longitude" type="text" name="longitude" class="form-select" placeholder="Longitude" required>
                     </div>
                 </div>
-
-
                 <input
                         style="margin-bottom: 30px;margin-top: 10px;width: 15%"
                         id="pac-input"

@@ -16,7 +16,7 @@
             Housing
         </div>
         <div class="card-body">
-            <form id="housingForm" action="{{ route('housing.store') }}" method="POST">
+            <form class="preventSubmit" action="{{ route('housing.store') }}" method="POST">
                 @csrf
                 @if ($errors->any())
                     <div class="alert alert-danger">
@@ -50,7 +50,8 @@
                     </div>
                     <div class="form-group">
                         <label for="upazilaSelect" class="form-label">Upazila</label>
-                        <select id="upazilaSelect" class="form-select upazila-select-facilities" name="upazila_id" required>
+                        <select id="upazilaSelect" class="form-select upazila-select-facilities" name="upazila_id"
+                                required>
                             <option value="">Select Upazila</option>
                         </select>
                     </div>
@@ -61,22 +62,33 @@
                 <div class="d-flex flex-wrap gap-3 align-items-start">
                     <div class="form-group">
                         <label for="latitude" class="form-label">Latitude</label>
-                        <input id="latitude" type="text" name="latitude" class="form-select" placeholder="Latitude" required>
+                        <input id="latitude" type="text" name="latitude" class="form-select" placeholder="Latitude"
+                               required>
                     </div>
                     <div class="form-group">
                         <label for="longitude" class="form-label">Longitude</label>
-                        <input id="longitude" type="text" name="longitude" class="form-select" placeholder="Longitude" required>
+                        <input id="longitude" type="text" name="longitude" class="form-select" placeholder="Longitude"
+                               required>
                     </div>
                 </div>
-                <input id="pac-input" class="controls my-4" type="text" placeholder="Search Box">
+                <input
+                        id="pac-input"
+                        class="controls my-4"
+                        type="text"
+                        placeholder="Search Box"
+                />
                 <div id="map" style="height: 500px; width: 100%;"></div>
-                <button type="submit" class="btn btn-primary mt-4">Submit</button>
+
+
+                <button type="submit" class="btn btn-primary mt-4">
+                    Submit
+                </button>
             </form>
         </div>
     </div>
 
-    <!-- Include External Scripts -->
     <script src="{{ asset('assets/js/ajax-handlers.js') }}"></script>
     <script src="{{ asset('assets/js/google-maps.js') }}"></script>
-    <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyABnAbo9ifTK9aGO-2oBameLdIKPxVKoXI&callback=initAutocomplete&libraries=places" defer></script>
+    <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyABnAbo9ifTK9aGO-2oBameLdIKPxVKoXI&callback=initAutocomplete&libraries=places"
+            defer></script>
 @endsection
