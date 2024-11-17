@@ -28,7 +28,7 @@ class HousingController extends Controller
         $divisions = Division::all();
         $districts = District::all();
         $upazilas = Upazila::all();
-        $groupedFacilities = Facility::all()->groupBy('category_id');
+        $groupedFacilities = Facility::where('upazila_id',$housing->upazila_id)->get()->groupBy('category_id');
         $selectedFacilities = $housing->facilities->pluck('id')->toArray();
 
         return view('housings.edit', [

@@ -98,8 +98,9 @@
 
 /* Focus effect on the input field */
 #pac-input:focus {
-    border-color: #4d90fe;
-    box-shadow: 0 0 8px rgba(77, 144, 254, 0.7);
+    border-color: #009688; /* Highlight color for focus */
+    outline: none;
+    box-shadow: 0 0 4px rgba(0, 150, 136, 0.5);
 }
 
 /* Styling for search button */

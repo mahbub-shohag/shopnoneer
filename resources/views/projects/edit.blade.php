@@ -229,13 +229,12 @@
                                 <div class="col-md-4 col-sm-6 mb-3">
                                     <div class="d-flex align-items-center">
                                         <input
-                                                class="form-check-input"
+                                                class="form-check-input initially-all-check-box"
                                                 type="checkbox"
                                                 id="amenity_{{ $amenity->id }}"
                                                 name="amenities[]"
                                                 value="{{ $amenity->id }}"
-
-                                                style="border-color: #0c4128; background-color: teal;"
+                                                onchange="toggleCheckboxBackground(this)"
                                         >
 
                                         <label for="amenity_{{ $amenity->id }}" class="form-check-label">

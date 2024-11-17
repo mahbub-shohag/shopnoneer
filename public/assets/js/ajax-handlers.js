@@ -19,7 +19,7 @@ $('#divisionSelect').change(function () {
     let divisionId = $(this).val();
     fetchOptions(
         "/districts_by_division_id",
-        { _token: $("meta[name='csrf-token']").attr("content"), division_id: divisionId },
+        {_token: $("meta[name='csrf-token']").attr("content"), division_id: divisionId},
         '#districtSelect',
         '#upazilaSelect'
     );
@@ -29,11 +29,10 @@ $('#districtSelect').change(function () {
     let districtId = $(this).val();
     fetchOptions(
         "/upazillas_by_district_id",
-        { _token: $("meta[name='csrf-token']").attr("content"), district_id: districtId },
+        {_token: $("meta[name='csrf-token']").attr("content"), district_id: districtId},
         '#upazilaSelect',
     );
 });
-
 
 
 // For Create Project
@@ -57,10 +56,14 @@ $('.upazila-select-facilities').change(function () {
 
                 $.each(category, function (index, facility) {
                     cardHTML += `
-                        <div class="form-check">
-                            <input class="form-check-input" type="checkbox" name="facilities[${facility.id}]" value="${facility.id}">
-                            <label class="form-check-label">${facility.name}</label>
+
+                       <div class="form-check">
+                        <input class="form-check-input initially-all-check-box" type="checkbox" name="facilities[${facility.id}]" value="${facility.id}"
+                        onchange="toggleCheckboxBackground(this)"
+                        >
+                       <label class="form-check-label">${facility.name}</label>
                         </div>
+
                     `;
                 });
 
@@ -76,6 +79,7 @@ $('.upazila-select-facilities').change(function () {
         }
     });
 });
+
 
 $('.upazila-select-housing').change(function () {
     let upazilaId = $(this).val();
@@ -100,3 +104,24 @@ $('.upazila-select-housing').change(function () {
 });
 
 
+//  Here use the customized Checked-Box
+function toggleCheckboxBackground(c) {
+    c.style.backgroundColor = c.checked ? 'teal' : 'white';
+    c.style.borderColor = 'teal';
+}
+
+// Initialize background color for all checkboxes on page load
+document.addEventListener("DOMContentLoaded", function() {
+    const checkboxes = document.querySelectorAll(".initially-all-check-box"); // Select all checkboxes with the class 'custom-checkbox'
+    checkboxes.forEach(c => {
+        toggleCheckboxBackground(c); // Apply initial background color
+    });
+});
+
+// prevent the form submission on enter button
+
+$('.preventSubmit input[type="text"]').on('keydown', function (event) {
+    if (event.key === 'Enter') {
+        event.preventDefault();
+    }
+});
