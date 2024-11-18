@@ -175,14 +175,14 @@
                         </div>
                         <div class="col-md-12mb-3">
                             <label class="custom-control-label">Is Corner?</label>
-                            <input type="checkbox" class="form-checkbox" name="is_corner"
+                            <input type="checkbox" class="form-check-input initially-all-check-box" name="is_corner" onchange="toggleCheckboxBackground(this)"
                                    value="{{ $project->is_corner}}"
                                     {{$project->is_corner == 1  ? 'checked' : ''}}
                             >
                         </div>
                         <div class="mb-3">
                             <label class="custom-control-label">Parking Available?</label>
-                            <input type="checkbox" class="form-checkbox" name="parking_available"
+                            <input type="checkbox" class="form-check-input initially-all-check-box" name="parking_available" onchange="toggleCheckboxBackground(this)"
                                    value="{{ $project->parking_available}}"
                                     {{$project->parking_available == 1  ? 'checked' : ''}}
                             >
@@ -197,13 +197,12 @@
                         <div style="display: flex; gap: 1rem; flex-wrap: wrap;">
                             @foreach($project->getMedia('project_image') as $image)
                                 <label style="position: relative; width: auto; height: 60px; border-radius: 8px; overflow: hidden; display: flex; justify-content: center; align-items: center; cursor: pointer;">
-                                    <img style="max-width: 100%; max-height: 100%; object-fit: cover; opacity: 0.6; transition: opacity 0.3s;" src="{{ $image->getUrl() }}" alt="Image">
+                                    <img style="max-width: 100%; max-height: 100%; object-fit: cover;  transition: opacity 0.3s;" src="{{ $image->getUrl() }}" alt="Image">
                                     <input
                                             type="checkbox"
                                             name="delete_images[]"
                                             value="{{ $image->id }}"
                                             style="display: none;"
-                                            checked
                                             onclick="this.previousElementSibling.style.opacity = this.checked ? '0.5' : '1';">
                                 </label>
                             @endforeach
@@ -235,7 +234,11 @@
                                                 name="amenities[]"
                                                 value="{{ $amenity->id }}"
                                                 onchange="toggleCheckboxBackground(this)"
-                                        >
+{{--                                                @if(in_array($amenity->id, $amenities)) checked @endif--}}
+                                                @if(in_array($amenity->id, $project->amenities->pluck('id')->toArray())) checked @endif
+                                        />
+
+
 
                                         <label for="amenity_{{ $amenity->id }}" class="form-check-label">
                                             {{ $amenity->name }}

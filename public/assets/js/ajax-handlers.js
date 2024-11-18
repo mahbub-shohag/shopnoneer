@@ -104,19 +104,25 @@ $('.upazila-select-housing').change(function () {
 });
 
 
-//  Here use the customized Checked-Box
+
+
+
 function toggleCheckboxBackground(c) {
     c.style.backgroundColor = c.checked ? 'teal' : 'white';
     c.style.borderColor = 'teal';
 }
 
-// Initialize background color for all checkboxes on page load
 document.addEventListener("DOMContentLoaded", function() {
-    const checkboxes = document.querySelectorAll(".initially-all-check-box"); // Select all checkboxes with the class 'custom-checkbox'
+    const checkboxes = document.querySelectorAll(".initially-all-check-box");
     checkboxes.forEach(c => {
         toggleCheckboxBackground(c); // Apply initial background color
     });
 });
+
+
+
+
+
 
 // prevent the form submission on enter button
 

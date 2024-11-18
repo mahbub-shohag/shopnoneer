@@ -23,7 +23,8 @@
                     </div>
                     <div class="card-body p-5">
                         <div class="table-responsive">
-                            <table class="table table-hover table-striped table-bordered text-center" style="font-size: 1.5rem;">
+                            <table class="table table-hover table-striped table-bordered text-center"
+                                   style="font-size: 1.5rem;">
                                 <tbody>
                                 <tr>
                                     <td class="bg-dark text-white" style="width: 25%; padding: 1rem;">Name</td>
@@ -40,10 +41,12 @@
                                 <tr>
                                     <td class="bg-dark text-white" style="padding: 1rem;">Upazila</td>
                                     <td style="padding: 1rem;">{{ $housing->upazila->name }}</td>
-                                </tr> <tr>
+                                </tr>
+                                <tr>
                                     <td class="bg-dark text-white" style="padding: 1rem;">Latitude</td>
                                     <td style="padding: 1rem;">{{ $housing->latitude}}</td>
-                                </tr> <tr>
+                                </tr>
+                                <tr>
                                     <td class="bg-dark text-white" style="padding: 1rem;">Longitude</td>
                                     <td style="padding: 1rem;">{{ $housing->longitude }}</td>
                                 </tr>
@@ -60,14 +63,21 @@
                     </div>
                     <div class="card-body p-5">
                         <div class="table-responsive">
-                            <table class="table table-hover table-striped table-bordered text-center" style="font-size: 1.5rem;">
+                            <table class="table table-hover table-striped table-bordered text-center"
+                                   style="font-size: 1.5rem;">
                                 <tbody>
                                 @if ($housing->facilities->isNotEmpty())
                                     @foreach ($housing->facilities->groupBy('category.label') as $categoryLabel => $facilities)
                                         <tr>
-                                            <td class="bg-dark text-white" style="width: 25%; padding: 1rem;">{{ $categoryLabel }}</td>
+                                            <td class="bg-dark text-white"
+                                                style="width: 25%; padding: 1rem;">{{ $categoryLabel }}</td>
                                             <td style="padding: 1rem;">
-                                                {{ $facilities->pluck('name')->join(', ') }}
+                                                <!-- Loop through each facility and display it with a larger teal badge -->
+                                                @foreach ($facilities as $facility)
+                                                    <span class="badge mt-3 bg-teal text-white fs-5 p-2 me-2">
+                                                      {{ $facility->name }}
+                                                    </span>
+                                                @endforeach
                                             </td>
                                         </tr>
                                     @endforeach
@@ -78,6 +88,9 @@
                                     </tr>
                                 @endif
                                 </tbody>
+                            </table>
+
+
                             </table>
                             <div id="map" style="height: 500px; width: 100%;"
                                  data-latitude="{{ $housing->latitude }}"
@@ -90,7 +103,8 @@
         </div>
     </div>
     <script src="{{ asset('assets/js/google-maps.js') }}"></script>
-    <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyABnAbo9ifTK9aGO-2oBameLdIKPxVKoXI&callback=initAutocomplete&libraries=places" defer></script>
+    <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyABnAbo9ifTK9aGO-2oBameLdIKPxVKoXI&callback=initAutocomplete&libraries=places"
+            defer></script>
 
     <!-- Custom CSS for Teal and Indigo 200 theme -->
     <style>

@@ -50,7 +50,7 @@
 {{--                            <img src="{{$project->project_image}}" width="120px" alt="Image">--}}
                         </td>
                         <td>
-                            <div style="display: flex; align-items: center; justify-content: space-around; width: 100%;">
+                            <div style="display: flex; align-items: center; justify-content: space-around; width: auto;">
                                 <!-- Edit Link -->
                                 <a href="{{ route('project.edit', ['project' => $project]) }}" class="btn-icon btn-edit">
                                     <i class="fas fa-pencil-alt"></i>

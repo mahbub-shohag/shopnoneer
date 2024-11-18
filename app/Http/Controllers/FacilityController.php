@@ -38,7 +38,7 @@ class FacilityController extends Controller
 
             return redirect('facility')->with('success', 'Facility created successfully.');
         } catch (\Exception $e) {
-            return redirect('facility.create')->with('error', $e->getMessage());
+            return redirect('facility/create')->with('error', $e->getMessage());
         }
     }
 
@@ -99,7 +99,7 @@ class FacilityController extends Controller
 
             return redirect('/facility')->with('success', 'Facility updated successfully.');
         } catch (\Exception $e) {
-            return redirect('/facility.edit', $facility->id)->with('error', 'Failed to update facility. Please try again.');
+            return redirect('/facility/edit', $facility->id)->with('error', 'Failed to update facility. Please try again.');
         }
     }
 

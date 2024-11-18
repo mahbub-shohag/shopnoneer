@@ -41,11 +41,8 @@ class ProjectController extends Controller
         $upazilas = Upazila::all();
         $housings = Housing::all();
         $amenities = Amenity::all();
-
-
         return view('projects.edit',['project' =>$project,'housings'=>$housings,'divisions' => $divisions,'districts' => $districts,'upazillas' => $upazilas,'amenities'=>$amenities]);
     }
-
 
 
     public function store(Request $request)
@@ -99,10 +96,8 @@ class ProjectController extends Controller
             $project->save();
             $project->amenities()->attach($amenities);
 
-            // If everything is successful, redirect with success message
             return redirect('/project')->with('success', 'Project created successfully!');
         } catch (\Exception $e) {
-            // If something goes wrong, return back with an error message
             return redirect()->back()->with('error', 'Failed to create project: ' . $e->getMessage());
         }
     }
@@ -152,7 +147,6 @@ class ProjectController extends Controller
 
 
         try {
-            // Delete selected images
             if ($request->has('delete_images')) {
                 foreach ($request->input('delete_images') as $imageId) {
                     $media = $project->media()->find($imageId);
@@ -162,7 +156,6 @@ class ProjectController extends Controller
                 }
             }
 
-            // Upload new images if provided
             if ($request->hasFile('project_image')) {
                 foreach ($request->file('project_image') as $image) {
                     $project->addMedia($image)->toMediaCollection('project_image');
@@ -176,7 +169,12 @@ class ProjectController extends Controller
         }
 
         $project->save();
-        $project->amenities()->attach($amenities);
+        if ($request->has('amenities')) {
+            $amenities = $request->input('amenities');
+            $project->amenities()->sync($amenities);
+        } else {
+            $project->amenities()->detach();
+        }
 
         return redirect('/project')->with('success', 'Project updated successfully.');
     }

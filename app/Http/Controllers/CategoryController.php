@@ -31,29 +31,35 @@ class CategoryController extends Controller
         return view('categories.edit', ['category' => $category, 'category_types' => $category_types]);
 
     }
-
-
-
-
     public function store(Request $request)
     {
-        $category = new Category();
-        $category->label = $request->label;
-        $category->parent_id = $request->parent_id;
-        $category->save();
-        return redirect('/category')->with('success', 'Category created successfully.');
+        try {
+            $category = new Category();
+            $category->label = $request->label;
+            $category->parent_id = $request->parent_id;
+            $category->save();
+            return redirect('/category')->with('success', 'Category created successfully.');
+        }
+        catch (\Exception $e) {
+            return redirect('/category')->with('error', $e->getMessage());
+        }
     }
     public function update(Request $request, Category $category)
     {
-        $request->validate([
-            'label' => 'required|string|max:255',
-            'parent_id' => 'nullable|exists:categories,id', // Ensure parent_id exists in the categories table
-        ]);
+        try {
+            $request->validate([
+                'label' => 'required|string|max:255',
+                'parent_id' => 'nullable|exists:categories,id', // Ensure parent_id exists in the categories table
+            ]);
 
-        $category->label = $request->label;
-        $category->parent_id = $request->parent_id;
-        $category->save();
-        return redirect('category')->with('success', 'Category updated successfully.');
+            $category->label = $request->label;
+            $category->parent_id = $request->parent_id;
+            $category->save();
+            return redirect('category')->with('success', 'Category updated successfully.');
+        } catch (\Exception $e) {
+            return redirect('/category/edit')->with('error',$e->getMessage());
+
+        }
 
 
     }

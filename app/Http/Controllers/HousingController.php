@@ -115,7 +115,7 @@ class HousingController extends Controller
             }
             return redirect('/housing')->with('success', 'Housing updated successfully.');
         } catch (\Exception $e) {
-            return redirect('/housing')->with($e->getMessage());
+            return redirect('/housing/edit')->with($e->getMessage());
         }
     }
 
