@@ -67,8 +67,9 @@ class FavouriteController extends Controller
     /*API Start*/
     public function addFavourite(Request $request){
         $favourite = new Favourite();
-        $favourite->project_id;
+        $favourite->project_id = $request->project_id;
         $favourite->user_id = Auth::user()->id;
+        $favourite->is_active = 1;
         $favourite->save();
         if($favourite){
             return $this->returnSuccess('Favourite addedd successfully',$favourite);
@@ -80,13 +81,13 @@ class FavouriteController extends Controller
     public function favouriteListByUser(Request $request){
         $favourites = Favourite::with('project')
             ->where('is_active',1)
-            ->where('user_id',Auth::user()->id);
+            ->where('user_id',Auth::user()->id)->get();
         return $this->returnSuccess('Favourite List',$favourites);
     }
 
     public function removeFavourite(Request $request){
-        $favourite_id = $request->input('favourite_id');
-        $favourite = Favourite::where('id',$favourite_id)->first()->id;
+        $project_id = $request->input('project_id');
+        $favourite = Favourite::where('project_id',$project_id)->where('user_id',Auth::user()->id)->first();
         $favourite->is_active = 0;
         $favourite->save();
         return $this->returnSuccess('Favourite removed',$favourite);

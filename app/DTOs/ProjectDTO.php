@@ -36,7 +36,8 @@ class ProjectDTO
     public $is_active;
     public $images;
 
-    public $nearest_facilities;
+    public $facilities;
+    public $amenities;
 
     public function __construct($id, $title, $division, $district, $upazila, $housing, $road, $block, $plot, $plot_size, $plot_face, $is_corner, $storied, $no_of_units, $floor_area, $floor_no, $no_of_beds, $no_of_baths, $no_of_balcony, $parking_available, $owner_name, $owner_phone, $owner_email, $rate_per_sqft, $total_price, $description, $google_map, $created_at, $updated_at, $is_active,$project)
     {
@@ -71,6 +72,8 @@ class ProjectDTO
         $this->updated_at = $updated_at;
         $this->is_active = $is_active;
         $this->images = $this->getImages($project);
+        $this->amenities = $project->amenities;
+        $this->facilities = $project->housing->facilities;
     }
 
     public static function fromModel($project)
@@ -154,6 +157,8 @@ class ProjectDTO
             'updated_at' => $this->updated_at,
             'is_active' => $this->is_active,
             'images' => $this->images,
+            'facilities' => $this->facilities,
+            'amenities' => $this->amenities,
         ];
     }
 }

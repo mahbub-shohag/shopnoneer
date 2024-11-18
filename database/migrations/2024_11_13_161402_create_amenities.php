@@ -14,9 +14,9 @@ return new class extends Migration
         Schema::create('amenities', function (Blueprint $table) {
             $table->id();
             $table->string('name');
-            $table->string('android_icon')->nullable()->after('name');
-            $table->string('ios_icon')->nullable()->after('android_icon');
-            $table->string('web_icon')->nullable()->after('ios_icon');
+            $table->string('android_icon')->nullable();
+            $table->string('ios_icon')->nullable();
+            $table->string('web_icon')->nullable();
             $table->timestamps();
         });
     }
