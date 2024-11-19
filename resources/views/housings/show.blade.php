@@ -16,7 +16,6 @@
     <div class="container mt-4">
         <div class="row justify-content-center">
             <div class="col-md-10">
-                <!-- Housing Details Card -->
                 <div class="card shadow-lg border-0">
                     <div class="card-header bg-teal text-white text-center">
                         <h1 class="mb-0">Housing Details</h1>

@@ -12,7 +12,7 @@
 
     <div class="auth-card shadow-lg rounded-lg">
         <div class="auth-card-header bg-teal text-white">
-            <h4 class="text-center font-semibold">Create a New Role</h4>
+            <h4 class="text-center p-3 ">Create a New Role</h4>
         </div>
         <div class="auth-card-body p-4">
             <form method="POST" action="{{ route('roles.store') }}">
@@ -20,8 +20,8 @@
 
                 <!-- Role Name Input -->
                 <div class="form-group mb-4">
-                    <label for="name" class="font-medium text-teal">Role Name</label>
-                    <input type="text" id="name" name="name" class="form-control focus:ring-teal-500 focus:border-teal-500 hover:border-teal-400" placeholder="Enter Role Name" required>
+                    <label for="name" class="font-medium text-teal form-label">Role Name</label>
+                    <input type="text" id="name" name="name" class="form-select" placeholder="Enter Role Name" required>
                 </div>
 
                 <!-- Permissions for Controllers and Methods -->
@@ -53,7 +53,6 @@
                             <div class="col-md-4">
                                 @foreach($group as $permission)
                                     @if(!in_array($permission['action'], $UnUsedMethods))
-                                        <!-- Display controller heading if it changes -->
                                         @if($permission['controller'] != $currentController)
                                             <h3 class="mt-3">{{ $permission['controller'] }}</h3>
                                             @php $currentController = $permission['controller']; @endphp
@@ -61,7 +60,7 @@
                                         <div class="form-check hover-checkbox">
                                             <input class="form-check-input" type="checkbox" name="permissions[]"
                                                    value="{{ $permission['controller'] . '@' . $permission['action'] }}"
-                                                   id="permission-{{ $permission['id'] }}">
+                                                   id="permission-{{ $permission['id'] }}" onchange="toggleCheckboxBackground(this)">
                                             <label class="form-check-label" for="permission-{{ $permission['id'] }}">
                                                 {{ ucfirst($permission['action']) }}
                                             </label>
@@ -73,14 +72,15 @@
                     </div>
                 </div>
 
-                <!-- Submit Button -->
                 <div class="text-center mt-5">
-                    <button type="submit" class="btn btn-teal px-4 py-2 rounded-md shadow-sm transition duration-300"> <!-- Custom Teal Button -->
+                    <button type="submit" class="btn btn-teal px-4 py-2 rounded-md shadow-sm transition duration-300">
                         Submit Role
                     </button>
                 </div>
             </form>
         </div>
     </div>
+    <script src="{{ asset('assets/js/ajax-handlers.js') }}"></script>
+
 
 @endsection

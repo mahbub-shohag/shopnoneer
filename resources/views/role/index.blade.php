@@ -41,17 +41,13 @@
                         <td><?php echo $role->id; ?></td>
                         <td><?php echo $role->name; ?></td>
                         <td>
-                            <!-- Flex Container for Edit, View, and Delete Actions -->
-                            <div style="display: flex; align-items: center; justify-content: space-around; width:30%;">
-                                <!-- Edit Link -->
+                            <div style="display: flex; align-items: center; justify-content: space-around; width:auto;">
                                 <a href="{{ route('roles.edit', ['role' => $role]) }}" class="btn-icon btn-edit">
                                     <i class="fas fa-pencil-alt"></i>
                                 </a>
-                                <!-- View Link -->
                                 <a href="{{ route('roles.show', ['role' => $role]) }}" class="btn-icon btn-view">
                                     <i class="fas fa-eye"></i>
                                 </a>
-                                <!-- Delete Form -->
                                 <form action="{{ route('roles.destroy', ['role' => $role]) }}" method="POST" style="margin: 0;">
                                     @csrf
                                     @method('DELETE')

@@ -46,17 +46,13 @@
                         <td>{{ $category->label }}</td>
                         <td>{{ $category->parent?->label ?? 'Root' }}</td>
                         <td>
-                            <!-- Flex Container for Edit, View, and Delete Actions -->
-                            <div style="display: flex; align-items: center; justify-content: space-around; width: 40%;">
-                                <!-- Edit Link -->
+                            <div style="display: flex; align-items: center; justify-content: space-around; width: auto;">
                                 <a href="{{ route('category.edit', ['category' => $category]) }}" class="btn-icon btn-edit">
                                     <i class="fas fa-pencil-alt"></i>
                                 </a>
-                                <!-- View Link -->
                                 <a href="{{ route('category.show', ['category' => $category]) }}" class="btn-icon btn-view">
                                     <i class="fas fa-eye"></i>
                                 </a>
-                                <!-- Delete Form -->
                                 <form action="{{ route('category.destroy', ['category' => $category]) }}" method="POST" style="margin: 0;">
                                     @csrf
                                     @method('DELETE')

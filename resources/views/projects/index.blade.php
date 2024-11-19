@@ -45,21 +45,17 @@
                         <td>{{$project->housing->name}}</td>
                         <td>
                             @foreach($project->getMedia('project_image') as $image)
-                                <img style="width: auto;height: 40px" src="{{$image->getUrl()}}" alt="Image"/>
+                                <img style="width: auto;height: 20px" src="{{$image->getUrl()}}" alt="Image"/>
                             @endforeach
-{{--                            <img src="{{$project->project_image}}" width="120px" alt="Image">--}}
                         </td>
                         <td>
-                            <div style="display: flex; align-items: center; justify-content: space-around; width: auto;">
-                                <!-- Edit Link -->
+                            <div style="display: flex; align-items: center; justify-content: space-around;">
                                 <a href="{{ route('project.edit', ['project' => $project]) }}" class="btn-icon btn-edit">
                                     <i class="fas fa-pencil-alt"></i>
                                 </a>
-                                <!-- View Link -->
                                 <a href="{{ route('project.show', ['project' => $project]) }}" class="btn-icon btn-view">
                                     <i class="fas fa-eye"></i>
                                 </a>
-                                <!-- Delete Form -->
                                 <form action="{{ route('project.destroy', ['project' => $project]) }}" method="POST" style="margin: 0;">
                                     @csrf
                                     @method('DELETE')

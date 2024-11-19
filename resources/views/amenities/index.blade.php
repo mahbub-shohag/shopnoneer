@@ -52,19 +52,15 @@
                         <td>{{$amenity->ios_icon }}</td>
                         <td>{{$amenity->web_icon }}</td>
                         <td>
-                            <!-- Flex Container for Edit, View, and Delete Actions -->
                             <div style="display: flex; align-items: center; justify-content: space-around; width: auto;">
-                                <!-- Edit Link -->
                                 <a href="{{ route('amenity.edit', ['amenity' => $amenity]) }}"
                                    class="btn-icon btn-edit">
                                     <i class="fas fa-pencil-alt"></i>
                                 </a>
-                                <!-- View Link -->
                                 <a href="{{ route('amenity.show', ['amenity' => $amenity]) }}"
                                    class="btn-icon btn-view">
                                     <i class="fas fa-eye"></i>
                                 </a>
-                                <!-- Delete Form -->
                                 <form action="{{ route('amenity.destroy', ['amenity' => $amenity]) }}" method="POST" style="margin: 0;">
                                     @csrf
                                     @method('DELETE')

@@ -74,8 +74,7 @@ class ProjectController extends Controller
             $project->rate_per_sqft = $request->rate_per_sqft;
             $project->total_price = $request->total_price;
             $project->description = $request->description;
-            $project->project_image = "";
-
+//            $project->project_image = "";
             $amenities = $request->amenities;
 
                 try {
@@ -85,23 +84,18 @@ class ProjectController extends Controller
                         }
                     }
 
-
                 } catch (FileDoesNotExist $e) {
                     return redirect()->back()->with('error', 'The uploaded file does not exist.');
                 } catch (FileIsTooBig $e) {
                     return redirect()->back()->with('error', 'The uploaded file is too large.');
                 }
-            //}
-
             $project->save();
             $project->amenities()->attach($amenities);
-
             return redirect('/project')->with('success', 'Project created successfully!');
         } catch (\Exception $e) {
             return redirect()->back()->with('error', 'Failed to create project: ' . $e->getMessage());
         }
     }
-
     public function update(Request $request, Project $project)
     {
         $project->title = $request->title;
@@ -129,23 +123,6 @@ class ProjectController extends Controller
         $project->rate_per_sqft = $request->rate_per_sqft;
         $project->total_price = $request->total_price;
         $project->description = $request->description;
-        $amenities = $request->amenities;
-
-//        if ($request->hasFile('project_image') && $request->file('project_image')->isValid()) {
-//            $project->media()->delete();
-//            $project->addMediaFromRequest('project_image')->toMediaCollection('project_image');
-//        }
-//
-//
-//
-//
-//        if ($request->hasFile('project_image') && $request->file('project_image')->isValid()) {
-//            $url = $project->getFirstMediaUrl('project_image', 'thumb');
-//            $project->project_image = $url;
-//            $project->save();
-//        }
-
-
         try {
             if ($request->has('delete_images')) {
                 foreach ($request->input('delete_images') as $imageId) {
@@ -167,7 +144,6 @@ class ProjectController extends Controller
         } catch (FileIsTooBig $e) {
             return redirect()->back()->with('error', 'The uploaded file is too large.');
         }
-
         $project->save();
         if ($request->has('amenities')) {
             $amenities = $request->input('amenities');

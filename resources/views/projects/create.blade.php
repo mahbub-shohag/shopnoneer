@@ -160,11 +160,6 @@
                                 <input type="file" class="form-select" name="project_image[]" accept="image/*">
                             </div>
                         </div>
-
-                        <div class="col-12 mb-3">
-                            <label class="form-label" for="autocomplete">Enter Address</label>
-                            <input type="text" class="form-select"  id="autocomplete" placeholder="Enter your address">
-                        </div>
                         <label class="form-label card-body">Amenities</label>
                         <div class="row">
                             @foreach($amenities as $amenity)

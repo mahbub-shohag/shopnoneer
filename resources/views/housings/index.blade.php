@@ -52,7 +52,7 @@
                     <td><?php echo $housing->district->name; ?></td>
                     <td>
                         <!-- Flex Container for Edit, View, and Delete Actions -->
-                        <div style="display: flex; align-items: center; justify-content: space-around; width: 70%;">
+                        <div style="display: flex; align-items: center; justify-content: space-around; width: auto;">
                             <!-- Edit Link -->
                             <a href="{{ route('housing.edit', ['housing' => $housing]) }}" class="btn-icon btn-edit">
                                 <i class="fas fa-pencil-alt"></i>

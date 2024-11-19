@@ -18,8 +18,6 @@
             <form action="{{ route('roles.update', $role->id) }}" method="POST">
                 @csrf
                 @method('PUT')
-
-                <!-- Role Name Input -->
                 <div class="form-group">
                     <label for="roleName">Role Name</label>
                     <input type="text" id="roleName" name="name"
@@ -28,8 +26,6 @@
                            placeholder="Enter Role Name"
                            required>
                 </div>
-
-                <!-- Permissions Checkboxes -->
                 <div class="row mt-4">
                     @php
                         $currentController = null;
@@ -58,13 +54,13 @@
                                             $currentController = $permission['controller'];
                                         @endphp
                                     @endif
-
-                                    <!-- Permission Action Checkbox -->
                                     <div class="form-check hover-checkbox">
-                                        <input class="form-check-input" type="checkbox" name="permissions[]"
+                                        <input class="form-check-input initially-all-check-box" type="checkbox" name="permissions[]"
                                                value="{{ $permission['controller'] . '@' . $permission['action'] }}"
                                                {{ in_array($permission['controller'] . '@' . $permission['action'], $rolePermissions) ? 'checked' : '' }}
-                                               id="permission-{{ $permission['id'] }}">
+                                               id="permission-{{ $permission['id'] }}"
+                                               onchange="toggleCheckboxBackground(this)"
+                                        >
                                         <label class="form-check-label" for="permission-{{ $permission['id'] }}">
                                             {{ $permission['action'] }}
                                         </label>
@@ -75,9 +71,10 @@
                     @endforeach
                 </div>
 
-                <!-- Submit Button -->
                 <button type="submit" class="btn btn-primary mt-3">Update Role</button>
             </form>
         </div>
     </div>
+    <script src="{{ asset('assets/js/ajax-handlers.js') }}"></script>
+
 @endsection

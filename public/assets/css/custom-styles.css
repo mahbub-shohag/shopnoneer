@@ -211,16 +211,6 @@ a:hover {
     cursor: pointer;
 }
 
-.hover-checkbox {
-    position: relative;
-    padding: 10px 15px;
-    border-radius: 5px;
-    transition: background-color 0.3s ease;
-}
-
-.hover-checkbox:hover {
-    background-color: #e0f7fa; /* Light teal on hover */
-}
 
 /* Checkbox */
 .form-check-input {
@@ -365,11 +355,11 @@ a:hover {
 /*------------- Hover Effects -------------*/
 .hover-item, .hover-checkbox {
     transition: background-color 0.3s ease;
-    padding: 10px 15px;
+    padding: 10px 25px;
     border-radius: 5px;
 }
 
-.hover-item:hover, .hover-checkbox:hover {
+.hover-item:hover {
     background-color: #e0f7fa;
     cursor: pointer;
 }
