@@ -11,12 +11,11 @@ return new class extends Migration
      */
     public function up(): void
     {
-        Schema::create('amenities', function (Blueprint $table) {
+        Schema::create('favourites', function (Blueprint $table) {
             $table->id();
-            $table->string('name');
-            $table->string('android_icon')->nullable();
-            $table->string('ios_icon')->nullable();
-            $table->string('web_icon')->nullable();
+            $table->foreignId('user_id')->constrained();
+            $table->foreignId('project_id')->constrained();
+            $table->boolean('is_active')->default(false);
             $table->timestamps();
         });
     }
@@ -26,6 +25,6 @@ return new class extends Migration
      */
     public function down(): void
     {
-        Schema::dropIfExists('amenities');
+        Schema::dropIfExists('favourites');
     }
 };
