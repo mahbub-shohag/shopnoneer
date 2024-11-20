@@ -19,7 +19,7 @@ class FacilityController extends Controller
     public function create()
     {
         $divisions = Division::all();
-        $facility_categories = Category::where('parent_id', config('constants.religions'))->get();
+        $facility_categories = Category::where('parent_id', config('constants.cat_facilities'))->get();
         //print_r($facility_categories);exit;
         return view('facilities.create', ['divisions' => $divisions], ['facility_categories' => $facility_categories]);
     }
@@ -57,7 +57,7 @@ class FacilityController extends Controller
         $divisions = Division::all();
         $districts = District::all();
         $upazilas = Upazila::all();
-        $facility_categories = Category::where('parent_id', config('constants.religions'))->get();
+        $facility_categories = Category::where('parent_id', config('constants.cat_facilities'))->get();
 
         return view('facilities.edit', [
             'facility' => $facility,
