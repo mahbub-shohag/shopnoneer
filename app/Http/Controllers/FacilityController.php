@@ -19,7 +19,8 @@ class FacilityController extends Controller
     public function create()
     {
         $divisions = Division::all();
-        $facility_categories = Category::where('parent_id', 38)->get();
+        $facility_categories = Category::where('parent_id', config('constants.religions'))->get();
+        //print_r($facility_categories);exit;
         return view('facilities.create', ['divisions' => $divisions], ['facility_categories' => $facility_categories]);
     }
 
