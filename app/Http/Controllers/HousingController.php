@@ -149,11 +149,11 @@ class HousingController extends Controller
     /*Housing API*/
     public function getHousingList(Request $request){
         $housings = DB::table('projects')
-                    ->leftJoin('housings', 'projects.housing_id', '=', 'housings.id')
-                    ->select('housings.id','housings.name',DB::raw('COUNT(projects.id) as total_projects'))
-                    ->groupBy('housings.id')
-                    ->orderBy('total_projects', 'DESC')
-                    ->get();
+            ->leftJoin('housings', 'projects.housing_id', '=', 'housings.id')
+            ->select('housings.id', 'housings.name', DB::raw('COUNT(projects.id) as total_projects'))
+            ->groupBy('housings.id', 'housings.name') // Add housings.name here
+            ->orderBy('total_projects', 'DESC')
+            ->get();
         return response()->json($housings);
     }
     /*Housing API*/
