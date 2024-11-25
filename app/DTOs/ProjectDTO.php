@@ -1,6 +1,7 @@
 <?php
 namespace App\DTOs;
 use Carbon\Carbon;
+use PhpParser\Node\Expr\Cast\Double;
 
 class ProjectDTO
 {
@@ -10,6 +11,8 @@ class ProjectDTO
     public $district;
     public $upazila;
     public $housing;
+    public $latitude;
+    public $longitude;
     public $road;
     public $block;
     public $plot;
@@ -39,7 +42,7 @@ class ProjectDTO
     public $facilities;
     public $amenities;
 
-    public function __construct($id, $title, $division, $district, $upazila, $housing, $road, $block, $plot, $plot_size, $plot_face, $is_corner, $storied, $no_of_units, $floor_area, $floor_no, $no_of_beds, $no_of_baths, $no_of_balcony, $parking_available, $owner_name, $owner_phone, $owner_email, $rate_per_sqft, $total_price, $description, $google_map, $created_at, $updated_at, $is_active,$project)
+    public function __construct($id, $title, $division, $district, $upazila, $housing,$latitude,$longitude, $road, $block, $plot, $plot_size, $plot_face, $is_corner, $storied, $no_of_units, $floor_area, $floor_no, $no_of_beds, $no_of_baths, $no_of_balcony, $parking_available, $owner_name, $owner_phone, $owner_email, $rate_per_sqft, $total_price, $description, $google_map, $created_at, $updated_at, $is_active,$project)
     {
         $this->id = $id;
         $this->title = $title;
@@ -47,6 +50,8 @@ class ProjectDTO
         $this->district = $district;
         $this->upazila = $upazila;
         $this->housing = $housing;
+        $this->latitude = $latitude;
+        $this->longitude = $longitude;
         $this->road = $road;
         $this->block = $block;
         $this->plot = $plot;
@@ -85,6 +90,8 @@ class ProjectDTO
             $project->district->name,
             $project->upazila->name,
             $project->housing->name,
+             $project->housing->latitude,
+            $project->housing->longitude,
             $project->road,
             $project->block,
             $project->plot,

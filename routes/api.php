@@ -24,5 +24,5 @@ Route::middleware('auth:sanctum')->group(function (){
     Route::post('add-favourite',[\App\Http\Controllers\FavouriteController::class,'addFavourite']);
     Route::post('remove-favourite',[\App\Http\Controllers\FavouriteController::class,'removeFavourite']);
     Route::post('favourite-list',[\App\Http\Controllers\FavouriteController::class,'favouriteListByUser']);
-
+    Route::post('housing-list',[\App\Http\Controllers\HousingController::class,'getHousingList']);
 });

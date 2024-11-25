@@ -8,6 +8,7 @@ use App\Models\Facility;
 use App\Models\Housing;
 use App\Models\Upazila;
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\DB;
 
 class HousingController extends Controller
 {
@@ -143,6 +144,19 @@ class HousingController extends Controller
         }
         return $options;
     }
+
+
+    /*Housing API*/
+    public function getHousingList(Request $request){
+        $housings = DB::table('projects')
+                    ->leftJoin('housings', 'projects.housing_id', '=', 'housings.id')
+                    ->select('housings.id','housings.name',DB::raw('COUNT(projects.id) as total_projects'))
+                    ->groupBy('housings.id')
+                    ->orderBy('total_projects', 'DESC')
+                    ->get();
+        return response()->json($housings);
+    }
+    /*Housing API*/
 
 
 }
