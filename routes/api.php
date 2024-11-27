@@ -21,6 +21,9 @@ Route::middleware('auth:sanctum')->group(function (){
     Route::delete('logoutapi',[\App\Http\Controllers\AuthController::class,'logoutapi']);
     Route::post('projectlist',[\App\Http\Controllers\ProjectController::class,'getProjectList']);
     Route::post('get-project-by-id',[\App\Http\Controllers\ProjectController::class,'getProjectById']);
+    Route::post('get-project-by-filter',[\App\Http\Controllers\ProjectController::class,'getProjectByFilter']);
+
+
     Route::post('add-favourite',[\App\Http\Controllers\FavouriteController::class,'addFavourite']);
     Route::post('remove-favourite',[\App\Http\Controllers\FavouriteController::class,'removeFavourite']);
     Route::post('favourite-list',[\App\Http\Controllers\FavouriteController::class,'favouriteListByUser']);

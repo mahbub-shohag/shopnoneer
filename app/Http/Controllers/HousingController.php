@@ -6,9 +6,11 @@ use App\Models\District;
 use App\Models\Division;
 use App\Models\Facility;
 use App\Models\Housing;
+use App\Models\Project;
 use App\Models\Upazila;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\DB;
+use function Laravel\Prompts\table;
 
 class HousingController extends Controller
 {
@@ -155,6 +157,7 @@ class HousingController extends Controller
             ->orderBy('total_projects', 'DESC')
             ->get();
         return response()->json($housings);
+
     }
     /*Housing API*/
 

@@ -196,6 +196,20 @@ class ProjectController extends Controller
         }
     }
 
+    public function getProjectByFilter(Request $request){
+        $filters = $request->filters;
+        $query = Project::query()->with('media','division','district','upazila','housing');
+
+        foreach ($filters as $field => $value) {
+            if (!is_null($value)) {
+                $query->where($field, $field === 'title' ? 'LIKE' : '=', $field === 'title' ? "%{$value}%" : $value);
+            }
+        }
+        $projects = $query->get();
+        $projectDtos = $projects->map(fn($project) => ProjectDTO::fromModel($project))->toArray();
+        return $this->returnSuccess("Project List",$projectDtos);
+    }
+
     public function returnError($message,$code): \Illuminate\Http\JsonResponse
     {
         $message = [
