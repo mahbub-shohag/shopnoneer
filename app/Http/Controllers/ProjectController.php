@@ -181,9 +181,9 @@ class ProjectController extends Controller
         $size = $request->size;
         $page = $request->page?$request->page:1;
         $skip = ($page - 1) * $size;
-        $projects = Project::with('media','division','district','upazila','housing')->where('is_active',1)->skip($skip)->take($size)->get();
+        $projects = Project::with('media', 'division', 'district', 'upazila', 'housing')->where('is_active', 1)->skip($skip)->take($size)->get();
         $projectDtos = $projects->map(fn($project) => ProjectDTO::fromModel($project))->toArray();
-        return $this->returnSuccess("Project List",$projectDtos);
+        return $this->returnSuccess("Project List", $projectDtos);
     }
 
     public function getProjectById(Request $request){
