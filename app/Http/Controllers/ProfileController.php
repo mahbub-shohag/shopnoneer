@@ -111,4 +111,11 @@ class ProfileController extends Controller
     {
         //
     }
+
+    /*API Start*/
+    public function updateProfileAPI(Request $request)
+    {
+        
+    }
+    /*API End*/
 }
