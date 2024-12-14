@@ -71,8 +71,12 @@ class FavouriteController extends Controller
     public function addFavourite(Request $request){
 
         $existingFavourite = Favourite::where('project_id', $request->project_id)->where('user_id', Auth::id())->first();
-        if($existingFavourite){
-            return $this->returnError('favourite already exist');
+        if($existingFavourite && $existingFavourite->is_active==0){
+            $existingFavourite->is_active = 1;
+            $existingFavourite->save();
+            return $this->returnSuccess('Favourite added successfully',$existingFavourite);
+        }else if($existingFavourite && $existingFavourite->is_active==1){
+            return $this->returnSuccess('Already added to favourite',$existingFavourite);
         }
 
         $favourite = new Favourite();
