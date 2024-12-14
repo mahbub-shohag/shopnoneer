@@ -25,6 +25,19 @@ class User extends Authenticatable
     public function profile(){
         return $this->hasOne(Profile::class);
     }
+
+    public function favouriteProjects(): \Illuminate\Database\Eloquent\Relations\HasManyThrough
+    {
+        return $this->hasManyThrough(
+            \App\Models\Project::class,
+            \App\Models\Favourite::class,
+            'user_id', // Foreign key on favourites table
+            'id', // Foreign key on projects table
+            'id', // Local key on users table
+            'project_id' // Local key on favourites table
+        )->where('favourites.is_active', true); // Filter active favourites if needed
+    }
+
     /**
      * The attributes that are mass assignable.
      *

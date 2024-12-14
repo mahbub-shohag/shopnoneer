@@ -189,7 +189,9 @@ class ProjectController extends Controller
     public function getProjectById(Request $request){
         try {
             $project = Project::with('media','division','district','upazila','housing')->find($request->project_id);
+            //echo "<pre>"; print_r($project);exit;
             $projectDto = ProjectDTO::fromModel($project);
+            //echo "<pre>"; print_r($projectDto->latitude);exit;
             return $this->returnSuccess("Project Detail",$projectDto);
         }catch (\Exception $e) {
             return $this->returnError("Error",$e->getMessage());

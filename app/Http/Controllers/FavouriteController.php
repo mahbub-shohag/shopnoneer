@@ -2,7 +2,10 @@
 
 namespace App\Http\Controllers;
 
+use App\DTOs\ProjectDTO;
 use App\Models\Favourite;
+use App\Models\Project;
+use App\Models\User;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Auth;
 
@@ -66,23 +69,28 @@ class FavouriteController extends Controller
 
     /*API Start*/
     public function addFavourite(Request $request){
+
+        $existingFavourite = Favourite::where('project_id', $request->project_id)->where('user_id', Auth::id())->first();
+        if($existingFavourite){
+            return $this->returnError('favourite already exist');
+        }
+
         $favourite = new Favourite();
-        $favourite->project_id = $request->project_id;
         $favourite->user_id = Auth::user()->id;
+        $favourite->project_id = $request->project_id;
         $favourite->is_active = 1;
         $favourite->save();
         if($favourite){
-            return $this->returnSuccess('Favourite addedd successfully',$favourite);
+            return $this->returnSuccess('Favourite added successfully',$favourite);
         }else{
             return $this->returnError('Something went wrong');
         }
     }
 
     public function favouriteListByUser(Request $request){
-        $favourites = Favourite::with('project')
-            ->where('is_active',1)
-            ->where('user_id',Auth::user()->id)->get();
-        return $this->returnSuccess('Favourite List',$favourites);
+        $projects = \App\Models\User::find(Auth::user()->id)->favouriteProjects;
+        $projectDtos = $projects->map(fn($project) => ProjectDTO::fromModel($project))->toArray();
+        return $this->returnSuccess("Favourite List",$projectDtos);
     }
 
     public function removeFavourite(Request $request){

@@ -78,7 +78,16 @@ class ProjectDTO
         $this->is_active = $is_active;
         $this->images = $this->getImages($project);
         $this->amenities = $project->amenities;
-        $this->facilities = $project->housing->facilities;
+        $this->facilities = $project->housing->facilities->load('category')->map(function ($facility) {
+            return [
+                'id' => $facility->id,
+                'name' => $facility->name,
+                'latitude' => $facility->latitude,
+                'longitude' => $facility->longitude,
+                'category' => $facility->category->label,
+            ];
+        });
+
     }
 
     public static function fromModel($project)
@@ -90,7 +99,7 @@ class ProjectDTO
             $project->district->name,
             $project->upazila->name,
             $project->housing->name,
-             $project->housing->latitude,
+            $project->housing->latitude,
             $project->housing->longitude,
             $project->road,
             $project->block,
