@@ -4,69 +4,13 @@ namespace App\Http\Controllers;
 
 use App\DTOs\ProjectDTO;
 use App\Models\Favourite;
-use App\Models\Project;
 use App\Models\User;
+use Illuminate\Http\JsonResponse;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Auth;
 
 class FavouriteController extends Controller
 {
-    /**
-     * Display a listing of the resource.
-     */
-    public function index()
-    {
-        //
-    }
-
-    /**
-     * Show the form for creating a new resource.
-     */
-    public function create()
-    {
-        //
-    }
-
-    /**
-     * Store a newly created resource in storage.
-     */
-    public function store(Request $request)
-    {
-        //
-    }
-
-    /**
-     * Display the specified resource.
-     */
-    public function show(Favourite $favourite)
-    {
-        //
-    }
-
-    /**
-     * Show the form for editing the specified resource.
-     */
-    public function edit(Favourite $favourite)
-    {
-        //
-    }
-
-    /**
-     * Update the specified resource in storage.
-     */
-    public function update(Request $request, Favourite $favourite)
-    {
-        //
-    }
-
-    /**
-     * Remove the specified resource from storage.
-     */
-    public function destroy(Favourite $favourite)
-    {
-        //
-    }
-
     /*API Start*/
     public function addFavourite(Request $request){
 
@@ -92,7 +36,7 @@ class FavouriteController extends Controller
     }
 
     public function favouriteListByUser(Request $request){
-        $projects = \App\Models\User::find(Auth::user()->id)->favouriteProjects;
+        $projects = User::find(Auth::user()->id)->favouriteProjects;
         $projectDtos = $projects->map(fn($project) => ProjectDTO::fromModel($project))->toArray();
         return $this->returnSuccess("Favourite List",$projectDtos);
     }
@@ -105,16 +49,16 @@ class FavouriteController extends Controller
         return $this->returnSuccess('Favourite removed',$favourite);
     }
 
-    public function returnError($message,$code): \Illuminate\Http\JsonResponse
+    public function returnError($message): JsonResponse
     {
         $message = [
             "error"=>$message,
-            "code"=>$code
+            "code"=> 500
         ];
         return response()->json($message);
     }
 
-    public function returnSuccess($message,$data): \Illuminate\Http\JsonResponse
+    public function returnSuccess($message,$data): JsonResponse
     {
         $message = [
             "message"=>$message,
