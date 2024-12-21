@@ -33,6 +33,6 @@ class Project extends Model implements HasMedia
 
     public function housing()
     {
-        return $this->belongsTo(Housing::class)->select(['id', 'name']);
+        return $this->belongsTo(Housing::class);
     }
 }

@@ -85,6 +85,7 @@ class ProjectDTO
                 'latitude' => $facility->latitude,
                 'longitude' => $facility->longitude,
                 'category' => $facility->category->label,
+                'category_id' => $facility->category->id,
             ];
         });
 
