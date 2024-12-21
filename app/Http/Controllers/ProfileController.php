@@ -75,32 +75,33 @@ class ProfileController extends Controller
      */
     public function update(Request $request, Profile $profile)
     {
-        $profile->fullName = isset($request->fullName)?$request->fullName:$profile->fullName;
-        $profile->age = isset($request->age)?$request->age:$profile->age;
-        $profile->education = isset($request->education)?$request->education:$profile->education;
-        $profile->occupation = isset($request->occupation)?$request->occupation:$profile->occupation;
-        $profile->presentDivision = isset($request->presentDivision)?$request->presentDivision:$profile->presentDivision;
-        $profile->presentDistrict = isset($request->presentDistrict)?$request->presentDistrict:$profile->presentDistrict;
-        $profile->presentUpazilla = isset($request->presentUpazilla)?$request->presentUpazilla:$profile->presentUpazilla;
-        $profile->presentCity = isset($request->presentCity)?$request->presentCity:$profile->dateOfBirth;
-        $profile->permanentDivision = isset($request->permanentDivision)?$request->permanentDivision:$profile->permanentDivision;
-        $profile->permanentDistrict = isset($request->permanentDistrict)?$request->permanentDistrict:$profile->permanentDistrict;
-        $profile->permanentUpazilla = isset($request->permanentUpazilla)?$request->permanentUpazilla:$profile->permanentUpazilla;
-        $profile->permanentCity = isset($request->permanentCity)?$request->permanentCity:$profile->permanentCity;
-        $profile->preferableDivision = isset($request->preferableDivision)?$request->preferableDivision:$profile->preferableDivision;
-        $profile->preferableDistrict = isset($request->preferableDistrict)?$request->preferableDistrict:$profile->preferableDistrict;
-        $profile->preferableUpazilla = isset($request->preferableUpazilla)?$request->preferableUpazilla:$profile->preferableUpazilla;
-        $profile->preferableCity = isset($request->preferableCity)?$request->preferableCity:$profile->preferableCity;
-        $profile->estimatedBudget = isset($request->estimatedBudget)?$request->estimatedBudget:$profile->estimatedBudget;
-        $profile->preferableFlatSize = isset($request->preferableFlatSize)?$request->preferableFlatSize:$profile->preferableFlatSize;
-        $profile->monthlyIncome = isset($request->monthlyIncome)?$request->monthlyIncome:$profile->monthlyIncome;
-        $profile->currentCapital = isset($request->currentCapital)?$request->currentCapital:$profile->currentCapital;
-        $profile->totalFamilyMembers = isset($request->totalFamilyMembers)?$request->totalFamilyMembers:$profile->totalFamilyMembers;
-        $profile->sourceOfIncome = isset($request->sourceOfIncome)?$request->sourceOfIncome:$profile->sourceOfIncome;
-        $profile->preferableDivision = isset($request->preferableDivision)?$request->preferableDivision:$profile->preferableDivision;
+        $profile->fullName = $request->fullName;
+        $profile->age = $request->age;
+        $profile->education = $request->education;
+        $profile->occupation = $request->occupation;
+        $profile->presentDivision = $request->presentDivision;
+        $profile->presentDistrict = $request->presentDistrict;
+        $profile->presentUpazilla = $request->presentUpazilla;
+        $profile->presentCity = $request->presentCity;
+        $profile->permanentDivision = $request->permanentDivision;
+        $profile->permanentDistrict = $request->permanentDistrict;
+        $profile->permanentUpazilla = $request->permanentUpazilla;
+        $profile->permanentCity = $request->permanentCity;
+        $profile->preferableDivision = $request->preferableDivision;
+        $profile->preferableDistrict = $request->preferableDistrict;
+        $profile->preferableUpazilla = $request->preferableUpazilla;
+        $profile->preferableCity = $request->preferableCity;
+        $profile->estimatedBudget = $request->estimatedBudget;
+        $profile->preferableFlatSize = $request->preferableFlatSize;
+        $profile->monthlyIncome = $request->monthlyIncome;
+        $profile->currentCapital = $request->currentCapital;
+        $profile->totalFamilyMembers = $request->totalFamilyMembers;
+        $profile->sourceOfIncome = $request->sourceOfIncome;
         $profile->save();
+
         return Redirect::route('profile.index');
     }
+
 
     /**
      * Remove the specified resource from storage.
