@@ -34,8 +34,6 @@ class ProfileController extends Controller
 
     public function profile_list()
     {
-        $user = Auth::user();
-        $profile = Profile::where('userId', $user->id)->first();
         $profiles = Profile::all();
         return view('profile.profile_list', ['profiles' => $profiles]);
     }

@@ -38,6 +38,4 @@ Route::middleware('auth:sanctum')->group(function (){
 
     Route::post('update-user-profile',[UserController::class,'updateUserProfile']);
     Route::post('user-profile',[ProfileController::class,'userProfile']);
-
-
 });
