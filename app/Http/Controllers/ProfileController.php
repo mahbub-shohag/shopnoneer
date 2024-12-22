@@ -117,5 +117,10 @@ class ProfileController extends Controller
     {
         
     }
+
+    public function userProfile()
+    {
+
+    }
     /*API End*/
 }
