@@ -1,6 +1,11 @@
 <?php
 
-use Illuminate\Http\Request;
+use App\Http\Controllers\AuthController;
+use App\Http\Controllers\FavouriteController;
+use App\Http\Controllers\HousingController;
+use App\Http\Controllers\ProfileController;
+use App\Http\Controllers\ProjectController;
+use App\Http\Controllers\UserController;
 use Illuminate\Support\Facades\Route;
 /*
 |--------------------------------------------------------------------------
@@ -13,20 +18,21 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
-Route::post('/signupapi', [\App\Http\Controllers\AuthController::class, 'signupapi']);
-Route::post('loginapi',[\App\Http\Controllers\AuthController::class,'loginapi']);
+Route::post('/signupapi', [AuthController::class, 'signupapi']);
+Route::post('loginapi',[AuthController::class,'loginapi']);
 
 Route::middleware('auth:sanctum')->group(function (){
-    Route::delete('logoutapi',[\App\Http\Controllers\AuthController::class,'logoutapi']);
-    Route::post('projectlist',[\App\Http\Controllers\ProjectController::class,'getProjectList']);
-    Route::post('get-project-by-id',[\App\Http\Controllers\ProjectController::class,'getProjectById']);
-    Route::post('get-project-by-filter',[\App\Http\Controllers\ProjectController::class,'getProjectByFilter']);
+    Route::delete('logoutapi',[AuthController::class,'logoutapi']);
 
-    Route::post('add-favourite',[\App\Http\Controllers\FavouriteController::class,'addFavourite']);
-    Route::post('remove-favourite',[\App\Http\Controllers\FavouriteController::class,'removeFavourite']);
-    Route::post('favourite-list',[\App\Http\Controllers\FavouriteController::class,'favouriteListByUser']);
-    Route::post('housing-list',[\App\Http\Controllers\HousingController::class,'getHousingList']);
-    Route::post('update-user-profile',[\App\Http\Controllers\UserController::class,'updateUserProfile']);
-    Route::post('user-profile',[\App\Http\Controllers\ProfileController::class,'userProfile']);
+    Route::post('housing-list',[HousingController::class,'getHousingList']);
 
+    Route::post('projectlist',[ProjectController::class,'getProjectList']);
+    Route::post('get-project-by-id',[ProjectController::class,'getProjectById']);
+    Route::post('get-project-by-filter',[ProjectController::class,'getProjectByFilter']);
+
+    Route::post('add-favourite',[FavouriteController::class,'addFavourite']);
+    Route::post('remove-favourite',[FavouriteController::class,'removeFavourite']);
+    Route::post('favourite-list',[FavouriteController::class,'favouriteListByUser']);
+    Route::post('update-user-profile',[UserController::class,'updateUserProfile']);
+    Route::post('user-profile',[ProfileController::class,'userProfile']);
 });
