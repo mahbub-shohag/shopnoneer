@@ -34,8 +34,8 @@ return new class extends Migration
             $table->integer('currentCapital')->unsigned()->nullable();
             $table->integer('totalFamilyMembers')->unsigned()->nullable();
             $table->string('sourceOfIncome')->nullable();
-            $table->unsignedBigInteger('userId')->unsigned();
-            $table->foreign('userId')->references('id')->on('users')->onDelete('cascade');
+            $table->unsignedBigInteger('user_id')->unsigned();
+            $table->foreign('user_id')->references('id')->on('users')->onDelete('cascade');
         });
     }
 

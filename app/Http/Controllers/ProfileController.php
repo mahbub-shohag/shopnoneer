@@ -7,6 +7,7 @@ use App\Models\District;
 use App\Models\Division;
 use App\Models\Profile;
 use App\Models\Upazila;
+use App\Models\User;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\Redirect;
@@ -119,7 +120,28 @@ class ProfileController extends Controller
 
     public function userProfile()
     {
-
+        $user = User::where('id',Auth::user()->id)->with('profile')->first();
+        return $this->returnSuccess('User Profile',$user);
     }
     /*API End*/
+
+    public function returnError($message,$code): \Illuminate\Http\JsonResponse
+    {
+        $message = [
+            "error"=>$message,
+            "code"=>$code
+        ];
+        return response()->json($message);
+    }
+
+    public function returnSuccess($message,$data): \Illuminate\Http\JsonResponse
+    {
+        $message = [
+            "message"=>$message,
+            "code"=>200,
+            "success"=>true,
+            "data"=>$data
+        ];
+        return response()->json($message);
+    }
 }
