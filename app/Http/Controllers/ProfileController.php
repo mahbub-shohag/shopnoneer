@@ -20,7 +20,7 @@ class ProfileController extends Controller
     public function index()
     {
         $user = Auth::user();
-        $profile = Profile::where('userId', $user->id)->first();
+        $profile = Profile::where('user_id', $user->id)->first();
         $divisions = Division::all();
         $districts = District::all();
         $upazillas = Upazila::all();

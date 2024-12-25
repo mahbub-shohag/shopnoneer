@@ -76,7 +76,7 @@ class AuthController extends Controller
             $user->password = Hash::make($request->password);
             $user->save();
             $profile = new Profile();
-            $profile->userId = $user->id;
+            $profile->user_id = $user->id;
             $profile->fullName = $request->name;
             $profile->save();
             return redirect()->route('dashboard')->with('message', 'User created successfully');
@@ -97,12 +97,19 @@ class AuthController extends Controller
             $user->email = $request->email;
             $user->password = Hash::make($request->password);
             $user->role_id = 3;
-            $user->save();
+            if($user->save()){
+                $profile = new Profile();
+                $profile->user_id = $user->id;
+                $profile->fullName = $request->name;
+                $profile->save();
+            }
+
             if($user && Hash::check($request->password,$user->password)){
                 $token = $user->createToken('api');
                 $user->token = $token->plainTextToken;
                 return $this->returnSuccess("Signup Successful",$user);
             }
+
         }else{
             return $this->returnError("User signup failed",401);
         }

@@ -30,7 +30,7 @@ class UserController extends Controller
     public function updateUserProfile(Request $request)
     {
         $user = Auth::user();
-        $profile = Profile::where('userId', $user->id)->first();
+        $profile = Profile::where('user_id', $user->id)->first();
 
         $profile->fullName = $request->fullName;
         $profile->religion = $request->religion;
@@ -54,7 +54,7 @@ class UserController extends Controller
         $profile->currentCapital = $request->currentCapital;
         $profile->totalFamilyMembers = $request->totalFamilyMembers;
         $profile->sourceOfIncome = $request->sourceOfIncome;
-        $profile->userId = $request->userId;
+        $profile->user_id = $request->user_id;
         $profile->age = $request->age;
 
         $profile->save();
