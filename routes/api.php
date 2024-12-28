@@ -6,6 +6,7 @@ use App\Http\Controllers\HousingController;
 use App\Http\Controllers\ProfileController;
 use App\Http\Controllers\ProjectController;
 use App\Http\Controllers\UserController;
+use App\Http\Controllers\TranslationController;
 use Illuminate\Support\Facades\Route;
 /*
 |--------------------------------------------------------------------------
@@ -35,4 +36,5 @@ Route::middleware('auth:sanctum')->group(function (){
     Route::post('favourite-list',[FavouriteController::class,'favouriteListByUser']);
     Route::post('update-user-profile',[UserController::class,'updateUserProfile']);
     Route::post('user-profile',[ProfileController::class,'userProfile']);
+    Route::post('translation',[TranslationController::class,'translation']);
 });

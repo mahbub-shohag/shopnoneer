@@ -96,9 +96,9 @@ class ProjectDTO
         return new self(
             $project->id,
             $project->title,
-            $project->division->name,
-            $project->district->name,
-            $project->upazila->name,
+            $project->division->name_bn,
+            $project->district->name_bn,
+            $project->upazila->name_bn,
             $project->housing->name,
             $project->housing->latitude,
             $project->housing->longitude,

@@ -19,16 +19,16 @@ class Project extends Model implements HasMedia
         return $this->belongsToMany(Amenity::class, 'amenity_project', 'project_id', 'amenity_id');
     }
     public function upazila(){
-        return $this->belongsTo(Upazila::class)->select(['id', 'name']);
+        return $this->belongsTo(Upazila::class)->select(['id', 'name_bn']);
     }
 
     public function division()
     {
-        return $this->belongsTo(Division::class)->select(['id', 'name']);
+        return $this->belongsTo(Division::class)->select(['id', 'name_bn']);
     }
     public function district()
     {
-        return $this->belongsTo(District::class)->select(['id', 'name']);
+        return $this->belongsTo(District::class)->select(['id', 'name_bn']);
     }
 
     public function housing()

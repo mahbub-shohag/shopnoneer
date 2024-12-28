@@ -1,0 +1,581 @@
+id,name,name_bn
+1,BAGERHAT SADAR,বাগেরহাট সদর
+2,CHITALMARI,চিতলমারী
+3,FAKIRHAT,ফকিরহাট
+4,KACHUA,কচুয়া
+5,MOLLAHAT,মোল্লাহাট
+6,MONGLA,মংলা
+7,MORELGANJ,মোরেলগঞ্জ
+8,RAMPAL,রামপাল
+9,SHARANKHOLA,শরণখোলা
+10,ALIKADAM,আলীকদম
+11,BANDARBAN SADAR,বান্দরবান সদর
+12,LAMA,লামা
+13,NAIKKHONGCHHARI,নাইক্ষংছড়ি
+14,ROWANGCHHARI,রোয়াংছড়ি
+15,RUMA,রুমা
+16,THANCHI,থানচি
+17,AMTALI,আমতলী
+18,BAMNA,বামনা
+19,BARGUNA SADAR,বরগুনা সদর
+20,BETAGI,বেতাগী
+21,PATHARGHATA,পাথরঘাটা
+22,TALTALI,তালতলী
+23,AGAILJHARA,আগৈলঝাড়া
+24,BABUGANJ,বাবুগঞ্জ
+25,BAKERGANJ,বাকেরগঞ্জ
+26,BANARIPARA,বানারীপাড়া
+27,GAURNADI,গৌরনদী
+28,HIJLA,হিজলা
+29,BARISHAL SADAR (KOTWALI),বরিশাল সদর (কোতোয়ালি)
+30,MEHENDIGANJ,মেহেন্দিগঞ্জ
+31,MULADI,মুলাদি
+32,UJIRPUR,উজিরপুর
+33,BHOLA SADAR,ভোলা সদর
+34,BORHANUDDIN,বোরহানুদ্দীন
+35,CHARFASSON,চরফ্যাসন
+36,DAULATKHAN,দৌলতখান
+37,LALMOHAN,লালমোহন
+38,MONPURA,মনপুরা
+39,TAZUMUDDIN,তজুমুদ্দীন
+40,ADAMDIGHI,আদমদীঘি
+41,BOGURA SADAR,বগুড়া সদর
+42,DHUNAT,ধুনট
+43,DUPCHACHIA,দুপচাছিয়া
+44,GABTALI,গাবতলী
+45,KAHALOO,কাহালু
+46,NANDIGRAM,নন্দীগ্রাম
+47,SARIAKANDI,সারিয়াকান্দি
+48,SHAJAHANPUR,শাহজাহানপুর
+49,SHERPUR,শেরপুর
+50,SHIBGANJ,শিবগঞ্জ
+51,SONATALA,সোনাতলা
+52,AKHAURA,আখাউড়া
+53,BANCHHARAMPUR,বাঞ্ছারামপুর
+54,BIJOYNAGAR,বিজয়নগর
+55,BRAHMANBARIA SADAR,ব্রাহ্মণবাড়িয়া সদর
+56,ASHUGANJ,আশুগঞ্জ
+57,KASBA,কাসবা
+58,NABINAGAR,নবীনগর
+59,NASIRNAGAR,নাসিরনগর
+60,SARAIL,সরাইল
+61,CHANDPUR SADAR,চাঁদপুর সদর
+62,FARIDGANJ,ফরিদগঞ্জ
+63,HAIMCHAR,হাইমচর
+64,HAJIGANJ,হাজীগঞ্জ
+65,KACHUA,কচুয়া
+66,MATLAB DAKKHIN,মতলব দাখিন
+67,MATLAB UTTAR,মতলব উত্তর
+68,SHAHRASTI,শাহরাস্তি
+69,AKBARSHAH,আকবরশাহ
+70,ANWARA,আনোয়ারা
+71,BAYEJID BOSTAMI,বায়েজিদ বোস্তামী
+72,BANSHKHALI,বাঁশখালী
+73,BAKALIA,বাকালিয়া
+74,BOALKHALI,বোয়ালখালী
+75,CHALK BAZAR,চকবাজার
+76,CHANDANAISH,চন্দনাইশ
+77,CHANDGAON,চান্দগাঁও
+78,CHATTOGRAM PORT,চট্টগ্রাম বন্দর
+79,DOUBLEMOORING,ডাবলমুরিং
+80,EPZ,ইপিজেড
+81,FATIKCHHARI,ফটিকছড়ি
+82,HALISHAHAR,হালিশহর
+83,HATHAZARI,হাটহাজারী
+84,KARNAPHULI,কর্ণফুলী
+85,KOTWALI,কোতোয়ালি
+86,KHULSHI,খুলশি
+87,LOHAGARA,লোহাগাড়া
+88,MIRSARAI,মিরসরাই
+89,PAHARTALI,পাহাড়তলী
+90,PANCHLAISH,পঞ্চলাইশ
+91,PATIYA,পটিয়া
+92,PATENGA,পতেঙ্গা
+93,RANGUNIA,রাঙ্গুনিয়া
+94,RAOZAN,রাওজান
+95,SADARGHAT,সদরঘাট
+96,SANDWIP,স্যান্ডউইপ
+97,SATKANIA,সাতকানিয়া
+98,SITAKUNDA,সীতাকুণ্ড
+99,ALAMDANGA,আলমডাঙ্গা
+100,CHUADANGA SADAR,চুয়াডাঙ্গা সদর
+101,DAMURHUDA,দামুড়হুদা
+102,JIBANNAGAR,জীবননগর
+103,BARURA,বরুড়া
+104,BRAHMANPARA,ব্রাহ্মণপাড়া
+105,BURICHANG,বুড়িচং
+106,CHANDINA,চান্দিনা
+107,CHAUDDAGRAM,চৌদ্দগ্রাম
+108,SADAR DAKKHIN,সদর দক্ষিণ
+109,DAUDKANDI,দাউদকান্দি
+110,DEBIDWAR,দেবিদ্বার
+111,HOMNA,HOMNA
+112,ADARSHA SADAR,আদর্শ সদর
+113,LAKSAM,লাকসাম
+114,LALMAI,লালমাই
+115,MANOHARGANJ,মনোহরগঞ্জ
+116,MEGHNA,মেঘনা
+117,MURADNAGAR,মুরাদনগর
+118,NANGALKOT,নাঙ্গলকোট
+119,TITAS,তিতাস
+120,CHAKARIA,চকরিয়া
+121,COXS BAZAR SADAR,কক্সবাজার সদর
+122,KUTUBDIA,কুতুবদিয়া
+123,MAHESHKHALI,মহেশখালী
+124,PEKUA,পেকুয়া
+125,RAMU,রামু
+126,TEKNAF,টেকনাফ
+127,UKHIA,উখিয়া
+128,ADABAR,আদাবর
+129,BADDA,বাড্ডা
+130,BANGSHAL,বংশাল
+131,BIMANBANDAR,বিমানবন্দর
+132,BANANI,বনানী
+133,CANTONMENT,ক্যান্টনমেন্ট
+134,CHAKBAZAR,চকবাজার
+135,DAKKHINKHAN,দক্ষিণখান
+136,DARUSSALAM,দারুসসালাম
+137,DEMRA,ডেমরা
+138,DHAMRAI,ধামরাই
+139,DHANMONDI,ধানমন্ডি
+140,DOHAR,দোহার
+141,BHASANTEK,ভাসানটেক
+142,BHATARA,ভাটারা
+143,GENDARIA,গেন্ডারিয়া
+144,GULSHAN,গুলশান
+145,HAZARIBAG,হাজারীবাগ
+146,JATRABARI,যাত্রাবাড়ী
+147,KAFRUL,কাফরুল
+148,KADAMTALI,কদমতলী
+149,KALABAGAN,কলাবাগান
+150,KAMRANGICHAR,কামরাঙ্গীরচর
+151,KHILGAON,খিলগাঁও
+152,KHILKHET,খিলক্ষেত
+153,KERANIGANJ,কেরানীগঞ্জ
+154,KOTWALI,কোতোয়ালি
+155,LALBAG,লালবাগ
+156,MIRPUR,মিরপুর
+157,MOHAMMADPUR,মহম্মদপুর
+158,MOTIJHEEL,মতিঝিল
+159,MUGDA,মুগদা
+160,NAWABGANJ,নবাবগঞ্জ
+161,NEWMARKET,নিউমার্কেট
+162,PALLABI,পল্লবী
+163,PALTAN,পল্টন
+164,RAMNA,রমনা
+165,RAMPURA,রামপুরা
+166,SABUJBAG,সবুজবাগ
+167,RUPNAGAR,রূপনগর
+168,SAVAR,সাভার
+169,SHAHJAHANPUR,শাহজাহানপুর
+170,SHAH ALI,শাহ আলী
+171,SHAHBAG,শাহবাগ
+172,SHYAMPUR,শ্যামপুর
+173,SHERE BANGLA NAGAR,শেরে বাংলা নগর
+174,SUTRAPUR,সূত্রাপুর
+175,TEJGAON,তেজগাঁও
+176,TEJGAON SHILPA ELAKA,তেজগাঁও শিল্প এলাকা
+177,TURAG,তুরাগ
+178,UTTRA PASHCHIM,উত্তর পশ্চিম
+179,UTTARA PURBA,উত্তরা পূর্বা
+180,UTTARKHAN,উত্তরখান
+181,WARI,ওয়ারি
+182,BIRAMPUR,বিরামপুর
+183,BIRGANJ,বীরগঞ্জ
+184,BIROL,বিরোল
+185,BOCHAGANJ,বোচাগঞ্জ
+186,CHIRIRBANDAR,চিরিরবন্দর
+187,FULBARI,ফুলবাড়ি
+188,GHORAGHAT,ঘোড়াঘাট
+189,HAKIMPUR,হাকিমপুর
+190,KAHAROLE,কাহারোল
+191,KHANSAMA,খানসামা
+192,DINAJPUR SADAR,দিনাজপুর সদর
+193,NABABGANJ,নবাবগঞ্জ
+194,PARBATIPUR,পার্বতীপুর
+195,ALFADANGA,আলফাডাঙ্গা
+196,BHANGA,ভাঙ্গা
+197,BOALMARI,বোয়ালমারি
+198,CHAR BHADRASAN,চর ভদ্রাসন
+199,FARIDPUR SADAR,ফরিদপুর সদর
+200,MADHUKHALI,মধুখালী
+201,NAGARKANDA,নগরকান্দা
+202,SADARPUR,সদরপুর
+203,SALTHA,সালথা
+204,CHHAGALNAIYA,ছাগলনাইয়া
+205,DAGANBHUIYAN,দাগনভূঁইয়ান
+206,FENI SADAR,ফেনী সদর
+207,FULGAZI,ফুলগাজি
+208,PARASHURAM,পরশুরাম
+209,SONAGAZI,সোনাগাজী
+210,FULCHHARI,ফুলছড়ি
+211,GAIBANDHA SADAR,গাইবান্ধা সদর
+212,GOBINDAGANJ,গোবিন্দগঞ্জ
+213,PALASHBARI,পলাশবাড়ী
+214,SADULLAPUR,সাদুল্লাপুর
+215,SAGHATA,সাঘাটা
+216,SUNDARGANJ,সুন্দরগঞ্জ
+217,BASAN,বাসন
+218,GACHHA,গছা
+219,GAZIPUR SADAR,গাজীপুর সদর
+220,KALIAKAIR,কালিয়াকৈর
+221,KALIGANJ,কালীগঞ্জ
+222,KAPASIA,কাপাসিয়া
+223,KASHIMPUR,কাশিমপুর
+224,KONABARI,কোনাবাড়ি
+225,PUBAIL,পুবাইল
+226,SADAR,সদর
+227,SREEPUR,শ্রীপুর
+228,TONGI PASHCHIM,টঙ্গি পশ্চিম
+229,TONGI PURBA,টঙ্গী পূর্বা
+230,GOPALGANJ SADAR,গোপালগঞ্জ সদর
+231,KASHIANI,কাশিয়ানী
+232,KOTALIPARA,কোটালিপাড়া
+233,MUKSUDPUR,মুকসুদপুর
+234,TUNGIPARA,টুঙ্গিপাড়া
+235,AJMIRIGANJ,আজমিরীগঞ্জ
+236,BAHUBAL,বাহুবল
+237,BANIACHONG,বানিয়াচং
+238,CHUNARUGHAT,চুনারুঘাট
+239,HABIGANJ SADAR,হবিগঞ্জ সদর
+240,LAKHAI,লাখাই
+241,MADHABPUR,মাধবপুর
+242,NABIGANJ,নবীগঞ্জ
+243,SHAYESTAGANJ,শায়েস্তাগঞ্জ
+244,AKKELPUR,আক্কেলপুর
+245,JOYPURHAT SADAR,জয়পুরহাট সদর
+246,KALAI,কালাই
+247,KHETLAL,খেতলাল
+248,PANCHBIBI,পাঁচবিবি
+249,BAKSHIGANJ,বকশীগঞ্জ
+250,DEWANGANJ,দেওয়ানগঞ্জ
+251,ISLAMPUR,ইসলামপুর
+252,JAMALPUR SADAR,জামালপুর সদর
+253,MADARGANJ,মাদারগঞ্জ
+254,MELANDAHA,মেলান্দাহা
+255,SARISHABARI,সরিষাবাড়ী
+256,ABHAYNAGAR,অভয়নগর
+257,BAGHARPARA,বাঘারপাড়া
+258,CHAUGACHHA,চৌগাছা
+259,JHIKARGACHHA,ঝিকরগাছা
+260,KESHABPUR,কেশবপুর
+261,JASHORE SADAR,যশোর সদর
+262,MANIRAMPUR,মণিরামপুর
+263,SHARSHA,শার্শা
+264,JHALOKATHI SADAR,ঝালকাঠি সদর
+265,KANTHALIA,কাঁথালিয়া
+266,NALCHHITY,নলচিটি
+267,RAJAPUR,রাজাপুর
+268,HARINAKUNDU,হরিণাকুন্ডু
+269,JHENAIDAH SADAR,ঝিনাইদহ সদর
+270,KALIGANJ,কালীগঞ্জ
+271,KOTCHANDPUR,কোটচাঁদপুর
+272,MAHESHPUR,মহেশপুর
+273,SHAILKUPA,শৈলকুপা
+274,DIGHINALA,দীঘিনালা
+275,GUIMARA,গুইমারা
+276,KHAGRACHHARI SADAR,খাগড়াছড়ি সদর
+277,LAKKHICHHARI,লক্ষীছড়ি
+278,MAHALCHHARI,মহালছড়ি
+279,MANIKCHHARI,মানিকছড়ি
+280,MATIRANGA,মাটিরাঙ্গা
+281,PANCHHARI,পানছড়ি
+282,RAMGARH,রামগড়
+283,BATIAGHATA,বটিয়াঘাটা
+284,DACOPE,ড্যাকোপে
+285,DAULATPUR,দৌলতপুর
+286,DUMURIA,ডুমুরিয়া
+287,DIGHALIA,দীঘলিয়া
+288,KHALISHPUR,খালিশপুর
+289,KHAN JAHAN ALI,খান জাহান আলী
+290,KHULNA SADAR,খুলনা সদর
+291,KOYRA,কয়রা
+292,PAIKGACHHA,পাইকগাছা
+293,PHULTALA,ফুলতলা
+294,RUPSA,রূপসা
+295,SONADANGA,সোনাডাঙ্গা
+296,TEROKHADA,তেরখাদা
+297,AUSTAGRAM,AUSTAGRAM
+298,BAJITPUR,বাজিতপুর
+299,BHAIRAB,ভৈরব
+300,HOSSAINPUR,হোসেনপুর
+301,ITNA,আইটিএনএ
+302,KARIMGANJ,করিমগঞ্জ
+303,KATIADI,কাটিয়াদি
+304,KISHOREGANJ SADAR,কিশোরগঞ্জ সদর
+305,KULIARCHAR,কুলিয়ারচর
+306,MITHAMAIN,মিঠামাইন
+307,NIKLI,নিকলি
+308,PAKUNDIA,পাকুন্দিয়া
+309,TARAIL,তাড়াইল
+310,BHURUNGAMARI,ভূরুঙ্গামারি
+311,RAJIBPUR,রাজিবপুর
+312,CHILMARI,চিলমারি
+313,PHULBARI,ফুলবাড়ী
+314,KURIGRAM SADAR,কুড়িগ্রাম সদর
+315,NAGESHWARI,নাগেশ্বরী
+316,RAJARHAT,রাজারহাট
+317,ROUMARI,রৌমারি
+318,ULIPUR,উলিপুর
+319,BHERAMARA,ভেড়ামারা
+320,DAULATPUR,দৌলতপুর
+321,KHOKSA,খোকসা
+322,KUMARKHALI,কুমারখালী
+323,KUSHTIA SADAR,কুষ্টিয়া সদর
+324,MIRPUR,মিরপুর
+325,KAMALNAGAR,কমলনগর
+326,LAKSHMIPUR SADAR,লক্ষ্মীপুর সদর
+327,RAIPUR,রায়পুর
+328,RAMGANJ,রামগঞ্জ
+329,RAMGATI,রামগতি
+330,ADITMARI,আদিতমারি
+331,HATIBANDHA,হাতীবান্ধা
+332,KALIGANJ,কালীগঞ্জ
+333,LALMONIRHAT SADAR,লালমনিরহাট সদর
+334,PATGRAM,প্যাটগ্রাম
+335,KALKINI,কালকিনি
+336,MADARIPUR SADAR,মাদারীপুর সদর
+337,RAJOIR,রাজওর
+338,SHIBCHAR,শিবচর
+339,MAGURA SADAR,মাগুরা সদর
+340,MOHAMMADPUR,মহম্মদপুর
+341,SHALIKHA,শালিখা
+342,SREEPUR,শ্রীপুর
+343,DAULATPUR,দৌলতপুর
+344,GHIOR,ঘিওর
+345,HARIRAMPUR,হরিরামপুর
+346,MANIKGANJ SADAR,মানিকগঞ্জ সদর
+347,SATURIA,সাটুরিয়া
+348,SHIBALAY,শিবালয়
+349,SINGAIR,সিঙ্গাইর
+350,GANGNI,গাংনি
+351,MUJIBNAGAR,মুজিবনগর
+352,MEHERPUR SADAR,মেহেরপুর সদর
+353,BARALEKHA,বড়লেখা
+354,JURI,জুরি
+355,KAMALGANJ,কমলগঞ্জ
+356,KULAURA,কুলাউড়া
+357,MOULVIBAZAR SADAR,মৌলভীবাজার সদর
+358,RAJNAGAR,রাজনগর
+359,SREEMANGAL,শ্রীমঙ্গল
+360,GAZARIA,গজারিয়া
+361,LOUHAJANG,লৌহজং
+362,MUNSHIGANJ SADAR,মুন্সীগঞ্জ সদর
+363,SIRAJDIKHAN,সিরাজদিখান
+364,SREENAGAR,শ্রীনগর
+365,TONGIBARI,টঙ্গিবাড়ি
+366,BHALUKA,ভালুকা
+367,DHOBAURA,ধোবাউড়া
+368,FULBARIA,ফুলবাড়িয়া
+369,GAFARGAON,গফরগাঁও
+370,GOURIPUR,গৌরীপুর
+371,HALUAGHAT,হালুয়াঘাট
+372,ISHWARGANJ,ঈশ্বরগঞ্জ
+373,MYMENSINGH SADAR,ময়মনসিংহ সদর
+374,MUKTAGACHHA,মুক্তাগাছা
+375,NANDAIL,নান্দাইল
+376,FULPUR,ফুলপুর
+377,TARAKANDA,তারাকান্দা
+378,TRISHAL,ত্রিশাল
+379,ATRAI,ATRAI
+380,BADALGACHHI,বদলগাছী
+381,DHAMOIRHAT,ধামইরহাট
+382,MANDA,মান্ডা
+383,MAHADEBPUR,মহাদেবপুর
+384,NAOGAON SADAR,নওগাঁ সদর
+385,NIAMATPUR,নিয়ামতপুর
+386,PATNITALA,পত্নীতলা
+387,PORSHA,পোরশা
+388,RANINAGAR,রাণীনগর
+389,SAPAHAR,সাপাহার
+390,KALIA,কালিয়া
+391,LOHAGARA,লোহাগাড়া
+392,NARAIL SADAR,নড়াইল সদর
+393,ARAIHAZAR,আড়াইহাজার
+394,SONARGAON,সোনারগাঁও
+395,BANDAR,বান্দর
+396,NARAYANGANJ SADAR,নারায়ণগঞ্জ সদর
+397,RUPGANJ,রূপগঞ্জ
+398,BELABO,বেলাবো
+399,MANOHARDI,মনোহরদী
+400,NARSINGDI SADAR,নরসিংদী সদর
+401,PALASH,পলাশ
+402,RAIPURA,রায়পুরা
+403,SHIBPUR,শিবপুর
+404,BAGATIPARA,বাগাতিপাড়া
+405,BARAIGRAM,বড়াইগ্রাম
+406,GURUDASPUR,গুরুদাসপুর
+407,LALPUR,লালপুর
+408,NALDANGA,নলডাঙ্গা
+409,NATORE SADAR,নাটোর সদর
+410,SINGRA,সিংড়া
+411,BHOLAHAT,ভোলাহাট
+412,GOMASTAPUR,গোমস্তাপুর
+413,NACHOLE,নাচোল
+414,CHAPAINAWABGANJ SADAR,চাঁপাইনবাবগঞ্জ সদর
+415,SHIBGANJ,শিবগঞ্জ
+416,ATPARA,আটপাড়া
+417,BARHATTA,বারহাট্টা
+418,DURGAPUR,দুর্গাপুর
+419,KHALIAJURI,খালিয়াজুরি
+420,KALMAKANDA,কলমাকান্দা
+421,KENDUA,কেন্ডুয়া
+422,MADAN,মদন
+423,MOHANGANJ,মোহনগঞ্জ
+424,NETRAKONA SADAR,নেত্রকোনা সদর
+425,PURBADHALA,পূর্বধলা
+426,DIMLA,ডিমলা
+427,DOMAR,ডোমার
+428,JALDHAKA,জলঢাকা
+429,KISHOREGANJ,কিশোরগঞ্জ
+430,NILPHAMARI SADAR,নীলফামারী সদর
+431,SAIDPUR,সৈয়দপুর
+432,BEGUMGANJ,বেগমগঞ্জ
+433,CHATKHIL,চাটখিল
+434,COMPANIGANJ,কোম্পানীগঞ্জ
+435,HATIYA,হাতিয়া
+436,KABIRHAT,কবিরহাট
+437,SENBAG,সেনবাগ
+438,SONAIMURI,সোনাইমুড়ি
+439,SUBARNACHAR,সুবর্ণাচার
+440,NOAKHALI SADAR,নোয়াখালী সদর
+441,ATGHARIA,আটঘরিয়া
+442,BERA,বেরা
+443,BHANGURA,ভাঙ্গুড়া
+444,CHATMOHAR,চাটমোহর
+445,FARIDPUR,ফরিদপুর
+446,ISHWARDI,ঈশ্বরদী
+447,PABNA SADAR,পাবনা সদর
+448,SANTHIA,সাঁথিয়া
+449,SUJANAGAR,সুজানগর
+450,ATOWARI,আতোয়ারী
+451,BODA,BODA
+452,DEBIGANJ,দেবীগঞ্জ
+453,PANCHAGARH SADAR,পঞ্চগড় সদর
+454,TENTULIA,তেঁতুলিয়া
+455,BAUPHAL,বাউফল
+456,DASHMINA,দশমিনা
+457,DUMKI,দুমকি
+458,GALACHIPA,গলাচিপা
+459,KALAPARA,কলাপাড়া
+460,MIRZAGANJ,মির্জাগঞ্জ
+461,PATUAKHALI SADAR,পটুয়াখালী সদর
+462,RANGABALI,রাঙ্গাবালি
+463,BHANDARIA,ভান্ডারিয়া
+464,KAWKHALI,কাওখালি
+465,MATHBARIA,মঠবাড়িয়া
+466,NAZIRPUR,নাজিরপুর
+467,PIROJPUR SADAR,পিরোজপুর সদর
+468,NESARABAD (SWARUPKATHI),নেছারাবাদ (স্বরূপকাঠি)
+469,INDURKANI,ইন্দুরকানি
+470,BAGHA,বাঘা
+471,BAGMARA,বাগমারা
+472,BOALIA,বোয়ালিয়া
+473,CHANDRIMA,চন্দ্রিমা
+474,CHARGHAT,চারঘাট
+475,DURGAPUR,দুর্গাপুর
+476,GODAGARI,গোদাগাড়ী
+477,KASHIADANGA,কাশিয়াডাঙ্গা
+478,MATIHAR,মতিহার
+479,MOHANPUR,মোহনপুর
+480,PABA,পবা
+481,PUTHIA,পুঠিয়া
+482,RAJPARA,রাজপাড়া
+483,SHAH MAKHDUM,শাহ মখদুম
+484,TANORE,তানোর
+485,BALIAKANDI,বালিয়াকান্দি
+486,GOALANDA,গোয়ালন্দ
+487,KALUKHALI,কালুখালী
+488,PANGSHA,পাংশা
+489,RAJBARI SADAR,রাজবাড়ী সদর
+490,BAGHAICHHARI,বাঘাইছড়ি
+491,BARKAL,বারকাল
+492,KAWKHALI,কাওখালি
+493,BELAICHHARI,বেলাইছড়ি
+494,KAPTAI,কাপ্তাই
+495,JURACHHARI,জুরাছড়ি
+496,LANGADU,ল্যাঙ্গাডু
+497,NANIARCHAR,নানিয়ারচর
+498,RAJASTHALI,রাজস্থলী
+499,RANGAMATI SADAR,রাঙ্গামাটি সদর
+500,BADARGANJ,বদরগঞ্জ
+501,GANGACHARA,গঙ্গাচড়া
+502,KAUNIA,কাউনিয়া
+503,RANGPUR SADAR,রংপুর সদর
+504,MITHAPUKUR,মিঠাপুকুর
+505,PIRGACHHA,পীরগাছা
+506,PIRGANJ,পীরগঞ্জ
+507,TARAGANJ,তারাগঞ্জ
+508,BHEDARGANJ,ভেদরগঞ্জ
+509,DAMUDYA,দামুদ্য
+510,GOSAIRHAT,গোসাইরহাট
+511,NARIA,নারিয়া
+512,SHARIATPUR SADAR,শরীয়তপুর সদর
+513,ZAJIRA,জাজিরা
+514,ASHASHUNI,আশাশুনি
+515,DEBHATA,দেবহাটা
+516,KALAROA,কালরোয়া
+517,KALIGANJ,কালীগঞ্জ
+518,SATKHIRA SADAR,সাতক্ষীরা সদর
+519,SHYAMNAGAR,শ্যামনগর
+520,TALA,তালা
+521,BELKUCHI,বেলকুচি
+522,CHOUHALI,চৌহালী
+523,KAMARKHANDA,কামারখণ্ডা
+524,KAZIPUR,কাজিপুর
+525,RAYGANJ,রায়গঞ্জ
+526,SHAHJADPUR,শাহজাদপুর
+527,SIRAJGANJ SADAR,সিরাজগঞ্জ সদর
+528,TARASH,তারাশ
+529,ULLAPARA,উল্লাপাড়া
+530,JHENAIGATI,ঝিনাইগাতী
+531,NAKLA,নকলা
+532,NALITABARI,নালিতাবাড়ী
+533,SHERPUR SADAR,শেরপুর সদর
+534,SREEBARDI,শ্রীবর্দী
+535,BISHWAMBHARPUR,বিশ্বম্ভরপুর
+536,CHHATAK,ছাতক
+537,DAKKHIN SUNAMGANJ,দক্ষিণ সুনামগঞ্জ
+538,DERAI,DERAI
+539,DHARMAPASHA,ধর্মপাশা
+540,DOWARABAZAR,দোয়ারাবাজার
+541,JAGANNATHPUR,জগন্নাথপুর
+542,JAMALGANJ,জামালগঞ্জ
+543,SHALLA,শাল্লা
+544,SUNAMGANJ SADAR,সুনামগঞ্জ সদর
+545,TAHIRPUR,তাহিরপুর
+546,AIRPORT,এয়ারপোর্ট
+547,BALAGANJ,বালাগঞ্জ
+548,BEANIBAZAR,বিয়ানীবাজার
+549,BISHWANATH,বিশ্বনাথ
+550,COMPANIGANJ,কোম্পানীগঞ্জ
+551,DAKKHIN SURMA,দক্ষিণ সুরমা
+552,FENCHUGANJ,ফেঞ্চুগঞ্জ
+553,GOLAPGANJ,গোলাপগঞ্জ
+554,GOWAINGHAT,গোয়াইনঘাট
+555,JALALABAD,জালালাবাদ
+556,JAINTAPUR,জৈন্তাপুর
+557,KOTWALI,কোতোয়ালি
+558,MOGLABAZAR,মোগলাবাজার
+559,KANAIGHAT,কানাইঘাট
+560,OSMANINAGAR,ওসমানীনগর
+561,SYLHET SADAR,সিলেট সদর
+562,SHAHPARAN,শাহপরান
+563,ZAKIGANJ,জকিগঞ্জ
+564,BASAIL,বাসাইল
+565,BHUANPUR,ভুয়ানপুর
+566,DELDUAR,ডেলডুয়ার
+567,DHANBARI,ধনবাড়ী
+568,GHATAIL,ঘাটাইল
+569,GOPALPUR,গোপালপুর
+570,KALIHATI,কালিহাতী
+571,MADHUPUR,মধুপুর
+572,MIRZAPUR,মির্জাপুর
+573,NAGARPUR,নাগরপুর
+574,SAKHIPUR,সখিপুর
+575,TANGAIL SADAR,টাঙ্গাইল সদর
+576,BALIADANGI,বালিয়াডাঙ্গি
+577,HARIPUR,হরিপুর
+578,PIRGANJ,পীরগঞ্জ
+579,RANISHANKAIL,রানীশংকৈল
+580,THAKURGAON SADAR,ঠাকুরগাঁও সদর
