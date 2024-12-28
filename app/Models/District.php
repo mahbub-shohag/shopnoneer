@@ -11,11 +11,14 @@ class District extends Model
     use ValidatorTrait;
     use HasFactory;
 
-    public function division(){
-        return $this->belongsTo(Division::class,'division_id');
+    public function upazilas()
+    {
+        return $this->hasMany(Upazila::class); // Ensure the correct model is referenced
     }
-    public function upazilas(){
-        $this->hasMany(Upazila::class);
+
+    public function division()
+    {
+        return $this->belongsTo(Division::class); // Ensure the correct foreign key
     }
 
     public static function boot()

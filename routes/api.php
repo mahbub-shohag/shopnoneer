@@ -1,6 +1,7 @@
 <?php
 
 use App\Http\Controllers\AuthController;
+use App\Http\Controllers\DivisionController;
 use App\Http\Controllers\FavouriteController;
 use App\Http\Controllers\HousingController;
 use App\Http\Controllers\ProfileController;
@@ -37,4 +38,5 @@ Route::middleware('auth:sanctum')->group(function (){
     Route::post('update-user-profile',[UserController::class,'updateUserProfile']);
     Route::post('user-profile',[ProfileController::class,'userProfile']);
     Route::post('translation',[TranslationController::class,'translation']);
+    Route::post('division-list',[DivisionController::class,'getDivisions']);
 });
