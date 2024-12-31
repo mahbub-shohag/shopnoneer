@@ -179,7 +179,7 @@ class ProjectController extends Controller
 
     public function getProjectList(Request $request){
         $size = $request->size;
-        $page = $request->page?$request->page:1;
+        $page = $request->page ? $request->page : 1;
         $skip = ($page - 1) * $size;
         $projects = Project::with('media', 'division', 'district', 'upazila', 'housing')->where('is_active', 1)->skip($skip)->take($size)->get();
         $projectDtos = $projects->map(fn($project) => ProjectDTO::fromModel($project))->toArray();
@@ -199,7 +199,13 @@ class ProjectController extends Controller
     }
 
     public function getProjectByFilter(Request $request){
+        $size = $request->size;
+        $page = $request->page ? $request->page : 1;
+        $skip = ($page - 1) * $size;
         $filters = $request->filters;
+//        print_r($filters);
+
+
         $query = Project::query()->with('media','division','district','upazila','housing');
 
         foreach ($filters as $field => $value) {
@@ -207,6 +213,9 @@ class ProjectController extends Controller
                 $query->where($field, $field === 'title' ? 'LIKE' : '=', $field === 'title' ? "%{$value}%" : $value);
             }
         }
+//        $projects = $query->skip($skip)->take($size)->get();
+//        print_r($projects);
+
         $projects = $query->get();
         $projectDtos = $projects->map(fn($project) => ProjectDTO::fromModel($project))->toArray();
         return $this->returnSuccess("Project List",$projectDtos);
