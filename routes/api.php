@@ -36,7 +36,7 @@ Route::middleware('auth:sanctum')->group(function (){
     Route::post('add-favourite',[FavouriteController::class,'addFavourite']);
     Route::post('remove-favourite',[FavouriteController::class,'removeFavourite']);
     Route::post('favourite-list',[FavouriteController::class,'favouriteListByUser']);
-    Route::post('update-user-profile',[UserController::class,'updateUserProfile']);
+    Route::post('update-user-profile',[ProfileController::class,'updateProfileAPI']);
     Route::post('user-profile',[ProfileController::class,'userProfile']);
     Route::post('translation',[TranslationController::class,'translation']);
     Route::post('division-list',[DivisionController::class,'getDivisions']);

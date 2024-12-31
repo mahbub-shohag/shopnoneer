@@ -93,7 +93,6 @@ class AuthController extends Controller
         if($request->password == $request->confirm_password){
             $user = new User;
             $user->name = $request->name;
-            $user->phone_number = $request->phone_number;
             $user->email = $request->email;
             $user->password = Hash::make($request->password);
             $user->role_id = 3;
@@ -101,6 +100,7 @@ class AuthController extends Controller
                 $profile = new Profile();
                 $profile->user_id = $user->id;
                 $profile->fullName = $request->name;
+                $profile->phone_number = $request->phone_number;
                 $profile->save();
             }
 

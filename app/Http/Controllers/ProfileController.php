@@ -60,7 +60,7 @@ class ProfileController extends Controller
         $user = Auth::user();
         $profile = Profile::where('user_id', $user->id)->first();
         $profile->fullName = $request->fullName ?? $profile->fullName;
-        $profile->number = $request->number ?? $profile->number;
+        $profile->phone_number = $request->phone_number ?? $profile->phone_number;
         $profile->religion = $request->religion ?? $profile->religion;
         $profile->education = $request->education ?? $profile->education;
         $profile->occupation = $request->occupation ?? $profile->occupation;
@@ -85,6 +85,9 @@ class ProfileController extends Controller
         $profile->user_id = $user->id; // Assuming the user ID is always set.
         $profile->age = $request->age ?? $profile->age;
 
+
+
+
         $profile->save();
 
         return Redirect::route('profile.index');
@@ -92,15 +95,60 @@ class ProfileController extends Controller
 
 
     /*API Start*/
+
     public function updateProfileAPI(Request $request)
     {
+        $user = Auth::user();
+        $profile = Profile::where('user_id', $user->id)->first();
+//        print_r($request->data);exit;
+        $info = json_decode($request->data);
+//        print_r($info->fullName);exit;
+        $profile->fullName = $info->fullName ?? $profile->fullName;
+        $profile->phoneNumber = $info->phoneNumber ?? $profile->phoneNumber;
+        $profile->religion = $info->religion ?? $profile->religion;
+        $profile->education = $info->education ?? $profile->education;
+        $profile->occupation = $info->occupation ?? $profile->occupation;
+        $profile->presentDivision = $info->presentDivision ?? $profile->presentDivision;
+        $profile->presentDistrict = $info->presentDistrict ?? $profile->presentDistrict;
+        $profile->presentUpazilla = $info->presentUpazilla ?? $profile->presentUpazilla;
+        $profile->presentCity = $info->presentCity ?? $profile->presentCity;
+        $profile->permanentDivision = $info->permanentDivision ?? $profile->permanentDivision;
+        $profile->permanentDistrict = $info->permanentDistrict ?? $profile->permanentDistrict;
+        $profile->permanentUpazilla = $info->permanentUpazilla ?? $profile->permanentUpazilla;
+        $profile->permanentCity = $info->permanentCity ?? $profile->permanentCity;
+        $profile->preferableDivision = $info->preferableDivision ?? $profile->preferableDivision;
+        $profile->preferableDistrict = $info->preferableDistrict ?? $profile->preferableDistrict;
+        $profile->preferableUpazilla = $info->preferableUpazilla ?? $profile->preferableUpazilla;
+        $profile->preferableCity = $info->preferableCity ?? $profile->preferableCity;
+        $profile->estimatedBudget = $info->estimatedBudget ?? $profile->estimatedBudget;
+        $profile->preferableFlatSize = $info->preferableFlatSize ?? $profile->preferableFlatSize;
+        $profile->monthlyIncome = $info->monthlyIncome ?? $profile->monthlyIncome;
+        $profile->currentCapital = $info->currentCapital ?? $profile->currentCapital;
+        $profile->totalFamilyMembers = $info->totalFamilyMembers ?? $profile->totalFamilyMembers;
+        $profile->sourceOfIncome = $info->sourceOfIncome ?? $profile->sourceOfIncome;
+        $profile->user_id = $user->id; // Assuming the user ID is always set.
+        $profile->age = $info->age ?? $profile->age;
 
+
+        if ($request->hasFile('profilePhoto') && $request->file('profilePhoto')->isValid()) {
+            $profilePhoto_path = $request->file('profilePhoto')->store('profilePhotos', 'public');
+            print_r($profilePhoto_path);
+
+            $profile->profilePhoto = $profilePhoto_path;
+        } else {
+            $profile->profilePhoto = $profile->profilePhoto ?? $profile->profilePhoto;
+        }
+        $profile->save();
+
+
+        return $profile;
     }
+
 
     public function userProfile()
     {
-        $user = User::where('id',Auth::user()->id)->with('profile')->first();
-        return $this->returnSuccess('User Profile',$user);
+        $user = User::where('id', Auth::user()->id)->with('profile')->first();
+        return $this->returnSuccess('User Profile', $user);
     }
     /*API End*/
 }
