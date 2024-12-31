@@ -35,6 +35,20 @@ class FavouriteController extends Controller
         }
     }
 
+    public function favouriteListByUser(Request $request){
+        $favourites = Favourite::with('project')
+            ->where('is_active',1)
+            ->where('user_id',Auth::user()->id)->get();
+        return $this->returnSuccess('Favourite List',$favourites);
+    }
+    public function removeFavourite(Request $request){
+        $favourite_id = $request->input('favourite_id');
+        $favourite = Favourite::where('id',$favourite_id)->first()->id;
+        $favourite->is_active = 0;
+        $favourite->save();
+        return $this->returnSuccess('Favourite removed',$favourite);
+    }
+
 
     /*API End*/
 }
