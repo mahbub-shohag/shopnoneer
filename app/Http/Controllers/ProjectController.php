@@ -211,24 +211,4 @@ class ProjectController extends Controller
         $projectDtos = $projects->map(fn($project) => ProjectDTO::fromModel($project))->toArray();
         return $this->returnSuccess("Project List",$projectDtos);
     }
-
-    public function returnError($message,$code): \Illuminate\Http\JsonResponse
-    {
-        $message = [
-            "error"=>$message,
-            "code"=>$code
-        ];
-        return response()->json($message);
-    }
-
-    public function returnSuccess($message,$data): \Illuminate\Http\JsonResponse
-    {
-        $message = [
-            "message"=>$message,
-            "code"=>200,
-            "success"=>true,
-            "data"=>$data
-        ];
-        return response()->json($message);
-    }
 }

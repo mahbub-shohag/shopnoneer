@@ -69,13 +69,13 @@ class DivisionController extends Controller
     public function getDivisions(Request $request){
         $divisions = Division::with([
             'districts' => function ($query) {
-                $query->select('id', 'name', 'division_id')->with([
+                $query->select('id', 'name','name_bn', 'division_id')->with([
                     'upazilas' => function ($subQuery) {
-                        $subQuery->select('id', 'name', 'district_id');
+                        $subQuery->select('id', 'name','name_bn', 'district_id');
                     }
                 ]);
             }
-        ])->select('id', 'name')->get();
+        ])->select('id', 'name','name_bn')->get();
         return $this->returnSuccess('List of Divisions',$divisions);
     }
 

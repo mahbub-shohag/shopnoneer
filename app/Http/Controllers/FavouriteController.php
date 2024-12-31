@@ -35,39 +35,6 @@ class FavouriteController extends Controller
         }
     }
 
-    public function favouriteListByUser(Request $request){
-        $projects = User::find(Auth::user()->id)->favouriteProjects;
-        $projectDtos = $projects->map(fn($project) => ProjectDTO::fromModel($project))->toArray();
-        return $this->returnSuccess("Favourite List",$projectDtos);
-    }
-
-    public function removeFavourite(Request $request){
-        $project_id = $request->input('project_id');
-        $favourite = Favourite::where('project_id',$project_id)->where('user_id',Auth::user()->id)->first();
-        $favourite->is_active = 0;
-        $favourite->save();
-        return $this->returnSuccess('Favourite removed',$favourite);
-    }
-
-    public function returnError($message): JsonResponse
-    {
-        $message = [
-            "error"=>$message,
-            "code"=> 500
-        ];
-        return response()->json($message);
-    }
-
-    public function returnSuccess($message,$data): JsonResponse
-    {
-        $message = [
-            "message"=>$message,
-            "code"=>200,
-            "success"=>true,
-            "data"=>$data
-        ];
-        return response()->json($message);
-    }
 
     /*API End*/
 }
