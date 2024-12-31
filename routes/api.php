@@ -1,6 +1,7 @@
 <?php
 
 use App\Http\Controllers\AuthController;
+use App\Http\Controllers\CategoryController;
 use App\Http\Controllers\DivisionController;
 use App\Http\Controllers\FavouriteController;
 use App\Http\Controllers\HousingController;
@@ -39,4 +40,5 @@ Route::middleware('auth:sanctum')->group(function (){
     Route::post('user-profile',[ProfileController::class,'userProfile']);
     Route::post('translation',[TranslationController::class,'translation']);
     Route::post('division-list',[DivisionController::class,'getDivisions']);
+    Route::post('category-list',[CategoryController::class,'getCategory']);
 });

@@ -39,25 +39,6 @@ class ProfileController extends Controller
         return view('profile.profile_list', ['profiles' => $profiles]);
     }
 
-    /**
-     * Show the form for creating a new resource.
-     */
-    public function create()
-    {
-        //
-    }
-
-    /**
-     * Store a newly created resource in storage.
-     */
-    public function store(Request $request)
-    {
-        //
-    }
-
-    /**
-     * Display the specified resource.
-     */
     public function show(Profile $profile)
     {
         return view('profile.show', ['profile' => $profile]);
@@ -79,6 +60,7 @@ class ProfileController extends Controller
         $user = Auth::user();
         $profile = Profile::where('user_id', $user->id)->first();
         $profile->fullName = $request->fullName ?? $profile->fullName;
+        $profile->number = $request->number ?? $profile->number;
         $profile->religion = $request->religion ?? $profile->religion;
         $profile->education = $request->education ?? $profile->education;
         $profile->occupation = $request->occupation ?? $profile->occupation;
@@ -108,14 +90,6 @@ class ProfileController extends Controller
         return Redirect::route('profile.index');
     }
 
-
-    /**
-     * Remove the specified resource from storage.
-     */
-    public function destroy(Profile $profile)
-    {
-        //
-    }
 
     /*API Start*/
     public function updateProfileAPI(Request $request)

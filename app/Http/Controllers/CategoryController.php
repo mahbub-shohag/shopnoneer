@@ -15,15 +15,18 @@ class CategoryController extends Controller
         $categories = Category::with('parent')->orderByDesc('updated_at')->get();
         return view('categories.index', ['categories' => $categories]);
     }
+
     public function create()
     {
         $category_types = Category::where('parent_id', 1)->get();
         return view('categories.create', ['category_types' => $category_types]);
     }
+
     public function show(Category $category)
     {
         return view('categories.show', ['category' => $category]);
     }
+
     public function edit(Category $category)
     {
         $category_types = Category::where('parent_id', 1)->get();
@@ -31,6 +34,7 @@ class CategoryController extends Controller
         return view('categories.edit', ['category' => $category, 'category_types' => $category_types]);
 
     }
+
     public function store(Request $request)
     {
         try {
@@ -39,11 +43,11 @@ class CategoryController extends Controller
             $category->parent_id = $request->parent_id;
             $category->save();
             return redirect('/category')->with('success', 'Category created successfully.');
-        }
-        catch (\Exception $e) {
+        } catch (\Exception $e) {
             return redirect('/category')->with('error', $e->getMessage());
         }
     }
+
     public function update(Request $request, Category $category)
     {
         try {
@@ -57,12 +61,13 @@ class CategoryController extends Controller
             $category->save();
             return redirect('category')->with('success', 'Category updated successfully.');
         } catch (\Exception $e) {
-            return redirect('/category/edit')->with('error',$e->getMessage());
+            return redirect('/category/edit')->with('error', $e->getMessage());
 
         }
 
 
     }
+
     public function destroy(Category $category)
     {
         try {
@@ -72,8 +77,6 @@ class CategoryController extends Controller
             return redirect('/category')->with('warning', 'Failed to delete Category');
         }
     }
-
-
 
 
     // ........ Others Operation .........
@@ -89,4 +92,23 @@ class CategoryController extends Controller
         }
         return $options;
     }
+
+
+    // API START
+
+    public function getCategory(Request $request)
+    {
+        $parentIds = Category::whereIn('label',['Occupation','Religion','Education'])->get()->pluck('id')->toArray();
+        $categoryList = Category::whereIn('categories.parent_id',$parentIds)
+            ->join('categories as parent_categories', 'categories.parent_id', '=', 'parent_categories.id')
+            ->orderBy('parent_id','desc')
+            ->select('categories.id','categories.parent_id','categories.label','parent_categories.label as parent')->get();
+        return $this->returnSuccess('category list',$categoryList) ;
+    }
+
+    // API END
+
+
 }
+
+
