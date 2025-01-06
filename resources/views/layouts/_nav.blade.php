@@ -28,6 +28,8 @@ function active($selectedMenu){
                 </a>
                 <div class="collapse show collapsed" id="collapseLayouts" aria-labelledby="headingOne" data-bs-parent="#sidenavAccordion">
                     <nav class="sb-sidenav-menu-nested nav">
+                        <a class="nav-link mt-2 {{ active('contact') }}" href="{{ asset('contact') }}">Contact</a>
+                        <a class="nav-link mt-2 {{ active('faq') }}" href="{{ asset('faq') }}">FAQ</a>
                         <a class="nav-link mt-2 {{ active('housing') }}" href="{{ asset('housing') }}">Housing</a>
                         <a class="nav-link {{ active('facility') }}" href="{{ asset('facility') }}">Facility</a>
                         <a class="nav-link {{ active('category') }}" href="{{ asset('category') }}">Category</a>

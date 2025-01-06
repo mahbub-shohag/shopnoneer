@@ -2,7 +2,9 @@
 
 use App\Http\Controllers\AuthController;
 use App\Http\Controllers\CategoryController;
+use App\Http\Controllers\ContactController;
 use App\Http\Controllers\DivisionController;
+use App\Http\Controllers\FaqController;
 use App\Http\Controllers\FavouriteController;
 use App\Http\Controllers\HousingController;
 use App\Http\Controllers\ProfileController;
@@ -41,4 +43,6 @@ Route::middleware('auth:sanctum')->group(function (){
     Route::post('translation',[TranslationController::class,'translation']);
     Route::post('division-list',[DivisionController::class,'getDivisions']);
     Route::post('category-list',[CategoryController::class,'getCategory']);
+    Route::post('faq-list',[FaqController::class,'getFaq']);
+    Route::post('contact-list',[ContactController::class,'createContact']);
 });

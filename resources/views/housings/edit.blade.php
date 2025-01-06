@@ -22,8 +22,8 @@
 
         <div class="card-body">
             <form class="preventSubmit" action="{{ route('housing.update', $housing->id) }}" method="POST">
-                {{ csrf_field() }}
-                {{ method_field('PUT') }}
+                @csrf
+                @method('PUT')
 
                 @if ($errors->any())
                     <div class="alert alert-danger">

@@ -98,8 +98,6 @@ class ProfileController extends Controller
 
     public function updateProfileAPI(Request $request)
     {
-        echo "<pre>";
-        print_r($request->profilePhoto);
         try {
             $user = Auth::user();
             $profile = Profile::where('user_id', $user->id)->first();
@@ -130,7 +128,6 @@ class ProfileController extends Controller
             $profile->user_id = $user->id; // Assuming the user ID is always set.
             $profile->age = $info->age ?? $profile->age;
 
-
             if ($request->hasFile('profilePhoto') && $request->file('profilePhoto')->isValid()) {
                 $profilePhoto_path = $request->file('profilePhoto')->store('profilePhotos', 'public');
                 $profile->profilePhoto = $profilePhoto_path;
@@ -139,8 +136,7 @@ class ProfileController extends Controller
             }
             $profile->save();
 
-
-            return $profile;
+            return $this->returnSuccess('Profile Updated Successfully',$profile);
         }catch (\Exception $exception){
             echo $exception->getMessage();
         }

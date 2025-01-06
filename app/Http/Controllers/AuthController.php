@@ -100,7 +100,6 @@ class AuthController extends Controller
                 $profile = new Profile();
                 $profile->user_id = $user->id;
                 $profile->fullName = $request->name;
-                $profile->phone_number = $request->phone_number;
                 $profile->save();
             }
 

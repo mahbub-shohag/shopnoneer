@@ -17,54 +17,6 @@ class DivisionController extends Controller
         return view('divisions.index',['divisions'=>$divisions]);
     }
 
-    /**
-     * Show the form for creating a new resource.
-     */
-    public function create()
-    {
-        //
-    }
-
-    /**
-     * Store a newly created resource in storage.
-     */
-    public function store(Request $request)
-    {
-        //
-    }
-
-    /**
-     * Display the specified resource.
-     */
-    public function show(Division $division)
-    {
-        //
-    }
-
-    /**
-     * Show the form for editing the specified resource.
-     */
-    public function edit(Division $division)
-    {
-        //
-    }
-
-    /**
-     * Update the specified resource in storage.
-     */
-    public function update(Request $request, Division $division)
-    {
-        //
-    }
-
-    /**
-     * Remove the specified resource from storage.
-     */
-    public function destroy(Division $division)
-    {
-        //
-    }
-
     /*API Start*/
     public function getDivisions(Request $request){
         $divisions = Division::with([
@@ -78,8 +30,6 @@ class DivisionController extends Controller
         ])->select('id', 'name','name_bn')->get();
         return $this->returnSuccess('List of Divisions',$divisions);
     }
-
-
     /*API End*/
 
 }
