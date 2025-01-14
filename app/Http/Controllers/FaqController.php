@@ -13,6 +13,7 @@ class FaqController extends Controller
     {
         $faqs = Faq::orderByDesc('updated_at')->get();
         return view('faq.index', ['faqs' => $faqs]);
+
     }
 
 

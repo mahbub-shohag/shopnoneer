@@ -181,7 +181,7 @@ class ProjectController extends Controller
         $size = $request->size;
         $page = $request->page ? $request->page : 1;
         $skip = ($page - 1) * $size;
-        $projects = Project::with('media', 'division', 'district', 'upazila', 'housing')->where('is_active', 1)->skip($skip)->take($size)->get();
+        $projects = Project::with('media', 'division', 'district', 'upazila', 'housing')->where('is_active', 1)->skip($skip)->take($size)->orderByDesc('created_at')->get();
         $projectDtos = $projects->map(fn($project) => ProjectDTO::fromModel($project))->toArray();
         return $this->returnSuccess("Project List", $projectDtos);
     }
@@ -197,27 +197,50 @@ class ProjectController extends Controller
             return $this->returnError("Error",$e->getMessage());
         }
     }
-
-    public function getProjectByFilter(Request $request){
+    public function getProjectByFilter(Request $request)
+    {
         $size = $request->size;
         $page = $request->page ? $request->page : 1;
         $skip = ($page - 1) * $size;
         $filters = $request->filters;
-//        print_r($filters);
 
-
-        $query = Project::query()->with('media','division','district','upazila','housing');
+        // This is query for project only selected relation will get
+        $query = Project::query()->with('media', 'division', 'district', 'upazila', 'housing');
 
         foreach ($filters as $field => $value) {
             if (!is_null($value)) {
-                $query->where($field, $field === 'title' ? 'LIKE' : '=', $field === 'title' ? "%{$value}%" : $value);
+                if ($field === 'title') {
+                    // This is for partial matching
+                    $query->where($field, 'LIKE', "%{$value}%");
+                } elseif ($field === 'housing') {
+                    // If 'housing' is a relationship, use whereHas to filter based on the housing relation
+                    $query->whereHas('housing', function($query) use ($value) {
+                        $query->where('name', 'LIKE', "%{$value}%");
+                    });
+                } else {
+                    // '=' this for same to same matching
+                    $query->where($field, '=', $value);
+                }
             }
         }
-//        $projects = $query->skip($skip)->take($size)->get();
-//        print_r($projects);
 
-        $projects = $query->get();
+        $activeProjectsCount = $query->where('is_active', 1)->count();
+
+        // Fetch paginated results
+        $projects = $query->where('is_active', 1) // Filter only active projects
+        ->skip($skip)
+            ->take($size)
+            ->orderByDesc('created_at')
+            ->get();
+
+        // Map projects to DTOs
         $projectDtos = $projects->map(fn($project) => ProjectDTO::fromModel($project))->toArray();
-        return $this->returnSuccess("Project List",$projectDtos);
+//        return $this->returnSuccess("Project List", $projectDtos);
+
+        return $this->returnSuccess("Project List", [
+            'projects' => $projectDtos,
+            'total_active_projects' => $activeProjectsCount
+        ]);
     }
+
 }

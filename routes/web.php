@@ -9,7 +9,7 @@ use App\Http\Controllers\DashboardController;
 use App\Http\Controllers\DivisionController;
 use App\Http\Controllers\DistrictController;
 use App\Http\Controllers\FacilityController;
-use App\Http\Controllers\FAQController;
+use App\Http\Controllers\FaqController;
 use App\Http\Controllers\UpazilaController;
 use App\Http\Controllers\UserController;
 use App\Http\Controllers\RoleController;
@@ -110,7 +110,7 @@ Route::post('/facilities_by_upazila_id', [FacilityController::class, 'facilities
 /*Amenities*/
 Route::resource('/amenity',AmenityController::class);
 
-Route::resource('/faq',FAQController::class);
+Route::resource('/faq',FaqController::class);
 Route::resource('/contact',ContactController::class);
 
 

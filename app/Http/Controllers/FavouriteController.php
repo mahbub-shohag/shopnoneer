@@ -8,6 +8,7 @@ use App\Models\User;
 use Illuminate\Http\JsonResponse;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Auth;
+use function Laravel\Prompts\error;
 
 class FavouriteController extends Controller
 {
@@ -31,7 +32,7 @@ class FavouriteController extends Controller
         if($favourite){
             return $this->returnSuccess('Favourite added successfully',$favourite);
         }else{
-            return $this->returnError('Something went wrong');
+            return $this->returnError('Something went wrong',404);
         }
     }
 
@@ -48,7 +49,5 @@ class FavouriteController extends Controller
         $favourite->save();
         return $this->returnSuccess('Favourite removed',$favourite);
     }
-
-
     /*API End*/
 }

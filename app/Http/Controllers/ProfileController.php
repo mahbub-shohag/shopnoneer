@@ -101,7 +101,13 @@ class ProfileController extends Controller
         try {
             $user = Auth::user();
             $profile = Profile::where('user_id', $user->id)->first();
+
+            if (!$profile) {
+                return response()->json(['success' => false, 'message' => 'Profile not found.'], 404);
+            }
+
             $info = json_decode($request->data);
+
             $profile->fullName = $info->fullName ?? $profile->fullName;
             $profile->phoneNumber = $info->phoneNumber ?? $profile->phoneNumber;
             $profile->religion = $info->religion ?? $profile->religion;
@@ -125,23 +131,42 @@ class ProfileController extends Controller
             $profile->currentCapital = $info->currentCapital ?? $profile->currentCapital;
             $profile->totalFamilyMembers = $info->totalFamilyMembers ?? $profile->totalFamilyMembers;
             $profile->sourceOfIncome = $info->sourceOfIncome ?? $profile->sourceOfIncome;
-            $profile->user_id = $user->id; // Assuming the user ID is always set.
+            $profile->user_id = $user->id;
             $profile->age = $info->age ?? $profile->age;
 
+            // Update username if provided
+            if (isset($info->fullName)) {
+                $user->name = $info->fullName;
+            }
+
+            // Handle profile photo upload
             if ($request->hasFile('profilePhoto') && $request->file('profilePhoto')->isValid()) {
                 $profilePhoto_path = $request->file('profilePhoto')->store('profilePhotos', 'public');
+                // Update both user and profile models with the new photo
+//                $user->profile_photo_url = $profilePhoto_path;
                 $profile->profilePhoto = $profilePhoto_path;
-            } else {
-                $profile->profilePhoto = $profile->profilePhoto ?? $profile->profilePhoto;
             }
+
+            // Save changes to both User and Profile models
+            $user->save();
             $profile->save();
 
-            return $this->returnSuccess('Profile Updated Successfully',$profile);
-        }catch (\Exception $exception){
-            echo $exception->getMessage();
-        }
+            return response()->json([
+                'success' => true,
+                'message' => 'Profile Updated Successfully',
+                'user' => $user,
+                'profile' => $profile
+            ]);
 
+        } catch (\Exception $exception) {
+            return response()->json([
+                'success' => false,
+                'message' => 'An error occurred: ' . $exception->getMessage()
+            ], 500);
+        }
     }
+
+
 
 
     public function userProfile()
