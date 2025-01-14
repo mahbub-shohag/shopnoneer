@@ -56,7 +56,7 @@
                             <div style="display: flex; align-items: center; justify-content: space-around; width: 50%;">
                                 <a href="{{ route('contact.show', ['contact' => $contact]) }}"
                                    class="btn-icon btn-view">
-                                    <i class="fas fa-eye"></i>Ω
+                                    <i class="fas fa-eye"></i>
                                 </a>
                                 <form action="{{ route('contact.destroy', ['contact' => $contact]) }}" method="POST"
                                       style="margin: 0;">
