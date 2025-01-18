@@ -204,10 +204,8 @@ class ProjectController extends Controller
         $page = $request->page ? $request->page : 1;
         $skip = ($page - 1) * $size;
         $filters = $request->filters;
-//        print_r($filters);
-
-
-        $query = Project::query()->with('media','division','district','upazila','housing');
+        $query = Project::query()->with('media','division','district','upazila','housing')
+            ->where('is_active', 1);
 
         foreach ($filters as $field => $value) {
             if (!is_null($value)) {
@@ -215,8 +213,10 @@ class ProjectController extends Controller
             }
         }
 
+        $totalFilteredItems = $query->count();
+        $query->skip($skip)->take($size)->orderByDesc('created_at')->get();
         $projects = $query->get();
         $projectDtos = $projects->map(fn($project) => ProjectListDTO::fromModel($project))->toArray();
-        return $this->returnSuccess("Project List",$projectDtos);
+        return $this->returnSuccess("Project List",['projects'=>$projectDtos,'total_projects'=>$totalFilteredItems]);
     }
 }
