@@ -3,6 +3,7 @@
 namespace App\Http\Controllers;
 
 use App\DTOs\ProjectDTO;
+use App\DTOs\ProjectListDTO;
 use App\Models\Favourite;
 use App\Models\User;
 use Illuminate\Http\JsonResponse;
@@ -36,14 +37,16 @@ class FavouriteController extends Controller
     }
 
     public function favouriteListByUser(Request $request){
-        $favourites = Favourite::with('project')
-            ->where('is_active',1)
-            ->where('user_id',Auth::user()->id)->get();
-        return $this->returnSuccess('Favourite List',$favourites);
+        $projects = Auth::user()
+            ->favouriteProjects()
+            ->with(['media','division','district','upazila','housing'])
+            ->get();
+        $projectDtos = $projects->map(fn($project) => ProjectListDTO::fromModel($project))->toArray();
+        return $this->returnSuccess('Favourite List',$projectDtos);
     }
     public function removeFavourite(Request $request){
-        $favourite_id = $request->input('favourite_id');
-        $favourite = Favourite::where('id',$favourite_id)->first()->id;
+        $project_id = $request->input('project_id');
+        $favourite = Favourite::where('project_id',$project_id)->where('user_id',Auth::user()->id)->first();
         $favourite->is_active = 0;
         $favourite->save();
         return $this->returnSuccess('Favourite removed',$favourite);

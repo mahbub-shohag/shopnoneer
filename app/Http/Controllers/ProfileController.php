@@ -98,8 +98,6 @@ class ProfileController extends Controller
 
     public function updateProfileAPI(Request $request)
     {
-        echo "<pre>";
-        print_r($request->profilePhoto);
         try {
             $user = Auth::user();
             $profile = Profile::where('user_id', $user->id)->first();

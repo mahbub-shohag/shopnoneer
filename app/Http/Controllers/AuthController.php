@@ -100,8 +100,9 @@ class AuthController extends Controller
                 $profile = new Profile();
                 $profile->user_id = $user->id;
                 $profile->fullName = $request->name;
-                $profile->phone_number = $request->phone_number;
+                $profile->phoneNumber = $request->phone_number;
                 $profile->save();
+                $user->profile = $profile;
             }
 
             if($user && Hash::check($request->password,$user->password)){
@@ -116,7 +117,7 @@ class AuthController extends Controller
     }
 
     public function loginapi(Request $request){
-        $user = User::where('email',$request->email)->first();
+        $user = User::with('profile')->where('email',$request->email)->first();
         if(!$user){
             return $this->returnError("Email or password is invalid",401);
         }

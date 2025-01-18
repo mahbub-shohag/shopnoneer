@@ -9,6 +9,7 @@ use App\Models\Housing;
 use App\Models\Project;
 use App\Models\Upazila;
 use App\DTOs\ProjectDTO;
+use App\DTOs\ProjectListDTO;
 use Illuminate\Http\Request;
 use Spatie\MediaLibrary\MediaCollections\Exceptions\FileDoesNotExist;
 use Spatie\MediaLibrary\MediaCollections\Exceptions\FileIsTooBig;
@@ -181,8 +182,8 @@ class ProjectController extends Controller
         $size = $request->size;
         $page = $request->page ? $request->page : 1;
         $skip = ($page - 1) * $size;
-        $projects = Project::with('media', 'division', 'district', 'upazila', 'housing')->where('is_active', 1)->skip($skip)->take($size)->get();
-        $projectDtos = $projects->map(fn($project) => ProjectDTO::fromModel($project))->toArray();
+        $projects = Project::with('media', 'division', 'district', 'upazila', 'housing')->where('is_active', 1)->skip($skip)->take($size)->orderByDesc('created_at')->get();
+        $projectDtos = $projects->map(fn($project) => ProjectListDTO::fromModel($project))->toArray();
         return $this->returnSuccess("Project List", $projectDtos);
     }
 
@@ -213,11 +214,9 @@ class ProjectController extends Controller
                 $query->where($field, $field === 'title' ? 'LIKE' : '=', $field === 'title' ? "%{$value}%" : $value);
             }
         }
-//        $projects = $query->skip($skip)->take($size)->get();
-//        print_r($projects);
 
         $projects = $query->get();
-        $projectDtos = $projects->map(fn($project) => ProjectDTO::fromModel($project))->toArray();
+        $projectDtos = $projects->map(fn($project) => ProjectListDTO::fromModel($project))->toArray();
         return $this->returnSuccess("Project List",$projectDtos);
     }
 }
