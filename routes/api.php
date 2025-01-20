@@ -2,7 +2,9 @@
 
 use App\Http\Controllers\AuthController;
 use App\Http\Controllers\CategoryController;
+use App\Http\Controllers\ContactController;
 use App\Http\Controllers\DivisionController;
+use App\Http\Controllers\FaqController;
 use App\Http\Controllers\FavouriteController;
 use App\Http\Controllers\HousingController;
 use App\Http\Controllers\ProfileController;
@@ -26,19 +28,21 @@ Route::post('loginapi',[AuthController::class,'loginapi']);
 
 Route::middleware('auth:sanctum')->group(function (){
     Route::delete('logoutapi',[AuthController::class,'logoutapi']);
-
-    Route::post('housing-list',[HousingController::class,'getHousingList']);
-
-    Route::post('projectlist',[ProjectController::class,'getProjectList']);
-    Route::post('get-project-by-id',[ProjectController::class,'getProjectById']);
-    Route::post('get-project-by-filter',[ProjectController::class,'getProjectByFilter']);
-
     Route::post('add-favourite',[FavouriteController::class,'addFavourite']);
     Route::post('remove-favourite',[FavouriteController::class,'removeFavourite']);
     Route::post('favourite-list',[FavouriteController::class,'favouriteListByUser']);
     Route::post('update-user-profile',[ProfileController::class,'updateProfileAPI']);
     Route::post('user-profile',[ProfileController::class,'userProfile']);
     Route::post('translation',[TranslationController::class,'translation']);
+});
+
+Route::middleware(['api-token'])->group(function () {
     Route::post('division-list',[DivisionController::class,'getDivisions']);
     Route::post('category-list',[CategoryController::class,'getCategory']);
+    Route::post('faq-list',[FaqController::class,'getFaq']);
+    Route::post('contact-list',[ContactController::class,'createContact']);
+    Route::post('housing-list',[HousingController::class,'getHousingList']);
+    Route::post('projectlist',[ProjectController::class,'getProjectList']);
+    Route::post('get-project-by-id',[ProjectController::class,'getProjectById']);
+    Route::post('get-project-by-filter',[ProjectController::class,'getProjectByFilter']);
 });

@@ -30,6 +30,8 @@ function active($selectedMenu){
                     <nav class="sb-sidenav-menu-nested nav">
                         <a class="nav-link mt-2 {{ active('housing') }}" href="{{ asset('housing') }}">Housing</a>
                         <a class="nav-link {{ active('facility') }}" href="{{ asset('facility') }}">Facility</a>
+                        <a class="nav-link mt-2 {{ active('faq') }}" href="{{ asset('faq') }}">FAQ</a>
+                        <a class="nav-link mt-2 {{ active('contact') }}" href="{{ asset('contact') }}">Contact</a>
                         <a class="nav-link {{ active('category') }}" href="{{ asset('category') }}">Category</a>
                         <a class="nav-link {{ active('amenity') }}" href="{{ asset('amenity') }}">Amenity</a>
                         <a class="nav-link {{ active('division') }}" href="{{ asset('division') }}">DIVISION</a>

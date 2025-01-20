@@ -4,10 +4,12 @@ use App\Http\Controllers\AmenityController;
 use App\Http\Controllers\AuthController;
 use App\Http\Controllers\CategoryController;
 use App\Http\Controllers\CityController;
+use App\Http\Controllers\ContactController;
 use App\Http\Controllers\DashboardController;
 use App\Http\Controllers\DivisionController;
 use App\Http\Controllers\DistrictController;
 use App\Http\Controllers\FacilityController;
+use App\Http\Controllers\FaqController;
 use App\Http\Controllers\UpazilaController;
 use App\Http\Controllers\UserController;
 use App\Http\Controllers\RoleController;
@@ -120,8 +122,8 @@ Route::middleware([
 });
 //ALl controller and method
 Route::get('/controllers-actions', [RoleController::class, 'getControllersAndActions']);
-
-
+Route::resource('/faq',FaqController::class);
+Route::resource('/contact',ContactController::class);
 Route::get('/dashboard', [DashboardController::class, 'index'])->name('dashboard');
 
 
