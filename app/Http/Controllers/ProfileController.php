@@ -136,11 +136,9 @@ class ProfileController extends Controller
                 $profile->profilePhoto = $profile->profilePhoto ?? $profile->profilePhoto;
             }
             $profile->save();
-
-
-            return $profile;
+            return $this->returnSuccess("Project List",['profile'=>$profile]);
         }catch (\Exception $exception){
-            echo $exception->getMessage();
+            return $this->returnError("Error",$e->getMessage());
         }
 
     }
