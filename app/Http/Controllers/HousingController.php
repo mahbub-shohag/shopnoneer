@@ -77,12 +77,34 @@ class HousingController extends Controller
             $housing->latitude = $request->latitude;
             $housing->longitude = $request->longitude;
             $facilities = $request->facilities;
+
+            $formattedFacilities = [];
+            foreach ($facilities as $facilityId => $distance) {
+                $facility = Facility::find($facilityId);
+                $formattedFacilities[$facilityId] = ['distance' => $this->haversineDistanceMeters($housing->latitude, $housing->longitude, $facility->latitude,$facility->longitude)];
+            }
             $housing->save();
-            $housing->facilities()->attach($facilities);
+            $housing->facilities()->attach($formattedFacilities);
+            //$housing->facilities()->attach($facilities);
             return redirect('/housing')->with('success', 'Housing record created successfully.');
         } catch (\Exception $e) {
             return redirect('/housing/create')->with('error',$e->getMessage());
         }
+    }
+
+    function haversineDistanceMeters($lat1, $lon1, $lat2, $lon2) {
+        $earthRadius = 6371000; // Radius of Earth in meters
+
+        $latDelta = deg2rad($lat2 - $lat1);
+        $lonDelta = deg2rad($lon2 - $lon1);
+
+        $a = sin($latDelta / 2) * sin($latDelta / 2) +
+            cos(deg2rad($lat1)) * cos(deg2rad($lat2)) *
+            sin($lonDelta / 2) * sin($lonDelta / 2);
+
+        $c = 2 * atan2(sqrt($a), sqrt(1 - $a));
+
+        return round($earthRadius * $c, 2); // Distance in meters
     }
 
     public function update(Request $request, Housing $housing)
@@ -109,10 +131,14 @@ class HousingController extends Controller
             $housing->longitude = $request->input('longitude');
             $housing->save();
 
-            // Update facilities
             if ($request->has('facilities')) {
                 $facilities = $request->input('facilities');
-                $housing->facilities()->sync($facilities);
+                $formattedFacilities = [];
+                foreach ($facilities as $facilityId => $distance) {
+                    $facility = Facility::find($facilityId);
+                    $formattedFacilities[$facilityId] = ['distance' => $this->haversineDistanceMeters($housing->latitude, $housing->longitude, $facility->latitude,$facility->longitude)];
+                }
+                $housing->facilities()->sync($formattedFacilities);
             } else {
                 $housing->facilities()->detach();
             }

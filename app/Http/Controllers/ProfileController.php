@@ -137,7 +137,7 @@ class ProfileController extends Controller
             }
             $profile->save();
             return $this->returnSuccess("Project List",['profile'=>$profile]);
-        }catch (\Exception $exception){
+        }catch (\Exception $e){
             return $this->returnError("Error",$e->getMessage());
         }
 

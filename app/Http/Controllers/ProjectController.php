@@ -209,8 +209,43 @@ class ProjectController extends Controller
 
         foreach ($filters as $field => $value) {
             if (!is_null($value)) {
-                $query->where($field, $field === 'title' ? 'LIKE' : '=', $field === 'title' ? "%{$value}%" : $value);
+                if ($field === 'price_range') {
+
+                    $minPrice = $value['min'] ?? null;
+                    $maxPrice = $value['max'] ?? null;
+
+                    if (!is_null($minPrice)) {
+                        $query->where('total_price', '>=', $minPrice);
+                    }
+
+                    if (!is_null($maxPrice)) {
+                        $query->where('total_price', '<=', $maxPrice);
+                    }
+
+
+                } elseif ($field === 'sqr_range') {
+
+                    $minPrice = $value['min'] ?? null;
+                    $maxPrice = $value['max'] ?? null;
+
+                    if (!is_null($minPrice)) {
+                        $query->where('floor_area', '>=', $minPrice);
+                    }
+
+                    if (!is_null($maxPrice)) {
+                        $query->where('floor_area', '<=', $maxPrice);
+                    }
+
+                } elseif ($field === 'title') {
+
+                    $query->where($field, 'LIKE', "%{$value}%");
+
+                } else {
+
+                    $query->where($field, '=', $value);
+                }
             }
+
         }
 
         $totalFilteredItems = $query->count();

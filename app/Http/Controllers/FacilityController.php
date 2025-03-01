@@ -58,7 +58,6 @@ class FacilityController extends Controller
         $districts = District::all();
         $upazilas = Upazila::all();
         $facility_categories = Category::where('parent_id', config('constants.cat_facilities'))->get();
-
         return view('facilities.edit', [
             'facility' => $facility,
             'divisions' => $divisions,
