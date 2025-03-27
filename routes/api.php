@@ -7,6 +7,7 @@ use App\Http\Controllers\DivisionController;
 use App\Http\Controllers\FaqController;
 use App\Http\Controllers\FavouriteController;
 use App\Http\Controllers\HousingController;
+use App\Http\Controllers\NotificationController;
 use App\Http\Controllers\ProfileController;
 use App\Http\Controllers\ProjectController;
 use App\Http\Controllers\UserController;
@@ -45,4 +46,5 @@ Route::middleware(['api-token'])->group(function () {
     Route::post('projectlist',[ProjectController::class,'getProjectList']);
     Route::post('get-project-by-id',[ProjectController::class,'getProjectById']);
     Route::post('get-project-by-filter',[ProjectController::class,'getProjectByFilter']);
+    Route::post('get-notification-list',[NotificationController::class,'getNotificationList']);
 });

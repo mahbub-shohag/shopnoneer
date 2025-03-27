@@ -15,10 +15,11 @@ class ProjectListDTO
     public $no_of_balcony;
     public $rate_per_sqft;
     public $floor_area;
+    public $floor_no;
     public $total_price;
     public $description;
     public $images;
-    public function __construct($id, $title, $district, $upazila, $housing,$no_of_beds, $no_of_baths, $no_of_balcony, $rate_per_sqft,$floor_area, $total_price, $description,$project)
+    public function __construct($id, $title, $district, $upazila, $housing,$no_of_beds, $no_of_baths, $no_of_balcony, $rate_per_sqft,$floor_area,$floor_no, $total_price, $description,$project)
     {
         $this->id = $id;
         $this->title = $title;
@@ -30,6 +31,7 @@ class ProjectListDTO
         $this->no_of_balcony = $no_of_balcony;
         $this->rate_per_sqft = $rate_per_sqft;
         $this->floor_area = $floor_area;
+        $this->floor_no = $floor_no;
         $this->total_price = $total_price;
         $this->description = $description;
         $this->images = $this->getImages($project);
@@ -48,6 +50,7 @@ class ProjectListDTO
             $project->no_of_balcony,
             $project->rate_per_sqft,
             $project->floor_area,
+            $project->floor_no,
             $project->total_price,
             $project->description,
             $project
@@ -78,6 +81,7 @@ class ProjectListDTO
             'no_of_balcony' => $this->no_of_balcony,
             'rate_per_sqft' => $this->rate_per_sqft,
             'floor_area' => $this->floor_area,
+            'floor_no' => $this->floor_no,
             'total_price' => $this->total_price,
             'description' => $this->description,
             'images' => $this->images

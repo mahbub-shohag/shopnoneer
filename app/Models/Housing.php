@@ -26,6 +26,6 @@ class Housing extends Model
 
     public function facilities()
     {
-        return $this->belongsToMany(Facility::class, 'facility_housing', 'housing_id', 'facility_id');
+        return $this->belongsToMany(Facility::class, 'facility_housing', 'housing_id', 'facility_id')->withPivot('distance');
     }
 }

@@ -78,7 +78,7 @@ class ProjectDTO
         $this->is_active = $is_active;
         $this->images = $this->getImages($project);
         $this->amenities = $project->amenities;
-        $this->facilities = $project->housing->facilities->load('category')->map(function ($facility) {
+        $this->facilities = $project->housing->facilities->load('category','housings')->map(function ($facility) {
             return [
                 'id' => $facility->id,
                 'name' => $facility->name,
@@ -86,6 +86,7 @@ class ProjectDTO
                 'longitude' => $facility->longitude,
                 'category' => $facility->category->label,
                 'category_id' => $facility->category->id,
+                'distance' => $facility->pivot->distance,
             ];
         });
 

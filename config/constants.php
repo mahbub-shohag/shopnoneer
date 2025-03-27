@@ -1,4 +1,4 @@
 <?php
 return [
-    'cat_facilities' => 2
+    'cat_facilities' => 3
 ];
