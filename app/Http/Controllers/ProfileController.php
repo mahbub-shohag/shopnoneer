@@ -153,7 +153,7 @@ class ProfileController extends Controller
 
     public function changePassword(Request $request){
         $request->validate([
-            'password' => 'required',
+            'password' => 'required|min:6',
             'confirm_password' => 'required|same:password',
         ]);
         
