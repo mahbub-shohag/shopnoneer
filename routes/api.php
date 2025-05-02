@@ -35,6 +35,7 @@ Route::middleware('auth:sanctum')->group(function (){
     Route::post('update-user-profile',[ProfileController::class,'updateProfileAPI']);
     Route::post('user-profile',[ProfileController::class,'userProfile']);
     Route::post('translation',[TranslationController::class,'translation']);
+    Route::post('change-password',[ProfileController::class,'changePassword']);
 });
 
 Route::middleware(['api-token'])->group(function () {

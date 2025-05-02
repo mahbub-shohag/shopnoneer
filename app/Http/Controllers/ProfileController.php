@@ -9,6 +9,7 @@ use App\Models\Profile;
 use App\Models\Upazila;
 use App\Models\User;
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\Hash;
 use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\Redirect;
 
@@ -148,6 +149,23 @@ class ProfileController extends Controller
     {
         $user = User::where('id', Auth::user()->id)->with('profile')->first();
         return $this->returnSuccess('User Profile', $user);
+    }
+
+    public function changePassword(Request $request){
+        $request->validate([
+            'password' => 'required',
+            'confirm_password' => 'required|same:password',
+        ]);
+        
+        $user = Auth::user();
+        if($user){
+            $user->password = Hash::make($request->password);
+            $user->save();  
+            return $this->returnSuccess("Password Changed Successfully",200);   
+        }else{
+            return $this->returnError("User not found",405);    
+        }
+        
     }
     /*API End*/
 }

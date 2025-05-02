@@ -107,10 +107,6 @@ Route::post('/facilities_by_upazila_id', [FacilityController::class, 'facilities
 
 
 
-/*Amenities*/
-Route::resource('/amenity',AmenityController::class);
-
-
 Route::middleware([
     'auth:sanctum',
     config('jetstream.auth_session'),
@@ -125,6 +121,7 @@ Route::get('/controllers-actions', [RoleController::class, 'getControllersAndAct
 Route::resource('/faq',FaqController::class);
 Route::resource('/contact',ContactController::class);
 Route::get('/dashboard', [DashboardController::class, 'index'])->name('dashboard');
+
 
 
 
