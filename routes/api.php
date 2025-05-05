@@ -27,6 +27,16 @@ use Illuminate\Support\Facades\Route;
 Route::post('/signupapi', [AuthController::class, 'signupapi']);
 Route::post('loginapi',[AuthController::class,'loginapi']);
 
+Route::get('/send-test-mail', function () {
+    Mail::raw('This is a test email using Gmail SMTP.', function ($message) {
+        $message->to('mahbub.cse3@gmail.com')
+                ->subject('Test Email');
+    });
+
+    return 'Email sent!';
+});
+
+
 Route::middleware('auth:sanctum')->group(function (){
     Route::delete('logoutapi',[AuthController::class,'logoutapi']);
     Route::post('add-favourite',[FavouriteController::class,'addFavourite']);
@@ -48,4 +58,6 @@ Route::middleware(['api-token'])->group(function () {
     Route::post('get-project-by-id',[ProjectController::class,'getProjectById']);
     Route::post('get-project-by-filter',[ProjectController::class,'getProjectByFilter']);
     Route::post('get-notification-list',[NotificationController::class,'getNotificationList']);
+    Route::post('/send-reset-code', [AuthController::class, 'sendResetCode']);
+    Route::post('/reset-password', [AuthController::class, 'resetPassword']);
 });

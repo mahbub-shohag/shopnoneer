@@ -20,7 +20,7 @@ class FacilityController extends Controller
     {
         $divisions = Division::all();
         $facility_categories = Category::where('parent_id', config('constants.cat_facilities'))->get();
-        //print_r($facility_categories);exit;
+        //echo "<pre>";print_r($facility_categories);exit;
         return view('facilities.create', ['divisions' => $divisions], ['facility_categories' => $facility_categories]);
     }
 

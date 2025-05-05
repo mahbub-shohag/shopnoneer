@@ -2,6 +2,8 @@
 
 namespace App\Http\Controllers;
 
+use App\Mail\PasswordResetCodeMail;
+use Illuminate\Support\Facades\Mail;
 use App\Models\Profile;
 use App\Models\UserVerification;
 use Illuminate\Http\Request;
@@ -10,6 +12,7 @@ use Illuminate\Validation\ValidationException;
 use App\Models\User;
 use Illuminate\Support\Facades\DB;
 use Illuminate\Support\Facades\Hash;
+use Carbon\Carbon;
 class AuthController extends Controller
 {
 
@@ -148,6 +151,82 @@ class AuthController extends Controller
     {
         $user = User::where('email', $email)->first();
         return $user?true:false;
+    }
+
+    public function sendResetCode(Request $request)
+    {
+        try {
+            $request->validate(['email' => 'required|email']);
+
+            $user = User::where('email', $request->email)->first();
+            if (!$user) {
+                return $this->returnError('No account exists with this email',404);
+            }
+
+            // Generate verification code
+            $verificationCode = sprintf("%06d", mt_rand(1, 999999));
+            $expiredAt = Carbon::now()->addMinutes(5);
+
+            //Save verification data with user_id
+            UserVerification::updateOrCreate(
+                ['email' => $user->email],
+                [
+                    'user_id' => $user->id, // Add the user_id field
+                    'verification_code' => $verificationCode,
+                    'expired_at' => $expiredAt
+                ]
+            );
+
+            // Send email
+            try {
+                $res = Mail::to($user->email)->send(new PasswordResetCodeMail($verificationCode));
+                return $this->returnSuccess('Reset code sent to your email',null);
+            } catch (\Exception $e) {
+                echo "Mail sending failed: " . $e->getMessage();
+            }
+
+        } catch (\Illuminate\Validation\ValidationException $e) {
+            return $this->returnError('Validation error',422);
+        } catch (\Exception $e) {
+            return $this->returnError('An error occurred while sending reset code', 500);
+        }
+    }
+
+
+    public function resetPassword(Request $request)
+    {
+        try {
+            $request->validate([
+                'email' => 'required|email',
+                'verification_code' => 'required|string',
+                'password' => 'required|string|min:6|confirmed',
+            ]);
+
+            // Check verification code
+            $verification = UserVerification::where('email', $request->email)
+                ->where('verification_code', $request->verification_code)
+                ->where('expired_at', '>', Carbon::now())
+                ->first();
+
+            if (!$verification) {
+                return $this->returnError(false, 'Invalid or expired verification code', [], 400);
+            }
+
+            // Update user's password
+            $user = User::where('email', $request->email)->first();
+            $user->password = Hash::make($request->password);
+            $user->save();
+
+            // Delete verification record
+            $verification->delete();
+
+            return $this->returnError(true, 'Password reset successful', [], 200);
+
+        } catch (\Illuminate\Validation\ValidationException $e) {
+            return $this->returnError(false, 'Validation error', $e->errors(), 422);
+        } catch (\Exception $e) {
+            return $this->returnError(false, 'An error occurred during password reset', $e->getMessage(), 500);
+        }
     }
 
 }
