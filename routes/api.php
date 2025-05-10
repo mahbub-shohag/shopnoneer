@@ -12,6 +12,7 @@ use App\Http\Controllers\ProfileController;
 use App\Http\Controllers\ProjectController;
 use App\Http\Controllers\UserController;
 use App\Http\Controllers\TranslationController;
+use App\Http\Controllers\AppInfoController;
 use Illuminate\Support\Facades\Route;
 /*
 |--------------------------------------------------------------------------
@@ -37,6 +38,7 @@ Route::get('/send-test-mail', function () {
 });
 
 
+
 Route::middleware('auth:sanctum')->group(function (){
     Route::delete('logoutapi',[AuthController::class,'logoutapi']);
     Route::post('add-favourite',[FavouriteController::class,'addFavourite']);
@@ -46,6 +48,7 @@ Route::middleware('auth:sanctum')->group(function (){
     Route::post('user-profile',[ProfileController::class,'userProfile']);
     Route::post('translation',[TranslationController::class,'translation']);
     Route::post('change-password',[ProfileController::class,'changePassword']);
+    Route::post('insert-app-info',[AppInfoController::class,'insertInfo']);
 });
 
 Route::middleware(['api-token'])->group(function () {
@@ -60,4 +63,5 @@ Route::middleware(['api-token'])->group(function () {
     Route::post('get-notification-list',[NotificationController::class,'getNotificationList']);
     Route::post('/send-reset-code', [AuthController::class, 'sendResetCode']);
     Route::post('/reset-password', [AuthController::class, 'resetPassword']);
+    Route::post('get-app-info',[AppInfoController::class,'getInfo']);
 });
