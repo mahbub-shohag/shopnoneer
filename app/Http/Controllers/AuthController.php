@@ -139,6 +139,86 @@ class AuthController extends Controller
         return $this->returnSuccess("User logged out successfully!",[]);
     }
 
+    public function googleAuth(Request $request)
+    {
+        try {
+            // Validate the incoming request
+            $request->validate([
+                'google_token' => 'required|string',
+                'name' => 'required|string|max:255',
+                'email' => 'required|string|email|max:255',
+            ]);
+
+            // Check if a user with the provided Google token exists
+            $user = User::where('google_token', $request->google_token)->first();
+
+            if (!$user) {
+                // If user does not exist, check if email is already used
+                $existingUser = User::where('email', $request->email)->first();
+                if ($existingUser) {
+                    $existingUser->google_token = $request->google_token;
+                    $existingUser->save();
+                    $token = $existingUser->createToken('api')->plainTextToken;
+                    $existingUser->token = $token;
+
+                    $existingUser->profile_photo_url = null;
+                    $existingUser->makeHidden(['profile_photo_url']);
+
+                    $baseUrl = env('APP_URL', 'http://localhost:8000');
+
+                    // Generate the full URL for the profile picture
+                    if($existingUser->profile_photo_path) {
+                        $existingUser->profile_photo_path = $baseUrl . '/storage/' . $existingUser->profile_photo_path;
+                    } else {
+                        $existingUser->profile_photo_path = "";
+                    }
+                    // Return the success response
+                    return $this->returnSuccess(true, 'Authentication Successful', $existingUser, 200);
+                }
+
+                // Create a new user if not found
+                $user = new User();
+                $user->name = $request->name;
+                $user->email = $request->email;
+                $user->google_token = $request->google_token;
+                $user->password = Hash::make('123456'); // Default password
+                $user->role_id = 3;
+                $user->save();
+            }
+
+            // Generate a Sanctum token
+            $token = $user->createToken('api')->plainTextToken;
+
+            // Add the token to the user response
+            $user->token = $token;
+
+            $user->profile_photo_url = null;
+            $user->makeHidden(['profile_photo_url']);
+
+            $baseUrl = env('APP_URL', 'http://localhost:8000');
+
+            // Generate the full URL for the profile picture
+            if($user->profile_photo_path) {
+                $user->profile_photo_path = $baseUrl . '/storage/' . $user->profile_photo_path;
+            } else {
+                $user->profile_photo_path = "";
+            }
+
+
+
+            // Return the success response
+            return $this->returnSuccess('Authentication Successful', $user);
+
+        } catch (\Illuminate\Validation\ValidationException $e) {
+            // Handle validation errors
+            return $this->returnError('Validation error', $e->errors());
+
+        } catch (\Exception $e) {
+            // Handle unexpected errors
+            return $this->returnError($e->getMessage(), []);
+        }
+    }
+
     /* Email Phone Number Send for getting verification Code */
     public function send_verification_code(Request $request)
     {

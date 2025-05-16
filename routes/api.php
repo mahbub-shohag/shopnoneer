@@ -27,15 +27,15 @@ use Illuminate\Support\Facades\Route;
 
 Route::post('/signupapi', [AuthController::class, 'signupapi']);
 Route::post('loginapi',[AuthController::class,'loginapi']);
-
-Route::get('/send-test-mail', function () {
-    Mail::raw('This is a test email using Gmail SMTP.', function ($message) {
-        $message->to('mahbub.cse3@gmail.com')
-                ->subject('Test Email');
-    });
-
-    return 'Email sent!';
-});
+Route::post('/google-auth',[AuthController::class,'googleAuth']);
+//Route::get('/send-test-mail', function () {
+//    Mail::raw('This is a test email using Gmail SMTP.', function ($message) {
+//        $message->to('mahbub.cse3@gmail.com')
+//                ->subject('Test Email');
+//    });
+//
+//    return 'Email sent!';
+//});
 
 
 
