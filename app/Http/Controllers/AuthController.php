@@ -150,7 +150,7 @@ class AuthController extends Controller
             ]);
 
             // Check if a user with the provided Google token exists
-            $user = User::where('google_token', $request->google_token)->first();
+            $user = User::with('profile')->where('google_token', $request->google_token)->first();
 
             if (!$user) {
                 // If user does not exist, check if email is already used
@@ -191,8 +191,6 @@ class AuthController extends Controller
                     $profile->save();
                     $user->profile = $profile;
                 }
-
-                $user->save();
             }
 
             // Generate a Sanctum token
