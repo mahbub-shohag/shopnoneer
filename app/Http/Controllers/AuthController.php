@@ -183,6 +183,15 @@ class AuthController extends Controller
                 $user->google_token = $request->google_token;
                 $user->password = Hash::make('123456'); // Default password
                 $user->role_id = 3;
+                if($user->save()){
+                    $profile = new Profile();
+                    $profile->user_id = $user->id;
+                    $profile->fullName = $request->name;
+                    $profile->phoneNumber = $request->phone_number;
+                    $profile->save();
+                    $user->profile = $profile;
+                }
+
                 $user->save();
             }
 
