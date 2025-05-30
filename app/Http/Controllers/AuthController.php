@@ -154,7 +154,7 @@ class AuthController extends Controller
 
             if (!$user) {
                 // If user does not exist, check if email is already used
-                $existingUser = User::where('email', $request->email)->first();
+                $existingUser = User::with('profile')->where('email', $request->email)->first();
                 if ($existingUser) {
                     $existingUser->google_token = $request->google_token;
                     $existingUser->save();
@@ -173,7 +173,7 @@ class AuthController extends Controller
                         $existingUser->profile_photo_path = "";
                     }
                     // Return the success response
-                    return $this->returnSuccess(true, 'Authentication Successful', $existingUser, 200);
+                    return $this->returnSuccess('Authentication Successful', $existingUser);
                 }
 
                 // Create a new user if not found
